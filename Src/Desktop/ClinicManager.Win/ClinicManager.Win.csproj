@@ -6,6 +6,6 @@
     <AssemblyName>ClinicManager.Win</AssemblyName>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="ClinicManager.Core.csproj" />
+    <ProjectReference Include="..\ClinicManager.Core\ClinicManager.Core.csproj" />
   </ItemGroup>
 </Project>
