@@ -5,4 +5,7 @@
     <UseWpf>true</UseWpf>
     <AssemblyName>ClinicManager.Win</AssemblyName>
   </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="ClinicManager.Core.csproj" />
+  </ItemGroup>
 </Project>
