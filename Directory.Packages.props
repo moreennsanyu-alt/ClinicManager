@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ItemGroup>
+    <PackageReference Update="Microsoft.WindowsDesktop.App" Version="*" />
+    <PackageReference Update="Microsoft.NETCore.App" Version="*" />
+    <PackageReference Update="Nerdbank.GitVersioning" Version="*" PrivateAssets="all" />
+    <PackageReference Update="System.Xaml" Version="*" />
+    <PackageReference Update="System.Windows.Extensions" Version="*" />
+  </ItemGroup>
+</Project>
