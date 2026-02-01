@@ -1,1 +1,11 @@
-gvg
+<Project Sdk="Microsoft.NET.Sdk.Wpf">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWpf>true</UseWpf>
+    <AssemblyName>ClinicManager.Win</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="ClinicManager.Core.csproj" />
+  </ItemGroup>
+</Project>
