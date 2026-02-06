@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src">
+    <Folder Name="/src/desktop">
+      <Project Path="src\desktop\clinicmanager.win\clinicmanager.win.csproj" />
+      <Project Path="src\desktop\ds\ds.proj" />
+    </Folder>
+  </Folder>
+</Solution>
