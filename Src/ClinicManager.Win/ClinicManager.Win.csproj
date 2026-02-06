@@ -3,7 +3,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net10.0-windows</TargetFramework>
     <UseWpf>true</UseWpf>
-    <AssemblyName>ClinicManager.Win</AssemblyName>
+    <AssemblyName>ClinicMgr</AssemblyName>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\ClinicManager.Core\ClinicManager.Core.csproj" />
