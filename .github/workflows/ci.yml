@@ -20,7 +20,7 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: '8.0.x' 
+        dotnet-version: '10.0.x' 
 
     # 2. Add MSBuild (Often required for WPF specific tasks even in modern .NET)
     - name: Setup MSBuild
@@ -28,13 +28,13 @@ jobs:
 
     # 3. Restore
     - name: Restore Dependencies
-      run: dotnet restore Clinic.sln
+      run: dotnet restore ClinicManager.sln
 
     # 4. Build
     - name: Build Solution
-      run: dotnet build Clinic.sln --configuration Release --no-restore
+      run: dotnet build ClinicManager.sln --configuration Release --no-restore
 
     # 5. Run Tests (Includes Unit & UI Tests)
     # Note: This runs tests in a "headless" windows session.
     - name: Execute Tests
-      run: dotnet test Clinic.sln --configuration Release --no-build --verbosity normal
+      run: dotnet test ClinicManager.sln --configuration Release --no-build --verbosity normal
