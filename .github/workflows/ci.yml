@@ -1,1 +1,40 @@
-gg
+name: Clinic WPF Build & Test
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    name: Build and UI Test
+    # STRICTLY REQUIRED: WPF only builds/runs on Windows
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    # 1. Setup .NET (Adjust version to 6.0, 7.0, or 8.0)
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.0.x' 
+
+    # 2. Add MSBuild (Often required for WPF specific tasks even in modern .NET)
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v2
+
+    # 3. Restore
+    - name: Restore Dependencies
+      run: dotnet restore Clinic.sln
+
+    # 4. Build
+    - name: Build Solution
+      run: dotnet build Clinic.sln --configuration Release --no-restore
+
+    # 5. Run Tests (Includes Unit & UI Tests)
+    # Note: This runs tests in a "headless" windows session.
+    - name: Execute Tests
+      run: dotnet test Clinic.sln --configuration Release --no-build --verbosity normal
