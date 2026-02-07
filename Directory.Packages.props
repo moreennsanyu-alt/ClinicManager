@@ -5,6 +5,6 @@
   </ItemGroup> 
 
 <ItemGroup>
-    <GlobalPackageReference Update="Nerdbank.GitVersioning" Version="*" PrivateAssets="all" />
+    <GlobalPackageReference Include="Nerdbank.GitVersioning" Version="*" PrivateAssets="all" />
   </ItemGroup>
 </Project>
