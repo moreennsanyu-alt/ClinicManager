@@ -6,7 +6,7 @@
 
 <ItemGroup>
     <GlobalPackageReference Include="Nerdbank.GitVersioning" Version="3.9.50" PrivateAssets="all" />
-<GlobalPackageReference Include="ThisAssembly.Constants" Version="1.4.3" />
-<GlobalPackageReference Include="ThisAssembly.Strings" Version="1.4.3" />
+    <GlobalPackageReference Include="ThisAssembly.Constants" Version="1.4.3" />
+    <GlobalPackageReference Include="ThisAssembly.Strings" Version="1.4.3" />
   </ItemGroup>
 </Project>
