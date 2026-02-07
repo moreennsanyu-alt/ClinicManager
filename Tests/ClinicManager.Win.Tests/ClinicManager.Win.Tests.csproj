@@ -4,4 +4,8 @@
     <TargetFramework>net10.0-windows</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Src\ClinicManager.Win\ClinicManager.Win.csproj" />
+  </ItemGroup>
+
 </Project>
