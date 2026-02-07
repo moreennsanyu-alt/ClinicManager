@@ -1,6 +1,6 @@
 <Solution>
   <Folder Name="/src/">
       <Project Path="src/clinicmanager.win\clinicmanager.win.csproj" />
-      <Project Path="src/clinicmanager.core\clinicmanager.core.proj" />
+      <Project Path="src/clinicmanager.core\clinicmanager.core.csproj" />
   </Folder>
 </Solution>
