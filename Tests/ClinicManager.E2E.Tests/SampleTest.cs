@@ -1,5 +1,4 @@
 using NUnit.Framework;
-using CalculatorApp;
 using ClinicManager.E2E.Tests.Core;
 
 namespace ClinicManager.E2E.Tests;
