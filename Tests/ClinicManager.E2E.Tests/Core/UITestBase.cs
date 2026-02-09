@@ -14,24 +14,17 @@ namespace ClinicManager.E2E.Tests.Core;
 
 public class UITestBase: FlaUITestBase
 {
+
+    string AppPath = string.Format(@"{0}\..\..\ClinicManager.Win\Debug\net9.0-windows\ClinicMgr.exe", Environment.CurrentDirectory);
+       
     protected override AutomationBase GetAutomation()
     {
         return new UIA3Automation();
     }
     
     protected override FlaUI.Core.Application StartApplication()
-        {
-            if (OperatingSystem.IsWindows10())
-            {
-                // Use the store application on those systems
-                return Application.LaunchStoreApp("Microsoft.WindowsCalculator_8wekyb3d8bbwe!App");
-            }
-            if (OperatingSystem.IsWindowsServer2016() || OperatingSystem.IsWindowsServer2019())
-            {
-                // The calc.exe on this system is just a stub which launches win32calc.exe
-                return Application.Launch("win32calc.exe");
-            }
-            return Application.Launch("calc.exe");
-        }
+        => Application.Launch(AppPath);
+            
+        
     }
 
