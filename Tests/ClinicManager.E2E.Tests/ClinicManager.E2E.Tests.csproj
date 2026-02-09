@@ -3,7 +3,7 @@
   <PropertyGroup>
   <OutputType>Exe</OutputType>
     <EnableNUnitRunner>true</EnableNUnitRunner>
-    <TargetFramework>net10.0-windows</TargetFramework>
+    <TargetFramework>net9.0-windows</TargetFramework>
  <TestingPlatformDotnetTestSupport>true</TestingPlatformDotnetTestSupport>
   </PropertyGroup>
 
