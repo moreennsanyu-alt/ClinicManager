@@ -7,6 +7,8 @@ using FlaUI.TestUtilities;
 using FlaUI.UIA3;
 using NUnit.Framework;
 using OperatingSystem = FlaUI.Core.Tools.OperatingSystem;
+using Application = FlaUI.Core.Application;
+using FlaUI.Core;
 
 namespace ClinicManager.E2E.Tests.Core;
 
@@ -17,7 +19,7 @@ public class UITestBase: FlaUITestBase
         return new UIA3Automation();
     }
     
-    protected override Application StartApplication()
+    protected override FlaUI.Core.Application StartApplication()
         {
             if (OperatingSystem.IsWindows10())
             {
