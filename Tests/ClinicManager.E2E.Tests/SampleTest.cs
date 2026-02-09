@@ -1,14 +1,14 @@
 using NUnit.Framework;
-using CalculatorApp; // Reference the namespace of the class to be tested
+using CalculatorApp;
+using ClinicManager.E2E.Tests.Core;
 
-namespace CalculatorApp.Tests
-{
-    [TestFixture] // Optional in NUnit 3+, but good for clarity/compatibility
-    public class CalculatorTests
+namespace ClinicManager.E2E.Tests;
+
+    [TestFixture]
+    public class SampleTest : UITestBase
     {
 
-        [Test] // Marks a method as a test method
+        [Test]
         public void Test(){}
 
     }
-}
