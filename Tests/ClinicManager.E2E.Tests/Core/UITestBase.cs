@@ -32,4 +32,4 @@ public class UITestBase: FlaUITestBase
             return Application.Launch("calc.exe");
         }
     }
-}
+
