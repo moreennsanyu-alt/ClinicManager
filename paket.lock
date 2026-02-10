@@ -611,7 +611,7 @@ NUGET
       Microsoft.NETCore.Platforms (>= 1.1) - restriction: || (== net10.0) (== net10.0-windows7.0) (&& (== net48) (< net451))
       Microsoft.NETCore.Targets (>= 1.1) - restriction: || (== net10.0) (== net10.0-windows7.0) (&& (== net48) (< net451))
       System.Runtime (>= 4.3) - restriction: || (== net10.0) (== net10.0-windows7.0) (&& (== net48) (< net451))
-    System.ValueTuple (4.6.1) - restriction: || (&& (== net10.0) (>= net462)) (&& (== net10.0-windows7.0) (>= net462)) (== net48)
+    System.ValueTuple (4.6.1)
     System.Xml.ReaderWriter (4.3) - restriction: || (== net10.0) (== net10.0-windows7.0) (&& (== net48) (< net35))
       System.Collections (>= 4.3) - restriction: || (== net10.0) (== net10.0-windows7.0) (&& (== net48) (< net45))
       System.Diagnostics.Debug (>= 4.3) - restriction: || (== net10.0) (== net10.0-windows7.0) (&& (== net48) (< net45))
