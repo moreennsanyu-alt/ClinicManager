@@ -15,7 +15,7 @@ namespace ClinicManager.E2E.Tests.Core;
 public class UITestBase: FlaUITestBase
 {
 
-    string AppPath = string.Format(@"{0}\..\..\ClinicManager.Win\Debug\net9.0-windows\ClinicMgr.exe", Environment.CurrentDirectory);
+    string AppPath = string.Format(@"{0}\..\..\ClinicManager.Win\Debug\ClinicMgr.exe", Environment.CurrentDirectory);
        
     protected override AutomationBase GetAutomation()
     {
