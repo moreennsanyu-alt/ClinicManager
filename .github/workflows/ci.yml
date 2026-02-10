@@ -50,6 +50,7 @@ jobs:
       with:
         name: build-and-test-logs
         path: |
+          **/*.log
           *.log
           TestResults/*.trx
         retention-days: 5
