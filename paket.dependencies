@@ -1,0 +1,17 @@
+source https://api.nuget.org/v3/index.json
+storage:none
+strategy: min
+lowest_matching: true
+copy_local:true
+specific_version : false
+framework:net48,net10.0,net10.0-windows
+
+
+nuget Shouldly 4.3.0
+nuget Enums.NET 5.0
+nuget Moq 4.16
+nuget NUnit3TestAdapter 6.0.0
+nuget NUnit 4.4.0
+nuget FasterFlect.Xpand 2.0.7
+nuget ZString 2.6.0
+nuget Humanizer.Core 3.0.1
