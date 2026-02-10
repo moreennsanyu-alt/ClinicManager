@@ -24,7 +24,7 @@ jobs:
       uses: microsoft/setup-msbuild@v2
 
     - name: Restore Local Tools
-       run: dotnet tool restore
+      run: dotnet tool restore
 
     - name: Restore Dependencies
       run: dotnet restore ClinicManager.slnx
