@@ -7,7 +7,7 @@
     <AssemblyName>ClinicMgr</AssemblyName>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ClinicManager.Core\ClinicManager.Core.csproj" />
+    <ProjectReference Include="..\ClinicManager\ClinicManager.csproj" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Humanizer.Core" />
