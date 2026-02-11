@@ -1,5 +1,8 @@
 using NUnit.Framework;
 using ClinicManager.E2E.Tests.Core;
+using FlaUI.Core.Capturing;
+using System.IO;
+using System.Drawing.Imaging;
 
 namespace ClinicManager.E2E.Tests;
 
