@@ -1,7 +1,7 @@
 <Solution>
   <Folder Name="/src/">
       <Project Path="src/clinicmanager.win\clinicmanager.win.csproj" />
-      <Project Path="src/clinicmanager.core\clinicmanager.core.csproj" />
+      <Project Path="src/clinicmanager\clinicmanager.csproj" />
 <Project Path="tests/clinicmanager.win.tests\clinicmanager.win.tests.csproj" />
 <Project Path="tests/clinicmanager.e2e.tests\clinicmanager.e2e.tests.csproj" />
   </Folder>
