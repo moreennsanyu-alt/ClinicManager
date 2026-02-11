@@ -54,6 +54,7 @@ jobs:
         name: build-and-test-logs
         path: |
           **/*.log
+          **/*.e2e.tests/debug/*.png
           *.log
           TestResults/*.trx
         retention-days: 5
