@@ -1,24 +1,22 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
-      <OutputType>Exe</OutputType>
-      <EnableNUnitRunner>true</EnableNUnitRunner>
-      <TargetFramework>net9.0-windows</TargetFramework>
-      <TestingPlatformDotnetTestSupport>true</TestingPlatformDotnetTestSupport>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace></RootNamespace>
+    <NoWarn>CS0649;CS0169</NoWarn>
+    <NukeRootDirectory>..\</NukeRootDirectory>
+    <NukeScriptDirectory>..\</NukeScriptDirectory>
+    <NukeVersion>10.1.0</NukeVersion>
+    <NukeTelemetryVersion>1</NukeTelemetryVersion>
   </PropertyGroup>
-
   <ItemGroup>
-      <PackageReference Include="nunit" />
-      <PackageReference Include="NUnit.Analyzers">
-        <PrivateAssets>all</PrivateAssets>
-        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      </PackageReference>
-      <PackageReference Include="NUnit3TestAdapter" />
-      <PackageReference Include="Shouldly" />
-      <PackageReference Include="FlaUI.Core.Signed" />
-      <PackageReference Include="FlaUI.UIA3.Signed" />
-      <PackageReference Include="Interop.UIAutomationClient.Signed" />
-      <PackageReference Include="FlaUI.TestUtilities" />
-    </ItemGroup>
-
+    <PackageDownload Include="GitVersion.Tool" Version="[6.5.1]" />
+    <PackageDownload Include="ReportGenerator" Version="[5.5.1]" />
+    <PackageDownload Include="xunit.runner.console" Version="[2.9.3]" />
+    <PackageDownload Include="PackageGuard" Version="[1.6.1]" />
+    <PackageReference Include="LibGit2Sharp" Version="0.31.0" />
+    <PackageReference Include="Nuke.Common" Version="$(NukeVersion)" />
+    <PackageReference Include="Nuke.Components" Version="$(NukeVersion)" />
+    <PackageReference Include="SharpCompress" Version="0.42.1" />
+  </ItemGroup>
 </Project>
