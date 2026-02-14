@@ -32,28 +32,12 @@ class Build : NukeBuild
 
     public static int Main() => Execute<Build>(x => x.SpellCheck, x => x.Push);
 
-    GitHubActions GitHubActions => GitHubActions.Instance;
-
-    string BranchSpec => GitHubActions?.Ref;
-
-    string BuildNumber => GitHubActions?.RunNumber.ToString();
-
-    string PullRequestBase => GitHubActions?.BaseRef;
-
     [Parameter("The solution configuration to build. Default is 'Debug' (local) or 'CI' (server).")]
     readonly Configuration Configuration = IsLocalBuild ? Configuration.Debug : Configuration.CI;
 
     [Parameter("Use this parameter if you encounter build problems in any way, " +
         "to generate a .binlog file which holds some useful information.")]
     readonly bool? GenerateBinLog;
-
-    [Parameter("The key to push to Nuget")]
-    [Secret]
-    readonly string NuGetApiKey;
-
-    [Parameter("The key to use for scanning packages on GitHub")]
-    [Secret]
-    readonly string GitHubApiKey;
 
     [Solution(GenerateProjects = true)]
     readonly Solution Solution;
@@ -65,9 +49,6 @@ class Build : NukeBuild
     [Required]
     [GitRepository]
     readonly GitRepository GitRepository;
-
-    [NuGetPackage("PackageGuard", "PackageGuard.dll")]
-    Tool PackageGuard;
 
     AbsolutePath ArtifactsDirectory => RootDirectory / "Artifacts";
 
@@ -83,29 +64,11 @@ class Build : NukeBuild
             TestResultsDirectory.CreateOrCleanDirectory();
         });
 
-    Target CalculateNugetVersion => _ => _
-        .OnlyWhenDynamic(() => RunAllTargets || HasSourceChanges)
-        .Executes(() =>
-        {
-            SemVer = GitVersion.SemVer;
+    
 
-            if (IsPullRequest)
-            {
-                Information(
-                    "Branch spec {branchspec} is a pull request. Adding build number {buildnumber}",
-                    BranchSpec, BuildNumber);
-
-                SemVer = string.Join('.', GitVersion.SemVer.Split('.').Take(3).Union([BuildNumber]));
-            }
-
-            Information("SemVer = {semver}", SemVer);
-        });
-
-    bool IsPullRequest => GitHubActions?.IsPullRequest ?? false;
-
+    
     Target Restore => _ => _
         .DependsOn(Clean)
-        .OnlyWhenDynamic(() => RunAllTargets || HasSourceChanges)
         .Executes(() =>
         {
             DotNetRestore(s => s
@@ -116,8 +79,6 @@ class Build : NukeBuild
 
     Target Compile => _ => _
         .DependsOn(Restore)
-        .DependsOn(CalculateNugetVersion)
-        .OnlyWhenDynamic(() => RunAllTargets || HasSourceChanges)
         .Executes(() =>
         {
             ReportSummary(s => s
@@ -131,11 +92,7 @@ class Build : NukeBuild
                     .SetBinaryLog(ArtifactsDirectory / $"{Solution.Core.FluentAssertions.Name}.binlog")
                 )
                 .EnableNoLogo()
-                .EnableNoRestore()
-                .SetVersion(SemVer)
-                .SetAssemblyVersion(GitVersion.AssemblySemVer)
-                .SetFileVersion(GitVersion.AssemblySemFileVer)
-                .SetInformationalVersion(GitVersion.InformationalVersion));
+                .EnableNoRestore());
         });
 
     
@@ -159,7 +116,6 @@ class Build : NukeBuild
     Target CodeCoverage => _ => _
         .DependsOn(TestFrameworks)
         .DependsOn(UnitTests)
-        .OnlyWhenDynamic(() => RunAllTargets || HasSourceChanges)
         .Executes(() =>
         {
             ReportGenerator(s => s
@@ -172,7 +128,7 @@ class Build : NukeBuild
                     ReportTypes.HtmlInline_AzurePipelines_Dark)
                 .AddFileFilters("-*.g.cs")
                 .AddFileFilters("-*.nuget*")
-                .SetAssemblyFilters("+FluentAssertions"));
+                .SetAssemblyFilters("+ClinicManager"));
 
             string link = TestResultsDirectory / "reports" / "index.html";
             Information($"Code coverage report: \x1b]8;;file://{link.Replace('\\', '/')}\x1b\\{link}\x1b]8;;\x1b\\");
@@ -234,6 +190,4 @@ class Build : NukeBuild
         x.StartsWith("package.json") ||
         x.StartsWith("package-lock.json") ||
         x.StartsWith("README.md");
-
-    Repository Repository => new(GitRepository.LocalDirectory);
 }
