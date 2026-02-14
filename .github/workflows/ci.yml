@@ -16,34 +16,12 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Setup .NET
-      uses: actions/setup-dotnet@v4
+      uses: actions/setup-dotnet@v5
       with:
         dotnet-version: '9.0.x' 
 
-    - name: Setup MSBuild
-      uses: microsoft/setup-msbuild@v2
-
-    - name: Restore Local Tools
-      run: dotnet tool restore
-
-    - name: Restore Dependencies
-      run: dotnet restore ClinicManager.slnx
-
-    # 4a. Build Debug Configuration
-    # Added: -fl -flp:LogFile=... to write build output to a specific file
-    - name: Build Debug
-      run: dotnet build ClinicManager.slnx --configuration Debug --no-restore -fl -flp:LogFile=build-debug.log
-
-    # 4b. Build Release Configuration
-    # Added: -fl -flp:LogFile=... to write build output to a specific file
-    - name: Build Release
-      run: dotnet build ClinicManager.slnx --configuration Release --no-restore -fl -flp:LogFile=build-release.log
-
-    # 5. Run Tests (Only for Debug)
-    # Added: --logger "trx" to generate visual studio test results
-    # Added: --results-directory to control where the trx file goes
-    - name: Execute Debug Tests
-      run: dotnet test ClinicManager.slnx --configuration Debug --no-build --verbosity normal --logger "trx;LogFileName=debug-tests.trx" --results-directory ./TestResults
+    - name: Run NUKE
+      run: ./build.ps1
 
     # 6. Upload Artifacts
     # Uses 'if: always()' so logs are uploaded even if the build/test fails
