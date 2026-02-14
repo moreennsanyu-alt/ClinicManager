@@ -1,6 +1,7 @@
 <Solution>
   <Folder Name="/src/">
       <Project Path="src/clinicmanager.win\clinicmanager.win.csproj" />
+      <Project Path="src/clinicmanager.Server\clinicmanager.Server.csproj" />
       <Project Path="src/clinicmanager\clinicmanager.csproj" />
   </Folder>
   <Folder Name="/tests/">
