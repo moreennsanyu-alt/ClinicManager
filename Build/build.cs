@@ -30,7 +30,7 @@ class Build : NukeBuild
        - Microsoft VSCode           https://nuke.build/vscode
     */
 
-    public static int Main() => Execute<Build>(x => x.SpellCheck, x => x.Push);
+    public static int Main() => Execute<Build>(x => x.Tests);
 
     [Parameter("The solution configuration to build. Default is 'Debug' (local) or 'CI' (server).")]
     readonly Configuration Configuration = IsLocalBuild ? Configuration.Debug : Configuration.CI;
@@ -57,7 +57,6 @@ class Build : NukeBuild
     string SemVer;
 
     Target Clean => _ => _
-        .OnlyWhenDynamic(() => RunAllTargets || HasSourceChanges)
         .Executes(() =>
         {
             ArtifactsDirectory.CreateOrCleanDirectory();
@@ -97,21 +96,21 @@ class Build : NukeBuild
 
     
 
-    Project[] Projects =>
+    Project[] UnitTestProjects =>
     [
-        Solution.Specs.FluentAssertions_Specs,
-        Solution.Specs.FluentAssertions_Equivalency_Specs,
-        Solution.Specs.FluentAssertions_Extensibility_Specs,
-        Solution.Specs.FSharp_Specs,
-        Solution.Specs.VB_Specs
+        Solution.Tests.ClinicManager_Tests,
+        Solution.Tests.ClinicManager_Win_Tests
     ];
 
-    
+    Project[] E2ETestProjects =>
+    [
+        Solution.Tests.ClinicManager_E2E_Tests
+    ];
     
 
-    Target UnitTests => _ => _
-        .DependsOn(UnitTestsNet47)
-        .DependsOn(UnitTestsNet6OrGreater);
+    Target Tests => _ => _
+        .DependsOn(UnitTests);
+      //  .DependsOn(UnitTestsNet6OrGreater);
 
     Target CodeCoverage => _ => _
         .DependsOn(TestFrameworks)
@@ -136,18 +135,12 @@ class Build : NukeBuild
 
     
 
-    Target TestingPlatformFrameworks => _ => _
+    Target UnitTests => _ => _
         .DependsOn(Compile)
-        .OnlyWhenDynamic(() => RunAllTargets || HasSourceChanges)
         .Executes(() =>
         {
-            Project[] projects =
-            [
-                Solution.TestFrameworks.TUnit_Specs
-            ];
-
             var testCombinations =
-                from project in projects
+                from project in UnitTestProjects
                 let frameworks = project.GetTargetFrameworks()
                 from framework in frameworks
                 select new { project, framework };
@@ -172,15 +165,7 @@ class Build : NukeBuild
                 );
         });
 
-    Target TestFrameworks => _ => _
-        .DependsOn(VSTestFrameworks)
-        .DependsOn(TestingPlatformFrameworks);
-
-    
-    
-    
-    
-
+        
     
     static bool IsDocumentation(string x) =>
         x.StartsWith("docs") ||
