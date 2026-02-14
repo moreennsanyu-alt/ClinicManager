@@ -8,7 +8,7 @@
     <NukeScriptDirectory>..\</NukeScriptDirectory>
     <NukeVersion>10.1.0</NukeVersion>
     <NukeTelemetryVersion>1</NukeTelemetryVersion>
-    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    <ManagePackageVersionsCentrally>false</ManagePackageVersionsCentrally>
   </PropertyGroup>
   <ItemGroup>
     <PackageDownload Include="GitVersion.Tool" Version="[6.5.1]" />
