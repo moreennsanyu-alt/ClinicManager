@@ -98,13 +98,13 @@ class Build : NukeBuild
 
     Project[] UnitTestProjects =>
     [
-        Solution.Tests.ClinicManager_Tests.ClinicManager_Tests,
-        Solution.Tests.ClinicManager_Win_Tests.ClinicManager_Win_Tests
+        Solution.Tests.ClinicManager_Tests,
+        Solution.Tests.ClinicManager_Win_Tests
     ];
 
     Project[] E2ETestProjects =>
     [
-        Solution.Tests.ClinicManager_E2E_Tests.ClinicManager_E2E_Tests
+        Solution.Tests.ClinicManager_E2E_Tests
     ];
     
 
