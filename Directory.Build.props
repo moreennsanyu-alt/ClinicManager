@@ -3,7 +3,6 @@
     <Company>Company One</Company>
     <TargetFramework>net9.0</TargetFramework>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
-    <ArtifactsPath>$(MSBuildThisFileDirectory)artifacts</ArtifactsPath>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
