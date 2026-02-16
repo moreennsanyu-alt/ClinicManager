@@ -33,7 +33,7 @@ class Build : NukeBuild
     public static int Main() => Execute<Build>(x => x.Tests);
 
     [Parameter("The solution configuration to build. Default is 'Debug' (local) or 'CI' (server).")]
-    readonly Configuration Configuration = IsLocalBuild ? Configuration.Debug : Configuration.CI;
+    readonly Configuration Configuration = Configuration.Debug;
 
     [Parameter("Use this parameter if you encounter build problems in any way, " +
         "to generate a .binlog file which holds some useful information.")]
