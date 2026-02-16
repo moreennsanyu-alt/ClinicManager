@@ -42,9 +42,6 @@ class Build : NukeBuild
     [Solution(GenerateProjects = true)]
     readonly Solution Solution;
 
-    [Required]
-    [GitVersion(Framework = "net10.0", NoCache = true, NoFetch = true)]
-    readonly GitVersion GitVersion;
 
     [Required]
     [GitRepository]
