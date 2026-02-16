@@ -1,10 +1,16 @@
 <Solution>
   <Folder Name="/CMBuild/">
-      <Project Path="build/_build.csproj" />
+      <Project Path="build/_build.csproj">
+          <Configuration Solution="Debug|*" Build="false" />
+          <Configuration Solution="Release|*" Build="false" />
+     </Project>
   </Folder>
   <Folder Name="/Source/">
       <Project Path="Src/ClinicManager.win\ClinicManager.Win.csproj" />
-      <Project Path="Src/ClinicManager.Setup\ClinicManager.Setup.csproj" />
+      <Project Path="Src/ClinicManager.Setup\ClinicManager.Setup.csproj">
+          <Configuration Solution="Debug|*" Build="false" />
+          <Configuration Solution="Release|*" Build="false" />
+     </Project>
       <Project Path="Src/ClinicManager.Server\ClinicManager.Server.csproj" />
       <Project Path="Src/ClinicManager\ClinicManager.csproj" />
   </Folder>
