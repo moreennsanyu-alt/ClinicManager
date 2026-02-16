@@ -67,14 +67,6 @@ class Build : NukeBuild
         .DependsOn(Clean)
         .Executes(() =>
         {
-            var projects = Solution.GetAllProjects("*");
-
-            Serilog.Log.Information("Projects in {SolutionName}:", Solution.Name);
-        
-            foreach (var project in projects)
-            {
-                Serilog.Log.Information("- {ProjectName} ({Path})", project.Name, project.Path);
-            }
             
             DotNetRestore(s => s
                 .SetProjectFile(Solution)
