@@ -105,10 +105,10 @@ class Build : NukeBuild
 
     
 
-    IEnumerable<Project> UnitTestProjects  = Solution.GetAllProjects("*")
+    IEnumerable<Project> UnitTestProjects  => Solution.GetAllProjects("*")
             .Where(x => x.Name.EndsWith("Tests") && !x.Name.EndsWith("E2E.Tests"));
 
-    IEnumerable<Project> E2ETestProjects = Solution.GetAllProjects("*")
+    IEnumerable<Project> E2ETestProjects => Solution.GetAllProjects("*")
             .Where(x => x.Name.EndsWith("E2E.Tests"));
             
     Target Tests => _ => _
