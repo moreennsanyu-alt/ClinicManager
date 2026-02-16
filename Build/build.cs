@@ -105,18 +105,12 @@ class Build : NukeBuild
 
     
 
-    Project[] UnitTestProjects =>
-    [
-        Solution.Tests.ClinicManager_Tests,
-        Solution.Tests.ClinicManager_Win_Tests
-    ];
+    IEnumerable<Project> UnitTestProjects  = Solution.GetAllProjects("*")
+            .Where(x => x.Name.EndsWith("Tests") && !x.Name.EndsWith("E2E.Tests"));
 
-    Project[] E2ETestProjects =>
-    [
-        Solution.Tests.ClinicManager_E2E_Tests
-    ];
-    
-
+    IEnumerable<Project> E2ETestProjects = Solution.GetAllProjects("*")
+            .Where(x => x.Name.EndsWith("E2E.Tests"));
+            
     Target Tests => _ => _
         .DependsOn(UnitTests);
       //  .DependsOn(UnitTestsNet6OrGreater);
