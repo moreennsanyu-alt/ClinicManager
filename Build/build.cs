@@ -71,7 +71,8 @@ class Build : NukeBuild
             DotNetRestore(s => s
                 .SetProjectFile(Solution)
                 .EnableNoCache()
-                .SetConfigFile(RootDirectory / "nuget.config"));
+                //.SetConfigFile(RootDirectory / "nuget.config")
+                );
         });
 
     Target Compile => _ => _
