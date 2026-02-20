@@ -6,18 +6,29 @@
      </Project>
   </Folder>
   <Folder Name="/Source/">
-      <Project Path="Src/ClinicManager.win\ClinicManager.Win.csproj" />
-      <Project Path="Src/ClinicManager.Setup\ClinicManager.Setup.csproj">
-          <Configuration Solution="Debug|*" Build="false" />
-          <Configuration Solution="Release|*" Build="false" />
-     </Project>
-      <Project Path="Src/ClinicManager.Server\ClinicManager.Server.csproj" />
-      <Project Path="Src/ClinicManager\ClinicManager.csproj" />
+    <Folder Name="Desktop">
+        <Project Path="Src/Desktop/ClinicManager.Core\ClinicManager.Core.csproj" />
+        <Project Path="Src/Desktop/ClinicManager.Win\ClinicManager.Win.csproj" />
+    </Folder>
+    <Folder Name="Desktop.Tests">
+        <Project Path="Src/Desktop.Tests/ClinicManager.Win.Tests\ClinicManager.Win.Tests.csproj" />
+        <Project Path="Src/Desktop.Tests/ClinicManager.Core.Tests\ClinicManager.Core.Tests.csproj" />
+        <Project Path="Src/Desktop.Tests/ClinicManager.E2E.Tests\ClinicManager.E2E.Tests.csproj" />
+        <Project Path="Src/Desktop.Tests/ClinicManager.Testing\ClinicManager.Testing.csproj" />
+    </Folder>
+    <Folder Name="Server">
+        <Project Path="Src/Server/Domain/Domain.csproj" />
+        <Project Path="Src/Server/Application/Application.csproj" />
+        <Project Path="Src/Server/Web/Web.csproj" />
+        <Project Path="Src/Server/Infrastructure/Infrastructure.csproj" />
+    </Folder>
+    <Folder Name="Server.Tests">
+        <Project Path="Src/Server.Tests/Domain.Tests\Domain.Tests.csproj" />
+        <Project Path="Src/Server.Tests/Application.UnitTests\Application.UnitTests.csproj" />
+        <Project Path="Src/Server.Tests/Application.FunctionalTests\Application.FunctionalTests.csproj" />
+        <Project Path="Src/Server.Tests/Infrastructure.IntergrationTests\Infrastructure.IntergrationTests.csproj" />  
+    </Folder>
+
   </Folder>
-  <Folder Name="/Tests/">
-      <Project Path="Tests/ClinicManager.Win.Tests\clinicManager.Win.Tests.csproj" />
-      <Project Path="Tests/ClinicManager.E2E.Tests\clinicManager.E2E.Tests.csproj" />
-      <Project Path="Tests/ClinicManager.Tests\ClinicManager.Tests.csproj" />
-      <Project Path="Tests/ClinicManager.Testing\ClinicManager.Testing.csproj" />
-  </Folder>
+
 </Solution>
