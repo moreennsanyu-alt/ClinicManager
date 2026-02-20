@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <UseWpf>true</UseWpf>
+    <AssemblyName>ClinicMgr</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClinicManager\ClinicManager.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Humanizer.Core" />
+  </ItemGroup>
+</Project>
