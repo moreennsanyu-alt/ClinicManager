@@ -10,7 +10,7 @@
         <Project Path="Src/Desktop/ClinicManager.Core\ClinicManager.Core.csproj" />
         <Project Path="Src/Desktop/ClinicManager.Win\ClinicManager.Win.csproj" />
     </Folder>
-    <Folder Name="Desktop.Tests">
+    <Folder Name="DesktopTests">
         <Project Path="Src/Desktop.Tests/ClinicManager.Win.Tests\ClinicManager.Win.Tests.csproj" />
         <Project Path="Src/Desktop.Tests/ClinicManager.Core.Tests\ClinicManager.Core.Tests.csproj" />
         <Project Path="Src/Desktop.Tests/ClinicManager.E2E.Tests\ClinicManager.E2E.Tests.csproj" />
@@ -22,7 +22,7 @@
         <Project Path="Src/Server/Web/Web.csproj" />
         <Project Path="Src/Server/Infrastructure/Infrastructure.csproj" />
     </Folder>
-    <Folder Name="Server.Tests">
+    <Folder Name="ServerTests">
         <Project Path="Src/Server.Tests/Domain.Tests\Domain.Tests.csproj" />
         <Project Path="Src/Server.Tests/Application.UnitTests\Application.UnitTests.csproj" />
         <Project Path="Src/Server.Tests/Application.FunctionalTests\Application.FunctionalTests.csproj" />
