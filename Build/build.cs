@@ -39,6 +39,10 @@ class Build : NukeBuild
         "to generate a .binlog file which holds some useful information.")]
     readonly bool? GenerateBinLog;
 
+    AbsolutePath BuildLogFile => TemporaryDirectory / "build.log";
+    
+    AbsolutePath FinalLogFile => ArtifactsDirectory / "build.log";
+
     [Solution(GenerateProjects = true)]
     readonly Solution Solution;
 
@@ -52,6 +56,37 @@ class Build : NukeBuild
     AbsolutePath TestResultsDirectory => RootDirectory / "TestResults";
 
     string SemVer;
+
+    protected override void OnBuildInitialized()
+    {
+        base.OnBuildInitialized();
+
+        // Write to Nuke's temporary directory to avoid conflicts with the Clean target
+        Log.Logger = new LoggerConfiguration()
+            .WriteTo.Console() 
+            .WriteTo.File(BuildLogFile, rollingInterval: RollingInterval.Day) 
+            .CreateLogger();
+        
+        Information($"Logging temporarily to: {BuildLogFile}");
+    }
+
+    protected override void OnBuildFinished()
+    {
+        base.OnBuildFinished();
+
+        // 1. Flush and close the logger to release the file lock
+        Log.CloseAndFlush();
+
+        // 2. Copy the completed log to the Artifacts directory
+        if (BuildLogFile.FileExists())
+        {
+            ArtifactsDirectory.CreateDirectory(); // Ensure directory exists
+            FileSystemTasks.CopyFile(BuildLogFile, FinalLogFile, FileExistsPolicy.Overwrite);
+        
+            // Use standard Console.WriteLine here since Serilog is now closed
+            Console.WriteLine($"Build log successfully saved to: {FinalLogFile}");
+        }
+    }
 
     Target Clean => _ => _
         .Executes(() =>
