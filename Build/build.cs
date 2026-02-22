@@ -137,7 +137,7 @@ class Build : NukeBuild
                 from framework in frameworks
                 select new { project, framework };
 
-                UnitTestProjects.ForEach(x=>Information(x.Namespace));
+                UnitTestProjects.ForEach(x=>Information(x.Name));
 
             DotNetRun(s => s
                 .SetConfiguration(Configuration.Debug)
