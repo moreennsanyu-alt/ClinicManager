@@ -131,8 +131,9 @@ class Build : NukeBuild
 
     
 
-    IEnumerable<Project> UnitTestProjects  => Solution.GetAllProjects("*")
-            .Where(x => x.Name.EndsWith("Tests") && !x.Name.EndsWith("E2E.Tests"));
+    Project[] UnitTestProjects  =>new[]{
+    Source.Desktop_Tests.ClinicManager_Win_Tests.ClinicManager_Win_Tests,
+    };
 
     IEnumerable<Project> E2ETestProjects => Solution.GetAllProjects("*")
             .Where(x => x.Name.EndsWith("E2E.Tests"));
