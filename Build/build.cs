@@ -82,7 +82,7 @@ class Build : NukeBuild
         if (BuildLogFile.FileExists())
         {
             ArtifactsDirectory.CreateDirectory(); // Ensure directory exists
-            FileSystemTasks.CopyFile(BuildLogFile, FinalLogFile, FileExistsPolicy.Overwrite);
+            FileSystemTasks.CopyFile(BuildLogFile, FinalLogFile, ExistsPolicy.Overwrite);
         
             // Use standard Console.WriteLine here since Serilog is now closed
             Console.WriteLine($"Build log successfully saved to: {FinalLogFile}");
