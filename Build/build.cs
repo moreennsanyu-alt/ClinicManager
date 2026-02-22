@@ -18,6 +18,7 @@ using static Nuke.Common.Tools.DotNet.DotNetTasks;
 using static Nuke.Common.Tools.ReportGenerator.ReportGeneratorTasks;
 using static Nuke.Common.Tools.Xunit.XunitTasks;
 using static Serilog.Log;
+using Serilog;
 
 [UnsetVisualStudioEnvironmentVariables]
 [DotNetVerbosityMapping]
