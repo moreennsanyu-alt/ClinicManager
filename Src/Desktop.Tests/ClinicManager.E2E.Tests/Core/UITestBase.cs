@@ -26,5 +26,5 @@ public class UITestBase: FlaUITestBase
         => Application.Launch(AppPath);
             
         
-    }
-
+   
+}
