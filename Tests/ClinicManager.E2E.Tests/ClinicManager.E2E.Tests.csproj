@@ -2,7 +2,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net48</TargetFramework>
-    <AssemblyName>ClinicMgr</AssemblyName>
-  </PropertyGroup>
-  <Import Project="..\..\.paket\Paket.Restore.targets" />
+    <OutputType>Exe</OutputType>
+    <UseMicrosoftTestingPlatformRunner>true</UseMicrosoftTestingPlatformRunner>
+ </PropertyGroup>
+  
+ <Import Project="..\..\.paket\Paket.Restore.targets" />
 </Project>
