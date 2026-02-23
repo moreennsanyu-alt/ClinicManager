@@ -8,7 +8,7 @@
   <Folder Name="/Src/">
       <Project Path="Src/ClinicManager.Setup\ClinicManager.Setup.csproj" />
       <Project Path="Src/ClinicManager.Server\ClinicManager.Server.csproj" />
-      <Project Path="Src/ClinicManager.Workflow\ClinicManager.Workflow.csproj" />
+      <Project Path="Src/ClinicManager.WFServer\ClinicManager.WFServer.csproj" />
       <Project Path="Src/ClinicManager\ClinicManager.csproj" />
       <Project Path="Src/ClinicManager.Win\ClinicManager.Win.csproj" />
   </Folder>
