@@ -22,3 +22,4 @@ nuget System.Runtime.CompilerServices.Unsafe 6.1.2
 nuget System.Threading.Tasks.Extensions 4.6.3
 nuget System.ValueTuple 4.6.1
 nuget PolySharp 1.15.0
+nuget xunit.v3.extensibility.core 3.2.2
