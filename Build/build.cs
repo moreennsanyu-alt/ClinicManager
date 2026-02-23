@@ -97,7 +97,7 @@ class Build : NukeBuild
     
 
     Project[] UnitTestProjects  =>new[]{
-         Solution.Source.DesktopTests.ClinicManager_Win_Tests,
+         Solution.Tests.ClinicManager_E2E_Tests,
     };
 
     IEnumerable<Project> E2ETestProjects => Solution.GetAllProjects("*")
