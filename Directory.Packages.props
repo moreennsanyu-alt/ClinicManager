@@ -14,7 +14,8 @@
     <PackageVersion Include="FlaUI.UIA3.Signed" Version="5.0.0" />
     <PackageVersion Include="Interop.UIAutomationClient.Signed" Version="10.19041.0" />
     <PackageVersion Include="FlaUI.TestUtilities" Version="5.0.0" />
-  </ItemGroup> 
+    <PackageVersion Include="Microsoft.Testing.Extensions.CodeCoverage" Version="18.4.1"  />
+</ItemGroup> 
 
 <ItemGroup>
     <GlobalPackageReference Include="Nerdbank.GitVersioning" Version="3.9.50" PrivateAssets="all" />
