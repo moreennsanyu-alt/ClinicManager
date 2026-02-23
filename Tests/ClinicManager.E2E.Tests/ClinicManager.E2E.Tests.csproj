@@ -5,5 +5,9 @@
     <OutputType>Exe</OutputType>
     <UseMicrosoftTestingPlatformRunner>true</UseMicrosoftTestingPlatformRunner>
  </PropertyGroup>
+
+<ItemGroup>
+    <PackageReference Include="xunit.v3" />
+</ItemGroup>
   
 </Project>
