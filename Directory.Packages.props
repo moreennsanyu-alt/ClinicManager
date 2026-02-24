@@ -15,6 +15,7 @@
     <PackageVersion Include="Interop.UIAutomationClient.Signed" Version="10.19041.0" />
     <PackageVersion Include="FlaUI.TestUtilities" Version="5.0.0" />
     <PackageVersion Include="Microsoft.Testing.Extensions.CodeCoverage" Version="18.4.1"  />
+    <PackageVersion Include="Microsoft.Testing.Extensions.TrxLogger" Version="18.3.0"  />
 </ItemGroup> 
 
 <ItemGroup>
