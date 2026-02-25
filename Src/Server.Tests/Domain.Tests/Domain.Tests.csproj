@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>net48</TargetFramework>
-    <AssemblyName>ClinicMgr</AssemblyName>
   </PropertyGroup>
 
 </Project>

@@ -5,17 +5,23 @@
           <Configuration Solution="Release|*" Build="false" />
      </Project>
   </Folder>
-  <Folder Name="/Src/">
-      <Project Path="Src/ClinicManager.Setup\ClinicManager.Setup.csproj" />
-      <Project Path="Src/ClinicManager.Server\ClinicManager.Server.csproj" />
-      <Project Path="Src/ClinicManager.WFServer\ClinicManager.WFServer.csproj" />
-      <Project Path="Src/ClinicManager\ClinicManager.csproj" />
-      <Project Path="Src/ClinicManager.Win\ClinicManager.Win.csproj" />
+  <Folder Name="/Desktop/">
+      <Project Path="Src/Desktop/ClinicManager.Core\ClinicManager.Core.csproj" />
+      <Project Path="Src/Desktop/ClinicManager.Win\ClinicManager.Win.csproj" />
+  </Folder> 
+  <Folder Name="/Server/">
+      <Project Path="Src/Server/Domain/Domain.csproj" />
+  </Folder>
+    <Folder Name="/ServerTests/">
+      <Project Path="Src/Server.Tests/Domain.Tests/Domain.Tests.csproj" />
   </Folder>
   <Folder Name="/DesktopTests/">
       <Project Path="Src/Desktop.Tests/ClinicManager.Win.Tests\ClinicManager.Win.Tests.csproj" />
       <Project Path="Src/Desktop.Tests/ClinicManager.Tests\ClinicManager.Tests.csproj" />
       <Project Path="Src/Desktop.Tests/ClinicManager.E2E.Tests\ClinicManager.E2E.Tests.csproj" />
       <Project Path="Src/Desktop.Tests/ClinicManager.Testing\ClinicManager.Testing.csproj" />
+  </Folder>
+  <Folder Name="/Setup/">
+      <Project Path="Src/ClinicManager.Setup\ClinicManager.Setup.csproj" />
   </Folder>
 </Solution>
