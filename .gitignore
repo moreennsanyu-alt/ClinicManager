@@ -22,7 +22,4 @@ TestResults/
 # NuGet packages
 packages/
 
-# Directory.Packages.props
-Directory.Packages.props
-
 # Build artifacts
