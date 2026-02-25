@@ -1,8 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net48</TargetFramework>
+    <TargetFramework>net10.0-windows</TargetFramework>
     <AssemblyName>ClinicMgr</AssemblyName>
   </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\ClinicManager.Core\ClinicManager.Core.csproj" />
+  </ItemGroup>
 
 </Project>

@@ -1,7 +1,19 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net48</TargetFramework>
+    <TargetFramework>net10.0-windows</TargetFramework>
   </PropertyGroup>
 
+ <ItemGroup>
+    <ProjectReference Include="..\..\Desktop\ClinicManager.Win\ClinicManager.Win.csproj" />
+  </ItemGroup>
+  
+   <ItemGroup>
+    <PackageReference Include="Shouldly" />
+    <PackageReference Include="NUnit" /> 
+    <PackageReference Include="NUnit3TestAdapter" />
+    <PackageReference Include="Microsoft.Testing.Extensions.CodeCoverage" />
+    <PackageReference Include="Microsoft.Testing.Extensions.TrxReport " />
+ </ItemGroup>
+ 
 </Project>

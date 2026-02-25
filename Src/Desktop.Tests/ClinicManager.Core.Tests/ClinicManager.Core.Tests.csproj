@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net10.0-windows</TargetFramework>
@@ -7,17 +6,16 @@
     <EnableNUnitRunner>true</EnableNUnitRunner>
  </PropertyGroup>
 
-<ItemGroup>
-    <PackageReference Include="Humanizer.Core" />
+ <ItemGroup>
     <PackageReference Include="Shouldly" />
-    <PackageReference Include="FlaUI.Core.Signed" />
-    <PackageReference Include="FlaUI.UIA3.Signed" />
-    <PackageReference Include="Interop.UIAutomationClient.Signed" />
-    <PackageReference Include="FlaUI.TestUtilities" />
     <PackageReference Include="NUnit" /> 
     <PackageReference Include="NUnit3TestAdapter" />
     <PackageReference Include="Microsoft.Testing.Extensions.CodeCoverage" />
     <PackageReference Include="Microsoft.Testing.Extensions.TrxReport " />
-</ItemGroup>
+ </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\..\Desktop\ClinicManager.Core\ClinicManager.Core.csproj" />
+  </ItemGroup>
   
 </Project>
