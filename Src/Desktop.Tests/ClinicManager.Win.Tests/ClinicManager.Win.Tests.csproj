@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10-windows</TargetFramework>
+    <AssemblyName>ClinicMgr.Tests</AssemblyName>
+  </PropertyGroup>
+
+</Project>
