@@ -1,9 +1,9 @@
 <Solution>
   <Folder Name="/CMBuild/">
       <Project Path="build/_build.csproj">
-          <Configuration Solution="Debug|*" Build="false" />
-          <Configuration Solution="Release|*" Build="false" />
-     </Project>
+         <Build Solution="Debug|Any CPU" Project="false" />
+         <Build Solution="Release|Any CPU" Project="false" /> 
+      </Project>
   </Folder>
   <Folder Name="/Desktop/">
       <Project Path="Src/Desktop/ClinicManager.Core\ClinicManager.Core.csproj" />
