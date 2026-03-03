@@ -16,6 +16,9 @@
       <Project Path="Src/Desktop.Tests/ClinicManager.Testing\ClinicManager.Testing.csproj" />
   </Folder>
   <Folder Name="/Setup/">
-      <Project Path="Src/ClinicManager.Setup\ClinicManager.Setup.csproj" />
+      <Project Path="Src/ClinicManager.Setup\ClinicManager.Setup.csproj" >
+          <Configuration Solution="Debug|*" Build="false" />
+          <Configuration Solution="Release|*" Build="false" />
+      </Project>
   </Folder>
 </Solution>
