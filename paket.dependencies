@@ -1,1 +1,16 @@
 
+
+nuget Moq 4.20.72
+nuget NUnit.Analyzers 4.11.2
+nuget Shouldly 4.3.0
+nuget Humanizer.Core 3.0.1
+nuget NUnit3TestAdapter 6.1.0
+nuget NUnit 4.4.0
+
+nuget FlaUI.Core.Signed 5.0.0
+nuget FlaUI.UIA3.Signed 5.0.0
+nuget Interop.UIAutomationClient.Signed 10.19041.0
+nuget FlaUI.TestUtilities 5.0.0
+nuget Microsoft.Testing.Extensions.CodeCoverage 18.4.1
+nuget Microsoft.Testing.Extensions.TrxReport 2.1.0
+
