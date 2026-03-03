@@ -5,4 +5,5 @@
     <AssemblyName>ClinicMgr.Tests</AssemblyName>
   </PropertyGroup>
 
+  <Import Project="..\..\..\.paket\Paket.Restore.targets" />
 </Project>
