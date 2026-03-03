@@ -1,11 +1,6 @@
 using NUnit.Framework; // Changed from Xunit
 using System;
 
-// A public class to hold the tests. 
-// xUnit creates a new instance of the test class for every test run.
-public class CalculatorTests
-{
-
 // In NUnit, [TestFixture] is optional for modern versions, 
 // but still widely used for clarity.
 [TestFixture]
