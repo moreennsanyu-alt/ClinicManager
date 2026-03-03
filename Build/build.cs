@@ -99,19 +99,21 @@ class Build : NukeBuild
 
     
 
-    Project[] UnitTestProjects  =>new[]{
-         Solution.DesktopTests.ClinicManager_E2E_Tests,
+    Project[] UnitTestProjects  => new[]{
+         Solution.DesktopTests.ClinicManager_Win_Tests,
+		 Solution.DesktopTests.ClinicManager_Core_Tests,
     };
 
-    IEnumerable<Project> E2ETestProjects => Solution.GetAllProjects("*")
-            .Where(x => x.Name.EndsWith("E2E.Tests"));
-            
+	Project[] E2ETestProjects  => new[]{
+         Solution.DesktopTests.ClinicManager_E2E_Tests,
+    };
+   
     Target Tests => _ => _
         .DependsOn(UnitTests);
-      //  .DependsOn(UnitTestsNet6OrGreater);
+        .DependsOn(E2ETests);
 
     Target CodeCoverage => _ => _
-        .DependsOn(UnitTests)
+        .DependsOn(Tests)
         .Executes(() =>
         {
             ReportGenerator(s => s
@@ -164,7 +166,38 @@ class Build : NukeBuild
                 );
         });
 
-        
+    Target E2ETests => _ => _
+        .DependsOn(Compile)
+        .Executes(() =>
+        {
+            var testCombinations =
+                from project in E2ETestProjects
+                let frameworks = project.GetTargetFrameworks()
+                from framework in frameworks
+                select new { project, framework };
+
+                E2ETestProjects.ForEach(x=>Information(x.Name));
+
+            DotNetRun(s => s
+                .SetConfiguration(Configuration.Debug)
+                .SetProcessEnvironmentVariable("DOTNET_CLI_UI_LANGUAGE", "en-US")
+                .EnableNoBuild()
+                .CombineWith(
+                    testCombinations,
+                    (settings, v) => settings
+                        .SetProjectFile(v.project)
+                        .SetFramework(v.framework)
+                        .SetProcessAdditionalArguments(
+                            "--",
+                            "--coverage",
+                            "--report-trx",
+                            $"--report-trx-filename {v.project.Name}_{v.framework}.trx",
+                            $"--results-directory {TestResultsDirectory}"
+                        )
+                    )
+                );
+        }
+		);
     
     static bool IsDocumentation(string x) =>
         x.StartsWith("docs") ||
