@@ -3,7 +3,10 @@
   <PropertyGroup>
     <TargetFramework>net10.0-windows</TargetFramework>
     <AssemblyName>ClinicMgr.Tests</AssemblyName>
-  </PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TestingPlatformDotnetTestSupport>true</TestingPlatformDotnetTestSupport>
+    <EnableNUnitRunner>true</EnableNUnitRunner>
+</PropertyGroup>
 
  <ItemGroup>
     <ProjectReference Include="..\..\Desktop\ClinicManager.Win\ClinicManager.Win.csproj" />
