@@ -70,6 +70,10 @@ class Build : NukeBuild
         .DependsOn(Clean)
         .Executes(() =>
         {
+
+            PaketRestore(s => s
+                .SetRootDirectory(RootDirectory)
+                );
             
             DotNetRestore(s => s
                 .SetProjectFile(Solution)
