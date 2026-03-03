@@ -72,7 +72,7 @@ class Build : NukeBuild
         {
 
             PaketRestore(s => s
-                .SetRootDirectory(RootDirectory)
+                .SetProcessWorkingDirectory(RootDirectory)
                 );
             
             DotNetRestore(s => s
