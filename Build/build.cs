@@ -109,7 +109,7 @@ class Build : NukeBuild
     };
    
     Target Tests => _ => _
-        .DependsOn(UnitTests);
+        .DependsOn(UnitTests)
         .DependsOn(E2ETests);
 
     Target CodeCoverage => _ => _
