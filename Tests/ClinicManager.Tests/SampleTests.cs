@@ -1,13 +1,11 @@
-using NUnit.Framework; // Changed from Xunit
+using Xunit; // Changed from NUnit.Framework
 using System;
 
-// In NUnit, [TestFixture] is optional for modern versions, 
-// but still widely used for clarity.
-[TestFixture]
+// In xUnit, no [TestFixture] attribute is required on the class.
 public class CalculatorTests
 {
-    // [Test] replaces [Fact]
-    [Test]
+    // [Fact] replaces [Test] for a single test case
+    [Fact]
     public void Add_GivenTwoNumbers_ReturnsSum()
     {
         // Arrange
@@ -17,21 +15,25 @@ public class CalculatorTests
         // Act
         int actualSum = calculator.Add(2, 3);
 
-        // Assert: NUnit prefers the constraint-based "Assert.That" syntax
-        Assert.That(actualSum, Is.EqualTo(expectedSum)); 
+        // Assert: xUnit uses Assert.Equal(expected, actual)
+        Assert.Equal(expectedSum, actualSum); 
     }
 
-    // [TestCase] replaces the combination of [Theory] and [InlineData]
-    [TestCase(1, 2, 3)]
-    [TestCase(-4, 0, -4)]
-    [TestCase(-5, -5, -10)]
+    // [Theory] + [InlineData] replaces [TestCase]
+    [Theory]
+    [InlineData(1, 2, 3)]
+    [InlineData(-4, 0, -4)]
+    [InlineData(-5, -5, -10)]
     public void Add_GivenMultipleDataInputs_ReturnsCorrectSum(int x, int y, int expected)
     {
+        // Arrange
         var calculator = new Calculator();
 
+        // Act
         int actual = calculator.Add(x, y);
 
-        Assert.That(actual, Is.EqualTo(expected));
+        // Assert
+        Assert.Equal(expected, actual);
     }
 }
 
