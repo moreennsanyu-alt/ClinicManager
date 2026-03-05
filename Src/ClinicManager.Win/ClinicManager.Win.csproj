@@ -2,8 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>net48</TargetFramework>
-    <AssemblyName>ClinicMgrSetup</AssemblyName>
+    <AssemblyName>ClinicMgr</AssemblyName>
   </PropertyGroup>
-
+ 
+ 
  <Import Project="..\..\.paket\Paket.Restore.targets" />
 </Project>
