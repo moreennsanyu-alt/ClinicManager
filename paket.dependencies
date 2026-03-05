@@ -12,6 +12,7 @@ nuget Shouldly 4.3.0
 nuget Humanizer.Core 3.0.1
 nuget NUnit3TestAdapter 6.1.0
 nuget NUnit 4.4.0
+nuget xunit.v3.mtp-v2 3.2.2
 
 nuget FlaUI.Core.Signed 5.0.0
 nuget FlaUI.UIA3.Signed 5.0.0
