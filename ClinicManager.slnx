@@ -17,8 +17,8 @@
   </Folder>
   <Folder Name="/Setup/">
       <Project Path="Src/ClinicManager.Setup\ClinicManager.Setup.csproj" >
-          <Configuration Solution="Debug|*" Build="false" />
-          <Configuration Solution="Release|*" Build="false" />
-      </Project>
+         <Build Solution="Debug|Any CPU" Project="false" />
+         <Build Solution="Release|Any CPU" Project="false" /> 
+    </Project>
   </Folder>
 </Solution>
