@@ -1,10 +1,5 @@
 Humanizer.Core
 Shouldly
-FlaUI.Core.Signed
-FlaUI.UIA3.Signed
-Interop.UIAutomationClient.Signed
-FlaUI.TestUtilities
-NUnit
-NUnit3TestAdapter
+xunit.v3.mtp-v2
 Microsoft.Testing.Extensions.CodeCoverage 
 Microsoft.Testing.Extensions.TrxReport
