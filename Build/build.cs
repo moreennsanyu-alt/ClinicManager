@@ -50,7 +50,13 @@ class Build : NukeBuild
 
     AbsolutePath ArtifactsDirectory => RootDirectory / "Artifacts";
 
-    AbsolutePath TestResultsDirectory => RootDirectory / "TestResults";
+    AbsolutePath AttachmentsDirectory => ArtifactsDirectory / "Attachments";
+
+    AbsolutePath BuildLogsDirectory => AttachmentsDirectory / "build_logs";
+
+    AbsolutePath CoverageDirectory => AttachmentsDirectory / "Coverage";
+
+    AbsolutePath TestResultsDirectory => AttachmentsDirectory / "TestResults";
 
     string SemVer;
 
@@ -91,7 +97,7 @@ class Build : NukeBuild
                 .SetProjectFile(Solution)
                 .SetConfiguration(Configuration)
                 .When(_ => GenerateBinLog == true, c => c
-                    .SetBinaryLog(ArtifactsDirectory / $"ClinicManager.build.binlog")
+                    .SetBinaryLog(BuildLogsDirectory / $"ClinicManager.build.binlog")
                 )
                 .EnableNoLogo()
                 .EnableNoRestore());
@@ -158,6 +164,8 @@ class Build : NukeBuild
                         .SetProcessAdditionalArguments(
                             "--",
                             "--coverage",
+							"--coverage-output-format cobertura",
+							$"--coverage-output {CoverageDirectory / $"{v.project.Name}_{v.framework}.cobertura.xml"}",
                             "--report-trx",
                             $"--report-trx-filename {v.project.Name}_{v.framework}.trx",
                             $"--results-directory {TestResultsDirectory}"
