@@ -36,7 +36,7 @@ jobs:
             dotnet paket update group ${{ inputs.update_group }}
           } else {
             echo "Updating all packages"
-            nuke :add-package ReportGenerator --version 5.5.3
+            dotnet nuke :add-package ReportGenerator --version 5.5.3
           }
 
       - name: Create Pull Request
