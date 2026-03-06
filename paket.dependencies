@@ -17,6 +17,6 @@ nuget Humanizer.Core 3.0.1
 nuget System.ValueTuple 4.6.2
 nuget Utf8StringInterpolation 1.3.2 
 
-nuget Microsoft.Testing.Extensions.CodeCoverage 18.4.1
+nuget Microsoft.Testing.Extensions.CodeCoverage 18.5.2
 nuget Microsoft.Testing.Extensions.TrxReport 2.1.0
 
