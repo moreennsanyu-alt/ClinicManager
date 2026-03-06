@@ -31,7 +31,7 @@ class Build : NukeBuild
        - Microsoft VSCode           https://nuke.build/vscode
     */
 
-    public static int Main() => Execute<Build>(x => x.Tests);
+    public static int Main() => Execute<Build>(x => x.CodeCoverage);
 
     [Parameter("The solution configuration to build. Default is 'Debug' (local) or 'CI' (server).")]
     readonly Configuration Configuration = Configuration.Debug;
@@ -125,16 +125,16 @@ class Build : NukeBuild
             ReportGenerator(s => s
                 .SetProcessToolPath(NuGetToolPathResolver.GetPackageExecutable("ReportGenerator", "ReportGenerator.dll",
                     framework: "net10.0"))
-                .SetTargetDirectory(TestResultsDirectory / "reports")
-                .AddReports(TestResultsDirectory / "**/coverage.cobertura.xml")
+                .SetTargetDirectory(TestResultsDirectory / "coverage_reports")
+                .AddReports(CoverageDirectory / "**/*.cobertura.xml")
                 .AddReportTypes(
                     ReportTypes.lcov,
                     ReportTypes.HtmlInline_AzurePipelines_Dark)
                 .AddFileFilters("-*.g.cs")
                 .AddFileFilters("-*.nuget*")
-                .SetAssemblyFilters("+ClinicManager"));
+                .SetAssemblyFilters("+ClinicMgr"));
 
-            string link = TestResultsDirectory / "reports" / "index.html";
+            string link = TestResultsDirectory / "coverage_reports" / "index.html";
             Information($"Code coverage report: \x1b]8;;file://{link.Replace('\\', '/')}\x1b\\{link}\x1b]8;;\x1b\\");
         });
 
@@ -197,11 +197,13 @@ class Build : NukeBuild
                         .SetFramework(v.framework)
                         .SetProcessAdditionalArguments(
                             "--",
-                            "--coverage",
+							"--coverage",
+							"--coverage-output-format cobertura",
+							$"--coverage-output {CoverageDirectory / $"{v.project.Name}_{v.framework}.cobertura.xml"}",
                             "--report-trx",
                             $"--report-trx-filename {v.project.Name}_{v.framework}.trx",
                             $"--results-directory {TestResultsDirectory}"
-                        )
+                         )
                     )
                 );
         }
