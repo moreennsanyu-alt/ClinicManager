@@ -122,7 +122,7 @@ class Build : NukeBuild
         .DependsOn(Tests)
         .Executes(() =>
         {
-            
+            DotNet("nuke -restore");
             ReportGenerator(s => s
                .SetProcessToolPath(NuGetToolPathResolver.GetPackageExecutable("ReportGenerator", "ReportGenerator.dll",
                     framework: "net8.0"))
