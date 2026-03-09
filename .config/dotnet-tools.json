@@ -8,12 +8,6 @@
         "paket"
       ]
     },
-     "reportgenerator-globaltool": {
-      "version": "5.5.3",
-      "commands": [
-        "reportgenerator"
-      ]
-    },
     "Nuke.GlobalTool": {
       "version": "10.1.0",
       "commands": [
