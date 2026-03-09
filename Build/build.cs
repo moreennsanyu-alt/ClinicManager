@@ -122,18 +122,16 @@ class Build : NukeBuild
         .DependsOn(Tests)
         .Executes(() =>
         {
-            ReportGenerator(s => s
-                .SetProcessToolPath(NuGetToolPathResolver.GetPackageExecutable("ReportGenerator", "ReportGenerator.dll",
-                    framework: "net10.0"))
-                .SetTargetDirectory(TestResultsDirectory / "coverage_reports")
-                .AddReports(CoverageDirectory / "**/*.cobertura.xml")
-                .AddReportTypes(
-                    ReportTypes.lcov,
-                    ReportTypes.HtmlInline_AzurePipelines_Dark)
-                .AddFileFilters("-*.g.cs")
-                .AddFileFilters("-*.nuget*")
-                .SetAssemblyFilters("+ClinicMgr"));
-
+            
+string reportCommand = """
+     reportgenerator \
+      -reports:"./output/coverage/**/*.cobertura.xml" \
+      -targetdir:"./output/test_results/coverage_reports" \
+      -reporttypes:"lcov;HtmlInline_AzurePipelines_Dark" \
+      -filefilters:"-*.g.cs;-*.nuget*" \
+      -assemblyfilters:"+ClinicMgr"
+    """;
+DotNet(reportCommand);
             string link = TestResultsDirectory / "coverage_reports" / "index.html";
             Information($"Code coverage report: \x1b]8;;file://{link.Replace('\\', '/')}\x1b\\{link}\x1b]8;;\x1b\\");
         });
