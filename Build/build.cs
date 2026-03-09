@@ -124,8 +124,8 @@ class Build : NukeBuild
         {
             
             ReportGenerator(s => s
-               // .SetProcessToolPath(NuGetToolPathResolver.GetPackageExecutable("ReportGenerator", "ReportGenerator.dll",
-               //     framework: "net10.0"))
+               .SetProcessToolPath(NuGetToolPathResolver.GetPackageExecutable("ReportGenerator", "ReportGenerator.dll",
+                    framework: "net8.0"))
                 .SetTargetDirectory(TestResultsDirectory / "coverage_reports")
                 .AddReports(CoverageDirectory / "**/*.cobertura.xml")
                 .AddReportTypes(
