@@ -122,10 +122,10 @@ class Build : NukeBuild
         .DependsOn(Tests)
         .Executes(() =>
         {
-            DotNet("nuke -restore");
+        
             ReportGenerator(s => s
                .SetProcessToolPath(NuGetToolPathResolver.GetPackageExecutable("ReportGenerator", "ReportGenerator.dll",
-                    framework: "net8.0"))
+                    framework: "net10.0"))
                 .SetTargetDirectory(TestResultsDirectory / "coverage_reports")
                 .AddReports(CoverageDirectory / "**/*.cobertura.xml")
                 .AddReportTypes(
