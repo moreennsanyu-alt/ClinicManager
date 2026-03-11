@@ -20,3 +20,5 @@ nuget Utf8StringInterpolation 1.3.2
 nuget Microsoft.Testing.Extensions.CodeCoverage 18.5.2
 nuget Microsoft.Testing.Extensions.TrxReport 2.1.0
 
+nuget WixSharp_wix4 2.12.3
+
