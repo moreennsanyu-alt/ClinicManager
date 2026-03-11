@@ -219,8 +219,7 @@ class Build : NukeBuild
                 .When(_ => GenerateBinLog == true, c => c
                     .SetBinaryLog(BuildLogsDirectory / $"ClinicManagerSetup.build.binlog")
                 )
-                .EnableNoLogo()
-                .EnableNoRestore());
+                .EnableNoLogo());
         });
 		
     static bool IsDocumentation(string x) =>
