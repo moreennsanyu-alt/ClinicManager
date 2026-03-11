@@ -215,7 +215,7 @@ class Build : NukeBuild
         {
             
             DotNetBuild(s => s
-                .SetProjectFile(Solution.Setup.ClinicManager.Setup)
+                .SetProjectFile(Solution.Setup.ClinicManager_Setup)
                 .SetConfiguration(Configuration)
                 .When(_ => GenerateBinLog == true, c => c
                     .SetBinaryLog(BuildLogsDirectory / $"ClinicManagerSetup.build.binlog")
