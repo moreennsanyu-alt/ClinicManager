@@ -45,7 +45,7 @@ jobs:
       uses: icsharpcode/test-summary-action@dist
       if: always()
       with:
-        paths: "artifacts/attachments/testresults/**/*.trx"
+        paths: "**/*.trx"
         folded: true
      
 
