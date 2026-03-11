@@ -46,7 +46,6 @@ jobs:
       if: always()
       with:
         paths: "artifacts/**/*.trx"
-        folded: true
      
 
     # 6. Upload Artifacts
