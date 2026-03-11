@@ -41,6 +41,14 @@ jobs:
     - name: Run NUKE
       run: ./build.ps1
 
+    - name: Create Test Report
+      uses: icsharpcode/test-summary-action@dist
+      if: always()
+      with:
+        paths: "artifacts/attachments/testresults/**/*.trx"
+        folded: true
+     
+
     # 6. Upload Artifacts
     # Uses 'if: always()' so logs are uploaded even if the build/test fails
     - name: Upload Build and Test Logs
