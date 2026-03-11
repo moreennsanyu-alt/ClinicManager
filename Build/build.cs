@@ -99,8 +99,7 @@ class Build : NukeBuild
                 .When(_ => GenerateBinLog == true, c => c
                     .SetBinaryLog(BuildLogsDirectory / $"ClinicManager.build.binlog")
                 )
-                .EnableNoLogo()
-                .EnableNoRestore());
+                .EnableNoLogo());
         });
 
     
