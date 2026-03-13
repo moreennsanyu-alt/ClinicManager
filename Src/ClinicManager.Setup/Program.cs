@@ -2,6 +2,7 @@ using System;
 using System.Windows.Forms;
 using WixSharp;
 using WixSharp.Forms;
+using File = WixSharp.File;
 
 namespace Wixsharp 
 {
