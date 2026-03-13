@@ -16,7 +16,7 @@
       <Project Path="Src/Desktop.Tests/ClinicManager.Testing/ClinicManager.Testing.csproj" />
   </Folder>
   <Folder Name="/Setup/">
-      <Project Path="Src/ClinicManager.Setup\ClinicManager.Setup.csproj" >
+      <Project Path="Src/ClinicManager.Setup\ClinicManager.Setup.wixproj" >
          <Build Solution="Debug|Any CPU" Project="false" />
          <Build Solution="Release|Any CPU" Project="false" /> 
     </Project>
