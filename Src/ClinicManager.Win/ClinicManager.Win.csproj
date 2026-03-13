@@ -4,7 +4,12 @@
     <TargetFramework>net48</TargetFramework>
     <AssemblyName>ClinicMgr</AssemblyName>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="PolySharp" PrivateAssets="All" />
+    <PackageReference Include="Humanizer.Core" />
+    <PackageReference Include="System.ValueTuple" />
+    <PackageReference Include="Utf8StringInterpolation" />
+  </ItemGroup>
  
- 
- <Import Project="..\..\.paket\Paket.Restore.targets" />
 </Project>
