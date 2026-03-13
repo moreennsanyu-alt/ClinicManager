@@ -3,6 +3,8 @@
   <PropertyGroup>
     <TargetFramework>net9.0-windows</TargetFramework>
     <AssemblyName>ClinicMgr</AssemblyName>
+    <OutputType>WinExe</OutputType>
+    <UseWPF>true</UseWPF>
   </PropertyGroup>
 
   <ItemGroup>
