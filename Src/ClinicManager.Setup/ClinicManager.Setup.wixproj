@@ -19,5 +19,7 @@
   <ItemGroup>
     <PackageReference Include="WixToolset.UI.wixext" Version="6.0.2" />
   </ItemGroup>
-
+  <ItemGroup>
+    <ProjectReference Include="..\Desktop\ClinicManager.Win.csproj" />
+  </ItemGroup>
 </Project>
