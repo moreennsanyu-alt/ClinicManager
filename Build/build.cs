@@ -76,7 +76,7 @@ class Build : NukeBuild
         {
 
             DotNetToolRestore();
-			DotNet("paket restore");
+			//DotNet("paket restore");
             
             DotNetRestore(s => s
                 .SetProjectFile(Solution)
