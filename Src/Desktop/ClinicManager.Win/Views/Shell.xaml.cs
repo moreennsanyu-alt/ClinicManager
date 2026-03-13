@@ -1,4 +1,3 @@
-using Prism.Navigation.Regions;
 using System.Windows;
 
 namespace ClinicManager.Win.Views
