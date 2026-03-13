@@ -55,5 +55,10 @@
     <PackageVersion Include="Microsoft.Testing.Extensions.CodeCoverage" Version="18.5.2" />
     <PackageVersion Include="Microsoft.Testing.Extensions.TrxReport" Version="2.0.1" />
     <PackageVersion Include="WixSharp_wix4" Version="2.12.3" />
-  </ItemGroup>
+
+    <PackageVersion Include="Prism.Core" Version="8.1.97" />
+    <PackageVersion Include="Prism.Wpf" Version="8.1.97" />
+    <PackageVersion Include="Prism.DryIoc" Version="8.1.97" />
+
+</ItemGroup>
 </Project>
