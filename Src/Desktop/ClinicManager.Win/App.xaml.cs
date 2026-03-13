@@ -3,8 +3,8 @@ using Prism.DryIoc;
 using System.Windows;
 using ClinicManager.Win.Views;
 
-namespace ClinicManager.Win
-{
+namespace ClinicManager.Win;
+
     /// <summary>
     /// Interaction logic for App.xaml
     /// </summary>
