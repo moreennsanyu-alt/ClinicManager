@@ -31,7 +31,7 @@ class Build : NukeBuild
        - Microsoft VSCode           https://nuke.build/vscode
     */
 
-    public static int Main() => Execute<Build>(x => x.Installers);
+    public static int Main() => Execute<Build>(x => x.Full);
 
     [Parameter("The solution configuration to build. Default is 'Debug' (local) or 'CI' (server).")]
     readonly Configuration Configuration = Configuration.Debug;
@@ -210,6 +210,22 @@ class Build : NukeBuild
 		
     Target Installers => _ => _
         .DependsOn(Restore)
+        .Executes(() =>
+        {
+            
+            DotNetBuild(s => s
+                .SetProjectFile(Solution.Setup.ClinicManager_Setup)
+                .SetConfiguration(Configuration)
+                .When(_ => GenerateBinLog == true, c => c
+                    .SetBinaryLog(BuildLogsDirectory / $"ClinicManagerSetup.build.binlog")
+                )
+                .EnableNoLogo());
+        });
+
+		Target Full => _ => _
+        .DependsOn(Compile)
+		.DependsOn(Installers)
+	    .DependsOn(Tests)
         .Executes(() =>
         {
             
