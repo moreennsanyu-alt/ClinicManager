@@ -6,14 +6,14 @@
       </Project>
   </Folder>
   <Folder Name="/Desktop/">
-      <Project Path="Src/ClinicManager\ClinicManager.csproj" />
-      <Project Path="Src/ClinicManager.Win\ClinicManager.Win.csproj" />
+      <Project Path="Src/Desktop/ClinicManager/ClinicManager.csproj" />
+      <Project Path="Src/Desktop/ClinicManager.Win/ClinicManager.Win.csproj" />
   </Folder> 
   <Folder Name="/DesktopTests/">
-      <Project Path="Tests/ClinicManager.Win.Tests\ClinicManager.Win.Tests.csproj" />
-      <Project Path="Tests/ClinicManager.Tests\ClinicManager.Tests.csproj" />
-      <Project Path="Tests/ClinicManager.E2E.Tests\ClinicManager.E2E.Tests.csproj" />
-      <Project Path="Tests/ClinicManager.Testing\ClinicManager.Testing.csproj" />
+      <Project Path="Src/Desktop.Tests/ClinicManager.Win.Tests/ClinicManager.Win.Tests.csproj" />
+      <Project Path="Src/Desktop.Tests/ClinicManager.Tests/ClinicManager.Tests.csproj" />
+      <Project Path="Src/Desktop.Tests/ClinicManager.E2E.Test/ClinicManager.E2E.Tests.csproj" />
+      <Project Path="Src/Desktop.Tests/ClinicManager.Testing/ClinicManager.Testing.csproj" />
   </Folder>
   <Folder Name="/Setup/">
       <Project Path="Src/ClinicManager.Setup\ClinicManager.Setup.csproj" >
