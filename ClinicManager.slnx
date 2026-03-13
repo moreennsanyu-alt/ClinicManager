@@ -12,7 +12,7 @@
   <Folder Name="/DesktopTests/">
       <Project Path="Src/Desktop.Tests/ClinicManager.Win.Tests/ClinicManager.Win.Tests.csproj" />
       <Project Path="Src/Desktop.Tests/ClinicManager.Tests/ClinicManager.Tests.csproj" />
-      <Project Path="Src/Desktop.Tests/ClinicManager.E2E.Test/ClinicManager.E2E.Tests.csproj" />
+      <Project Path="Src/Desktop.Tests/ClinicManager.E2E.Tests/ClinicManager.E2E.Tests.csproj" />
       <Project Path="Src/Desktop.Tests/ClinicManager.Testing/ClinicManager.Testing.csproj" />
   </Folder>
   <Folder Name="/Setup/">
