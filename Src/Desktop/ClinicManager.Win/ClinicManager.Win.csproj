@@ -1,1 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
 
+  <PropertyGroup>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <AssemblyName>ClinicMgr</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Humanizer.Core" />
+    <PackageReference Include="System.ValueTuple" />
+    <PackageReference Include="Utf8StringInterpolation" />
+  </ItemGroup>
+ 
+</Project>
