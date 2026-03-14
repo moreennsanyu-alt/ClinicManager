@@ -40,7 +40,7 @@
         The AppName variable is built from the Simple App's target name property
         appended by the install type to render a unique name for this installer.
     -->
-    <?define AppName = "$(var.SimpleApp.TargetName)-$(var.InstallType)" ?>
+    <?define AppName = "ClinicManager-$(var.InstallType)" ?>
     <?define Manufacturer = "Stephen Lepisto" ?>
     <?if $(var.Configuration) = Debug?>
     <!-- Debug builds get "-Debug" as part of the name -->
