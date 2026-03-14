@@ -118,7 +118,7 @@
             of this component.
         -->
         <Component Id="SimpleAppDocs" Directory="INSTALLFOLDER" Subdirectory="Docs" KeyPath="yes" Guid="$(var.AppDocsGUID)">
-            <File Id="readmetxt" Source="$(var.SimpleApp.ProjectDir)\README.txt" Checksum="yes" Vital="no" />
+            <File Id="readmetxt" Source="$(var.ClinicManagerWinApp.ProjectDir)\README.txt" Checksum="yes" Vital="no" />
         </Component>
     </Fragment>
 </Wix>
