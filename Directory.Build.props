@@ -7,4 +7,11 @@
     <Nullable>enable</Nullable>
     <LangVersion>14.0</LangVersion>
   </PropertyGroup>
+  
+  <PropertyGroup>
+    <ArtifactsOutDir>$(MSBuildThisFileDirectory)Artifacts</ArtifactsOutDir>
+    <SetupOutDir>$(ArtifactsOutDir)\Installers</SetupOutDir>
+  </PropertyGroup>
+  
+ 
 </Project>

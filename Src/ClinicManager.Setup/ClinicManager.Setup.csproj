@@ -15,6 +15,13 @@
     <None Remove="*.wixobj" />
     <None Remove="App.config" />
   </ItemGroup>
+  
+    <ItemGroup>
+    <Constant Include="BuildInfo.SetupOutDir" 
+              Value="$(SetupOutDir)" 
+              Type="string" 
+              Comment="Default msi OutDir" />
+  </ItemGroup>
 
 
   <ItemGroup>
