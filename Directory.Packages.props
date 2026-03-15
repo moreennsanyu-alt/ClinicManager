@@ -52,13 +52,15 @@
     <PackageVersion Include="Utf8StringInterpolation" Version="1.3.2" />
     <PackageVersion Include="Microsoft.Testing.Extensions.CodeCoverage" Version="18.5.2" />
     <PackageVersion Include="Microsoft.Testing.Extensions.TrxReport" Version="2.0.1" />
-    <PackageVersion Include="WixSharp_wix4" Version="2.12.3" />
 
     <PackageVersion Include="Prism.Core" Version="8.1.97" />
     <PackageVersion Include="Prism.Wpf" Version="8.1.97" />
     <PackageVersion Include="Prism.DryIoc" Version="8.1.97" />
 
-    <PackageVersion Include="WixToolset.UI.wixext" Version="6.0.2" />
+    <PackageVersion Include="WixSharp" Version="1.26.0" />
+    <PackageVersion Include="WixSharp.bin" Version="1.26.0" />
+    <PackageVersion Include="WixSharp.wix.bin" Version="3.14.1" />
+    
 
 </ItemGroup>
 </Project>
