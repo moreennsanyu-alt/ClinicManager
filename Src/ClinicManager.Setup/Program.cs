@@ -39,7 +39,7 @@ namespace WixSharp
             project.AfterInstall += Msi_AfterInstall;
 
             //project.SourceBaseDir = "<input dir path>";
-            //project.OutDir = "<output dir path>";
+            project.OutDir = ThisAssembly.Constants.BuildInfo.SetupOutDir;
 
             project.BuildMsi();
         }
