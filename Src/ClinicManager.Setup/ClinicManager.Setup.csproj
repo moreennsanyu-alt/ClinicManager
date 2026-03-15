@@ -30,6 +30,7 @@
     <PackageReference Include="WixSharp" />
     <PackageReference Include="WixSharp.bin" />
     <PackageReference Include="WixSharp.wix.bin"  />
+    <PackageReference Include="ThisAssembly.Constants" />
   </ItemGroup>
  
    <ItemGroup>

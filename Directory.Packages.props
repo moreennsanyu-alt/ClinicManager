@@ -61,7 +61,7 @@
     <PackageVersion Include="WixSharp.bin" Version="1.26.0" />
     <PackageVersion Include="WixSharp.wix.bin" Version="3.14.1" />
     
-    PackageVersion Include="ThisAssembly.Constants" Version="1.4.3" />
+    <PackageVersion Include="ThisAssembly.Constants" Version="1.4.3" />
     
 
 </ItemGroup>
