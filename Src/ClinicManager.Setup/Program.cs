@@ -2,9 +2,8 @@ using System;
 using System.Windows.Forms;
 using WixSharp;
 using WixSharp.Forms;
-using File = WixSharp.File;
 
-namespace Wixsharp 
+namespace WixSharp
 {
     public class Program
     {
@@ -14,7 +13,7 @@ namespace Wixsharp
                              new Dir(@"%ProgramFiles%\My Company\My Product",
                                  new File("Program.cs")));
 
-            project.GUID = new Guid("$guid1$");
+            project.GUID = new Guid("766d187d-ab34-4a84-b0c9-693ac1e54513");
 
             project.ManagedUI = ManagedUI.Empty;    //no standard UI dialogs
             project.ManagedUI = ManagedUI.Default;  //all standard UI dialogs
