@@ -62,7 +62,10 @@
     <PackageVersion Include="WixSharp.wix.bin" Version="3.14.1" />
     
     <PackageVersion Include="ThisAssembly.Constants" Version="1.4.3" />
-    
 
-</ItemGroup>
+ </ItemGroup>
+ <ItemGroup>
+    <GlobalPackageReference Include="Nerdbank.GitVersioning" Version="3.9.50" />
+    <GlobalPackageReference Include="ThisAssembly.Constants" Version="1.4.3" />
+ </ItemGroup>
 </Project>
