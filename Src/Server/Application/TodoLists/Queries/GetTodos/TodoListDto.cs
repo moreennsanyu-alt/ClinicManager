@@ -1,6 +1,6 @@
-﻿using CleanArchitecture.Domain.Entities;
+﻿using ClinicManager.Domain.Entities;
 
-namespace CleanArchitecture.Application.TodoLists.Queries.GetTodos;
+namespace ClinicManager.Application.TodoLists.Queries.GetTodos;
 
 public class TodoListDto
 {
