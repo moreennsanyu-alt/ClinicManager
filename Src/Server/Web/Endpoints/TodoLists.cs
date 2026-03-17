@@ -4,7 +4,7 @@ using ClinicManager.Application.TodoLists.Commands.UpdateTodoList;
 using ClinicManager.Application.TodoLists.Queries.GetTodos;
 using Microsoft.AspNetCore.Http.HttpResults;
 
-namespace CleanArchitecture.Web.Endpoints;
+namespace ClinicManager.Web.Endpoints;
 
 public class TodoLists : EndpointGroupBase
 {
