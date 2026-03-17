@@ -133,7 +133,7 @@ class Build : NukeBuild
                 .SetTargetDirectory(TestResultsDirectory / "coverage_reports")
                 .AddReports(CoverageDirectory / "**/*.cobertura.xml")
                 .AddReportTypes(
-                    ReportTypes.lcov,
+                    ReportTypes.lcov,ReportTypes.MHtml,
                     ReportTypes.HtmlInline_AzurePipelines_Dark)
                 .AddFileFilters("-*.g.cs")
                 .AddFileFilters("-*.nuget*")
