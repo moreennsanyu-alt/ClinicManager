@@ -7,6 +7,7 @@
     <MicrosoftExtensionsVersion>10.0.3</MicrosoftExtensionsVersion>
     <CentralPackageVersionOverrideEnabled>false</CentralPackageVersionOverrideEnabled>
   </PropertyGroup>
+ 
   <ItemGroup>
     <PackageVersion Include="Ardalis.GuardClauses" Version="5.0.0" />
     <PackageVersion Include="AutoMapper" Version="16.0.0" />
@@ -42,30 +43,31 @@
     <PackageVersion Include="Shouldly" Version="4.3.0" />
     <PackageVersion Include="System.Configuration.ConfigurationManager" Version="10.0.3" />
     <PackageVersion Include="System.IdentityModel.Tokens.Jwt" Version="8.16.0" />
+
     <PackageVersion Include="Microsoft.EntityFrameworkCore.Sqlite" Version="$(EfcoreVersion)" />
-  
-    <PackageVersion Include="xunit.v3.mtp-v2" Version="3.2.2" />
-    <PackageVersion Include="Xunit.OpenCategories.V3" Version="2.4.1.19" />
+
     <PackageVersion Include="PolySharp" Version="1.15.0" />
     <PackageVersion Include="Humanizer.Core" Version="3.0.1" />
     <PackageVersion Include="System.ValueTuple" Version="4.6.2" />
     <PackageVersion Include="Utf8StringInterpolation" Version="1.3.2" />
+    
     <PackageVersion Include="Microsoft.Testing.Extensions.CodeCoverage" Version="18.5.2" />
     <PackageVersion Include="Microsoft.Testing.Extensions.TrxReport" Version="2.0.1" />
 
-    <PackageVersion Include="Prism.Core" Version="8.1.97" />
-    <PackageVersion Include="Prism.Wpf" Version="8.1.97" />
-    <PackageVersion Include="Prism.DryIoc" Version="8.1.97" />
 
     <PackageVersion Include="WixSharp" Version="1.26.0" />
     <PackageVersion Include="WixSharp.bin" Version="1.26.0" />
     <PackageVersion Include="WixSharp.wix.bin" Version="3.14.1" />
     
     <PackageVersion Include="ThisAssembly.Constants" Version="1.4.3" />
+    
+
+    <PackageVersion Include="Prism.Core" Version="8.1.97" />
+    <PackageVersion Include="Prism.Wpf" Version="8.1.97" />
+    <PackageVersion Include="Prism.DryIoc" Version="8.1.97" />
 
  </ItemGroup>
  <ItemGroup>
     <GlobalPackageReference Include="Nerdbank.GitVersioning" Version="3.9.50" />
-    <GlobalPackageReference Include="ThisAssembly.Constants" Version="1.4.3" />
  </ItemGroup>
 </Project>
