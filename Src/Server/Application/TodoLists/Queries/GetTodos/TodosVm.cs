@@ -1,6 +1,6 @@
-﻿using CleanArchitecture.Application.Common.Models;
+﻿using ClinicManager.Application.Common.Models;
 
-namespace CleanArchitecture.Application.TodoLists.Queries.GetTodos;
+namespace ClinicManager.Application.TodoLists.Queries.GetTodos;
 
 public class TodosVm
 {
