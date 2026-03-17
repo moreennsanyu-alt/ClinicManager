@@ -1,6 +1,6 @@
 using System.Data.Common;
 
-namespace CleanArchitecture.Application.FunctionalTests;
+namespace ClinicManager.Application.FunctionalTests;
 
 public interface ITestDatabase
 {
