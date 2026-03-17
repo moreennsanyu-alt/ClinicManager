@@ -31,7 +31,7 @@ class Build : NukeBuild
        - Microsoft VSCode           https://nuke.build/vscode
     */
 
-    public static int Main() => Execute<Build>(x => x.Tests);
+    public static int Main() => Execute<Build>(x => x.CodeCoverage);
 
     [Parameter("The solution configuration to build. Default is 'Debug' (local) or 'CI' (server).")]
     readonly Configuration Configuration = Configuration.Debug;
@@ -127,20 +127,20 @@ class Build : NukeBuild
         .Executes(() =>
         {
         
-           // ReportGenerator(s => s
-           //    .SetProcessToolPath(NuGetToolPathResolver.GetPackageExecutable("ReportGenerator", "ReportGenerator.dll",
-           //         framework: "net10.0"))
-           //     .SetTargetDirectory(TestResultsDirectory / "coverage_reports")
-           //     .AddReports(CoverageDirectory / "**/*.cobertura.xml")
-           //     .AddReportTypes(
-           //         ReportTypes.lcov,
-           //         ReportTypes.HtmlInline_AzurePipelines_Dark)
-           //     .AddFileFilters("-*.g.cs")
-           //     .AddFileFilters("-*.nuget*")
-           //     .SetAssemblyFilters("+ClinicMgr"));
+            ReportGenerator(s => s
+               .SetProcessToolPath(NuGetToolPathResolver.GetPackageExecutable("ReportGenerator", "ReportGenerator.dll",
+                    framework: "net10.0"))
+                .SetTargetDirectory(TestResultsDirectory / "coverage_reports")
+                .AddReports(CoverageDirectory / "**/*.cobertura.xml")
+                .AddReportTypes(
+                    ReportTypes.lcov,
+                    ReportTypes.HtmlInline_AzurePipelines_Dark)
+                .AddFileFilters("-*.g.cs")
+                .AddFileFilters("-*.nuget*")
+                 .SetAssemblyFilters("+ClinicMgr"));
 
-		   //string link = TestResultsDirectory / "coverage_reports" / "index.html";
-           // Information($"Code coverage report: \x1b]8;;file://{link.Replace('\\', '/')}\x1b\\{link}\x1b]8;;\x1b\\");
+		   string link = TestResultsDirectory / "coverage_reports" / "index.html";
+            Information($"Code coverage report: \x1b]8;;file://{link.Replace('\\', '/')}\x1b\\{link}\x1b]8;;\x1b\\");
       });
 
     
