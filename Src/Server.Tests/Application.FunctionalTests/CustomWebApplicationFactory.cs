@@ -28,7 +28,7 @@ public class CustomWebApplicationFactory : WebApplicationFactory<Program>
     {
         builder
             .UseEnvironment("Testing")
-            .UseSetting("ConnectionStrings:CleanArchitectureDb", _connectionString);
+            .UseSetting("ConnectionStrings:ClinicManagerDb", _connectionString);
 
         builder.ConfigureTestServices(services =>
         {
