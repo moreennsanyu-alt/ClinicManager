@@ -16,6 +16,8 @@
         </PackageReference>
         <PackageReference Include="NUnit3TestAdapter" />
         <PackageReference Include="Shouldly" />
+        <PackageReference Include="Microsoft.Testing.Extensions.TrxReport" />
+        <PackageReference Include="Microsoft.Testing.Extensions.CodeCoverage" />
     </ItemGroup>
 
     <ItemGroup>
