@@ -41,12 +41,12 @@ class Build : NukeBuild
     readonly bool? GenerateBinLog;
 
     [Solution(GenerateProjects = true)]
-    readonly Solution Solution;
+    readonly Solution Solution = null!;
 
 
     [Required]
     [GitRepository]
-    readonly GitRepository GitRepository;
+    readonly GitRepository GitRepository = null!;
 
     AbsolutePath ArtifactsDirectory => RootDirectory / "Artifacts";
 
