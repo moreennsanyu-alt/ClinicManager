@@ -132,10 +132,12 @@ class Build : NukeBuild
                     framework: "net10.0"))
                 .SetTargetDirectory(TestResultsDirectory / "coverage_reports")
                 .AddReports(CoverageDirectory / "**/*.cobertura.xml")
-                .AddReportTypes(ReportTypes.MHtml)
+                .AddReportTypes(
+                    ReportTypes.lcov,
+                    ReportTypes.HtmlInline_AzurePipelines_Dark)
                 .AddFileFilters("-*.g.cs")
                 .AddFileFilters("-*.nuget*")
-                 .SetAssemblyFilters("+ClinicMgr"));
+                 .SetAssemblyFilters("+*ClinicMgr*;+*ClinicManager*"));
 
 		   string link = TestResultsDirectory / "coverage_reports" / "index.html";
             Information($"Code coverage report: \x1b]8;;file://{link.Replace('\\', '/')}\x1b\\{link}\x1b]8;;\x1b\\");
