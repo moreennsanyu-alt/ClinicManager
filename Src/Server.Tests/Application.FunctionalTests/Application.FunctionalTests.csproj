@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <RootNamespace>ClinicManager.Application.FunctionalTests</RootNamespace>
+        <AssemblyName>ClinicManager.Application.FunctionalTests</AssemblyName>
+        <OutputType>Exe</OutputType>
+        <TestingPlatformDotnetTestSupport>true</TestingPlatformDotnetTestSupport>
+        <EnableNUnitRunner>true</EnableNUnitRunner>
+    </PropertyGroup>
+
+    <!--#if (UsePostgreSQL || UseSqlServer)-->
+    <ItemGroup>
+      <None Remove="appsettings.json" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="appsettings.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+    </ItemGroup>
+    <!--#endif-->
+    <ItemGroup>
+      <PackageReference Include="System.IdentityModel.Tokens.Jwt" />
+      <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" />
+      <PackageReference Include="nunit" />
+      <PackageReference Include="NUnit.Analyzers">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+      <PackageReference Include="NUnit3TestAdapter" />
+      <PackageReference Include="Moq" />
+      <PackageReference Include="Respawn" />
+      <PackageReference Include="Shouldly" />
+    </ItemGroup>
+    
+    <ItemGroup>
+        <ProjectReference Include="..\..\server\Web\Web.csproj" />
+    </ItemGroup>
+
+</Project>

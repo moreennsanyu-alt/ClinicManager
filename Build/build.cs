@@ -31,7 +31,7 @@ class Build : NukeBuild
        - Microsoft VSCode           https://nuke.build/vscode
     */
 
-    public static int Main() => Execute<Build>(x => x.Installers);
+    public static int Main() => Execute<Build>(x => x.Tests);
 
     [Parameter("The solution configuration to build. Default is 'Debug' (local) or 'CI' (server).")]
     readonly Configuration Configuration = Configuration.Debug;
@@ -106,8 +106,13 @@ class Build : NukeBuild
 
     Project[] UnitTestProjects  => new[]{
          Solution.DesktopTests.ClinicManager_Win_Tests,
-		 Solution.DesktopTests.ClinicManager_Tests,
-    };
+		 Solution.DesktopTests.ClinicManager_Core_Tests,
+         
+         Solution.ServerTests.Application_FunctionalTests,
+         Solution.ServerTests.Application_UnitTests,
+         Solution.ServerTests.Domain_UnitTests,
+         Solution.ServerTests.Infrastructure_IntegrationTests,
+  };
 
 	Project[] E2ETestProjects  => new[]{
          Solution.DesktopTests.ClinicManager_E2E_Tests,
