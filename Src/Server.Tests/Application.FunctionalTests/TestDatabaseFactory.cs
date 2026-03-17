@@ -1,4 +1,4 @@
-﻿namespace CleanArchitecture.Application.FunctionalTests;
+﻿namespace ClinicManager.Application.FunctionalTests;
 
 public static class TestDatabaseFactory
 {
