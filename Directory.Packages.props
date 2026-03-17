@@ -67,7 +67,4 @@
     <PackageVersion Include="Prism.DryIoc" Version="8.1.97" />
 
  </ItemGroup>
- <ItemGroup>
-    <GlobalPackageReference Include="Nerdbank.GitVersioning" Version="3.9.50" />
- </ItemGroup>
 </Project>
