@@ -58,7 +58,7 @@ class Build : NukeBuild
 
     AbsolutePath TestResultsDirectory => AttachmentsDirectory / "TestResults";
 
-    string SemVer;
+    string SemVer = null!;
 
     Target Clean => _ => _
         .Executes(() =>
