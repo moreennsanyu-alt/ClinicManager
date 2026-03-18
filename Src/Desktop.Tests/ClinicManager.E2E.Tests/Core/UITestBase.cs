@@ -38,7 +38,10 @@ public abstract class UITestBase : FlaUITestBase
             return new UIA3Automation();
         }
         
-
+    protected override Application StartApplication()
+        {
+            return Application.Launch("calc.exe");
+        }
 
     private static class NativeMethods
     {
