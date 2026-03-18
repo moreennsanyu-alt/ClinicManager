@@ -32,7 +32,16 @@ public abstract class UITestBase : FlaUITestBase
         Retry.DefaultTimeout = TimeSpan.FromSeconds(5);
         Retry.DefaultInterval = TimeSpan.FromMilliseconds(250);
     }
-    
+
+    /// <summary>
+    /// Overrides the media path to use NUnit's WorkDirectory instead of c:\temp.
+    /// </summary>
+    protected override string TestsMediaPath => 
+       Path.Combine(TestContext.CurrentContext.WorkDirectory, 
+            SanitizeFileName(TestContext.CurrentContext.Test.Name), 
+                 _testDateTime);
+
+                 
     protected override AutomationBase GetAutomation()
         {
             return new UIA3Automation();
