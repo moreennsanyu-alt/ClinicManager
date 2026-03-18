@@ -21,7 +21,7 @@ namespace ClinicManager.E2E.Tests.Core;
 
 public abstract class UITestBase : FlaUITestBase
 {
-    
+    static string ApplicationPath = string.Format("{0}\\..\\..\\..\\..\\Desktop\\ClinicManager.Win\\bin\\Debug\\ClinicMgr.exe",Environment.CurrentDirectory);
 
     static UITestBase()
     {
@@ -40,7 +40,7 @@ public abstract class UITestBase : FlaUITestBase
         
     protected override Application StartApplication()
         {
-            return Application.Launch("calc.exe");
+            return FlaUI.Core.Application.Launch(ApplicationPath);
         }
 
     private static class NativeMethods
