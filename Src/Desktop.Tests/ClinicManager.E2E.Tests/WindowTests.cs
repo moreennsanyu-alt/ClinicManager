@@ -11,7 +11,7 @@ namespace ClinicManager.E2E.Tests
         public void title_should_contain_company_name()
         {
            var window = Application.GetMainWindow(Automation);
-          
+          throw new Exception();
         }
 
     }
