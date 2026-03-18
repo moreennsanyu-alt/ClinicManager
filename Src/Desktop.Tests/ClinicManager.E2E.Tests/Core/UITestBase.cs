@@ -22,6 +22,8 @@ namespace ClinicManager.E2E.Tests.Core;
 public abstract class UITestBase : FlaUITestBase
 {
     static string ApplicationPath = string.Format("{0}\\..\\..\\..\\..\\..\\Desktop\\ClinicManager.Win\\bin\\Debug\\net9.0-windows\\ClinicMgr.exe",Environment.CurrentDirectory);
+    
+    private static string _testDateTime = DateTime.Now.ToString("yyyyMMddHHmmss");
 
     static UITestBase()
     {
