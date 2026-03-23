@@ -8,8 +8,13 @@ namespace ClinicManager.Win;
     /// <summary>
     /// Interaction logic for App.xaml
     /// </summary>
-    public partial class App : PrismApplication
+    public partial class ClinicManagerApp : PrismApplication
     {
+        static App()
+        {
+            SfSkinManager.ApplyThemeAsDefaultStyle = true;
+            SfSkinManager.ApplicationTheme = new Theme("Windows11Light");
+        }
         protected override Window CreateShell()
         {
             return Container.Resolve<Shell>();
@@ -18,5 +23,11 @@ namespace ClinicManager.Win;
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
 
+        }
+        
+        public void Activate()
+        {
+            // Reactivate application's main window
+            MainWindow.Activate();
         }
     }
