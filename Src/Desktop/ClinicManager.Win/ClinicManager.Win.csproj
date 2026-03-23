@@ -20,6 +20,7 @@
     <PackageReference Include="Syncfusion.Themes.Windows11Light.WPF" />
     <PackageReference Include="Syncfusion.Themes.Windows11Dark.WPF" />
     <PackageReference Include="Syncfusion.SfSkinManager.WPF" />
-  </ItemGroup>
+    <PackageReference Include="Microsoft.VisualBasic" />
+</ItemGroup>
  
 </Project>
