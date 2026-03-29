@@ -3,6 +3,7 @@ using Prism.DryIoc;
 using System.Windows;
 using ClinicManager.Win.Views;
 using ClinicManager.Win.Application.Lifetime;
+using Syncfusion.SfSkinManager;
 
 namespace ClinicManager.Win;
 
