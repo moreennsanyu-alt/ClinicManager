@@ -1,5 +1,4 @@
 using System.Windows;
-using Syncfusion.Windows.Shared;
 
 namespace ClinicManager.Win.Views
 {
