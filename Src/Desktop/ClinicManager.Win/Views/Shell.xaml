@@ -1,12 +1,11 @@
-<syncfusion:ChromelessWindow x:Class="ClinicManager.Win.Views.Shell"
+<Window x:Class="ClinicManager.Win.Views.Shell"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:prism="http://prismlibrary.com/"
-        xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
         Title="Shell"
         Height="350"
         Width="525">
     <Grid>
         <ContentControl prism:RegionManager.RegionName="ContentRegion" />
     </Grid>
-</syncfusion:ChromelessWindow>
+</Window>

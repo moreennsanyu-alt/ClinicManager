@@ -3,7 +3,6 @@ using Prism.DryIoc;
 using System.Windows;
 using ClinicManager.Win.Views;
 using ClinicManager.Win.Application.Lifetime;
-using Syncfusion.SfSkinManager;
 
 namespace ClinicManager.Win;
 
@@ -14,9 +13,8 @@ namespace ClinicManager.Win;
     {
         static ClinicManagerApp()
         {
-            SfSkinManager.ApplyThemeAsDefaultStyle = true;
-            SfSkinManager.ApplicationTheme = new Theme("Windows11Light");
         }
+        
         protected override Window CreateShell()
         {
             return Container.Resolve<Shell>();

@@ -11,11 +11,6 @@
     <PackageReference Include="Humanizer.Core" />
     <PackageReference Include="Utf8StringInterpolation" />
     <PackageReference Include="Prism.DryIoc" />
-    <PackageReference Include="Syncfusion.Shared.WPF" />
-    <PackageReference Include="Syncfusion.Themes.Windows11Light.WPF" />
-    <PackageReference Include="Syncfusion.Themes.Windows11Dark.WPF" />
-    <PackageReference Include="Syncfusion.SfSkinManager.WPF" />
-    <PackageReference Include="Microsoft.VisualBasic" />
 </ItemGroup>
  
 </Project>

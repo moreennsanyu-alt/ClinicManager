@@ -6,7 +6,7 @@ namespace ClinicManager.Win.Views
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class Shell : ChromelessWindow
+    public partial class Shell : Window
     {
         public Shell()
         {

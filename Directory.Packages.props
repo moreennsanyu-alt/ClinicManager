@@ -70,10 +70,5 @@
     <PackageVersion Include="Prism.Wpf" Version="8.1.97" />
     <PackageVersion Include="Prism.DryIoc" Version="8.1.97" />
 
-    <PackageVersion Include="Syncfusion.Shared.WPF" Version="33.1.44" />
-    <PackageVersion Include="Syncfusion.Themes.Windows11Light.WPF" Version="33.1.44" />
-    <PackageVersion Include="Syncfusion.Themes.Windows11Dark.WPF" Version="33.1.44" />
-    <PackageVersion Include="Syncfusion.SfSkinManager.WPF" Version="33.1.44" />
-    <PackageVersion Include="Microsoft.VisualBasic" Version="10.3.0" />
  </ItemGroup>
 </Project>
