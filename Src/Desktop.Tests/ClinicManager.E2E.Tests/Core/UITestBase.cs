@@ -32,7 +32,7 @@ public abstract class UITestBase : FlaUITestBase
     protected override Application StartApplication()
     {
         return FlaUI.Core.Application.Launch($@"{TestContext.CurrentContext.TestDirectory}\..\..\..\..\Desktop\ClinicManager.Win\bin\Debug\ClinicMgr.exe");
-
+    }
 
     private static class NativeMethods
     {
