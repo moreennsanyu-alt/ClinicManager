@@ -14,6 +14,11 @@
       </PackageReference>
       <PackageReference Include="NUnit3TestAdapter" />
       <PackageReference Include="Shouldly" />
+      
+      <PackageReference Include="FlaUI.UIA3.Signed"  />
+      <PackageReference Include="FlaUI.Core.Signed" />
+      <PackageReference Include="FlaUI.TestUtilities" />
+     
       <PackageReference Include="Microsoft.Testing.Extensions.TrxReport" />
       <PackageReference Include="Microsoft.Testing.Extensions.CodeCoverage" />
   </ItemGroup>

@@ -62,6 +62,10 @@
     <PackageVersion Include="ThisAssembly.Constants" Version="1.4.3" />
     
 
+    <PackageVersion Include="FlaUI.UIA3.Signed" Version="5.0.0" />
+    <PackageVersion Include="FlaUI.Core.Signed" Version="5.0.0" />
+    <PackageVersion Include="FlaUI.TestUtilities" Version="5.0.0" />
+     
     <PackageVersion Include="Prism.Core" Version="8.1.97" />
     <PackageVersion Include="Prism.Wpf" Version="8.1.97" />
     <PackageVersion Include="Prism.DryIoc" Version="8.1.97" />
