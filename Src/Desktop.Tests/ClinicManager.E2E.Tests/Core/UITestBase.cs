@@ -7,7 +7,7 @@ using System.Globalization;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using NUnit.Framework;
-using FlaUI.TestUtilitie;
+using FlaUI.TestUtilities;
 
 namespace ClinicManager.E2E.Tests.Core;
 
