@@ -6,7 +6,8 @@
     <Nullable>enable</Nullable>
     <LangVersion>14.0</LangVersion>
     <TargetFramework>net10.0</TargetFramework>
-   </PropertyGroup>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
   
   <PropertyGroup>
     <ArtifactsOutDir>$(MSBuildThisFileDirectory)Artifacts</ArtifactsOutDir>
