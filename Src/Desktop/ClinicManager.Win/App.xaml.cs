@@ -2,6 +2,7 @@ using Prism.Ioc;
 using Prism.DryIoc;
 using System.Windows;
 using ClinicManager.Win.Views;
+using ClinicManager.Win.Application.Lifetime;
 
 namespace ClinicManager.Win;
 
@@ -10,7 +11,7 @@ namespace ClinicManager.Win;
     /// </summary>
     public partial class ClinicManagerApp : PrismApplication
     {
-        static App()
+        static ClinicManagerApp()
         {
             SfSkinManager.ApplyThemeAsDefaultStyle = true;
             SfSkinManager.ApplicationTheme = new Theme("Windows11Light");
@@ -29,5 +30,18 @@ namespace ClinicManager.Win;
         {
             // Reactivate application's main window
             MainWindow.Activate();
+        }
+        
+        protected override void OnStartup(StartupEventArgs e)
+        {
+
+            var first = ApplicationActivator.LaunchOrReturn(otherInstance => { MessageBox.Show("got data"); }, e.Args);
+            if (!first)
+            {
+                Shutdown();
+            }
+
+
+            base.OnStartup(e);
         }
     }

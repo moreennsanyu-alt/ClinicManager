@@ -8,11 +8,6 @@
   </PropertyGroup>
   
   <ItemGroup>
-    <ApplicationDefinition Remove="App.xaml" />
-    <Page Include="App.xaml" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Humanizer.Core" />
     <PackageReference Include="Utf8StringInterpolation" />
     <PackageReference Include="Prism.DryIoc" />
