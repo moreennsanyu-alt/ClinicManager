@@ -69,6 +69,7 @@
     <PackageVersion Include="Prism.Core" Version="8.1.97" />
     <PackageVersion Include="Prism.Wpf" Version="8.1.97" />
     <PackageVersion Include="Prism.DryIoc" Version="8.1.97" />
-
+    <PackageVersion Include="SingleInstanceCore" Version="2.2.2" />
+  
  </ItemGroup>
 </Project>
