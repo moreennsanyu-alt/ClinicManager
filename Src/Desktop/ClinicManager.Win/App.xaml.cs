@@ -2,7 +2,6 @@ using Prism.Ioc;
 using Prism.DryIoc;
 using System.Windows;
 using ClinicManager.Win.Views;
-using ClinicManager.Win.Application.Lifetime;
 using SingleInstanceCore;
 
 namespace ClinicManager.Win;
