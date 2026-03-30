@@ -52,6 +52,7 @@
     <PackageVersion Include="ServiceStack.OrmLite" Version="10.0.6" />
     <PackageVersion Include="ServiceStack.Server" Version="10.0.6" />
     <PackageVersion Include="ServiceStack.Api.OpenApi" Version="10.0.6" />
+    <PackageVersion Include="ServiceStack.AspNetCore.OpenApi" Version="10.0.6" />
     <PackageVersion Include="ServiceStack.HttpClient" Version="10.0.6" />
     <PackageVersion Include="ServiceStack.Kestrel" Version="10.0.6" />
     <PackageVersion Include="ServiceStack.OrmLite.Sqlite" Version="10.0.6" />
