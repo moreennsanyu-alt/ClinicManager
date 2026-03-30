@@ -19,6 +19,8 @@
     <PackageReference Include="Microsoft.NET.Test.Sdk"  />
     <PackageReference Include="ServiceStack"  />
     <PackageReference Include="ServiceStack.Kestrel" />
+    <PackageReference Include="Microsoft.Testing.Extensions.TrxReport" />
+    <PackageReference Include="Microsoft.Testing.Extensions.CodeCoverage" />
   </ItemGroup>
 
 </Project>
