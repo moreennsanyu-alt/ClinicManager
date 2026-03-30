@@ -108,10 +108,7 @@ class Build : NukeBuild
          Solution.DesktopTests.ClinicManager_Win_Tests,
 		 Solution.DesktopTests.ClinicManager_Core_Tests,
          
-         Solution.ServerTests.Application_FunctionalTests,
-         Solution.ServerTests.Application_UnitTests,
-         Solution.ServerTests.Domain_UnitTests,
-         Solution.ServerTests.Infrastructure_IntegrationTests,
+         Solution.ServerTests.ClinicManager_Tests,
   };
 
 	Project[] E2ETestProjects  => new[]{

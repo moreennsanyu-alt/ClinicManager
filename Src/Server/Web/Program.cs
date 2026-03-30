@@ -1,44 +1,24 @@
-using ClinicManager.Infrastructure.Data;
-using Scalar.AspNetCore;
+using ClinicManager.ServiceInterface;
 
 var builder = WebApplication.CreateBuilder(args);
+var services = builder.Services;
 
-// Add services to the container.
-
-builder.AddKeyVaultIfConfigured();
-builder.AddApplicationServices();
-builder.AddInfrastructureServices();
-builder.AddWebServices();
+services.AddServiceStack(typeof(MyServices).Assembly);
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+if (!app.Environment.IsDevelopment())
 {
-    await app.InitialiseDatabaseAsync();
-}
-else
-{
+    app.UseExceptionHandler("/Error", createScopeForErrors: true);
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
-
-app.UseHealthChecks("/health");
-app.UseHttpsRedirection();
 app.UseStaticFiles();
 
-app.MapOpenApi();
-app.MapScalarApiReference();
-
-
-app.UseExceptionHandler(options => { });
-
-
-app.Map("/", () => Results.Redirect("/scalar"));
-
-app.MapEndpoints();
+app.UseServiceStack(new AppHost(), options => {
+    options.MapEndpoints();
+});
 
 app.Run();
-
-public partial class Program { }

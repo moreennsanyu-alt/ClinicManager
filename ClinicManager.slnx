@@ -16,16 +16,12 @@
       <Project Path="Src/Desktop.Tests/ClinicManager.Testing/ClinicManager.Testing.csproj" />
   </Folder>
   <Folder Name="/Server/">
-      <Project Path="Src/Server/Application/Application.csproj" />
-      <Project Path="Src/Server/Domain/Domain.csproj" />
-      <Project Path="Src/Server/Infrastructure/Infrastructure.csproj" />
+      <Project Path="Src/Server/ClinicManager.ServiceInterface/ClinicManager.ServiceInterface.csproj" />
+      <Project Path="Src/Server/ClinicManager.ServiceModel/ClinicManager.ServiceModel.csproj" />
       <Project Path="Src/Server/Web/Web.csproj" />
   </Folder>
   <Folder Name="/ServerTests/">
-      <Project Path="Src/Server.Tests/Application.FunctionalTests/Application.FunctionalTests.csproj" />
-      <Project Path="Src/Server.Tests/Application.UnitTests/Application.UnitTests.csproj" />
-      <Project Path="Src/Server.Tests/Domain.UnitTests/Domain.UnitTests.csproj" />
-      <Project Path="Src/Server.Tests/Infrastructure.IntegrationTests/Infrastructure.IntegrationTests.csproj" />
+      <Project Path="Src/Server.Tests/ClinicManager.Tests/ClinicManager.Tests.csproj" />
   </Folder>
   <Folder Name="/Setup/">
       <Project Path="Src/ClinicManager.Setup\ClinicManager.Setup.csproj" >
