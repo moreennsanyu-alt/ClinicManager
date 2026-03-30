@@ -59,6 +59,8 @@
     <PackageVersion Include="ServiceStack.Jobs" Version="10.0.6" />
     <PackageVersion Include="ServiceStack.Extensions" Version="10.0.6" />
     <PackageVersion Include="ServiceStack.OrmLite.Sqlite.Data" Version="10.0.6" />
-  </ItemGroup>
+    <PackageVersion Include="Scalar.AspNetCore" Version="2.13.17" />
+   
+    </ItemGroup>
   
 </Project>

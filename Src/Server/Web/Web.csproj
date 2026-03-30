@@ -24,6 +24,7 @@
     <PackageReference Include="ServiceStack.Server" />
     <PackageReference Include="ServiceStack.Jobs" />
     <PackageReference Include="ServiceStack.AspNetCore.OpenApi" />
+    <PackageReference Include="Scalar.AspNetCore" />
   </ItemGroup>
 
   <ItemGroup>
