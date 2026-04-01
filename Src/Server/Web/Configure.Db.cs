@@ -4,6 +4,7 @@ using ServiceStack;
 using ServiceStack.Data;
 using ServiceStack.DataAnnotations;
 using ServiceStack.OrmLite;
+using ClinicManager.Data;
 
 [assembly: HostingStartup(typeof(ClinicManager.ConfigureDb))]
 
@@ -13,13 +14,17 @@ public class ConfigureDb : IHostingStartup
 {
     public void Configure(IWebHostBuilder builder) => builder
         .ConfigureServices((context, services) => {
-            services.AddSingleton<IDbConnectionFactory>(new OrmLiteConnectionFactory(
-                context.Configuration.GetConnectionString("DefaultConnection")
-                ?? ":memory:",
-                SqliteDialect.Provider));
-        })
-        .ConfigureAppHost(appHost => {
+            var connectionString = context.Configuration.GetConnectionString("DefaultConnection")
+                ?? "DataSource=App_Data/app.db;Cache=Shared";
+            
+            services.AddOrmLite(options => options.UseSqlite(connectionString));
+
+            // $ dotnet ef migrations add CreateIdentitySchema
+            // $ dotnet ef database update
+            services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseSqlite(connectionString, b => b.MigrationsAssembly(nameof(ClinicManager))));
+            
             // Enable built-in Database Admin UI at /admin-ui/database
-            // appHost.Plugins.Add(new AdminDatabaseFeature());
+            services.AddPlugin(new AdminDatabaseFeature());
         });
 }
