@@ -5,6 +5,7 @@ using ServiceStack.Data;
 using ServiceStack.DataAnnotations;
 using ServiceStack.OrmLite;
 using ClinicManager.Data;
+using Microsoft.EntityFrameworkCore;
 
 [assembly: HostingStartup(typeof(ClinicManager.ConfigureDb))]
 
