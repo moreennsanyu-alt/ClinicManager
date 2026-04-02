@@ -1,7 +1,7 @@
 using ServiceStack.DataAnnotations;
 using ServiceStack.OrmLite;
 
-namespace MyApp.Migrations;
+namespace ClinicManager.Migrations;
 
 public class Migration1000 : MigrationBase
 {
