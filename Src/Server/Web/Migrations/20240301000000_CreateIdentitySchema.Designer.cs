@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using MyApp.Data;
+using using ClinicManager.Data;
 
 #nullable disable
 
-namespace MyApp.Migrations
+namespace ClinicManager.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     [Migration("20240301000000_CreateIdentitySchema")]

@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace MyApp.Migrations
+namespace ClinicManager.Migrations
 {
     /// <inheritdoc />
     public partial class CreateIdentitySchema : Migration
