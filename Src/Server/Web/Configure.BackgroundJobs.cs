@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using ServiceStack.Jobs;
 using ClinicManager.ServiceInterface;
+using ClinicManager.Data;
 
 [assembly: HostingStartup(typeof(ClinicManager.ConfigureBackgroundJobs))]
 
