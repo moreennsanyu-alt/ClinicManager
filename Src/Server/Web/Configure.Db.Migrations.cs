@@ -1,4 +1,4 @@
-using MyApp.Migrations;
+using ClinicManager.Migrations;
 using ServiceStack;
 using ServiceStack.Data;
 using ServiceStack.OrmLite;
