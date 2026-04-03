@@ -13,17 +13,17 @@ nuget Enums.NET 5.0.0
 nuget Fasterflect.Xpand 2.0.7
 nuget Microsoft.CSharp 4.7.0
 nuget Microsoft.Win32.Registry 5.0.0
-nuget System.Text.Encoding.CodePages 9.0.0
-nuget System.Text.Json 9.0.0
+nuget System.Text.Encoding.CodePages 9.0.14
+nuget System.Text.Json 9.0.14
 nuget System.Buffers 4.6.1
 nuget System.CodeDom 9.0.0
-nuget System.Configuration.ConfigurationManager 9.0.0
-nuget System.Security.Cryptography.Xml  9.0.0
+nuget System.Configuration.ConfigurationManager 9.0.14
+nuget System.Security.Cryptography.Xml  9.0.14
 nuget System.ComponentModel.Annotations == 5.0.0
-nuget System.Data.OleDb 9.0.0
-nuget System.Security.Permissions  9.0.0
+nuget System.Data.OleDb 9.0.14
+nuget System.Security.Permissions  9.0.14
 nuget System.Reflection.Emit 4.7.0
-nuget System.Drawing.Common 9.0.0
+nuget System.Drawing.Common 9.0.14
 nuget System.IO.Compression 4.3.0
 nuget System.Management 9.0.0
 nuget System.Reflection.TypeExtensions 4.7.0
@@ -37,14 +37,14 @@ nuget System.ValueTuple 4.6.2
 nuget System.Xml.XDocument 4.3.0
 nuget System.Threading.Tasks.Dataflow 9.0.0
 nuget System.Memory  4.6.3
-nuget System.Collections.Immutable  9.0.0
+nuget System.Collections.Immutable  9.0.14
 nuget System.ServiceModel.NetTcp  8.1
 nuget System.ServiceModel.Security  6.0.0
 nuget System.ServiceModel.Http  8.1
 nuget System.ServiceModel.Duplex  6.0.0
-nuget Microsoft.Bcl.AsyncInterfaces 9.0.0
-nuget System.Text.Encodings.Web 9.0.0
-nuget System.Security.Cryptography.ProtectedData 9.0.0
+nuget Microsoft.Bcl.AsyncInterfaces 9.0.14
+nuget System.Text.Encodings.Web 9.0.14
+nuget System.Security.Cryptography.ProtectedData 9.0.14
 
 nuget DevExpress.Xpo 24.2.13
 
