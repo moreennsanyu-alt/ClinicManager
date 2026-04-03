@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Timers;
 
-namespace WindowsService.NET
+namespace ClinicManager.WFServer
 {
     public partial class Service1 : ServiceBase
     {

@@ -1,4 +1,4 @@
-namespace WindowsService.NET
+namespace ClinicManager.WFServer
 {
     partial class ProjectInstaller
     {
