@@ -106,10 +106,8 @@ class Build : NukeBuild
 
     Project[] UnitTestProjects  => new[]{
          Solution.DesktopTests.ClinicManager_Win_Tests,
-		 Solution.DesktopTests.ClinicManager_Core_Tests,
-         
-         Solution.ServerTests.ClinicManager_Tests,
-  };
+		 Solution.DesktopTests.ClinicManager_Tests,
+    };
 
 	Project[] E2ETestProjects  => new[]{
          Solution.DesktopTests.ClinicManager_E2E_Tests,

@@ -1,0 +1,11 @@
+DevExpress.Xpo
+
+ZString
+Humanizer.Core
+PolySharp
+Enums.NET
+Fasterflect.Xpand
+Microsoft.CSharp
+System.ValueTuple
+
+xunit.v3

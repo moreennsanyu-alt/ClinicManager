@@ -24,15 +24,7 @@
   </ItemGroup>
 
 
-  <ItemGroup>
-    <PackageReference Include="Humanizer.Core" />
-    <PackageReference Include="System.ValueTuple" />
-    <PackageReference Include="WixSharp" />
-    <PackageReference Include="WixSharp.bin" />
-    <PackageReference Include="WixSharp.wix.bin"  />
-    <PackageReference Include="ThisAssembly.Constants" />
-  </ItemGroup>
- 
+
    <ItemGroup>
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
