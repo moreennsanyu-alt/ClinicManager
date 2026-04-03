@@ -1,6 +1,6 @@
 using Xunit;
 
-namespace ClinicManager.E2E.Tests
+namespace ClinicManager.E2E.Tests;
 
 public class CalculatorTests
 {
