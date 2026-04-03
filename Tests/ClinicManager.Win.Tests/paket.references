@@ -9,3 +9,5 @@ Microsoft.CSharp
 System.ValueTuple
 
 xunit.v3
+Microsoft.Testing.Extensions.CodeCoverage
+Shouldly
