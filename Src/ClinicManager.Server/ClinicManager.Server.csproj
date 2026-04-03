@@ -6,5 +6,10 @@
     <OutputType>Exe</OutputType>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
+  
+    <ItemGroup>
+        <Reference Include="System.ServiceProcess" />
+    </ItemGroup>    
+  
   <Import Project="..\..\.paket\Paket.Restore.targets" />
 </Project>
