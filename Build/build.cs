@@ -166,8 +166,6 @@ class Build : NukeBuild
                             "--coverage",
 							"--coverage-output-format cobertura",
 							$"--coverage-output {CoverageDirectory / $"{v.project.Name}_{v.framework}.cobertura.xml"}",
-                            "--report-trx",
-                            $"--report-trx-filename {v.project.Name}_{v.framework}.trx",
                             $"--results-directory {TestResultsDirectory}"
                         )
                     )

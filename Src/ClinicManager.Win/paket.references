@@ -4,3 +4,5 @@ PolySharp
 Fasterflect.Xpand
 Microsoft.CSharp
 System.ValueTuple
+
+System.Configuration.ConfigurationManager

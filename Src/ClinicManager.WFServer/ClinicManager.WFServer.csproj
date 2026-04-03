@@ -9,7 +9,8 @@
   
     <ItemGroup>
         <Reference Include="System.ServiceProcess" />
-    </ItemGroup>  
+        <Reference Include="System.Configuration.Install" />
+   </ItemGroup>  
     
   <Import Project="..\..\.paket\Paket.Restore.targets" />
 </Project>
