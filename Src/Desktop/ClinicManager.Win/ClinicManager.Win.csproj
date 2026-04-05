@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <AssemblyName>ClinicMgr</AssemblyName>
+    <OutputType>WinExe</OutputType>
+    <UseWPF>true</UseWPF>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  
+    <ItemGroup>
+        <PackageReference Include="AsyncAwaitBestPractices" /> 
+        <PackageReference Include="AsyncAwaitBestPractices.MVVM" />
+        <PackageReference Include="CommunityToolkit.Mvvm" />
+        <PackageReference Include="Prism.DryIoc" />
+        <PackageReference Include="SingleInstanceCore" />
+    </ItemGroup>
+  
+</Project>
