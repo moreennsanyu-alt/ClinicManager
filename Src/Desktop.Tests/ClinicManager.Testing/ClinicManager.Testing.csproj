@@ -4,7 +4,6 @@
         <TargetFramework>net10.0-windows</TargetFramework>
    </PropertyGroup>
    
-    <ItemGroupageReference Include="Microsoft.Testing.Extensions.CodeCoverage" />
     </ItemGroup>
         <PackageReference Include="NUnit" />
         <PackageReference Include="NSubstitute.Analyzers.CSharp" />
