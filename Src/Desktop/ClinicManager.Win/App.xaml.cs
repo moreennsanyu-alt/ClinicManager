@@ -20,11 +20,6 @@ namespace ClinicManager.Win
         {
             
         }
-        
-        public void OnInstanceInvoked(string[] args)
-    	{
-		    // What to do with the args another instance has sent
-	    }
 	    
 	    protected override void OnExit(ExitEventArgs e)
         {
