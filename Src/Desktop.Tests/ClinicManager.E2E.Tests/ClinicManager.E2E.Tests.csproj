@@ -16,7 +16,6 @@
         <PackageReference Include="FlaUI.UIA3.Signed" />
         <PackageReference Include="Interop.UIAutomationClient.Signed" />
         <PackageReference Include="FlaUI.Core.Signed" />
-        <PackageReference Include="Shouldly" />
         <PackageReference Include="NUnit.Analyzers" />
         <PackageReference Include="ThisAssembly.Constants" />
         <PackageReference Include="Microsoft.Testing.Extensions.CodeCoverage" />

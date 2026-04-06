@@ -14,7 +14,6 @@
         <PackageReference Include="NSubstitute" />
         <PackageReference Include="Shouldly" />
         <PackageReference Include="Humanizer.Core" />
-        <PackageReference Include="Shouldly" />
         <PackageReference Include="NUnit.Analyzers" />
         <PackageReference Include="ThisAssembly.Constants" />
         <PackageReference Include="Microsoft.Testing.Extensions.CodeCoverage" />
