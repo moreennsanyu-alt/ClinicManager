@@ -3,7 +3,7 @@ using Prism.DryIoc;
 using ClinicManager.Win.Views;
 using System.Windows;
 using SingleInstanceCore;
-
+using DryIoc
 namespace ClinicManager.Win
 {
     /// <summary>
