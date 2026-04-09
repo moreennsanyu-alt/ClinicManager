@@ -169,7 +169,7 @@ class Build : NukeBuild
                         (settings, project) => settings
                             .SetProjectFile(project)
                             .CombineWith(
-                                project.GetTargetFrameworks().Except([net47]),
+                                project.GetTargetFrameworks(),
                                 (frameworkSettings, framework) => frameworkSettings
                                     .SetFramework(framework)
                                     .AddLoggers($"trx;LogFileName={project.Name}_{framework}.trx")
