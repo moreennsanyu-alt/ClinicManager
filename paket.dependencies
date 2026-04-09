@@ -60,6 +60,7 @@ nuget Moq 4.20.72
 nuget Shouldly 4.3.0
 
 nuget Microsoft.Testing.Extensions.CodeCoverage 18.5.2
+nuget Microsoft.NET.Test.Sdk 18.4.0
 
 nuget WixSharp 1.26.0
 nuget WixSharp.bin 1.26.0
