@@ -147,13 +147,8 @@ class Build : NukeBuild
         .DependsOn(Compile)
         .Executes(() =>
         {
-            var testCombinations =
-                from project in UnitTestProjects
-                let frameworks = project.GetTargetFrameworks()
-                from framework in frameworks
-                select new { project, framework };
-
-                UnitTestProjects.ForEach(x=>Information(x.Name));
+            
+            UnitTestProjects.ForEach(x=>Information(x.Name));
            
 			DotNetTest(s => s
                     .SetConfiguration(Configuration.Debug)
@@ -165,7 +160,7 @@ class Build : NukeBuild
                         "DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.DoesNotReturnAttribute",
                         "DoesNotReturnAttribute")
                     .CombineWith(
-                        Projects,
+                        UnitTestProjects,
                         (settings, project) => settings
                             .SetProjectFile(project)
                             .CombineWith(
