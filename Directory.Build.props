@@ -45,10 +45,10 @@
         </When>
         <When Condition="$(IsTestProject) OR $(IsTestSupportProject) ">
             <PropertyGroup>
-                <DefineConstants>$(DefineConstants);WPF</DefineConstants>
+                
             </PropertyGroup>
             <ItemGroup>
-                <Using Include="NUnit.Framework" />
+                <Using Include="Xunit" />
             </ItemGroup>
         </When>
     </Choose>

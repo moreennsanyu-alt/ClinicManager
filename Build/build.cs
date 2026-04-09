@@ -79,6 +79,8 @@ class Build : NukeBuild
 			
 			DotNet("wix extension add -g WixToolset.UI.wixext/6.0.2");
             
+            DotNet("paket restore);
+            
             DotNetRestore(s => s
                 .SetProjectFile(Solution)
                 .EnableNoCache()
@@ -107,7 +109,7 @@ class Build : NukeBuild
 
     Project[] UnitTestProjects  => new[]{
          Solution.DesktopTests.ClinicManager_Win_Tests,
-		 Solution.DesktopTests.ClinicManager_Core_Tests,
+		 Solution.DesktopTests.ClinicManager_Tests,
     };
 
 	Project[] E2ETestProjects  => new[]{
