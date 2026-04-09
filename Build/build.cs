@@ -156,9 +156,7 @@ class Build : NukeBuild
                     .EnableNoBuild()
                     .SetDataCollector("XPlat Code Coverage")
                     .SetResultsDirectory(TestResultsDirectory)
-                    .AddRunSetting(
-                        "DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.DoesNotReturnAttribute",
-                        "DoesNotReturnAttribute")
+                    .SetRunSettingsFile(RootDirectory / "e2e.runsettings")
                     .CombineWith(
                         UnitTestProjects,
                         (settings, project) => settings
