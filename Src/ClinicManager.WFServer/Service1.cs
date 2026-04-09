@@ -33,7 +33,7 @@ namespace ClinicManager.WFServer
 
         protected override void OnStop()
         {
-            Timer.Stop();
+            //Timer.Stop();
             //WriteLog("Service has been stopped.");
         }
 
