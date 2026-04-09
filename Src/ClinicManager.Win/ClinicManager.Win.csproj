@@ -4,7 +4,7 @@
         <TargetFramework>net48</TargetFramework>
         <AssemblyName>ClinicMgr</AssemblyName>
         <OutputType>WinExe</OutputType>
-        <UseWPF>true</UseWPF>
+        <UseWindowsForms>true</UseWindowsForms>
         <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     </PropertyGroup>
     
