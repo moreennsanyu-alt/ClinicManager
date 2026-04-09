@@ -37,10 +37,7 @@
                 <DefineConstants>$(DefineConstants);WPF</DefineConstants>
             </PropertyGroup>
             <ItemGroup>
-                <Using Include="System.Windows" />
-                <Using Include="System.Windows.Controls" />
-                <Using Include="System.Windows.Controls.Primitives" />
-                <Using Include="System.Windows.Data" />
+                
             </ItemGroup>
         </When>
         <When Condition="$(IsTestProject) OR $(IsTestSupportProject) ">
