@@ -12,6 +12,7 @@ DevExpress.Xpo
 
 xunit
 xunit.runner.visualstudio
+Microsoft.NET.Test.Sdk
 
 Humanizer.Core
 
