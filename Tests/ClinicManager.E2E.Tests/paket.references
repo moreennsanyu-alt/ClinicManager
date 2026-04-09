@@ -17,5 +17,3 @@ Humanizer.Core
 
 Moq
 Shouldly
-
-Microsoft.Testing.Extensions.CodeCoverage
