@@ -2,12 +2,11 @@
 
 namespace ClinicManager.E2E.Tests;
 
-public class CalculatorTests
+public class UnitTest1
 {
-    // [Fact] is used for tests that are always true (no parameters)
-    [Test]
-    public void Add_TwoNumbers_ReturnsSum()
+    [Fact]
+    public void AddTest()
     {
-
+        Assert.Equal(5, Class1.Add(2, 3));
     }
 }

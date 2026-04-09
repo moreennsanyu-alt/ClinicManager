@@ -4,7 +4,7 @@ ThisAssembly.Constants
 
 Enums.NET
 Fasterflect.Xpand
-Microsoft.CSharp
+
 
 System.ValueTuple 
 
