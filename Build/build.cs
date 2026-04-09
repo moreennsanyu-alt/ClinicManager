@@ -31,7 +31,7 @@ class Build : NukeBuild
        - Microsoft VSCode           https://nuke.build/vscode
     */
 
-    public static int Main() => Execute<Build>(x => x.Tests);
+    public static int Main() => Execute<Build>(x => x.UnitTests);
 
     [Parameter("The solution configuration to build. Default is 'Debug' (local) or 'CI' (server).")]
     readonly Configuration Configuration = Configuration.Debug;
@@ -154,25 +154,29 @@ class Build : NukeBuild
                 select new { project, framework };
 
                 UnitTestProjects.ForEach(x=>Information(x.Name));
-
-            DotNetRun(s => s
-                .SetConfiguration(Configuration.Debug)
-                .SetProcessEnvironmentVariable("DOTNET_CLI_UI_LANGUAGE", "en-US")
-                .EnableNoBuild()
-                .CombineWith(
-                    testCombinations,
-                    (settings, v) => settings
-                        .SetProjectFile(v.project)
-                        .SetFramework(v.framework)
-                        .SetProcessAdditionalArguments(
-                            "--",
-                            "--coverage",
-							"--coverage-output-format cobertura",
-							$"--coverage-output {CoverageDirectory / $"{v.project.Name}_{v.framework}.cobertura.xml"}",
-                            $"--results-directory {TestResultsDirectory}"
-                        )
-                    )
-                );
+           
+			DotNetTest(s => s
+                    .SetConfiguration(Configuration.Debug)
+                    .SetProcessEnvironmentVariable("DOTNET_CLI_UI_LANGUAGE", "en-US")
+                    .EnableNoBuild()
+                    .SetDataCollector("XPlat Code Coverage")
+                    .SetResultsDirectory(TestResultsDirectory)
+                    .AddRunSetting(
+                        "DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.DoesNotReturnAttribute",
+                        "DoesNotReturnAttribute")
+                    .CombineWith(
+                        Projects,
+                        (settings, project) => settings
+                            .SetProjectFile(project)
+                            .CombineWith(
+                                project.GetTargetFrameworks().Except([net47]),
+                                (frameworkSettings, framework) => frameworkSettings
+                                    .SetFramework(framework)
+                                    .AddLoggers($"trx;LogFileName={project.Name}_{framework}.trx")
+                            )
+                    ), completeOnFailure: true
+            );
+            
         });
 
     Target E2ETests => _ => _
