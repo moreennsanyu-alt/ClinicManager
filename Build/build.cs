@@ -156,7 +156,7 @@ class Build : NukeBuild
                     .EnableNoBuild()
                     .SetDataCollector("XPlat Code Coverage")
                     .SetResultsDirectory(TestResultsDirectory)
-                    .SetRunSettingsFile(RootDirectory / "e2e.runsettings")
+                    .SetSettingsFile(RootDirectory / "e2e.runsettings")
                     .CombineWith(
                         UnitTestProjects,
                         (settings, project) => settings
