@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RunSettings>
   <RunConfiguration>
-    <TargetFrameworkVersion>net7.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>net48</TargetFrameworkVersion>
     <ResultsDirectory>TestResults</ResultsDirectory>
   </RunConfiguration>
 </RunSettings>
