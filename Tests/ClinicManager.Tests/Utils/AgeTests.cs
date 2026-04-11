@@ -1,7 +1,6 @@
 using ClinicManager.Utils;
 using System;
 using Xunit;
-using Xunit.Abstractions;
 
 namespace ClinicManager.Tests.Utils
 {

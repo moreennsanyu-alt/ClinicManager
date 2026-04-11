@@ -50,6 +50,7 @@ nuget System.Security.Cryptography.ProtectedData 9.0.14
 nuget DevExpress.Xpo 24.2.13
 
 nuget xunit 2.9.3
+nuget xunit.v3 3.2.2
 nuget xunit.runner.visualstudio 3.1.5
 
 nuget ZString 2.6.0

@@ -10,7 +10,7 @@ System.ValueTuple
 
 DevExpress.Xpo
 
-xunit
+xunit.v3
 xunit.runner.visualstudio
 Microsoft.NET.Test.Sdk
 
