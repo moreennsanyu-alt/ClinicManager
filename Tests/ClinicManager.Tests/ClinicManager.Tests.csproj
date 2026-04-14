@@ -4,6 +4,7 @@
         <TargetFramework>net48</TargetFramework>
         <TestingPlatformDotnetTestSupport>true</TestingPlatformDotnetTestSupport>
         <UseMicrosoftTestingPlatformRunner>true</UseMicrosoftTestingPlatformRunner>
+        <OutputType>Exe</OutputType>
     </PropertyGroup>
 
 
