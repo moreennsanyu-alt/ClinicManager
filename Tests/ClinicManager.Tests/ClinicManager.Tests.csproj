@@ -10,8 +10,7 @@
 
     <ItemGroup>
         <ProjectReference Include="..\..\Src\ClinicManager\ClinicManager.csproj" />
-    </ItemGroup
->
+    </ItemGroup>
    
     <Import Project="..\..\.paket\Paket.Restore.targets" />
 </Project>
