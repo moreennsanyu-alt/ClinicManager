@@ -53,12 +53,16 @@ jobs:
               exit 0
           }
 
-          Write-Host "Found $($filesToZip.Count) DevExpress packages. Zipping..."
-
+          
           # Use 7nd (built-in on windows-latest) to create password protected zip
-          # -p sets password, -y assumes yes to prompts
-          & 7z a -p"$password" "$packageName" $($filesToZip.FullName)
+          
+          Write-Host "Found $($filesToZip.Count) DevExpress packages. Zipping and splitting..."
 
+          # -p sets password
+          # -v90m splits into 90MB chunks
+          # -y assumes yes to prompts
+          & 7z a -p"$password" -v90m "$packageName" $($filesToZip.FullName) -y
+      
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v7
         with:
