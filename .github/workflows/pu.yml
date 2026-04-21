@@ -40,6 +40,8 @@ jobs:
           }
           
       - name: Zip DevExpress Packages
+        env:
+         ZIP_PWD: ${{ secrets.DxPass }}
         shell: pwsh
         run: |
           $packageName = "devexpress_updates.zip"
