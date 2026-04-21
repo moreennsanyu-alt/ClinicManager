@@ -38,32 +38,6 @@ jobs:
             echo "Updating all packages"
             dotnet paket update
           }
-          
-      - name: Zip DevExpress Packages
-        env:
-         ZIP_PWD: ${{ secrets.DxPass }}
-        shell: pwsh
-        run: |
-          $packageName = "devexpress_updates.zip"
-          $password = "der.5941"
-          
-          # Find all .nupkg files starting with 'devexpress' in the packages folder
-          $filesToZip = Get-ChildItem -Path "packages" -Filter "devexpress*.nupkg" -Recurse
-          
-          if ($filesToZip.Count -eq 0) {
-              Write-Warning "No DevExpress packages found to zip."
-              exit 0
-          }
-
-          
-          # Use 7nd (built-in on windows-latest) to create password protected zip
-          
-          Write-Host "Found $($filesToZip.Count) DevExpress packages. Zipping and splitting..."
-
-          # -p sets password
-          # -v90m splits into 90MB chunks
-          # -y assumes yes to prompts
-          & 7z a -p"$password" -v90m "$packageName" $($filesToZip.FullName) -y
       
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v7
