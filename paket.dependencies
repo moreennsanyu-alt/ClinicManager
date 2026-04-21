@@ -49,7 +49,7 @@ nuget Microsoft.Bcl.AsyncInterfaces 9.0.14
 nuget System.Text.Encodings.Web 9.0.14
 nuget System.Security.Cryptography.ProtectedData 9.0.14
 
-nuget DevExpress.Xpo 24.2.13
+nuget DevExpress.Xpo 24.2.14
 
 nuget xunit 2.9.3
 nuget xunit.v3 3.2.2
