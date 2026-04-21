@@ -31,7 +31,7 @@ class Build : NukeBuild
        - Microsoft VSCode           https://nuke.build/vscode
     */
 
-    public static int Main() => Execute<Build>(x => x.UnitTests);
+    public static int Main() => Execute<Build>(x => x.None);
 
     [Parameter("The solution configuration to build. Default is 'Debug' (local) or 'CI' (server).")]
     readonly Configuration Configuration = Configuration.Debug;
@@ -67,7 +67,11 @@ class Build : NukeBuild
             TestResultsDirectory.CreateOrCleanDirectory();
         });
 
-    
+    Target None => _ => _
+        .Executes(() =>
+        {
+
+        });
 
     
     Target Restore => _ => _
