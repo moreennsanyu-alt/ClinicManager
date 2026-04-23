@@ -1,8 +1,7 @@
 source https://api.nuget.org/v3/index.json
 //source ./support/nupkg
-source https://nuget.devexpress.com/88luCgoeuPFTrDrTDcc6zKg22U2cVcTm3vdKCv88I7PHF9St6i/api
 
-storage: packages
+storage: none
 strategy: min
 lowest_matching: true
 copy_local:true
