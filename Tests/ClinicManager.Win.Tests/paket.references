@@ -1,15 +1,2 @@
-PolySharp
-Microsoft.CSharp
-ThisAssembly.Constants
-
-Enums.NET
-Fasterflect.Xpand
-
-System.ValueTuple 
 
 xunit.v3
-
-Humanizer.Core
-
-Moq
-Shouldly
