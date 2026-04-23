@@ -6,54 +6,9 @@ strategy: min
 lowest_matching: true
 copy_local:true
 specific_version : false
-framework:netstandard2.0,net48
+framework:netstandard2.0,net9.0,net9.0-windows,net10.0,net10.0-windows
 
-nuget System.Diagnostics.FileVersionInfo 4.3.0
-nuget System.IO.FileSystem 4.3.0
-nuget System.IO.FileSystem.Primitives 4.3.0
-nuget Enums.NET 5.0.0
-nuget Fasterflect.Xpand 2.0.7
-nuget Microsoft.CSharp 4.7.0
-nuget Microsoft.Win32.Registry 5.0.0
-nuget System.Text.Encoding.CodePages 9.0.14
-nuget System.Text.Json 9.0.14
-nuget System.Buffers 4.6.1
-nuget System.CodeDom 9.0.0
-nuget System.Configuration.ConfigurationManager 9.0.14
-nuget System.Security.Cryptography.Xml  9.0.14
-nuget System.ComponentModel.Annotations == 5.0.0
-nuget System.Data.OleDb 9.0.14
-nuget System.Security.Permissions  9.0.14
-nuget System.Reflection.Emit 4.7.0
-nuget System.Drawing.Common 9.0.14
-nuget System.IO.Compression 4.3.0
-nuget System.Management 9.0.0
-nuget System.Reflection.TypeExtensions 4.7.0
-nuget System.Reflection.DispatchProxy 4.8.0
-nuget System.Resources.Extensions 9.0.0
-nuget System.Runtime.CompilerServices.Unsafe 6.1.2
-nuget System.Reflection.Emit.Lightweight == 4.7.0
-nuget System.Runtime 4.3.1
-nuget System.Security.AccessControl 6.0.1
-nuget System.Threading.Tasks.Extensions 4.6.0
-nuget System.ValueTuple 4.6.2
-nuget System.Xml.XDocument 4.3.0
-nuget System.Threading.Tasks.Dataflow 9.0.0
-nuget System.Memory  4.6.3
-nuget System.Collections.Immutable  9.0.14
-nuget System.ServiceModel.NetTcp  8.1
-nuget System.ServiceModel.Security  6.0.0
-nuget System.ServiceModel.Http  8.1
-nuget System.ServiceModel.Duplex  6.0.0
-nuget Microsoft.Bcl.AsyncInterfaces 9.0.14
-nuget System.Text.Encodings.Web 9.0.14
-nuget System.Security.Cryptography.ProtectedData 9.0.14
-
-nuget DevExpress.Xpo 24.2.14
-
-nuget xunit 2.9.3
 nuget xunit.v3 3.2.2
-nuget xunit.runner.visualstudio 3.1.5
 nuget Xunit.OpenCategories.V3 2.4.1.19
 
 nuget ZString 2.6.0
@@ -64,7 +19,6 @@ nuget Moq 4.20.72
 nuget Shouldly 4.3.0
 
 nuget Microsoft.Testing.Extensions.CodeCoverage 18.5.2
-nuget Microsoft.NET.Test.Sdk 17.14.1
 
 nuget WixSharp 1.26.0
 nuget WixSharp.bin 1.26.0
@@ -72,45 +26,44 @@ nuget WixSharp.wix.bin 3.14.1
     
 nuget ThisAssembly.Constants 1.4.3
 
-nuget DevExpress.Win.PdfViewer 24.2.14
+nuget DevExpress.Wpf 24.2.14
+nuget DevExpress.Wpf.Printing 24.2.14
+nuget DevExpress.Wpf.RichEdit 24.2.14
+nuget DevExpress.Wpf.Charts 24.2.14
+nuget DevExpress.Wpf.PivotGrid 24.2.14
+nuget DevExpress.Wpf.Core 24.2.14
+nuget DevExpress.Wpf.SpellChecker 24.2.14
+nuget DevExpress.Wpf.Ribbon 24.2.14
+nuget DevExpress.Wpf.Controls 24.2.14
+nuget DevExpress.Wpf.Docking 24.2.14
+nuget DevExpress.Wpf.Grid.Core 24.2.14
+nuget DevExpress.Wpf.LayoutControl 24.2.14
+nuget DevExpress.Wpf.Grid 24.2.14
+nuget DevExpress.Wpf.Grid.Printing 24.2.14
+nuget DevExpress.Wpf.ExpressionEditor 24.2.14
+nuget DevExpress.Wpf.Diagram 24.2.14
+nuget DevExpress.Wpf.PropertyGrid 24.2.14
+nuget DevExpress.Wpf.TreeMap 24.2.14
+nuget DevExpress.Wpf.NavBar 24.2.14
+nuget DevExpress.Mvvm 24.2.14
+nuget DevExpress.Wpf.Reporting 24.2.14
+nuget DevExpress.Drawing 24.2.14
+nuget DevExpress.Wpf.Accordion 24.2.14
+nuget DevExpress.Wpf.PdfViewer 24.2.14
+nuget DevExpress.Wpf.Core.Extensions 24.2.14
+nuget DevExpress.Wpf.Map 24.2.14
+nuget DevExpress.Wpf.Carousel 24.2.14
+nuget DevExpress.Wpf.Dialogs 24.2.14
+nuget DevExpress.Wpf.Gauges 24.2.14
+nuget DevExpress.Wpf.Scheduling 24.2.14
+nuget DevExpress.Wpf.Gantt 24.2.14
+nuget DevExpress.Wpf.SchedulingReporting 24.2.14
+nuget DevExpress.Wpf.TypedStyles 24.2.14
+nuget DevExpress.Wpf.PrismAdapters 24.2.14
+nuget DevExpress.Wpf.Themes.Win11Light 24.2.14
+nuget DevExpress.Wpf.Themes.All 24.2.14
 nuget DevExpress.Document.Processor 24.2.14
 nuget DevExpress.Drawing.Skia 24.2.14
-nuget DevExpress.ExpressApp 24.2.14
-nuget DevExpress.ExpressApp.Chart 24.2.14
-nuget DevExpress.ExpressApp.Chart.Win 24.2.14
-nuget DevExpress.ExpressApp.CodeAnalysis 24.2.14
-nuget DevExpress.ExpressApp.ConditionalAppearance 24.2.14
-nuget DevExpress.ExpressApp.Dashboards 24.2.14
-nuget DevExpress.ExpressApp.Dashboards.Win 24.2.14
-nuget DevExpress.ExpressApp.FileAttachment.Win 24.2.14
-nuget DevExpress.ExpressApp.Notifications 24.2.14
-nuget DevExpress.ExpressApp.Notifications.Win 24.2.14
-nuget DevExpress.ExpressApp.Objects 24.2.14
-nuget DevExpress.ExpressApp.Office 24.2.14
-nuget DevExpress.ExpressApp.Office.Win 24.2.14
-nuget DevExpress.ExpressApp.PivotChart 24.2.14
-nuget DevExpress.ExpressApp.PivotChart.Win 24.2.14
-nuget DevExpress.ExpressApp.PivotGrid 24.2.14
-nuget DevExpress.ExpressApp.PivotGrid.Win 24.2.14
-nuget DevExpress.ExpressApp.ReportsV2 24.2.14
-nuget DevExpress.ExpressApp.ReportsV2.Win 24.2.14
-nuget DevExpress.ExpressApp.Scheduler 24.2.14
-nuget DevExpress.ExpressApp.Scheduler.Win 24.2.14
-nuget DevExpress.ExpressApp.TreeListEditors 24.2.14
-nuget DevExpress.ExpressApp.TreeListEditors.Win 24.2.14
-nuget DevExpress.ExpressApp.Validation 24.2.14
-nuget DevExpress.ExpressApp.Validation.Win 24.2.14
-nuget DevExpress.ExpressApp.ViewVariantsModule 24.2.14
-nuget DevExpress.ExpressApp.Win 24.2.14
-nuget DevExpress.Persistent.Base 24.2.14
-nuget DevExpress.RichEdit.Export 24.2.14
-nuget DevExpress.Win.Map 24.2.14
-nuget DevExpress.ExpressApp.Security.Xpo  24.2.14
-nuget DevExpress.Persistent.BaseImpl.Xpo  24.2.14
-
-nuget DevExpress.DataAccess.UI  24.2.14
-nuget DevExpress.Win.Gauges  24.2.14
-nuget DevExpress.Win.Reporting  24.2.14
-
+nuget DevExpress.Wpf.Scheduler 24.2.14
 
     
