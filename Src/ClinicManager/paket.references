@@ -6,50 +6,8 @@ Enums.NET
 Fasterflect.Xpand
 System.ValueTuple 
 
-DevExpress.Xpo 
-
 ZString
 Humanizer.Core 
-
-DevExpress.Win.PdfViewer
-DevExpress.Document.Processor
-DevExpress.Drawing.Skia
-DevExpress.ExpressApp
-DevExpress.ExpressApp.Chart
-DevExpress.ExpressApp.Chart.Win
-DevExpress.ExpressApp.CodeAnalysis
-DevExpress.ExpressApp.ConditionalAppearance
-DevExpress.ExpressApp.Dashboards
-DevExpress.ExpressApp.Dashboards.Win
-DevExpress.ExpressApp.FileAttachment.Win
-DevExpress.ExpressApp.Notifications
-DevExpress.ExpressApp.Notifications.Win
-DevExpress.ExpressApp.Objects
-DevExpress.ExpressApp.Office
-DevExpress.ExpressApp.Office.Win
-DevExpress.ExpressApp.PivotChart
-DevExpress.ExpressApp.PivotChart.Win
-DevExpress.ExpressApp.PivotGrid
-DevExpress.ExpressApp.PivotGrid.Win
-DevExpress.ExpressApp.ReportsV2
-DevExpress.ExpressApp.ReportsV2.Win
-DevExpress.ExpressApp.Scheduler
-DevExpress.ExpressApp.Scheduler.Win
-DevExpress.ExpressApp.TreeListEditors
-DevExpress.ExpressApp.TreeListEditors.Win
-DevExpress.ExpressApp.Validation
-DevExpress.ExpressApp.Validation.Win
-DevExpress.ExpressApp.ViewVariantsModule
-DevExpress.ExpressApp.Win
-DevExpress.Persistent.Base
-DevExpress.RichEdit.Export
-DevExpress.Win.Map
-DevExpress.ExpressApp.Security.Xpo
-DevExpress.Persistent.BaseImpl.Xpo
-
-DevExpress.DataAccess.UI
-DevExpress.Win.Gauges
-DevExpress.Win.Reporting
 
 
     
