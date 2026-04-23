@@ -154,25 +154,31 @@ class Build : NukeBuild
             
             UnitTestProjects.ForEach(x=>Information(x.Name));
            
-			DotNetTest(s => s
-                    .SetConfiguration(Configuration.Debug)
-                    .SetProcessEnvironmentVariable("DOTNET_CLI_UI_LANGUAGE", "en-US")
-                    .EnableNoBuild()
-                    .SetDataCollector("XPlat Code Coverage")
-                    .SetResultsDirectory(TestResultsDirectory)
-                    .SetSettingsFile(RootDirectory / "e2e.runsettings")
-                    .CombineWith(
-                        UnitTestProjects,
-                        (settings, project) => settings
-                            .SetProjectFile(project)
-                            .CombineWith(
-                                project.GetTargetFrameworks(),
-                                (frameworkSettings, framework) => frameworkSettings
-                                    .SetFramework(framework)
-                                    .AddLoggers($"trx;LogFileName={project.Name}_{framework}.trx")
-                            )
-                    ), completeOnFailure: true
-            );
+		var testCombinations =
+                from project in UnitTestProjects
+                let frameworks = project.GetTargetFrameworks()
+                from framework in frameworks
+                select new { project, framework };
+
+            
+            DotNetRun(s => s
+                .SetConfiguration(Configuration.Debug)
+                .SetProcessEnvironmentVariable("DOTNET_CLI_UI_LANGUAGE", "en-US")
+                .EnableNoBuild()
+                .CombineWith(
+                    testCombinations,
+                    (settings, v) => settings
+                        .SetProjectFile(v.project)
+                        .SetFramework(v.framework)
+                        .SetProcessAdditionalArguments(
+                            "--",
+							"--coverage",
+							"--coverage-output-format cobertura",
+							$"--coverage-output {CoverageDirectory / $"{v.project.Name}_{v.framework}.cobertura.xml"}",
+                            $"--results-directory {TestResultsDirectory}"
+                         )
+                    )
+                );
             
         });
 
