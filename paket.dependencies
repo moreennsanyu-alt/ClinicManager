@@ -67,4 +67,6 @@ nuget DevExpress.Document.Processor 24.2.14
 nuget DevExpress.Drawing.Skia 24.2.14
 nuget DevExpress.Wpf.Scheduler 24.2.14
 
+
+nuget System.Diagnostics.EventLog 10.0.7
     
