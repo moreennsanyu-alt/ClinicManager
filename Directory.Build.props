@@ -15,11 +15,11 @@
     <PropertyGroup>
         <NoWarn>$(NoWarn);NU5104;NU5100;NU5118;NU5123;NU1603;CS1701;CS1702;XA0101;MSB3277;CS8785;CS8669;CS1998;NU1507</NoWarn>
         <IsCoreProject>false</IsCoreProject>
-        <IsWpfProject>false</IsWpfProject>
+        <IsModuleProject>false</IsModuleProject>
         <IsCoreProject Condition=" $(MSBuildProjectName.Equals('ClinicManager.Core'))">true</IsCoreProject>
         <IsTestProject>$(MSBuildProjectName.Contains('Tests'))</IsTestProject>
         <IsTestSupportProject>$(MSBuildProjectName.Contains('Testing'))</IsTestSupportProject>
-        <IsWpfProject Condition=" $(MSBuildProjectName.Equals('ClinicManager.Core')) OR $(MSBuildProjectName.Equals('ClinicManager.Win'))">true</IsWpfProject>
+        <IsModuleProject Condition=" $(MSBuildProjectName.Equals('ClinicManager')) OR $(MSBuildProjectName.Equals('ClinicManager.Reports'))">true</IsModuleProject>
         <IsPackable>false</IsPackable>
         <MSBuildSdkExtrasVersion>3.0.44</MSBuildSdkExtrasVersion>
    </PropertyGroup>
@@ -32,9 +32,9 @@
   
     
     <Choose>
-        <When Condition="$(IsWpfProject)">
+        <When Condition="$(IsModuleProject)">
             <PropertyGroup>
-                <DefineConstants>$(DefineConstants);WPF</DefineConstants>
+                
             </PropertyGroup>
             <ItemGroup>
                 
