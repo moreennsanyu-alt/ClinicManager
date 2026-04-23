@@ -11,8 +11,6 @@ System.ValueTuple
 DevExpress.Xpo
 
 xunit.v3
-xunit.runner.visualstudio
-Microsoft.NET.Test.Sdk
 
 Humanizer.Core
 
