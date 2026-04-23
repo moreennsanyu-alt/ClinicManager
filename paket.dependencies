@@ -1,5 +1,5 @@
 source https://api.nuget.org/v3/index.json
-//source ./support/nupkg
+source ./support/nupkg
 
 storage: none
 strategy: min
