@@ -2,7 +2,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <TargetFramework>net9.0-windows</TargetFramework>
-        <AssemblyName>ClinicMgr.E2E.Tests</AssemblyName>
+        <TestingPlatformDotnetTestSupport>true</TestingPlatformDotnetTestSupport>
+        <EnableNUnitRunner>true</EnableNUnitRunner>
         <OutputType>Exe</OutputType>
         <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     </PropertyGroup>
