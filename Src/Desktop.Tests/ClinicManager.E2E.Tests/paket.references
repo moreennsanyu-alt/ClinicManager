@@ -8,8 +8,5 @@ NUnit3TestAdapter
 
 Microsoft.Testing.Extensions.CodeCoverage
 
-WixSharp
-WixSharp.bin
-WixSharp.wix.bin
     
 ThisAssembly.Constants
