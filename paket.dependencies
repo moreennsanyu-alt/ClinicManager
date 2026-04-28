@@ -104,7 +104,7 @@ nuget System.ValueTuple 4.5.0
 nuget System.Xml.XDocument 4.3.0
 nuget System.Threading.Tasks.Dataflow 9.0.0
 nuget System.Memory  4.6.0
-nuget System.Collections.Immutable  9.0.0
+nuget System.Collections.Immutable  9.0.10
 nuget System.ServiceModel.NetTcp  8.1
 nuget System.ServiceModel.Security  6.0.0
 nuget System.ServiceModel.Http  8.1
