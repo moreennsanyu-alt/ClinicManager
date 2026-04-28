@@ -1,4 +1,4 @@
-STORAGE: PACKAGES
+STORAGE: NONE
 STRATEGY: MIN
 LOWEST_MATCHING: TRUE
 COPY-LOCAL: TRUE
@@ -370,7 +370,7 @@ NUGET
       xunit.v3.runner.common (4.0.0-pre.81) - restriction: || (== net48) (&& (== netstandard2.0) (>= net472)) (&& (== netstandard2.0) (>= net8.0))
     ZString (2.6)
       System.Memory (>= 4.5.3)
-  remote: https://nuget.devexpress.com/88luCgoeuPFTrDrTDcc6zKg22U2cVcTm3vdKCv88I7PHF9St6i/api
+  remote: ./support/nupkg
     DevExpress.Charts (24.2.14) - restriction: || (== net48) (&& (== netstandard2.0) (>= net462)) (&& (== netstandard2.0) (>= net8.0))
       DevExpress.Charts.Core (24.2.14) - restriction: || (== net48) (&& (== netstandard2.0) (>= net462)) (&& (== netstandard2.0) (>= net8.0))
       DevExpress.Data (24.2.14) - restriction: || (== net48) (&& (== netstandard2.0) (>= net462)) (&& (== netstandard2.0) (>= net8.0))
