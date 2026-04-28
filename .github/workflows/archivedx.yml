@@ -48,7 +48,12 @@ jobs:
           
           $filesToZip = Get-ChildItem -Path "packages" -Filter "devexpress*.nupkg" -Recurse
           if ($filesToZip.Count -eq 0) { exit 0 }
-
+          
+          # --- Echo packages to be archived ---
+          Write-Host "The following packages will be archived:"
+          $filesToZip.FullName | ForEach-Object { Write-Host " - $_" }
+          Write-Host "------------------------------------"
+          
           # Access the environment variable using $env:
           & 7z a -p"$env:ZIP_PWD" -v90m "$packageName" $($filesToZip.FullName) -y
      
