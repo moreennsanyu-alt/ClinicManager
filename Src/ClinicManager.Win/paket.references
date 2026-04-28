@@ -7,6 +7,6 @@ ThisAssembly.Constants
 
 DevExpress.ExpressApp
 DevExpress.ExpressApp.Win
-
+System.Configuration.ConfigurationManager
 Microsoft.CSharp
 
