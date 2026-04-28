@@ -1,1 +1,17 @@
 
+Humanizer.Core
+
+
+Moq
+Shouldly
+NUnit.Analyzers
+NUnit
+NUnit3TestAdapter
+
+Microsoft.Testing.Extensions.CodeCoverage
+
+WixSharp
+WixSharp.bin
+WixSharp.wix.bin
+    
+ThisAssembly.Constants
