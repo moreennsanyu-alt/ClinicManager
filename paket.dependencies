@@ -76,7 +76,7 @@ nuget Microsoft.CSharp 4.7.0
 nuget Microsoft.NETCore.Platforms 7.0.4
 nuget Microsoft.Win32.Registry 5.0.0
 nuget System.Text.Encoding.CodePages 9.0.0
-nuget System.Text.Json 9.0.0
+nuget System.Text.Json 9.0.10
 nuget System.Buffers 4.6.1
 nuget System.CodeDom 9.0.0
 nuget Microsoft.Data.SqlClient 5.2.2
