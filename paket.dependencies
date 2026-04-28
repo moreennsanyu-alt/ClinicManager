@@ -17,8 +17,9 @@ nuget PolySharp 1.15.0
 nuget Moq 4.20.72
 nuget Shouldly 4.3.0
 nuget xunit.v3 4.0.0-pre.81
+nuget Microsoft.Testing.Platform 2.2.1
 
-nuget Microsoft.Testing.Extensions.CodeCoverage 18.5.2
+nuget Microsoft.Testing.Extensions.CodeCoverage 18.6.2
 
 nuget WixSharp 1.26.0
 nuget WixSharp.bin 1.26.0
@@ -79,7 +80,6 @@ nuget System.Text.Encoding.CodePages 9.0.10
 nuget System.Text.Json 9.0.10
 nuget System.Buffers 4.6.1
 nuget System.CodeDom 9.0.10
-nuget Microsoft.Data.SqlClient 5.2.2
 nuget System.Configuration.ConfigurationManager 9.0.10
 nuget System.Security.Cryptography.Xml  9.0.10
 nuget System.ComponentModel.Annotations == 5.0.0
@@ -112,4 +112,5 @@ nuget Microsoft.Bcl.AsyncInterfaces 9.0.10
 nuget System.Text.Encodings.Web 9.0.10
 nuget System.Security.Cryptography.ProtectedData 9.0.10
 nuget System.Reflection.Metadata 9.0.10
+nuget System.Security.AccessControl 6.0.1
 
