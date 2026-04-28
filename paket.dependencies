@@ -110,4 +110,5 @@ nuget System.ServiceModel.Duplex  6.0.0
 nuget Microsoft.Bcl.AsyncInterfaces 9.0.0
 nuget System.Text.Encodings.Web 9.0.0
 nuget System.Security.Cryptography.ProtectedData 9.0.0
+nuget System.Reflection.Metadata 9.0.10
 
