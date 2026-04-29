@@ -4,6 +4,15 @@
         <TargetFramework>net48</TargetFramework>
         <UseWindowsForms>true</UseWindowsForms>
     </PropertyGroup>
+
+   <ItemGroup>
+        <EmbeddedResource Include="**\*.png" />
+        <EmbeddedResource Include="**\*.svg" />
+        <EmbeddedResource Include="**\*.jpg" />
+        <EmbeddedResource Include="**\*.jpeg" />
+        <EmbeddedResource Include="**\*.xafml" />
+        <EmbeddedResource Remove="bin\**" />
+   </ItemGroup>
   
    <Import Project="..\..\.paket\Paket.Restore.targets" />
 </Project>
