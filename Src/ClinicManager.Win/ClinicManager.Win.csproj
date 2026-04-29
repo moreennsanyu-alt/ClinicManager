@@ -7,7 +7,24 @@
         <UseWindowsForms>true</UseWindowsForms>
         <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     </PropertyGroup>
-    
+
+
+    <ItemGroup>
+        <EmbeddedResource Include="**\*.png" />
+        <EmbeddedResource Include="**\*.svg" />
+        <EmbeddedResource Include="**\*.jpg" />
+        <EmbeddedResource Include="**\*.jpeg" />
+        <EmbeddedResource Include="**\*.xafml" />
+        <EmbeddedResource Remove="bin\**" />   
+        <EmbeddedResource Remove="Model.xafml" />
+   </ItemGroup>
+
+   <ItemGroup>
+        <Content Include="Model.xafml">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
+
     <ItemGroup>
         <ProjectReference Include="..\ClinicManager\ClinicManager.csproj" />
     </ItemGroup>
