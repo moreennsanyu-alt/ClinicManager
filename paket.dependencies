@@ -52,7 +52,6 @@ nuget DevExpress.Diagram.Core 24.2.14
 nuget DevExpress.Images 24.2.14
 nuget DevExpress.Wpf.PropertyGrid 24.2.14
 nuget DevExpress.Wpf.TreeMap 24.2.14
-nuget DevExpress.Wpf.TreeMap.Core 24.2.14
 nuget DevExpress.Wpf.NavBar 24.2.14
 nuget DevExpress.Wpf.Accordion 24.2.14
 nuget DevExpress.Wpf.PdfViewer 24.2.14
