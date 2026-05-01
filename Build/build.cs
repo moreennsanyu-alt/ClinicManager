@@ -83,12 +83,12 @@ class Build : NukeBuild
 			
 			DotNet("wix extension add -g WixToolset.UI.wixext/6.0.2");
             
-            DotNet("paket restore");
+            //DotNet("paket restore");
             
             DotNetRestore(s => s
                 .SetProjectFile(Solution)
                 .EnableNoCache()
-                //.SetConfigFile(RootDirectory / "nuget.config")
+                .SetConfigFile(RootDirectory / "nuget.config")
                 );
         });
 
