@@ -8,6 +8,13 @@
         <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="DevExpress.Wpf.Core.Extensions"  />
+    <PackageReference Include="DevExpress.Wpf.Core" />
+    <PackageReference Include="DevExpress.Wpf.Controls"  />
+    <PackageReference Include="DevExpress.Wpf.Themes.Win11Dark"  />
+    <PackageReference Include="DevExpress.Wpf.Themes.Win11Light" />
+  </ItemGroup>
 
 
     <ItemGroup>
