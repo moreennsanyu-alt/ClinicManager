@@ -2,9 +2,9 @@ name: Clinic WPF Build & Test
 
 on:
   push:
-    branches: [ "main3" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "main3" ]
+    branches: [ "main" ]
 
 jobs:
   build:
