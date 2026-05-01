@@ -9,7 +9,6 @@ copy_local:true
 specific_version : false
 framework:netstandard2.0,net9.0,net9.0-windows,net48
 
-nuget DevExpress.Wpf.PrismAdapters 24.2.14
 nuget DevExpress.RichEdit.Export 24.2.14
 nuget DevExpress.Wpf.Core.Extensions 24.2.14
 nuget DevExpress.Wpf.DocumentViewer.Core 24.2.14
