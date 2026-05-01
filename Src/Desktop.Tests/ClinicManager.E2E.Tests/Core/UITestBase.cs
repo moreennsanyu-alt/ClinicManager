@@ -6,10 +6,15 @@ using FlaUI.UIA3;
 using System.Globalization;
 using System.Reflection;
 using System.Runtime.InteropServices;
+using FlaUI.Core.AutomationElements;
+using FlaUI.Core.WindowsAPI;
+using FlaUI.TestUtilities;
+using NUnit.Framework;
+using OperatingSystem = FlaUI.Core.Tools.OperatingSystem;
 
 namespace ClinicManager.E2E.Tests.Core;
 
-public abstract class UITestBase 
+public abstract class UITestBase : FlaUITestBase
 {
     static UITestBase()
     {
@@ -21,7 +26,16 @@ public abstract class UITestBase
         Retry.DefaultInterval = TimeSpan.FromMilliseconds(250);
     }
 
-
+    protected override AutomationBase GetAutomation()
+        {
+            return new UIA3Automation();
+        }
+        
+    protected override Application StartApplication()
+        {
+            return FlaUI.Core.Application.Launch("");
+        }
+    }
     private static class NativeMethods
     {
         [DllImport("user32.dll", SetLastError = true)]
