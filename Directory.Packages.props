@@ -1,9 +1,16 @@
 <Project>
-  <PropertyGroup>
-    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
-  </PropertyGroup>
+    <PropertyGroup>
+        <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+        <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+        <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+        <DXVer>24.2.14</DXVer>
+    </PropertyGroup>
+
   <ItemGroup>
-    <PackageVersion Include="PackageA" Version="1.0.0" />
-    <PackageVersion Include="PackageB" Version="2.0.0" />
+    <PackageVersion Include="DevExpress.Wpf.Core.Extensions" Version="$(DXVer)" />
+    <PackageVersion Include="DevExpress.Wpf.Core" Version="$(DXVer)" />
+    <PackageVersion Include="DevExpress.Wpf.Controls" Version="$(DXVer)" />
+    <PackageVersion Include="DevExpress.Wpf.Themes.Win11Dark" Version="$(DXVer)" />
+    <PackageVersion Include="DevExpress.Wpf.Themes.Win11Light" Version="$(DXVer)" />
   </ItemGroup>
 </Project>
