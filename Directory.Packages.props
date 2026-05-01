@@ -13,7 +13,8 @@
     <PackageVersion Include="DevExpress.Wpf.Themes.Win11Dark" Version="$(DXVer)" />
     <PackageVersion Include="DevExpress.Wpf.Themes.Win11Light" Version="$(DXVer)" />
 
-    <PackageVersion Include="DevExpress.Wpf.Themes.Win11Light" Version="$(DXVer)" />
-
+    <PackageVersion Include="NUnit.Analyzers" Version="4.12.0" />
+    <PackageVersion Include="NUnit" Version="4.5.1" />
+    <PackageVersion Include="NUnit3TestAdapter" Version="6.2.0" />
   </ItemGroup>
 </Project>
