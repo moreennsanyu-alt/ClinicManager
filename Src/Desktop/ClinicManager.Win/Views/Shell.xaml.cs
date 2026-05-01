@@ -7,7 +7,7 @@ namespace ClinicManager.Win.Views
     /// </summary>
     public partial class Shell : Window
     {
-        public Shell
+        public Shell()
         {
             InitializeComponent();
         }
