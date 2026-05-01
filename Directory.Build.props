@@ -45,7 +45,7 @@
                 
             </PropertyGroup>
             <ItemGroup>
-                <Using Include="Xunit" />
+                <Using Include="NUnit.Framework" />
             </ItemGroup>
         </When>
     </Choose>
