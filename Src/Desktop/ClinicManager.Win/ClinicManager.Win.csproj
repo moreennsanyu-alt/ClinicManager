@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net9.0-windows</TargetFramework>
+        <AssemblyName>ClinicMgr</AssemblyName>
+        <OutputType>WinExe</OutputType>
+        <UseWPF>true</UseWPF>
+        <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DevExpress.Wpf.Core.Extensions"  />
+    <PackageReference Include="DevExpress.Wpf.Core" />
+    <PackageReference Include="DevExpress.Wpf.Controls"  />
+    <PackageReference Include="DevExpress.Wpf.Themes.Win11Dark"  />
+    <PackageReference Include="DevExpress.Wpf.Themes.Win11Light" />
+  </ItemGroup>
+
+
+    <ItemGroup>
+        <ProjectReference Include="..\ClinicManager.Core\ClinicManager.Core.csproj" />
+    </ItemGroup>
+
+</Project>
