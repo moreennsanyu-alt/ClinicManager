@@ -8,7 +8,6 @@ using DevExpress.ExpressApp.PivotChart.Win;
 using DevExpress.ExpressApp.PivotGrid.Win;
 using DevExpress.ExpressApp.ReportsV2;
 using DevExpress.ExpressApp.Scheduler.Win;
-using DevExpress.ExpressApp.ScriptRecorder.Win;
 using DevExpress.ExpressApp.TreeListEditors;
 using DevExpress.ExpressApp.TreeListEditors.Win;
 using DevExpress.ExpressApp.Updating;
