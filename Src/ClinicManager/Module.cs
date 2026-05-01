@@ -7,6 +7,7 @@ using DevExpress.ExpressApp.ConditionalAppearance;
 using DevExpress.ExpressApp.PivotChart.Win;
 using DevExpress.ExpressApp.PivotGrid.Win;
 using DevExpress.ExpressApp.ReportsV2;
+using DevExpress.ExpressApp.ReportsV2.Win;
 using DevExpress.ExpressApp.Scheduler.Win;
 using DevExpress.ExpressApp.TreeListEditors;
 using DevExpress.ExpressApp.TreeListEditors.Win;
