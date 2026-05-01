@@ -14,6 +14,8 @@
     <PackageReference Include="DevExpress.Wpf.Controls"  />
     <PackageReference Include="DevExpress.Wpf.Themes.Win11Dark"  />
     <PackageReference Include="DevExpress.Wpf.Themes.Win11Light" />
+
+    <PackageReference Include="Prism.DryIoc" />
   </ItemGroup>
 
 
