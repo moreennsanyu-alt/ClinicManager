@@ -13,7 +13,6 @@ nuget DevExpress.RichEdit.Export 24.2.14
 nuget DevExpress.Wpf.Core.Extensions 24.2.14
 nuget DevExpress.Wpf.DocumentViewer.Core 24.2.14
 nuget DevExpress.Wpf.Map 24.2.14
-nuget DevExpress.Wpf.Map.Core 24.2.14
 nuget DevExpress.Printing.Core 24.2.14
 nuget DevExpress.Mvvm 24.2.14
 nuget DevExpress.Wpf.Core 24.2.14
