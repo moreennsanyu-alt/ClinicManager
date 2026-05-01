@@ -13,6 +13,7 @@
     <PackageReference Include="NUnit.Analyzers" />
     
     <PackageReference Include="FlaUI.UIA3.Signed" />
+    <PackageReference Include="FlaUI.TestUtilities" />
    
     <PackageReference Include="Microsoft.Testing.Extensions.CodeCoverage" />
  
