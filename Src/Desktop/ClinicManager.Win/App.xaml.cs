@@ -8,7 +8,7 @@ namespace ClinicManager.Win
     /// <summary>
     /// Interaction logic for App.xaml
     /// </summary>
-    public partial class App : PrismApplication
+    public partial class App : CMApplication
     {
         protected override Window CreateShell()
         {
