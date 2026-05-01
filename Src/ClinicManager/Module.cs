@@ -6,6 +6,7 @@ using DevExpress.ExpressApp.Chart.Win;
 using DevExpress.ExpressApp.ConditionalAppearance;
 using DevExpress.ExpressApp.PivotChart.Win;
 using DevExpress.ExpressApp.PivotGrid.Win;
+using DevExpress.ExpressApp.Dashboards.Win;
 using DevExpress.ExpressApp.ReportsV2;
 using DevExpress.ExpressApp.ReportsV2.Win;
 using DevExpress.ExpressApp.Scheduler.Win;
