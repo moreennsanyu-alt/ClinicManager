@@ -35,7 +35,7 @@ public abstract class UITestBase : FlaUITestBase
         {
             return FlaUI.Core.Application.Launch("");
         }
-    }
+    
     private static class NativeMethods
     {
         [DllImport("user32.dll", SetLastError = true)]
