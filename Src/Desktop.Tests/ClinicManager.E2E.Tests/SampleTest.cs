@@ -1,4 +1,4 @@
-using ClinicManager.E2E.Tests.Core
+using ClinicManager.E2E.Tests.Core;
 using NUnit.Framework;
 
 namespace ClinicManager.E2E.Tests;
