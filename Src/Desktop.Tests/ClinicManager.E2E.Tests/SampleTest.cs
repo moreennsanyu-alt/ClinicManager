@@ -9,7 +9,8 @@ namespace ClinicManager.E2E.Tests;
     [Test]
     public void TransferFunds()
     {
-    var fg = 4 / 0;
+      Assert.Fail();
+      
     }
   }
 
