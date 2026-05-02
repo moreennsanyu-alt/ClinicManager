@@ -12,4 +12,4 @@ namespace ClinicManager.E2E.Tests;
     var fg = 4 / 0;
     }
   }
-}
+
