@@ -16,6 +16,7 @@ namespace ClinicManager.E2E.Tests.Core;
 
 public abstract class UITestBase : FlaUITestBase
 {
+    static string ApplicationPath = string.Format("..\\..\\ClinicManager.Win\\debug\\ClinicMgr.exe",Environment.CurrentDirectory);
     static UITestBase()
     {
         NativeMethods.SetProcessDPIAware();
@@ -33,7 +34,7 @@ public abstract class UITestBase : FlaUITestBase
         
     protected override Application StartApplication()
         {
-            return FlaUI.Core.Application.Launch("");
+            return FlaUI.Core.Application.Launch(ApplicationPath);
         }
     
     private static class NativeMethods
