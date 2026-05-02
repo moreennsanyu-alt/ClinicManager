@@ -10,6 +10,8 @@
         <Nullable>enable</Nullable>
         <LangVersion>13.0</LangVersion>
         <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+        <ArtifactsPath>$(MSBuildThisFileDirectory)artifacts</ArtifactsPath>
+   
     </PropertyGroup>
   
     <PropertyGroup>
