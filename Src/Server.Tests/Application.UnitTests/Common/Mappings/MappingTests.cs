@@ -1,12 +1,12 @@
 using System.Runtime.CompilerServices;
 using AutoMapper;
-using CleanArchitecture.Application.Common.Interfaces;
-using CleanArchitecture.Application.TodoLists.Queries.GetTodos;
-using CleanArchitecture.Domain.Entities;
+using ClinicManager.Application.Common.Interfaces;
+using ClinicManager.Application.TodoLists.Queries.GetTodos;
+using ClinicManager.Domain.Entities;
 using Microsoft.Extensions.Logging;
 using NUnit.Framework;
 
-namespace CleanArchitecture.Application.UnitTests.Common.Mappings;
+namespace ClinicManager.Application.UnitTests.Common.Mappings;
 
 public class MappingTests
 {
