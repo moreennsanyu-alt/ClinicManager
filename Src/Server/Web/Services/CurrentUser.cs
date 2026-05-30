@@ -1,8 +1,8 @@
-﻿using System.Security.Claims;
+using System.Security.Claims;
 
-using CleanArchitecture.Application.Common.Interfaces;
+using ClinicManager.Application.Common.Interfaces;
 
-namespace CleanArchitecture.Web.Services;
+namespace ClinicManager.Web.Services;
 
 public class CurrentUser : IUser
 {
