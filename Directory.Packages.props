@@ -46,6 +46,8 @@
     <PackageVersion Include="FlaUI.UIA3.Signed" Version="5.0.0" />
     <PackageVersion Include="FlaUI.Core.Signed" Version="5.0.0" />
     <PackageVersion Include="Microsoft.Testing.Extensions.CodeCoverage" Version="18.7.0" />
+    <PackageVersion Include="System.Security.Cryptography.Xml" Version="10.0.8" />
+
 
   </ItemGroup>
 </Project>
