@@ -1,4 +1,4 @@
-﻿namespace CleanArchitecture.Shared;
+﻿namespace ClinicManager.Shared;
 
 public static class Services
 {
