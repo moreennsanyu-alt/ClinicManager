@@ -1,6 +1,6 @@
 using ClinicManager.Application.Common.Behaviours;
 using ClinicManager.Application.Common.Interfaces;
-using CleanArchitecture.Application.TodoItems.Commands.CreateTodoItem;
+using ClinicManager.Application.TodoItems.Commands.CreateTodoItem;
 using Microsoft.Extensions.Logging;
 using Moq;
 using NUnit.Framework;
