@@ -24,7 +24,7 @@
   <Folder Name="/ServerTests/">
     <Project Path="Src/Server.Tests/Application.FunctionalTests/Application.FunctionalTests.csproj" />
     <Project Path="Src/Server.Tests/Application.UnitTests/Application.UnitTests.csproj" />
-    <Project Path="Src/Server.Tests/Infrastructure.UnitTests/Infrastructure.UnitTests.csproj" />
+    <Project Path="Src/Server.Tests/Infrastructure.IntegrationTests/Infrastructure.IntegrationTests.csproj" />
     <Project Path="Src/Server.Tests/Domain.UnitTests/Domain.UnitTests.csproj" />
   </Folder> 
   
