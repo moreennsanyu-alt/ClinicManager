@@ -45,5 +45,7 @@
     <PackageVersion Include="FlaUI.TestUtilities" Version="5.0.0" />
     <PackageVersion Include="FlaUI.UIA3.Signed" Version="5.0.0" />
     <PackageVersion Include="FlaUI.Core.Signed" Version="5.0.0" />
- </ItemGroup>
+    <PackageVersion Include="Microsoft.Testing.Extensions.CodeCoverage" Version="18.7.0" />
+
+  </ItemGroup>
 </Project>
