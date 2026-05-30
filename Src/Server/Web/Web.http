@@ -1,47 +1,58 @@
-﻿# For more info on HTTP files go to https://aka.ms/vs/httpfile
+# For more info on HTTP files go to https://aka.ms/vs/httpfile
 @Web_HostAddress = https://localhost:5001
-@AuthCookieName = .AspNetCore.Identity.Application
-@AuthCookieValue = <AuthCookieValue>
 
-# GET Identity Account Login
-# Get the @RequestVerificationToken necessary for logging in.
-GET {{Web_HostAddress}}/Identity/Account/Login
+@Email=administrator@localhost
+@Password=Administrator1!
+@BearerToken=<YourToken>
+
+# POST Users Register
+POST {{Web_HostAddress}}/api/Users/Register
+Content-Type: application/json
+
+{
+  "email": "{{Email}}",
+  "password": "{{Password}}"
+}
 
 ###
 
-# POST Identity Account Login
-# Get the @AuthCookieValue necessary for authenticating requests.
-@Email=administrator@localhost
-@Password=Administrator1!
-@RequestVerificationToken=<RequestVerificationToken>
-POST {{Web_HostAddress}}/Identity/Account/Login
-Content-Type: application/x-www-form-urlencoded
+# POST Users Login
+POST {{Web_HostAddress}}/api/Users/Login
+Content-Type: application/json
 
-Input.Email={{Email}}&Input.Password={{Password}}&__RequestVerificationToken={{RequestVerificationToken}}
+{
+  "email": "{{Email}}",
+  "password": "{{Password}}"
+}
+
+###
+
+# POST Users Refresh
+POST {{Web_HostAddress}}/api/Users/Refresh
+Authorization: Bearer {{BearerToken}}
+Content-Type: application/json
+
+{
+  "refreshToken": ""
+}
 
 ###
 
 # GET WeatherForecast
 GET {{Web_HostAddress}}/api/WeatherForecasts
-Cookie: {{AuthCookieName}}={{AuthCookieValue}}
+Authorization: Bearer {{BearerToken}}
 
 ###
 
 # GET TodoLists
 GET {{Web_HostAddress}}/api/TodoLists
-Cookie: {{AuthCookieName}}={{AuthCookieValue}}
-
-###
-
-#GET TodoList
-GET {{Web_HostAddress}}/api/TodoLists/1
-Cookie: {{AuthCookieName}}={{AuthCookieValue}}
+Authorization: Bearer {{BearerToken}}
 
 ###
 
 # POST TodoLists
 POST {{Web_HostAddress}}/api/TodoLists
-Cookie: {{AuthCookieName}}={{AuthCookieValue}}
+Authorization: Bearer {{BearerToken}}
 Content-Type: application/json
 
 // CreateTodoListCommand
@@ -53,7 +64,7 @@ Content-Type: application/json
 
 # PUT TodoLists
 PUT {{Web_HostAddress}}/api/TodoLists/1
-Cookie: {{AuthCookieName}}={{AuthCookieValue}}
+Authorization: Bearer {{BearerToken}}
 Content-Type: application/json
 
 // UpdateTodoListCommand
@@ -66,7 +77,7 @@ Content-Type: application/json
 
 # DELETE TodoLists
 DELETE {{Web_HostAddress}}/api/TodoLists/1
-Cookie: {{AuthCookieName}}={{AuthCookieValue}}
+Authorization: Bearer {{BearerToken}}
 
 ###
 
@@ -74,13 +85,14 @@ Cookie: {{AuthCookieName}}={{AuthCookieValue}}
 @PageNumber = 1
 @PageSize = 10
 GET {{Web_HostAddress}}/api/TodoItems?ListId=1&PageNumber={{PageNumber}}&PageSize={{PageSize}}
-Cookie: {{AuthCookieName}}={{AuthCookieValue}}
+
+Authorization: Bearer {{BearerToken}}
 
 ###
 
 # POST TodoItems
 POST {{Web_HostAddress}}/api/TodoItems
-Cookie: {{AuthCookieName}}={{AuthCookieValue}}
+Authorization: Bearer {{BearerToken}}
 Content-Type: application/json
 
 // CreateTodoItemCommand
@@ -93,7 +105,7 @@ Content-Type: application/json
 
 #PUT TodoItems UpdateItemDetails
 PUT {{Web_HostAddress}}/api/TodoItems/UpdateItemDetails?Id=1
-Cookie: {{AuthCookieName}}={{AuthCookieValue}}
+Authorization: Bearer {{BearerToken}}
 Content-Type: application/json
 
 // UpdateTodoItemDetailCommand
@@ -108,7 +120,7 @@ Content-Type: application/json
 
 # PUT TodoItems
 PUT {{Web_HostAddress}}/api/TodoItems/1
-Cookie: {{AuthCookieName}}={{AuthCookieValue}}
+Authorization: Bearer {{BearerToken}}
 Content-Type: application/json
 
 // UpdateTodoItemCommand
@@ -122,6 +134,6 @@ Content-Type: application/json
 
 # DELETE TodoItem
 DELETE {{Web_HostAddress}}/api/TodoItems/1
-Cookie: {{AuthCookieName}}={{AuthCookieValue}}
+Authorization: Bearer {{BearerToken}}
 
 ###

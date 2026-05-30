@@ -28,9 +28,8 @@ public static class DependencyInjection
         {
             options.AddOperationTransformer<ApiExceptionOperationTransformer>();
             options.AddOperationTransformer<IdentityApiOperationTransformer>();
-#if (UseApiOnly)
             options.AddDocumentTransformer<BearerSecuritySchemeTransformer>();
-#endif
+
         });
 
         builder.Services.AddCors();
