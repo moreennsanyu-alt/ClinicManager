@@ -19,6 +19,7 @@
     <PackageReference Include="Nuke.Common" Version="$(NukeVersion)" />
     <PackageReference Include="Nuke.Components" Version="$(NukeVersion)" />
     <PackageReference Include="SharpCompress" Version="0.42.1" />
+    <PackageVersion Include="System.Security.Cryptography.Xml" Version="10.0.8" />
     <PackageReference Include="Serilog.Sinks.File" Version="7.0.0" />
   </ItemGroup>
 </Project>
