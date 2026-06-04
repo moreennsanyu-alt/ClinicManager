@@ -2,6 +2,9 @@
 
   <PropertyGroup>
       <TargetFramework>net9.0-windows</TargetFramework>
+      <EnableNUnitRunner>true</EnableNUnitRunner>
+      <OutputType>Exe</OutputType> 
+      <TestingPlatformDotnetTestSupport>true</TestingPlatformDotnetTestSupport>
   </PropertyGroup>
 
   <ItemGroup>
