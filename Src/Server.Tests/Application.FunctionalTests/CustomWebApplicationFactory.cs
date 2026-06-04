@@ -1,6 +1,6 @@
 ﻿using System.Data.Common;
-using CleanArchitecture.Application.Common.Interfaces;
-using CleanArchitecture.Infrastructure.Data;
+using ClinicManager.Application.Common.Interfaces;
+using ClinicManager.Infrastructure.Data;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.AspNetCore.TestHost;
@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 
-namespace CleanArchitecture.Application.FunctionalTests;
+namespace ClinicManager.Application.FunctionalTests;
 
 using static Testing;
 
@@ -28,7 +28,7 @@ public class CustomWebApplicationFactory : WebApplicationFactory<Program>
     {
         builder
             .UseEnvironment("Testing")
-            .UseSetting("ConnectionStrings:CleanArchitectureDb", _connectionString);
+            .UseSetting("ConnectionStrings:ClinicManagerDb", _connectionString);
 
         builder.ConfigureTestServices(services =>
         {
@@ -41,21 +41,17 @@ public class CustomWebApplicationFactory : WebApplicationFactory<Program>
                     mock.SetupGet(x => x.Id).Returns(GetUserId());
                     return mock.Object;
                 });
-#if (!UseAspire || UseSqlite)
+
             services
                 .RemoveAll<DbContextOptions<ApplicationDbContext>>()
                 .AddDbContext<ApplicationDbContext>((sp, options) =>
                 {
                     options.AddInterceptors(sp.GetServices<ISaveChangesInterceptor>());
-    #if (UsePostgreSQL)
-                    options.UseNpgsql(_connection);
-    #elif (UseSqlServer)
-                    options.UseSqlServer(_connection);
-    #else
+  
                     options.UseSqlite(_connection);
-    #endif
+    
                 });
-#endif
+
         });
     }
 }
