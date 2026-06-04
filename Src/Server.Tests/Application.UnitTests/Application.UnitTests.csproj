@@ -3,21 +3,19 @@
     <PropertyGroup>
         <RootNamespace>ClinicManager.Application.UnitTests</RootNamespace>
         <AssemblyName>ClinicManager.Application.UnitTests</AssemblyName>
+        <EnableNUnitRunner>true</EnableNUnitRunner>
+        <OutputType>Exe</OutputType> 
+        <TestingPlatformDotnetTestSupport>true</TestingPlatformDotnetTestSupport>
     </PropertyGroup>
 
     <ItemGroup>
         <PackageReference Include="Azure.Identity" />
-        <PackageReference Include="Microsoft.NET.Test.Sdk" />
         <PackageReference Include="nunit" />
         <PackageReference Include="NUnit.Analyzers">
           <PrivateAssets>all</PrivateAssets>
           <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
         <PackageReference Include="NUnit3TestAdapter" />
-        <PackageReference Include="coverlet.collector">
-          <PrivateAssets>all</PrivateAssets>
-          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-        </PackageReference>
         <PackageReference Include="Moq" />
         <PackageReference Include="Shouldly" />
     </ItemGroup>
