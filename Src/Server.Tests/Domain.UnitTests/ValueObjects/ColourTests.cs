@@ -1,9 +1,9 @@
-﻿using CleanArchitecture.Domain.Exceptions;
-using CleanArchitecture.Domain.ValueObjects;
+﻿using ClinicManager.Domain.Exceptions;
+using ClinicManager.Domain.ValueObjects;
 using NUnit.Framework;
 using Shouldly;
 
-namespace CleanArchitecture.Domain.UnitTests.ValueObjects;
+namespace ClinicManager.Domain.UnitTests.ValueObjects;
 
 public class ColourTests
 {
