@@ -18,6 +18,7 @@
         <PackageReference Include="NUnit3TestAdapter" />
         <PackageReference Include="Moq" />
         <PackageReference Include="Shouldly" />
+        <PackageReference Include="Microsoft.Testing.Extensions.CodeCoverage" />
     </ItemGroup>
 
     <ItemGroup>
