@@ -7,6 +7,7 @@ builder.AddKeyVaultIfConfigured();
 builder.AddApplicationServices();
 builder.AddInfrastructureServices();
 builder.AddWebServices();
+builder.AddServiceDefaults();
 
 var app = builder.Build();
 
