@@ -1,8 +1,8 @@
-﻿using CleanArchitecture.Application.Common.Exceptions;
-using CleanArchitecture.Application.TodoLists.Commands.CreateTodoList;
-using CleanArchitecture.Domain.Entities;
+﻿using ClinicManager.Application.Common.Exceptions;
+using ClinicManager.Application.TodoLists.Commands.CreateTodoList;
+using ClinicManager.Domain.Entities;
 
-namespace CleanArchitecture.Application.FunctionalTests.TodoLists.Commands;
+namespace ClinicManager.Application.FunctionalTests.TodoLists.Commands;
 
 using static Testing;
 
