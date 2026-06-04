@@ -1,10 +1,10 @@
 ﻿using System.Data;
 using System.Data.Common;
-using CleanArchitecture.Infrastructure.Data;
+using ClinicManager.Infrastructure.Data;
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 
-namespace CleanArchitecture.Application.FunctionalTests;
+namespace ClinicManager.Application.FunctionalTests;
 
 public class SqliteTestDatabase : ITestDatabase
 {
