@@ -26,7 +26,7 @@ jobs:
       - name: create solution 
         env:
           DX_FEED: ${{ secrets.DXFeed }}
-        run: dotnet new dx.xaf -p Win -e2e --framework net9.0 --type solution -db Sqlite -orm XPO -s MiddleTier -nf "$env:DX_FEED" -n ClinicManager
+        run: dotnet new dx.xaf -p Win -e2e --framework net9.0 --type solution -db Sqlite -orm XPO -s MiddleTier --nuget-feed $env:DX_FEED -n ClinicManager
        
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v7
