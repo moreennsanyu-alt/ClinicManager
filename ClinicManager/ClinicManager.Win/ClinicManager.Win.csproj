@@ -53,6 +53,6 @@
     <PackageReference Include="DevExpress.Win.Design" Version="24.2.*" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ClinicManager.Module\ClinicManager.Module.csproj" />
+    <ProjectReference Include="..\ClinicManager\ClinicManager.csproj" />
   </ItemGroup>
 </Project>
