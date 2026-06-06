@@ -1,0 +1,63 @@
+source https://api.nuget.org/v3/index.json
+
+nuget Azure.Identity 1.14.2
+nuget coverlet.collector 6.0.2
+nuget DevExpress.Drawing.Skia >= 24.2.0
+nuget DevExpress.ExpressApp >= 24.2.0
+nuget DevExpress.ExpressApp.Api.Xpo.All >= 24.2.0
+nuget DevExpress.ExpressApp.AuditTrail.Xpo >= 24.2.0
+nuget DevExpress.ExpressApp.Chart >= 24.2.0
+nuget DevExpress.ExpressApp.Chart.Win >= 24.2.0
+nuget DevExpress.ExpressApp.CloneObject.Xpo >= 24.2.0
+nuget DevExpress.ExpressApp.CodeAnalysis >= 24.2.0
+nuget DevExpress.ExpressApp.ConditionalAppearance >= 24.2.0
+nuget DevExpress.ExpressApp.Dashboards >= 24.2.0
+nuget DevExpress.ExpressApp.Dashboards.Win >= 24.2.0
+nuget DevExpress.ExpressApp.EasyTest.WinAdapter >= 24.2.0
+nuget DevExpress.ExpressApp.FileAttachment.Win >= 24.2.0
+nuget DevExpress.ExpressApp.Kpi >= 24.2.0
+nuget DevExpress.ExpressApp.Notifications >= 24.2.0
+nuget DevExpress.ExpressApp.Notifications.Win >= 24.2.0
+nuget DevExpress.ExpressApp.Objects >= 24.2.0
+nuget DevExpress.ExpressApp.Office >= 24.2.0
+nuget DevExpress.ExpressApp.Office.Win >= 24.2.0
+nuget DevExpress.ExpressApp.PivotChart >= 24.2.0
+nuget DevExpress.ExpressApp.PivotChart.Win >= 24.2.0
+nuget DevExpress.ExpressApp.PivotGrid >= 24.2.0
+nuget DevExpress.ExpressApp.PivotGrid.Win >= 24.2.0
+nuget DevExpress.ExpressApp.ReportsV2 >= 24.2.0
+nuget DevExpress.ExpressApp.ReportsV2.Win >= 24.2.0
+nuget DevExpress.ExpressApp.Scheduler >= 24.2.0
+nuget DevExpress.ExpressApp.Scheduler.Win >= 24.2.0
+nuget DevExpress.ExpressApp.ScriptRecorder >= 24.2.0
+nuget DevExpress.ExpressApp.ScriptRecorder.Win >= 24.2.0
+nuget DevExpress.ExpressApp.Security >= 24.2.0
+nuget DevExpress.ExpressApp.Security.AspNetCore.Xpo >= 24.2.0
+nuget DevExpress.ExpressApp.Security.Xpo >= 24.2.0
+nuget DevExpress.ExpressApp.Security.Xpo.Extensions.Win >= 24.2.0
+nuget DevExpress.ExpressApp.StateMachine >= 24.2.0
+nuget DevExpress.ExpressApp.TreeListEditors >= 24.2.0
+nuget DevExpress.ExpressApp.TreeListEditors.Win >= 24.2.0
+nuget DevExpress.ExpressApp.Validation >= 24.2.0
+nuget DevExpress.ExpressApp.Validation.Win >= 24.2.0
+nuget DevExpress.ExpressApp.ViewVariantsModule >= 24.2.0
+nuget DevExpress.ExpressApp.Win >= 24.2.0
+nuget DevExpress.ExpressApp.Win.Design >= 24.2.0
+nuget DevExpress.ExpressApp.Xpo >= 24.2.0
+nuget DevExpress.Persistent.Base >= 24.2.0
+nuget DevExpress.Persistent.BaseImpl.Xpo >= 24.2.0
+nuget DevExpress.RichEdit.Export >= 24.2.0
+nuget DevExpress.Win.Design >= 24.2.0
+nuget LibGit2Sharp 0.31.0
+nuget Microsoft.AspNetCore.Authentication.JwtBearer 8.0.10
+nuget Microsoft.Data.SqlClient 5.2.2
+nuget Microsoft.NET.Test.Sdk 17.11.1
+nuget Nuke.Common 10.1.0
+nuget Nuke.Components 10.1.0
+nuget Serilog.Sinks.File 7.0.0
+nuget SharpCompress 0.42.1
+nuget System.IdentityModel.Tokens.Jwt 7.5.1
+nuget System.Net.Http 4.3.4
+nuget System.Text.RegularExpressions 4.3.1
+nuget xunit 2.4.2
+nuget xunit.runner.visualstudio 2.4.3

@@ -1,0 +1,11 @@
+DevExpress.Drawing.Skia
+DevExpress.ExpressApp
+DevExpress.ExpressApp.Api.Xpo.All
+DevExpress.ExpressApp.CodeAnalysis
+DevExpress.ExpressApp.Security.AspNetCore.Xpo
+DevExpress.ExpressApp.Security.Xpo
+DevExpress.ExpressApp.Xpo
+DevExpress.Persistent.Base
+DevExpress.Persistent.BaseImpl.Xpo
+DevExpress.RichEdit.Export
+Microsoft.AspNetCore.Authentication.JwtBearer
