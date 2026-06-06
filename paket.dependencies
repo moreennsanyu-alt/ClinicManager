@@ -29,8 +29,8 @@ nuget DevExpress.ExpressApp.EasyTest.WinAdapter  24.2.14
 nuget DevExpress.ExpressApp.Security  24.2.14
 nuget DevExpress.ExpressApp.Xpo 24.2.14
 nuget DevExpress.Persistent.Base 24.2.14
-nuget DevExpress.RichEdit.Export 24.2.1
-4
+nuget DevExpress.RichEdit.Export 24.2.14
+
 nuget ZString 2.5.0
 nuget System.CodeDom 9.0.16
 nuget System.Text.Json == 9.0.16
