@@ -1,6 +1,5 @@
 using Prism.Ioc;
 using Prism.DryIoc;
-using Regions.Views;
 using System.Windows;
 using ClinicManager.Win.ViewModels;
 using ClinicManager.Win.Views;
