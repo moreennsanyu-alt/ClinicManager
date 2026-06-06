@@ -24,6 +24,7 @@ jobs:
         run: dotnet new install DevExpress.XAF.ProjectTemplates::24.2.14
 
       - name: create solution 
+        continue-on-error: true
         env:
           DX_FEED: ${{ secrets.DXFeed }}
         run: dotnet new dx.xaf -p Win -e2e --framework net9.0 --type solution -db Sqlite -orm XPO -s MiddleTier -n ClinicManager
@@ -58,3 +59,4 @@ jobs:
           labels: |
             dependencies
             manual-trigger
+            
