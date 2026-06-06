@@ -1,4 +1,5 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net9.0-windows</TargetFramework>
@@ -26,31 +27,6 @@
   <ItemGroup>
     <EmbeddedResource Include="Images\Logo.svg" />
     <EmbeddedResource Include="Images\ExpressAppLogo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="DevExpress.ExpressApp" Version="24.2.*" />
-    <PackageReference Include="DevExpress.ExpressApp.Chart.Win" Version="24.2.*" />
-    <PackageReference Include="DevExpress.ExpressApp.CodeAnalysis" Version="24.2.*" />
-    <PackageReference Include="DevExpress.ExpressApp.Dashboards.Win" Version="24.2.*" />
-    <PackageReference Include="DevExpress.ExpressApp.FileAttachment.Win" Version="24.2.*" />
-    <PackageReference Include="DevExpress.ExpressApp.Notifications.Win" Version="24.2.*" />
-    <PackageReference Include="DevExpress.ExpressApp.Office.Win" Version="24.2.*" />
-    <PackageReference Include="DevExpress.ExpressApp.PivotChart.Win" Version="24.2.*" />
-    <PackageReference Include="DevExpress.ExpressApp.PivotGrid.Win" Version="24.2.*" />
-    <PackageReference Include="DevExpress.ExpressApp.ReportsV2.Win" Version="24.2.*" />
-    <PackageReference Include="DevExpress.ExpressApp.Scheduler.Win" Version="24.2.*" />
-    <PackageReference Include="DevExpress.ExpressApp.ScriptRecorder.Win" Version="24.2.*" />
-    <PackageReference Include="DevExpress.ExpressApp.Security.Xpo" Version="24.2.*" />
-    <PackageReference Include="DevExpress.ExpressApp.Security.Xpo.Extensions.Win" Version="24.2.*" />
-    <PackageReference Include="DevExpress.ExpressApp.TreeListEditors.Win" Version="24.2.*" />
-    <PackageReference Include="DevExpress.ExpressApp.Validation.Win" Version="24.2.*" />
-    <PackageReference Include="DevExpress.ExpressApp.Win" Version="24.2.*" />
-    <PackageReference Include="DevExpress.ExpressApp.Win.Design" Version="24.2.*" />
-    <PackageReference Include="DevExpress.ExpressApp.Xpo" Version="24.2.*" />
-    <PackageReference Include="DevExpress.Persistent.Base" Version="24.2.*" />
-    <PackageReference Include="DevExpress.Persistent.BaseImpl.Xpo" Version="24.2.*" />
-    <PackageReference Include="DevExpress.RichEdit.Export" Version="24.2.*" />
-    <PackageReference Include="DevExpress.Win.Design" Version="24.2.*" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ClinicManager\ClinicManager.csproj" />
