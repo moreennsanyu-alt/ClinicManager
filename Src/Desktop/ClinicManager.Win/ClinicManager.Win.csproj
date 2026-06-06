@@ -6,5 +6,9 @@
     <OutputType>WinExe</OutputType>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
-
+    <ItemGroup>
+         <PackageReference Include="CommunityToolkit.Mvvm" />
+         <PackageReference Include="Prism.DryIoc" />
+         <PackageReference Include="WpfScreenHelper" />
+    </ItemGroup>
 </Project>
