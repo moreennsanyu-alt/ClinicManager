@@ -27,7 +27,7 @@ jobs:
         continue-on-error: true
         env:
           DX_FEED: ${{ secrets.DXFeed }}
-        run: dotnet new dx.xaf -p Win -e2e -m All --framework net9.0 --type solution -db Sqlite -orm XPO -s MiddleTier  -n ClinicManager
+        run: dotnet new dx.xaf -p Win -e2e --framework net9.0 --type solution -db Sqlite -orm XPO -s MiddleTier -n ClinicManager
        
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v7
