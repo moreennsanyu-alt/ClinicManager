@@ -1,26 +1,26 @@
 // WPF Core layout and base
-using UserControl = System.Windows.Controls.UserControl;
-using Panel = System.Windows.Controls.Panel;
+global using UserControl = System.Windows.Controls.UserControl;
+global using Panel = System.Windows.Controls.Panel;
 
 // Common Text & Input Controls
-using Button = System.Windows.Controls.Button;
-using TextBox = System.Windows.Controls.TextBox;
-using Label = System.Windows.Controls.Label;
-using CheckBox = System.Windows.Controls.CheckBox;
-using RadioButton = System.Windows.Controls.RadioButton;
-using ComboBox = System.Windows.Controls.ComboBox;
-using ListBox = System.Windows.Controls.ListBox;
+global using Button = System.Windows.Controls.Button;
+global using TextBox = System.Windows.Controls.TextBox;
+global using Label = System.Windows.Controls.Label;
+global using CheckBox = System.Windows.Controls.CheckBox;
+global using RadioButton = System.Windows.Controls.RadioButton;
+global using ComboBox = System.Windows.Controls.ComboBox;
+global using ListBox = System.Windows.Controls.ListBox;
 
 // Lists, Trees, and Data
-using ListView = System.Windows.Controls.ListView;
-using TreeView = System.Windows.Controls.TreeView;
-using ProgressBar = System.Windows.Controls.ProgressBar;
+global using ListView = System.Windows.Controls.ListView;
+global using TreeView = System.Windows.Controls.TreeView;
+global using ProgressBar = System.Windows.Controls.ProgressBar;
 
 // Menus and Navigation
-using Menu = System.Windows.Controls.Menu;
-using ContextMenu = System.Windows.Controls.ContextMenu;
-using ToolBar = System.Windows.Controls.ToolBar;
-using ToolTip = System.Windows.Controls.ToolTip;
+global using Menu = System.Windows.Controls.Menu;
+global using ContextMenu = System.Windows.Controls.ContextMenu;
+global using ToolBar = System.Windows.Controls.ToolBar;
+global using ToolTip = System.Windows.Controls.ToolTip;
 
 // Media & Images
-using Image = System.Windows.Controls.Image;
+global using Image = System.Windows.Controls.Image;
