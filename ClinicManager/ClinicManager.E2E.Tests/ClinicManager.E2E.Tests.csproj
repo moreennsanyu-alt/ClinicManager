@@ -22,7 +22,4 @@
     </PackageReference>
     <PackageReference Include="DevExpress.ExpressApp.EasyTest.WinAdapter" Version="24.2.*" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ClinicManager.Module\ClinicManager.Module.csproj" />
-  </ItemGroup>
 </Project>
