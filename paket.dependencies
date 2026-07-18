@@ -69,5 +69,5 @@ nuget Serilog.Sinks.File 7.0.0
 nuget SharpCompress 0.42.1
 nuget System.Net.Http 4.3.4
 nuget System.Text.RegularExpressions 4.3.1
-nuget xunit 3.2.2
-nuget xunit.runner.visualstudio 2.4.3
+nuget xunit.v3 3.2.2
+nuget xunit.runner.visualstudio 3.1.5
