@@ -8,28 +8,28 @@ copy_local:true
 specific_version : false
 framework:netstandard2.0,net48
 
-nuget DevExpress.ExpressApp.Core.All 24.2.14
-nuget DevExpress.ExpressApp.Win.All 24.2.14
-nuget DevExpress.ExpressApp.Web.All 24.2.14
-nuget DevExpress.EasyTest 24.2.14  
-nuget DevExpress.ExpressApp.Security.Xpo 24.2.14 
-nuget DevExpress.Win.SpellChecker 24.2.14
-nuget DevExpress.Document.Processor 24.2.14
-nuget DevExpress.Drawing.Skia 24.2.14
-nuget DevExpress.Win.Map 24.2.14
-nuget DevExpress.Persistent.BaseImpl.Xpo  24.2.8
+nuget DevExpress.ExpressApp.Core.All 24.2.15
+nuget DevExpress.ExpressApp.Win.All 24.2.15
+nuget DevExpress.ExpressApp.Web.All 24.2.15
+nuget DevExpress.EasyTest 24.2.15  
+nuget DevExpress.ExpressApp.Security.Xpo 24.2.15
+nuget DevExpress.Win.SpellChecker 24.2.15
+nuget DevExpress.Document.Processor 24.2.15
+nuget DevExpress.Drawing.Skia 24.2.15
+nuget DevExpress.Win.Map 24.2.15
+nuget DevExpress.Persistent.BaseImpl.Xpo  24.2.15
 
-nuget DevExpress.DataAccess.UI  24.2.14
-nuget DevExpress.Win.Gauges  24.2.14
-nuget DevExpress.Win.PdfViewer  24.2.14
-nuget DevExpress.Win.Reporting  24.2.14
-nuget DevExpress.ExpressApp.CodeAnalysis  24.2.14
-nuget DevExpress.ExpressApp.EasyTest.WinAdapter  24.2.14
+nuget DevExpress.DataAccess.UI  24.2.15
+nuget DevExpress.Win.Gauges  24.2.15
+nuget DevExpress.Win.PdfViewer  24.2.15
+nuget DevExpress.Win.Reporting  24.2.15
+nuget DevExpress.ExpressApp.CodeAnalysis  24.2.15
+nuget DevExpress.ExpressApp.EasyTest.WinAdapter  24.2.15
 
-nuget DevExpress.ExpressApp.Security  24.2.14
-nuget DevExpress.ExpressApp.Xpo 24.2.14
-nuget DevExpress.Persistent.Base 24.2.14
-nuget DevExpress.RichEdit.Export 24.2.14
+nuget DevExpress.ExpressApp.Security  24.2.15
+nuget DevExpress.ExpressApp.Xpo 24.2.15
+nuget DevExpress.Persistent.Base 24.2.15
+nuget DevExpress.RichEdit.Export 24.2.15
 
 nuget ZString 2.5.0
 nuget System.CodeDom 9.0.16
