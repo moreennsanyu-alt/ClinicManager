@@ -65,8 +65,6 @@ nuget System.Diagnostics.DiagnosticSource == 9.0.16
 nuget LibGit2Sharp 0.31.0
 nuget Nuke.Common 10.1.0
 nuget Nuke.Components 10.1.0
-nuget Serilog.Sinks.File 7.0.0
-nuget SharpCompress 0.42.1
 nuget System.Net.Http 4.3.4
 nuget System.Text.RegularExpressions 4.3.1
 nuget xunit.v3 3.2.2
