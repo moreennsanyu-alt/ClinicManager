@@ -1,7 +1,1 @@
-coverlet.collector
-Microsoft.NET.Test.Sdk
-System.Net.Http
-System.Text.RegularExpressions
-xunit
-xunit.runner.visualstudio
-DevExpress.ExpressApp.EasyTest.WinAdapter
+
