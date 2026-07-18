@@ -5,7 +5,7 @@ DevExpress.ExpressApp.CloneObject.Xpo
 DevExpress.ExpressApp.CodeAnalysis
 DevExpress.ExpressApp.ConditionalAppearance
 DevExpress.ExpressApp.Dashboards
-DevExpress.ExpressApp.Kpi
+//DevExpress.ExpressApp.Kpi
 DevExpress.ExpressApp.Notifications
 DevExpress.ExpressApp.Objects
 DevExpress.ExpressApp.Office
@@ -13,16 +13,13 @@ DevExpress.ExpressApp.PivotChart
 DevExpress.ExpressApp.PivotGrid
 DevExpress.ExpressApp.ReportsV2
 DevExpress.ExpressApp.Scheduler
-DevExpress.ExpressApp.ScriptRecorder
+//DevExpress.ExpressApp.ScriptRecorder
 DevExpress.ExpressApp.Security
 DevExpress.ExpressApp.Security.Xpo
-DevExpress.ExpressApp.StateMachine
+//DevExpress.ExpressApp.StateMachine
 DevExpress.ExpressApp.TreeListEditors
 DevExpress.ExpressApp.Validation
 DevExpress.ExpressApp.ViewVariantsModule
 DevExpress.ExpressApp.Xpo
 DevExpress.Persistent.Base
 DevExpress.Persistent.BaseImpl.Xpo
-Azure.Identity
-Microsoft.Data.SqlClient
-System.IdentityModel.Tokens.Jwt
