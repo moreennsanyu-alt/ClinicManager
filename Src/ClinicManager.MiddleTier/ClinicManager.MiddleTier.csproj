@@ -12,4 +12,5 @@
   <ItemGroup>
     <ProjectReference Include="..\ClinicManager\ClinicManager.csproj" />
   </ItemGroup>
+  <Import Project="..\..\.paket\Paket.Restore.targets" />
 </Project>
