@@ -8,4 +8,5 @@
     <Configurations>Debug;Release;EasyTest</Configurations>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
+  <Import Project="..\..\.paket\Paket.Restore.targets" />
 </Project>
