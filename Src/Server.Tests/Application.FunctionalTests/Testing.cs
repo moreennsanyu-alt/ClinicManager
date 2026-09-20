@@ -1,12 +1,12 @@
-﻿using CleanArchitecture.Domain.Constants;
-using CleanArchitecture.Infrastructure.Data;
-using CleanArchitecture.Infrastructure.Identity;
+﻿using ClinicManager.Domain.Constants;
+using ClinicManager.Infrastructure.Data;
+using ClinicManager.Infrastructure.Identity;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace CleanArchitecture.Application.FunctionalTests;
+namespace ClinicManager.Application.FunctionalTests;
 
 [SetUpFixture]
 public partial class Testing
@@ -16,6 +16,7 @@ public partial class Testing
     private static IServiceScopeFactory _scopeFactory = null!;
     private static string? _userId;
     private static List<string>? _roles;
+
     [OneTimeSetUp]
     public async Task RunBeforeAnyTests()
     {

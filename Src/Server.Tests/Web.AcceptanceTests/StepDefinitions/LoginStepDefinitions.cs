@@ -1,4 +1,4 @@
-namespace CleanArchitecture.Web.AcceptanceTests.StepDefinitions;
+namespace ClinicManager.Web.AcceptanceTests.StepDefinitions;
 
 [Binding]
 public sealed class LoginStepDefinitions
@@ -17,12 +17,10 @@ public sealed class LoginStepDefinitions
 
         var options = new BrowserTypeLaunchOptions();
 
-        //-:cnd:noEmit
 #if DEBUG
         options.Headless = false;
         options.SlowMo = 500;
 #endif
-        //+:cnd:noEmit
 
         var browser = await playwright.Chromium.LaunchAsync(options);
 
