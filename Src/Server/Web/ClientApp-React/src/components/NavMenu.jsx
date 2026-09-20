@@ -1,73 +1,25 @@
-import React, { Component } from 'react';
-import { Collapse, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap';
-import { Link, useNavigate } from 'react-router-dom';
-import { useAuth } from './api-authorization/AuthContext';
-import './NavMenu.css';
+﻿using System.Reflection;
+using ClinicManager.Application.Common.Behaviours;
+using Microsoft.Extensions.Hosting;
 
-function NavMenuInner() {
-  const { isAuthenticated, logout } = useAuth();
-  const navigate = useNavigate();
+namespace Microsoft.Extensions.DependencyInjection;
 
-  const handleLogout = async () => {
-    await logout();
-    navigate('/login');
-  };
+public static class DependencyInjection
+{
+    public static void AddApplicationServices(this IHostApplicationBuilder builder)
+    {
+        builder.Services.AddAutoMapper(cfg => 
+            cfg.AddMaps(Assembly.GetExecutingAssembly()));
 
-  return (
-    <>
-      {isAuthenticated ? (
-        <NavItem>
-          <button className="btn btn-link nav-link text-dark" onClick={handleLogout}>Log out</button>
-        </NavItem>
-      ) : (
-        <>
-          <NavItem>
-            <NavLink tag={Link} className="text-dark" to="/login">Log in</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink tag={Link} className="text-dark" to="/register">Register</NavLink>
-          </NavItem>
-        </>
-      )}
-    </>
-  );
-}
+        builder.Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
 
-export class NavMenu extends Component {
-  static displayName = NavMenu.name;
-
-  constructor(props) {
-    super(props);
-    this.toggleNavbar = this.toggleNavbar.bind(this);
-    this.state = { collapsed: true };
-  }
-
-  toggleNavbar() {
-    this.setState({ collapsed: !this.state.collapsed });
-  }
-
-  render() {
-    return (
-      <header>
-        <Navbar className="navbar-expand-sm navbar-toggleable-sm ng-white border-bottom box-shadow mb-3" container light>
-          <NavbarBrand tag={Link} to="/">CleanArchitecture.Web</NavbarBrand>
-          <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
-          <Collapse className="d-sm-inline-flex flex-sm-row-reverse" isOpen={!this.state.collapsed} navbar>
-            <ul className="navbar-nav flex-grow">
-              <NavItem>
-                <NavLink tag={Link} className="text-dark" to="/">Home</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink tag={Link} className="text-dark" to="/counter">Counter</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink tag={Link} className="text-dark" to="/fetch-data">Fetch data</NavLink>
-              </NavItem>
-              <NavMenuInner />
-            </ul>
-          </Collapse>
-        </Navbar>
-      </header>
-    );
-  }
+        builder.Services.AddMediatR(cfg => {
+            cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly());
+            cfg.AddOpenRequestPreProcessor(typeof(LoggingBehaviour<>));
+            cfg.AddOpenBehavior(typeof(UnhandledExceptionBehaviour<,>));
+            cfg.AddOpenBehavior(typeof(AuthorizationBehaviour<,>));
+            cfg.AddOpenBehavior(typeof(ValidationBehaviour<,>));
+            cfg.AddOpenBehavior(typeof(PerformanceBehaviour<,>));
+        });
+    }
 }

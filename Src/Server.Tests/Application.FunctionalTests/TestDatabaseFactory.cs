@@ -1,23 +1,30 @@
-﻿namespace CleanArchitecture.Application.FunctionalTests;
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
-public static class TestDatabaseFactory
-{
-    public static async Task<ITestDatabase> CreateAsync()
-    {
-#if (UsePostgreSQL)
-        // Testcontainers requires Docker. To use a local PostgreSQL database instead,
-        // switch to `PostgreSQLTestDatabase` and update appsettings.json.
-        var database = new PostgreSQLTestcontainersTestDatabase();
-#elif (UseSqlServer)
-        // Testcontainers requires Docker. To use a local SQL Server database instead,
-        // switch to `SqlTestDatabase` and update appsettings.json.
-        var database = new SqlTestcontainersTestDatabase();
-#else
-        var database = new SqliteTestDatabase();
-#endif
+    <PropertyGroup>
+        <RootNamespace>ClinicManager.Application.UnitTests</RootNamespace>
+        <AssemblyName>ClinicManager.Application.UnitTests</AssemblyName>
+    </PropertyGroup>
 
-        await database.InitialiseAsync();
+    <ItemGroup>
+        <PackageReference Include="Azure.Identity" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" />
+        <PackageReference Include="nunit" />
+        <PackageReference Include="NUnit.Analyzers">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="NUnit3TestAdapter" />
+        <PackageReference Include="coverlet.collector">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Moq" />
+        <PackageReference Include="Shouldly" />
+    </ItemGroup>
 
-        return database;
-    }
-}
+    <ItemGroup>
+        <ProjectReference Include="..\..\src\Application\Application.csproj" />
+        <ProjectReference Include="..\..\src\Infrastructure\Infrastructure.csproj" />
+    </ItemGroup>
+
+</Project>

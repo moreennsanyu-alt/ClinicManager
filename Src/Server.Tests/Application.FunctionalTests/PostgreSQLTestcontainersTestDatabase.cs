@@ -1,16 +1,16 @@
 ﻿using System.Data.Common;
-using CleanArchitecture.Infrastructure.Data;
+using ClinicManager.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using Npgsql;
 using Respawn;
 using Testcontainers.PostgreSql;
 
-namespace CleanArchitecture.Application.FunctionalTests;
+namespace ClinicManager.Application.FunctionalTests;
 
 public class PostgreSQLTestcontainersTestDatabase : ITestDatabase
 {
-    private const string DefaultDatabase = "CleanArchitectureTestDb";
+    private const string DefaultDatabase = "ClinicManagerTestDb";
     private readonly PostgreSqlContainer _container;
     private DbConnection _connection = null!;
     private string _connectionString = null!;

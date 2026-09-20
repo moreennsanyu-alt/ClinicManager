@@ -1,61 +1,73 @@
-﻿using System.Data.Common;
-using CleanArchitecture.Application.Common.Interfaces;
-using CleanArchitecture.Infrastructure.Data;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc.Testing;
-using Microsoft.AspNetCore.TestHost;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Diagnostics;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.DependencyInjection.Extensions;
+import React, { Component } from 'react';
+import { Collapse, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap';
+import { Link, useNavigate } from 'react-router-dom';
+import { useAuth } from './api-authorization/AuthContext';
+import './NavMenu.css';
 
-namespace CleanArchitecture.Application.FunctionalTests;
+function NavMenuInner() {
+  const { isAuthenticated, logout } = useAuth();
+  const navigate = useNavigate();
 
-using static Testing;
+  const handleLogout = async () => {
+    await logout();
+    navigate('/login');
+  };
 
-public class CustomWebApplicationFactory : WebApplicationFactory<Program>
-{
-    private readonly DbConnection _connection;
-    private readonly string _connectionString;
+  return (
+    <>
+      {isAuthenticated ? (
+        <NavItem>
+          <button className="btn btn-link nav-link text-dark" onClick={handleLogout}>Log out</button>
+        </NavItem>
+      ) : (
+        <>
+          <NavItem>
+            <NavLink tag={Link} className="text-dark" to="/login">Log in</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink tag={Link} className="text-dark" to="/register">Register</NavLink>
+          </NavItem>
+        </>
+      )}
+    </>
+  );
+}
 
-    public CustomWebApplicationFactory(DbConnection connection, string connectionString)
-    {
-        _connection = connection;
-        _connectionString = connectionString;
-    }
+export class NavMenu extends Component {
+  static displayName = NavMenu.name;
 
-    protected override void ConfigureWebHost(IWebHostBuilder builder)
-    {
-        builder
-            .UseEnvironment("Testing")
-            .UseSetting("ConnectionStrings:CleanArchitectureDb", _connectionString);
+  constructor(props) {
+    super(props);
+    this.toggleNavbar = this.toggleNavbar.bind(this);
+    this.state = { collapsed: true };
+  }
 
-        builder.ConfigureTestServices(services =>
-        {
-            services
-                .RemoveAll<IUser>()
-                .AddTransient(provider =>
-                {
-                    var mock = new Mock<IUser>();
-                    mock.SetupGet(x => x.Roles).Returns(GetRoles());
-                    mock.SetupGet(x => x.Id).Returns(GetUserId());
-                    return mock.Object;
-                });
-#if (!UseAspire || UseSqlite)
-            services
-                .RemoveAll<DbContextOptions<ApplicationDbContext>>()
-                .AddDbContext<ApplicationDbContext>((sp, options) =>
-                {
-                    options.AddInterceptors(sp.GetServices<ISaveChangesInterceptor>());
-    #if (UsePostgreSQL)
-                    options.UseNpgsql(_connection);
-    #elif (UseSqlServer)
-                    options.UseSqlServer(_connection);
-    #else
-                    options.UseSqlite(_connection);
-    #endif
-                });
-#endif
-        });
-    }
+  toggleNavbar() {
+    this.setState({ collapsed: !this.state.collapsed });
+  }
+
+  render() {
+    return (
+      <header>
+        <Navbar className="navbar-expand-sm navbar-toggleable-sm ng-white border-bottom box-shadow mb-3" container light>
+          <NavbarBrand tag={Link} to="/">ClinicManager.Web</NavbarBrand>
+          <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
+          <Collapse className="d-sm-inline-flex flex-sm-row-reverse" isOpen={!this.state.collapsed} navbar>
+            <ul className="navbar-nav flex-grow">
+              <NavItem>
+                <NavLink tag={Link} className="text-dark" to="/">Home</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink tag={Link} className="text-dark" to="/counter">Counter</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink tag={Link} className="text-dark" to="/fetch-data">Fetch data</NavLink>
+              </NavItem>
+              <NavMenuInner />
+            </ul>
+          </Collapse>
+        </Navbar>
+      </header>
+    );
+  }
 }

@@ -1,12 +1,12 @@
 ﻿using System.Data.Common;
-using CleanArchitecture.Infrastructure.Data;
+using ClinicManager.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.Configuration;
 using Npgsql;
 using Respawn;
 
-namespace CleanArchitecture.Application.FunctionalTests;
+namespace ClinicManager.Application.FunctionalTests;
 
 public class PostgreSQLTestDatabase : ITestDatabase
 {
@@ -21,7 +21,7 @@ public class PostgreSQLTestDatabase : ITestDatabase
             .AddEnvironmentVariables()
             .Build();
 
-        var connectionString = configuration.GetConnectionString("CleanArchitectureDb");
+        var connectionString = configuration.GetConnectionString("ClinicManagerDb");
 
         Guard.Against.Null(connectionString);
 
