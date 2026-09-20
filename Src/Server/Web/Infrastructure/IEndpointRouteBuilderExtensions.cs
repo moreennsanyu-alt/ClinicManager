@@ -1,46 +1,86 @@
-﻿using System.Diagnostics.CodeAnalysis;
+﻿using ClinicManager.Application.Common.Exceptions;
+using Microsoft.AspNetCore.Diagnostics;
+using Microsoft.AspNetCore.Mvc;
 
 namespace ClinicManager.Web.Infrastructure;
 
-public static class EndpointRouteBuilderExtensions
+public class CustomExceptionHandler : IExceptionHandler
 {
-    public static RouteHandlerBuilder MapGet(this IEndpointRouteBuilder builder, Delegate handler, [StringSyntax("Route")] string pattern = "")
-    {
-        Guard.Against.AnonymousMethod(handler);
+    private readonly Dictionary<Type, Func<HttpContext, Exception, Task>> _exceptionHandlers;
 
-        return builder.MapGet(pattern, handler)
-              .WithName(handler.Method.Name);
+    public CustomExceptionHandler()
+    {
+        _exceptionHandlers = new()
+            {
+                { typeof(ValidationException), HandleValidationException },
+                { typeof(NotFoundException), HandleNotFoundException },
+                { typeof(UnauthorizedAccessException), HandleUnauthorizedAccessException },
+                { typeof(ForbiddenAccessException), HandleForbiddenAccessException },
+            };
     }
 
-    public static RouteHandlerBuilder MapPost(this IEndpointRouteBuilder builder, Delegate handler, [StringSyntax("Route")] string pattern = "")
+    public async ValueTask<bool> TryHandleAsync(HttpContext httpContext, Exception exception, CancellationToken cancellationToken)
     {
-        Guard.Against.AnonymousMethod(handler);
+        var exceptionType = exception.GetType();
 
-        return builder.MapPost(pattern, handler)
-            .WithName(handler.Method.Name);
+        if (_exceptionHandlers.ContainsKey(exceptionType))
+        {
+            await _exceptionHandlers[exceptionType].Invoke(httpContext, exception);
+            return true;
+        }
+
+        return false;
     }
 
-    public static RouteHandlerBuilder MapPut(this IEndpointRouteBuilder builder, Delegate handler, [StringSyntax("Route")] string pattern)
+    private async Task HandleValidationException(HttpContext httpContext, Exception ex)
     {
-        Guard.Against.AnonymousMethod(handler);
+        var exception = (ValidationException)ex;
 
-        return builder.MapPut(pattern, handler)
-            .WithName(handler.Method.Name);
+        httpContext.Response.StatusCode = StatusCodes.Status400BadRequest;
+
+        await httpContext.Response.WriteAsJsonAsync(new ValidationProblemDetails(exception.Errors)
+        {
+            Status = StatusCodes.Status400BadRequest,
+            Type = "https://tools.ietf.org/html/rfc7231#section-6.5.1"
+        });
     }
 
-    public static RouteHandlerBuilder MapPatch(this IEndpointRouteBuilder builder, Delegate handler, [StringSyntax("Route")] string pattern)
+    private async Task HandleNotFoundException(HttpContext httpContext, Exception ex)
     {
-        Guard.Against.AnonymousMethod(handler);
+        var exception = (NotFoundException)ex;
 
-        return builder.MapPatch(pattern, handler)
-            .WithName(handler.Method.Name);
+        httpContext.Response.StatusCode = StatusCodes.Status404NotFound;
+
+        await httpContext.Response.WriteAsJsonAsync(new ProblemDetails()
+        {
+            Status = StatusCodes.Status404NotFound,
+            Type = "https://tools.ietf.org/html/rfc7231#section-6.5.4",
+            Title = "The specified resource was not found.",
+            Detail = exception.Message
+        });
     }
 
-    public static RouteHandlerBuilder MapDelete(this IEndpointRouteBuilder builder, Delegate handler, [StringSyntax("Route")] string pattern)
+    private async Task HandleUnauthorizedAccessException(HttpContext httpContext, Exception ex)
     {
-        Guard.Against.AnonymousMethod(handler);
+        httpContext.Response.StatusCode = StatusCodes.Status401Unauthorized;
 
-        return builder.MapDelete(pattern, handler)
-            .WithName(handler.Method.Name);
+        await httpContext.Response.WriteAsJsonAsync(new ProblemDetails
+        {
+            Status = StatusCodes.Status401Unauthorized,
+            Title = "Unauthorized",
+            Type = "https://tools.ietf.org/html/rfc7235#section-3.1"
+        });
+    }
+
+    private async Task HandleForbiddenAccessException(HttpContext httpContext, Exception ex)
+    {
+        httpContext.Response.StatusCode = StatusCodes.Status403Forbidden;
+
+        await httpContext.Response.WriteAsJsonAsync(new ProblemDetails
+        {
+            Status = StatusCodes.Status403Forbidden,
+            Title = "Forbidden",
+            Type = "https://tools.ietf.org/html/rfc7231#section-6.5.3"
+        });
     }
 }

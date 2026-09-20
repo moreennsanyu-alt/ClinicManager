@@ -1,86 +1,78 @@
-﻿using CleanArchitecture.Application.Common.Exceptions;
-using Microsoft.AspNetCore.Diagnostics;
-using Microsoft.AspNetCore.Mvc;
+using ClinicManager.Application.Common.Models;
+using ClinicManager.Application.TodoItems.Commands.CreateTodoItem;
+using ClinicManager.Application.TodoItems.Commands.DeleteTodoItem;
+using ClinicManager.Application.TodoItems.Commands.UpdateTodoItem;
+using ClinicManager.Application.TodoItems.Commands.UpdateTodoItemDetail;
+using ClinicManager.Application.TodoItems.Queries.GetTodoItemsWithPagination;
+using Microsoft.AspNetCore.Http.HttpResults;
 
-namespace CleanArchitecture.Web.Infrastructure;
+namespace ClinicManager.Web.Endpoints;
 
-public class CustomExceptionHandler : IExceptionHandler
+public class TodoItems : EndpointGroupBase
 {
-    private readonly Dictionary<Type, Func<HttpContext, Exception, Task>> _exceptionHandlers;
-
-    public CustomExceptionHandler()
+    public override void Map(RouteGroupBuilder groupBuilder)
     {
-        _exceptionHandlers = new()
-            {
-                { typeof(ValidationException), HandleValidationException },
-                { typeof(NotFoundException), HandleNotFoundException },
-                { typeof(UnauthorizedAccessException), HandleUnauthorizedAccessException },
-                { typeof(ForbiddenAccessException), HandleForbiddenAccessException },
-            };
+        groupBuilder.MapGet(GetTodoItemsWithPagination).RequireAuthorization();
+        groupBuilder.MapPost(CreateTodoItem).RequireAuthorization();
+        groupBuilder.MapPut(UpdateTodoItem, "{id}").RequireAuthorization();
+        groupBuilder.MapPatch(UpdateTodoItemDetail, "UpdateDetail/{id}").RequireAuthorization();
+        groupBuilder.MapDelete(DeleteTodoItem, "{id}").RequireAuthorization();
     }
 
-    public async ValueTask<bool> TryHandleAsync(HttpContext httpContext, Exception exception, CancellationToken cancellationToken)
+    [EndpointName(nameof(GetTodoItemsWithPagination))]
+    [EndpointSummary("Get Todo Items with Pagination")]
+    [EndpointDescription("Retrieves a paginated list of todo items based on the provided query parameters.")]
+    public async Task<Ok<PaginatedList<TodoItemBriefDto>>> GetTodoItemsWithPagination(
+        ISender sender,
+        [AsParameters] GetTodoItemsWithPaginationQuery query)
     {
-        var exceptionType = exception.GetType();
+        var result = await sender.Send(query);
 
-        if (_exceptionHandlers.ContainsKey(exceptionType))
-        {
-            await _exceptionHandlers[exceptionType].Invoke(httpContext, exception);
-            return true;
-        }
-
-        return false;
+        return TypedResults.Ok(result);
     }
 
-    private async Task HandleValidationException(HttpContext httpContext, Exception ex)
+    [EndpointName(nameof(CreateTodoItem))]
+    [EndpointSummary("Create a new Todo Item")]
+    [EndpointDescription("Creates a new todo item using the provided details and returns the ID of the created item.")]
+    public async Task<Created<int>> CreateTodoItem(ISender sender, CreateTodoItemCommand command)
     {
-        var exception = (ValidationException)ex;
+        var id = await sender.Send(command);
 
-        httpContext.Response.StatusCode = StatusCodes.Status400BadRequest;
-
-        await httpContext.Response.WriteAsJsonAsync(new ValidationProblemDetails(exception.Errors)
-        {
-            Status = StatusCodes.Status400BadRequest,
-            Type = "https://tools.ietf.org/html/rfc7231#section-6.5.1"
-        });
+        return TypedResults.Created($"/{nameof(TodoItems)}/{id}", id);
     }
 
-    private async Task HandleNotFoundException(HttpContext httpContext, Exception ex)
+    [EndpointName(nameof(UpdateTodoItem))]
+    [EndpointSummary("Update a Todo Item")]
+    [EndpointDescription("Updates the specified todo item. The ID in the URL must match the ID in the payload.")]
+    public async Task<Results<NoContent, BadRequest>> UpdateTodoItem(ISender sender, int id, UpdateTodoItemCommand command)
     {
-        var exception = (NotFoundException)ex;
+        if (id != command.Id)
+            return TypedResults.BadRequest();
 
-        httpContext.Response.StatusCode = StatusCodes.Status404NotFound;
+        await sender.Send(command);
 
-        await httpContext.Response.WriteAsJsonAsync(new ProblemDetails()
-        {
-            Status = StatusCodes.Status404NotFound,
-            Type = "https://tools.ietf.org/html/rfc7231#section-6.5.4",
-            Title = "The specified resource was not found.",
-            Detail = exception.Message
-        });
+        return TypedResults.NoContent();
     }
 
-    private async Task HandleUnauthorizedAccessException(HttpContext httpContext, Exception ex)
+    [EndpointName(nameof(UpdateTodoItemDetail))]
+    [EndpointSummary("Update Todo Item Details")]
+    [EndpointDescription("Updates the detail fields of a specific todo item. The ID in the URL must match the ID in the payload.")]
+    public async Task<Results<NoContent, BadRequest>> UpdateTodoItemDetail(ISender sender, int id, UpdateTodoItemDetailCommand command)
     {
-        httpContext.Response.StatusCode = StatusCodes.Status401Unauthorized;
+        if (id != command.Id) return TypedResults.BadRequest();
 
-        await httpContext.Response.WriteAsJsonAsync(new ProblemDetails
-        {
-            Status = StatusCodes.Status401Unauthorized,
-            Title = "Unauthorized",
-            Type = "https://tools.ietf.org/html/rfc7235#section-3.1"
-        });
+        await sender.Send(command);
+
+        return TypedResults.NoContent();
     }
 
-    private async Task HandleForbiddenAccessException(HttpContext httpContext, Exception ex)
+    [EndpointName(nameof(DeleteTodoItem))]
+    [EndpointSummary("Delete a Todo Item")]
+    [EndpointDescription("Deletes the todo item with the specified ID.")]
+    public async Task<NoContent> DeleteTodoItem(ISender sender, int id)
     {
-        httpContext.Response.StatusCode = StatusCodes.Status403Forbidden;
+        await sender.Send(new DeleteTodoItemCommand(id));
 
-        await httpContext.Response.WriteAsJsonAsync(new ProblemDetails
-        {
-            Status = StatusCodes.Status403Forbidden,
-            Title = "Forbidden",
-            Type = "https://tools.ietf.org/html/rfc7231#section-6.5.3"
-        });
+        return TypedResults.NoContent();
     }
 }

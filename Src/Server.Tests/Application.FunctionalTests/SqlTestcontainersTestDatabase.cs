@@ -1,74 +1,59 @@
-﻿using System.Data.Common;
+using ClinicManager.Application.Common.Interfaces;
 using ClinicManager.Infrastructure.Data;
-using Microsoft.Data.SqlClient;
+using ClinicManager.Infrastructure.Identity;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
-using Respawn;
-using Testcontainers.MsSql;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
+using Moq;
 
 namespace ClinicManager.Application.FunctionalTests;
 
-public class SqlTestcontainersTestDatabase : ITestDatabase
+public class CustomWebApplicationFactory : WebApplicationFactory<Program>
 {
-    private const string DefaultDatabase = "ClinicManagerTestDb";
-    private readonly MsSqlContainer _container;
-    private DbConnection _connection = null!;
-    private string _connectionString = null!;
-    private Respawner _respawner = null!;
+    private readonly DbConnection _connection;
+    private readonly string _connectionString;
 
-    public SqlTestcontainersTestDatabase()
+    public CustomWebApplicationFactory(DbConnection connection, string connectionString)
     {
-        _container = new MsSqlBuilder()
-            .WithAutoRemove(true)
-            .Build();
+        _connection = connection;
+        _connectionString = connectionString;
     }
 
-    public async Task InitialiseAsync()
+    protected override void ConfigureWebHost(IWebHostBuilder builder)
     {
-        await _container.StartAsync();
-        await _container.ExecScriptAsync($"CREATE DATABASE {DefaultDatabase}");
+        builder
+            .UseEnvironment("Testing")
+            .UseSetting("ConnectionStrings:ClinicManagerDb", _connectionString);
 
-        var builder = new SqlConnectionStringBuilder(_container.GetConnectionString())
+        builder.ConfigureTestServices(services =>
         {
-            InitialCatalog = DefaultDatabase
-        };
-
-        _connectionString = builder.ConnectionString;
-
-        _connection = new SqlConnection(_connectionString);
-
-        var options = new DbContextOptionsBuilder<ApplicationDbContext>()
-            .UseSqlServer(_connectionString)
-            .ConfigureWarnings(warnings => warnings.Log(RelationalEventId.PendingModelChangesWarning))
-            .Options;
-
-        var context = new ApplicationDbContext(options);
-
-        await context.Database.EnsureDeletedAsync();
-        await context.Database.EnsureCreatedAsync();
-
-        await _connection.OpenAsync();
-        _respawner = await Respawner.CreateAsync(_connection);
-    }
-
-    public DbConnection GetConnection()
-    {
-        return _connection;
-    }
-
-    public string GetConnectionString()
-    {
-        return _connectionString;
-    }
-
-    public async Task ResetAsync()
-    {
-        await _respawner.ResetAsync(_connection);
-    }
-
-    public async Task DisposeAsync()
-    {
-        await _connection.DisposeAsync();
-        await _container.DisposeAsync();
+            services
+                .RemoveAll<IUser>()
+                .AddTransient(provider =>
+                {
+                    var mock = new Mock<IUser>();
+                    mock.SetupGet(x => x.Roles).Returns(GetRoles());
+                    mock.SetupGet(x => x.Id).Returns(GetUserId());
+                    return mock.Object;
+                });
+#if (!UseAspire || UseSqlite)
+            services
+                .RemoveAll<DbContextOptions<ApplicationDbContext>>()
+                .AddDbContext<ApplicationDbContext>((sp, options) =>
+                {
+                    options.AddInterceptors(sp.GetServices<ISaveChangesInterceptor>());
+#if (UsePostgreSQL)
+                    options.UseNpgsql(_connection);
+#elif (UseSqlServer)
+                    options.UseSqlServer(_connection);
+#else
+                    options.UseSqlite(_connection);
+#endif
+                });
+#endif
+        });
     }
 }

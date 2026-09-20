@@ -1,63 +1,45 @@
-using CleanArchitecture.Application.Common.Models;
-using CleanArchitecture.Application.TodoItems.Commands.CreateTodoItem;
-using CleanArchitecture.Application.TodoItems.Commands.DeleteTodoItem;
-using CleanArchitecture.Application.TodoItems.Commands.UpdateTodoItem;
-using CleanArchitecture.Application.TodoItems.Commands.UpdateTodoItemDetail;
-using CleanArchitecture.Application.TodoItems.Queries.GetTodoItemsWithPagination;
+using ClinicManager.Application.TodoLists.Commands.CreateTodoList;
+using ClinicManager.Application.TodoLists.Commands.DeleteTodoList;
+using ClinicManager.Application.TodoLists.Commands.UpdateTodoList;
+using ClinicManager.Application.TodoLists.Queries.GetTodos;
 using Microsoft.AspNetCore.Http.HttpResults;
 
-namespace CleanArchitecture.Web.Endpoints;
+namespace ClinicManager.Web.Endpoints;
 
-public class TodoItems : EndpointGroupBase
+public class TodoLists : EndpointGroupBase
 {
     public override void Map(RouteGroupBuilder groupBuilder)
     {
-        groupBuilder.MapGet(GetTodoItemsWithPagination).RequireAuthorization();
-        groupBuilder.MapPost(CreateTodoItem).RequireAuthorization();
-        groupBuilder.MapPut(UpdateTodoItem, "{id}").RequireAuthorization();
-        groupBuilder.MapPatch(UpdateTodoItemDetail, "UpdateDetail/{id}").RequireAuthorization();
-        groupBuilder.MapDelete(DeleteTodoItem, "{id}").RequireAuthorization();
+        groupBuilder.MapGet(GetTodoLists).RequireAuthorization();
+        groupBuilder.MapPost(CreateTodoList).RequireAuthorization();
+        groupBuilder.MapPut(UpdateTodoList, "{id}").RequireAuthorization();
+        groupBuilder.MapDelete(DeleteTodoList, "{id}").RequireAuthorization();
     }
 
-    [EndpointName(nameof(GetTodoItemsWithPagination))]
-    [EndpointSummary("Get Todo Items with Pagination")]
-    [EndpointDescription("Retrieves a paginated list of todo items based on the provided query parameters.")]
-    public async Task<Ok<PaginatedList<TodoItemBriefDto>>> GetTodoItemsWithPagination(
-        ISender sender,
-        [AsParameters] GetTodoItemsWithPaginationQuery query)
+    [EndpointName(nameof(GetTodoLists))]
+    [EndpointSummary("Get all Todo Lists")]
+    [EndpointDescription("Retrieves all todo lists along with their items.")]
+    public async Task<Ok<TodosVm>> GetTodoLists(ISender sender)
     {
-        var result = await sender.Send(query);
+        var vm = await sender.Send(new GetTodosQuery());
 
-        return TypedResults.Ok(result);
+        return TypedResults.Ok(vm);
     }
 
-    [EndpointName(nameof(CreateTodoItem))]
-    [EndpointSummary("Create a new Todo Item")]
-    [EndpointDescription("Creates a new todo item using the provided details and returns the ID of the created item.")]
-    public async Task<Created<int>> CreateTodoItem(ISender sender, CreateTodoItemCommand command)
+    [EndpointName(nameof(CreateTodoList))]
+    [EndpointSummary("Create a new Todo List")]
+    [EndpointDescription("Creates a new todo list using the provided details and returns the ID of the created list.")]
+    public async Task<Created<int>> CreateTodoList(ISender sender, CreateTodoListCommand command)
     {
         var id = await sender.Send(command);
 
-        return TypedResults.Created($"/{nameof(TodoItems)}/{id}", id);
+        return TypedResults.Created($"/{nameof(TodoLists)}/{id}", id);
     }
 
-    [EndpointName(nameof(UpdateTodoItem))]
-    [EndpointSummary("Update a Todo Item")]
-    [EndpointDescription("Updates the specified todo item. The ID in the URL must match the ID in the payload.")]
-    public async Task<Results<NoContent, BadRequest>> UpdateTodoItem(ISender sender, int id, UpdateTodoItemCommand command)
-    {
-        if (id != command.Id)
-            return TypedResults.BadRequest();
-
-        await sender.Send(command);
-
-        return TypedResults.NoContent();
-    }
-
-    [EndpointName(nameof(UpdateTodoItemDetail))]
-    [EndpointSummary("Update Todo Item Details")]
-    [EndpointDescription("Updates the detail fields of a specific todo item. The ID in the URL must match the ID in the payload.")]
-    public async Task<Results<NoContent, BadRequest>> UpdateTodoItemDetail(ISender sender, int id, UpdateTodoItemDetailCommand command)
+    [EndpointName(nameof(UpdateTodoList))]
+    [EndpointSummary("Update a Todo List")]
+    [EndpointDescription("Updates the specified todo list. The ID in the URL must match the ID in the payload.")]
+    public async Task<Results<NoContent, BadRequest>> UpdateTodoList(ISender sender, int id, UpdateTodoListCommand command)
     {
         if (id != command.Id) return TypedResults.BadRequest();
 
@@ -66,12 +48,12 @@ public class TodoItems : EndpointGroupBase
         return TypedResults.NoContent();
     }
 
-    [EndpointName(nameof(DeleteTodoItem))]
-    [EndpointSummary("Delete a Todo Item")]
-    [EndpointDescription("Deletes the todo item with the specified ID.")]
-    public async Task<NoContent> DeleteTodoItem(ISender sender, int id)
+    [EndpointName(nameof(DeleteTodoList))]
+    [EndpointSummary("Delete a Todo List")]
+    [EndpointDescription("Deletes the todo list with the specified ID.")]
+    public async Task<NoContent> DeleteTodoList(ISender sender, int id)
     {
-        await sender.Send(new DeleteTodoItemCommand(id));
+        await sender.Send(new DeleteTodoListCommand(id));
 
         return TypedResults.NoContent();
     }

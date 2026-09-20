@@ -1,23 +1,5 @@
-﻿using System.Reflection;
-using ClinicManager.Application.Common.Interfaces;
-using ClinicManager.Domain.Entities;
-using ClinicManager.Infrastructure.Identity;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
-
-namespace ClinicManager.Infrastructure.Data;
-
-public class ApplicationDbContext : IdentityDbContext<ApplicationUser>, IApplicationDbContext
-{
-    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
-
-    public DbSet<TodoList> TodoLists => Set<TodoList>();
-
-    public DbSet<TodoItem> TodoItems => Set<TodoItem>();
-
-    protected override void OnModelCreating(ModelBuilder builder)
-    {
-        base.OnModelCreating(builder);
-        builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
-    }
-}
+﻿global using ClinicManager.Web.AcceptanceTests.Pages;
+global using Reqnroll.BoDi;
+global using Shouldly;
+global using Microsoft.Playwright;
+global using Reqnroll;

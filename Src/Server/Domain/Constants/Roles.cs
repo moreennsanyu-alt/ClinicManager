@@ -1,6 +1,6 @@
 ﻿namespace ClinicManager.Domain.Constants;
 
-public abstract class Roles
+public abstract class Policies
 {
-    public const string Administrator = nameof(Administrator);
+    public const string CanPurge = nameof(CanPurge);
 }

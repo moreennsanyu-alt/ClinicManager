@@ -1,6 +1,46 @@
-﻿global using ClinicManager.Domain.Common;
-global using ClinicManager.Domain.Entities;
-global using ClinicManager.Domain.Enums;
-global using ClinicManager.Domain.Events;
-global using ClinicManager.Domain.Exceptions;
-global using ClinicManager.Domain.ValueObjects;
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace ClinicManager.Web.Infrastructure;
+
+public static class EndpointRouteBuilderExtensions
+{
+    public static RouteHandlerBuilder MapGet(this IEndpointRouteBuilder builder, Delegate handler, [StringSyntax("Route")] string pattern = "")
+    {
+        Guard.Against.AnonymousMethod(handler);
+
+        return builder.MapGet(pattern, handler)
+              .WithName(handler.Method.Name);
+    }
+
+    public static RouteHandlerBuilder MapPost(this IEndpointRouteBuilder builder, Delegate handler, [StringSyntax("Route")] string pattern = "")
+    {
+        Guard.Against.AnonymousMethod(handler);
+
+        return builder.MapPost(pattern, handler)
+            .WithName(handler.Method.Name);
+    }
+
+    public static RouteHandlerBuilder MapPut(this IEndpointRouteBuilder builder, Delegate handler, [StringSyntax("Route")] string pattern)
+    {
+        Guard.Against.AnonymousMethod(handler);
+
+        return builder.MapPut(pattern, handler)
+            .WithName(handler.Method.Name);
+    }
+
+    public static RouteHandlerBuilder MapPatch(this IEndpointRouteBuilder builder, Delegate handler, [StringSyntax("Route")] string pattern)
+    {
+        Guard.Against.AnonymousMethod(handler);
+
+        return builder.MapPatch(pattern, handler)
+            .WithName(handler.Method.Name);
+    }
+
+    public static RouteHandlerBuilder MapDelete(this IEndpointRouteBuilder builder, Delegate handler, [StringSyntax("Route")] string pattern)
+    {
+        Guard.Against.AnonymousMethod(handler);
+
+        return builder.MapDelete(pattern, handler)
+            .WithName(handler.Method.Name);
+    }
+}

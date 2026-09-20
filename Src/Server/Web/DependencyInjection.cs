@@ -1,50 +1,27 @@
-using Azure.Identity;
-using ClinicManager.Application.Common.Interfaces;
-using ClinicManager.Infrastructure.Data;
-using ClinicManager.Web.Services;
-using Microsoft.AspNetCore.Mvc;
+# ClinicManager.Web
 
-namespace Microsoft.Extensions.DependencyInjection;
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 21.1.5.
 
-public static class DependencyInjection
-{
-    public static void AddWebServices(this IHostApplicationBuilder builder)
-    {
-        builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+## Development server
 
-        builder.Services.AddScoped<IUser, CurrentUser>();
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-        builder.Services.AddHttpContextAccessor();
-#if (!UseAspire)
-        builder.Services.AddHealthChecks()
-            .AddDbContextCheck<ApplicationDbContext>();
-#endif
+## Code scaffolding
 
-        builder.Services.AddExceptionHandler<CustomExceptionHandler>();
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-        builder.Services.Configure<ApiBehaviorOptions>(options =>
-            options.SuppressModelStateInvalidFilter = true);
+## Build
 
-        builder.Services.AddEndpointsApiExplorer();
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-        builder.Services.AddOpenApi(options =>
-        {
-            options.AddOperationTransformer<ApiExceptionOperationTransformer>();
-            options.AddOperationTransformer<IdentityApiOperationTransformer>();
-#if (UseApiOnly)
-            options.AddDocumentTransformer<BearerSecuritySchemeTransformer>();
-#endif
-        });
-    }
+## Running unit tests
 
-    public static void AddKeyVaultIfConfigured(this IHostApplicationBuilder builder)
-    {
-        var keyVaultUri = builder.Configuration["AZURE_KEY_VAULT_ENDPOINT"];
-        if (!string.IsNullOrWhiteSpace(keyVaultUri))
-        {
-            builder.Configuration.AddAzureKeyVault(
-                new Uri(keyVaultUri),
-                new DefaultAzureCredential());
-        }
-    }
-}
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

@@ -1,25 +1,19 @@
-using System.Reflection;
-using ClinicManager.Application.Common.Behaviours;
-using Microsoft.Extensions.Hosting;
+﻿using System.Security.Claims;
 
-namespace Microsoft.Extensions.DependencyInjection;
+using ClinicManager.Application.Common.Interfaces;
 
-public static class DependencyInjection
+namespace ClinicManager.Web.Services;
+
+public class CurrentUser : IUser
 {
-    public static void AddApplicationServices(this IHostApplicationBuilder builder)
+    private readonly IHttpContextAccessor _httpContextAccessor;
+
+    public CurrentUser(IHttpContextAccessor httpContextAccessor)
     {
-        builder.Services.AddAutoMapper(cfg => 
-            cfg.AddMaps(Assembly.GetExecutingAssembly()));
-
-        builder.Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
-
-        builder.Services.AddMediatR(cfg => {
-            cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly());
-            cfg.AddOpenRequestPreProcessor(typeof(LoggingBehaviour<>));
-            cfg.AddOpenBehavior(typeof(UnhandledExceptionBehaviour<,>));
-            cfg.AddOpenBehavior(typeof(AuthorizationBehaviour<,>));
-            cfg.AddOpenBehavior(typeof(ValidationBehaviour<,>));
-            cfg.AddOpenBehavior(typeof(PerformanceBehaviour<,>));
-        });
+        _httpContextAccessor = httpContextAccessor;
     }
+
+    public string? Id => _httpContextAccessor.HttpContext?.User?.FindFirstValue(ClaimTypes.NameIdentifier);
+    public List<string>? Roles => _httpContextAccessor.HttpContext?.User?.FindAll(ClaimTypes.Role).Select(x => x.Value).ToList();
+
 }
