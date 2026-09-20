@@ -1,6 +1,6 @@
-﻿using CleanArchitecture.Domain.Entities;
+﻿using ClinicManager.Domain.Entities;
 
-namespace CleanArchitecture.Application.Common.Interfaces;
+namespace ClinicManager.Application.Common.Interfaces;
 
 public interface IApplicationDbContext
 {
