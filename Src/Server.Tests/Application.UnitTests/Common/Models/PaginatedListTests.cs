@@ -1,8 +1,8 @@
-using CleanArchitecture.Application.Common.Models;
+using ClinicManager.Application.Common.Models;
 using NUnit.Framework;
 using Shouldly;
 
-namespace CleanArchitecture.Application.UnitTests.Common.Models;
+namespace ClinicManager.Application.UnitTests.Common.Models;
 
 public class PaginatedListTests
 {

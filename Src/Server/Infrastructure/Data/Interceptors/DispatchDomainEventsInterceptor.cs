@@ -1,9 +1,9 @@
-﻿using CleanArchitecture.Domain.Common;
+﻿using ClinicManager.Domain.Common;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 
-namespace CleanArchitecture.Infrastructure.Data.Interceptors;
+namespace ClinicManager.Infrastructure.Data.Interceptors;
 
 public class DispatchDomainEventsInterceptor : SaveChangesInterceptor
 {

@@ -1,8 +1,8 @@
-﻿using CleanArchitecture.Application.Common.Interfaces;
-using CleanArchitecture.Application.Common.Mappings;
-using CleanArchitecture.Application.Common.Models;
+﻿using ClinicManager.Application.Common.Interfaces;
+using ClinicManager.Application.Common.Mappings;
+using ClinicManager.Application.Common.Models;
 
-namespace CleanArchitecture.Application.TodoItems.Queries.GetTodoItemsWithPagination;
+namespace ClinicManager.Application.TodoItems.Queries.GetTodoItemsWithPagination;
 
 public record GetTodoItemsWithPaginationQuery : IRequest<PaginatedList<TodoItemBriefDto>>
 {

@@ -1,7 +1,7 @@
-﻿using CleanArchitecture.Application.Common.Interfaces;
-using CleanArchitecture.Domain.Enums;
+﻿using ClinicManager.Application.Common.Interfaces;
+using ClinicManager.Domain.Enums;
 
-namespace CleanArchitecture.Application.TodoItems.Commands.UpdateTodoItemDetail;
+namespace ClinicManager.Application.TodoItems.Commands.UpdateTodoItemDetail;
 
 public record UpdateTodoItemDetailCommand : IRequest
 {

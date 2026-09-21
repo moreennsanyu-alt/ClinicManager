@@ -1,6 +1,6 @@
-﻿using CleanArchitecture.Domain.Entities;
+﻿using ClinicManager.Domain.Entities;
 
-namespace CleanArchitecture.Application.TodoItems.Queries.GetTodoItemsWithPagination;
+namespace ClinicManager.Application.TodoItems.Queries.GetTodoItemsWithPagination;
 
 public class TodoItemBriefDto
 {

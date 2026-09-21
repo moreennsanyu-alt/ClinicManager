@@ -1,10 +1,10 @@
-using CleanArchitecture.Application.Common.Interfaces;
-using CleanArchitecture.Application.Common.Models;
+using ClinicManager.Application.Common.Interfaces;
+using ClinicManager.Application.Common.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
-namespace CleanArchitecture.Infrastructure.Identity;
+namespace ClinicManager.Infrastructure.Identity;
 
 public class IdentityService : IIdentityService
 {

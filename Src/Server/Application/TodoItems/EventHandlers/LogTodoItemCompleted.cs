@@ -1,7 +1,7 @@
-﻿using CleanArchitecture.Domain.Events;
+﻿using ClinicManager.Domain.Events;
 using Microsoft.Extensions.Logging;
 
-namespace CleanArchitecture.Application.TodoItems.EventHandlers;
+namespace ClinicManager.Application.TodoItems.EventHandlers;
 
 public class LogTodoItemCompleted : INotificationHandler<TodoItemCompletedEvent>
 {
@@ -14,7 +14,7 @@ public class LogTodoItemCompleted : INotificationHandler<TodoItemCompletedEvent>
 
     public Task Handle(TodoItemCompletedEvent notification, CancellationToken cancellationToken)
     {
-        _logger.LogInformation("CleanArchitecture Domain Event: {DomainEvent}", notification.GetType().Name);
+        _logger.LogInformation("ClinicManager Domain Event: {DomainEvent}", notification.GetType().Name);
 
         return Task.CompletedTask;
     }

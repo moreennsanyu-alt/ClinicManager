@@ -1,9 +1,9 @@
-﻿using CleanArchitecture.Application.Common.Interfaces;
-using CleanArchitecture.Application.Common.Models;
-using CleanArchitecture.Application.Common.Security;
-using CleanArchitecture.Domain.Enums;
+﻿using ClinicManager.Application.Common.Interfaces;
+using ClinicManager.Application.Common.Models;
+using ClinicManager.Application.Common.Security;
+using ClinicManager.Domain.Enums;
 
-namespace CleanArchitecture.Application.TodoLists.Queries.GetTodos;
+namespace ClinicManager.Application.TodoLists.Queries.GetTodos;
 
 [Authorize]
 public record GetTodosQuery : IRequest<TodosVm>;

@@ -1,6 +1,6 @@
-﻿using CleanArchitecture.Application.Common.Interfaces;
+﻿using ClinicManager.Application.Common.Interfaces;
 
-namespace CleanArchitecture.Application.TodoItems.Commands.UpdateTodoItem;
+namespace ClinicManager.Application.TodoItems.Commands.UpdateTodoItem;
 
 public record UpdateTodoItemCommand : IRequest
 {
