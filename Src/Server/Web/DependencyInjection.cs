@@ -15,10 +15,9 @@ public static class DependencyInjection
         builder.Services.AddScoped<IUser, CurrentUser>();
 
         builder.Services.AddHttpContextAccessor();
-#if (!UseAspire)
+
         builder.Services.AddHealthChecks()
             .AddDbContextCheck<ApplicationDbContext>();
-#endif
 
         builder.Services.AddExceptionHandler<CustomExceptionHandler>();
 
@@ -32,9 +31,8 @@ public static class DependencyInjection
         {
             options.AddOperationTransformer<ApiExceptionOperationTransformer>();
             options.AddOperationTransformer<IdentityApiOperationTransformer>();
-#if (UseApiOnly)
+
             options.AddDocumentTransformer<BearerSecuritySchemeTransformer>();
-#endif
         });
     }
 
