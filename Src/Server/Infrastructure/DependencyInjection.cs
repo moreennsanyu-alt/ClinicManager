@@ -24,29 +24,19 @@ public static class DependencyInjection
         builder.Services.AddDbContext<ApplicationDbContext>((sp, options) =>
         {
             options.AddInterceptors(sp.GetServices<ISaveChangesInterceptor>());
-#if (UsePostgreSQL)
-            options.UseNpgsql(connectionString);
-#elif (UseSqlServer)
-            options.UseSqlServer(connectionString);
-#else
+
             options.UseSqlite(connectionString);
-#endif
+
             options.ConfigureWarnings(warnings => warnings.Ignore(RelationalEventId.PendingModelChangesWarning));
         });
 
-#if (UseAspire)
-#if (UsePostgreSQL)
-        builder.EnrichNpgsqlDbContext<ApplicationDbContext>();
-#elif (UseSqlServer)
-        builder.EnrichSqlServerDbContext<ApplicationDbContext>();
-#endif
-#endif
+
 
         builder.Services.AddScoped<IApplicationDbContext>(provider => provider.GetRequiredService<ApplicationDbContext>());
 
         builder.Services.AddScoped<ApplicationDbContextInitialiser>();
 
-#if (UseApiOnly)
+
         builder.Services.AddAuthentication()
             .AddBearerToken(IdentityConstants.BearerScheme);
 
@@ -57,24 +47,7 @@ public static class DependencyInjection
             .AddRoles<IdentityRole>()
             .AddEntityFrameworkStores<ApplicationDbContext>()
             .AddApiEndpoints();
-#else
-        builder.Services.AddAuthentication(options =>
-            {
-                options.DefaultScheme = IdentityConstants.ApplicationScheme;
-                options.DefaultSignInScheme = IdentityConstants.ExternalScheme;
-            })
-            .AddIdentityCookies();
 
-        builder.Services.AddAuthorizationBuilder();
-
-        builder.Services
-            .AddIdentityCore<ApplicationUser>()
-            .AddRoles<IdentityRole>()
-            .AddEntityFrameworkStores<ApplicationDbContext>()
-            .AddSignInManager()
-            .AddDefaultTokenProviders()
-            .AddApiEndpoints();
-#endif
 
         builder.Services.AddSingleton(TimeProvider.System);
         builder.Services.AddTransient<IIdentityService, IdentityService>();
