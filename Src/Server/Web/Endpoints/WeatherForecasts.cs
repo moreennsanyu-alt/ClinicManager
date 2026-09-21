@@ -1,7 +1,7 @@
-using CleanArchitecture.Application.WeatherForecasts.Queries.GetWeatherForecasts;
+using ClinicManager.Application.WeatherForecasts.Queries.GetWeatherForecasts;
 using Microsoft.AspNetCore.Http.HttpResults;
 
-namespace CleanArchitecture.Web.Endpoints;
+namespace ClinicManager.Web.Endpoints;
 
 public class WeatherForecasts : EndpointGroupBase
 {

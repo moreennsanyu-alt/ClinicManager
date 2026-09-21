@@ -1,9 +1,9 @@
-﻿using CleanArchitecture.Infrastructure.Identity;
+﻿using ClinicManager.Infrastructure.Identity;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CleanArchitecture.Web.Endpoints;
+namespace ClinicManager.Web.Endpoints;
 
 public class Users : EndpointGroupBase
 {
