@@ -1,4 +1,4 @@
-using CleanArchitecture.Infrastructure.Data;
+using ClinicManager.Infrastructure.Data;
 using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);

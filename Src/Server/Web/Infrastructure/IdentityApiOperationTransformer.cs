@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.OpenApi;
 using Microsoft.OpenApi;
 
-namespace CleanArchitecture.Web.Infrastructure;
+namespace ClinicManager.Web.Infrastructure;
 
 internal sealed class IdentityApiOperationTransformer : IOpenApiOperationTransformer
 {

@@ -1,8 +1,8 @@
-﻿using CleanArchitecture.Application.Common.Exceptions;
+﻿using ClinicManager.Application.Common.Exceptions;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CleanArchitecture.Web.Infrastructure;
+namespace ClinicManager.Web.Infrastructure;
 
 public class CustomExceptionHandler : IExceptionHandler
 {

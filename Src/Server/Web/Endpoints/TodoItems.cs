@@ -1,12 +1,12 @@
-using CleanArchitecture.Application.Common.Models;
-using CleanArchitecture.Application.TodoItems.Commands.CreateTodoItem;
-using CleanArchitecture.Application.TodoItems.Commands.DeleteTodoItem;
-using CleanArchitecture.Application.TodoItems.Commands.UpdateTodoItem;
-using CleanArchitecture.Application.TodoItems.Commands.UpdateTodoItemDetail;
-using CleanArchitecture.Application.TodoItems.Queries.GetTodoItemsWithPagination;
+using ClinicManager.Application.Common.Models;
+using ClinicManager.Application.TodoItems.Commands.CreateTodoItem;
+using ClinicManager.Application.TodoItems.Commands.DeleteTodoItem;
+using ClinicManager.Application.TodoItems.Commands.UpdateTodoItem;
+using ClinicManager.Application.TodoItems.Commands.UpdateTodoItemDetail;
+using ClinicManager.Application.TodoItems.Queries.GetTodoItemsWithPagination;
 using Microsoft.AspNetCore.Http.HttpResults;
 
-namespace CleanArchitecture.Web.Endpoints;
+namespace ClinicManager.Web.Endpoints;
 
 public class TodoItems : EndpointGroupBase
 {
