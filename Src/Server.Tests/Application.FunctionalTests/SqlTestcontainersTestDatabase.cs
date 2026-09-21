@@ -1,16 +1,16 @@
 ﻿using System.Data.Common;
-using CleanArchitecture.Infrastructure.Data;
+using ClinicManager.Infrastructure.Data;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using Respawn;
 using Testcontainers.MsSql;
 
-namespace CleanArchitecture.Application.FunctionalTests;
+namespace ClinicManager.Application.FunctionalTests;
 
 public class SqlTestcontainersTestDatabase : ITestDatabase
 {
-    private const string DefaultDatabase = "CleanArchitectureTestDb";
+    private const string DefaultDatabase = "ClinicManagerTestDb";
     private readonly MsSqlContainer _container;
     private DbConnection _connection = null!;
     private string _connectionString = null!;

@@ -1,8 +1,8 @@
-﻿using CleanArchitecture.Application.TodoLists.Queries.GetTodos;
-using CleanArchitecture.Domain.Entities;
-using CleanArchitecture.Domain.ValueObjects;
+﻿using ClinicManager.Application.TodoLists.Queries.GetTodos;
+using ClinicManager.Domain.Entities;
+using ClinicManager.Domain.ValueObjects;
 
-namespace CleanArchitecture.Application.FunctionalTests.TodoLists.Queries;
+namespace ClinicManager.Application.FunctionalTests.TodoLists.Queries;
 
 using static Testing;
 

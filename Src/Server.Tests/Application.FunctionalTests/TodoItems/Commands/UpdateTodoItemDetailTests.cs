@@ -1,11 +1,11 @@
-﻿using CleanArchitecture.Application.TodoItems.Commands.CreateTodoItem;
-using CleanArchitecture.Application.TodoItems.Commands.UpdateTodoItem;
-using CleanArchitecture.Application.TodoItems.Commands.UpdateTodoItemDetail;
-using CleanArchitecture.Application.TodoLists.Commands.CreateTodoList;
-using CleanArchitecture.Domain.Entities;
-using CleanArchitecture.Domain.Enums;
+﻿using ClinicManager.Application.TodoItems.Commands.CreateTodoItem;
+using ClinicManager.Application.TodoItems.Commands.UpdateTodoItem;
+using ClinicManager.Application.TodoItems.Commands.UpdateTodoItemDetail;
+using ClinicManager.Application.TodoLists.Commands.CreateTodoList;
+using ClinicManager.Domain.Entities;
+using ClinicManager.Domain.Enums;
 
-namespace CleanArchitecture.Application.FunctionalTests.TodoItems.Commands;
+namespace ClinicManager.Application.FunctionalTests.TodoItems.Commands;
 
 using static Testing;
 

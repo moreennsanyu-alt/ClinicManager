@@ -1,8 +1,8 @@
-﻿using CleanArchitecture.Application.Common.Interfaces;
-using CleanArchitecture.Domain.Constants;
-using CleanArchitecture.Infrastructure.Data;
-using CleanArchitecture.Infrastructure.Data.Interceptors;
-using CleanArchitecture.Infrastructure.Identity;
+﻿using ClinicManager.Application.Common.Interfaces;
+using ClinicManager.Domain.Constants;
+using ClinicManager.Infrastructure.Data;
+using ClinicManager.Infrastructure.Data.Interceptors;
+using ClinicManager.Infrastructure.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
@@ -15,8 +15,8 @@ public static class DependencyInjection
 {
     public static void AddInfrastructureServices(this IHostApplicationBuilder builder)
     {
-        var connectionString = builder.Configuration.GetConnectionString("CleanArchitectureDb");
-        Guard.Against.Null(connectionString, message: "Connection string 'CleanArchitectureDb' not found.");
+        var connectionString = builder.Configuration.GetConnectionString("ClinicManagerDb");
+        Guard.Against.Null(connectionString, message: "Connection string 'ClinicManagerDb' not found.");
 
         builder.Services.AddScoped<ISaveChangesInterceptor, AuditableEntityInterceptor>();
         builder.Services.AddScoped<ISaveChangesInterceptor, DispatchDomainEventsInterceptor>();

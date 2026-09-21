@@ -1,8 +1,8 @@
-﻿using CleanArchitecture.Application.TodoLists.Commands.CreateTodoList;
-using CleanArchitecture.Application.TodoLists.Commands.DeleteTodoList;
-using CleanArchitecture.Domain.Entities;
+﻿using ClinicManager.Application.TodoLists.Commands.CreateTodoList;
+using ClinicManager.Application.TodoLists.Commands.DeleteTodoList;
+using ClinicManager.Domain.Entities;
 
-namespace CleanArchitecture.Application.FunctionalTests.TodoLists.Commands;
+namespace ClinicManager.Application.FunctionalTests.TodoLists.Commands;
 
 using static Testing;
 

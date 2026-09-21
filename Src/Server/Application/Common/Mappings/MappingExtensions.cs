@@ -1,6 +1,6 @@
-﻿using CleanArchitecture.Application.Common.Models;
+﻿using ClinicManager.Application.Common.Models;
 
-namespace CleanArchitecture.Application.Common.Mappings;
+namespace ClinicManager.Application.Common.Mappings;
 
 public static class MappingExtensions
 {

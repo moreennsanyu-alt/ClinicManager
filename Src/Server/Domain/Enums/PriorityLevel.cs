@@ -1,4 +1,4 @@
-﻿namespace CleanArchitecture.Domain.Enums;
+﻿namespace ClinicManager.Domain.Enums;
 
 public enum PriorityLevel
 {

@@ -1,6 +1,6 @@
-﻿using CleanArchitecture.Domain.Entities;
+﻿using ClinicManager.Domain.Entities;
 
-namespace CleanArchitecture.Application.Common.Models;
+namespace ClinicManager.Application.Common.Models;
 
 public class LookupDto
 {

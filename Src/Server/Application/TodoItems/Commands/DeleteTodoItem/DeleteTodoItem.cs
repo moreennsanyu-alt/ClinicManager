@@ -1,7 +1,7 @@
-﻿using CleanArchitecture.Application.Common.Interfaces;
-using CleanArchitecture.Domain.Events;
+﻿using ClinicManager.Application.Common.Interfaces;
+using ClinicManager.Domain.Events;
 
-namespace CleanArchitecture.Application.TodoItems.Commands.DeleteTodoItem;
+namespace ClinicManager.Application.TodoItems.Commands.DeleteTodoItem;
 
 public record DeleteTodoItemCommand(int Id) : IRequest;
 

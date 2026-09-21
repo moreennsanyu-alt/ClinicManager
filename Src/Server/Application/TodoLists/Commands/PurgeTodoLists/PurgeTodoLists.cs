@@ -1,8 +1,8 @@
-﻿using CleanArchitecture.Application.Common.Interfaces;
-using CleanArchitecture.Application.Common.Security;
-using CleanArchitecture.Domain.Constants;
+﻿using ClinicManager.Application.Common.Interfaces;
+using ClinicManager.Application.Common.Security;
+using ClinicManager.Domain.Constants;
 
-namespace CleanArchitecture.Application.TodoLists.Commands.PurgeTodoLists;
+namespace ClinicManager.Application.TodoLists.Commands.PurgeTodoLists;
 
 [Authorize(Roles = Roles.Administrator)]
 [Authorize(Policy = Policies.CanPurge)]

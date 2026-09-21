@@ -1,7 +1,7 @@
-﻿using CleanArchitecture.Application.Common.Interfaces;
-using CleanArchitecture.Domain.Entities;
+﻿using ClinicManager.Application.Common.Interfaces;
+using ClinicManager.Domain.Entities;
 
-namespace CleanArchitecture.Application.TodoLists.Commands.CreateTodoList;
+namespace ClinicManager.Application.TodoLists.Commands.CreateTodoList;
 
 public record CreateTodoListCommand : IRequest<int>
 {

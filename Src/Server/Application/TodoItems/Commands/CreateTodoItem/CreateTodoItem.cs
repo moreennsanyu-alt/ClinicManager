@@ -1,8 +1,8 @@
-﻿using CleanArchitecture.Application.Common.Interfaces;
-using CleanArchitecture.Domain.Entities;
-using CleanArchitecture.Domain.Events;
+﻿using ClinicManager.Application.Common.Interfaces;
+using ClinicManager.Domain.Entities;
+using ClinicManager.Domain.Events;
 
-namespace CleanArchitecture.Application.TodoItems.Commands.CreateTodoItem;
+namespace ClinicManager.Application.TodoItems.Commands.CreateTodoItem;
 
 public record CreateTodoItemCommand : IRequest<int>
 {

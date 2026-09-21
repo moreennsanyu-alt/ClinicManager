@@ -1,8 +1,8 @@
-﻿using CleanArchitecture.Domain.Entities;
+﻿using ClinicManager.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace CleanArchitecture.Infrastructure.Data.Configurations;
+namespace ClinicManager.Infrastructure.Data.Configurations;
 
 public class TodoListConfiguration : IEntityTypeConfiguration<TodoList>
 {
