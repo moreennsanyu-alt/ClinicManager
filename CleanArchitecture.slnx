@@ -7,12 +7,29 @@
     <File Path="global.json" />
     <File Path="README.md" />
   </Folder>
+  <Folder Name="/Desktop/">
+    <Project Path="Src/Desktop/ClinicManager.Core/ClinicManager.Core.csproj" />
+    <Project Path="Src/Desktop/ClinicManager.Win/ClinicManager.Win.csproj" />
+    <Project Path="Src/Desktop/ClinicManager.Presentation/ClinicManager.Presentation.csproj" />
+    <Project Path="Src/Desktop/ClinicManager.Layout/ClinicManager.Layout.csproj" />
+    <Project Path="Src/Desktop/ClinicManager.Library/ClinicManager.Library.csproj" />
+  </Folder>
+
+  Folder Name="/Desktop.Tests/">
+    <Project Path="Src/Desktop/ClinicManager.Core.Tests/ClinicManager.Core.Tests.csproj" />
+    <Project Path="Src/Desktop/ClinicManager.Win.Tests/ClinicManager.Win.Tests.csproj" />
+    <Project Path="Src/Desktop/ClinicManager.Presentation.Tests/ClinicManager.Presentation.Tests.csproj" />
+    <Project Path="Src/Desktop/ClinicManager.Layout.Tests/ClinicManager.Layout.Tests.csproj" />
+    <Project Path="Src/Desktop/ClinicManager.Library.Tests/ClinicManager.Library.Tests.csproj" />
+  </Folder>
+
   <Folder Name="/Server/">
     <Project Path="Src/Server/Application/Application.csproj" />
     <Project Path="Src/Server/Domain/Domain.csproj" />
     <Project Path="Src/Server/Infrastructure/Infrastructure.csproj" />
-    <Project Path="Src/Server/Web/Web.csproj" DefaultStartup="true" />
+    <Project Path="Src/Server/Web/Web.csproj" />
   </Folder>
+
   <Folder Name="/Server.Tests/">
     <Project Path="Src/Server.Tests/Application.FunctionalTests/Application.FunctionalTests.csproj" />
     <Project Path="Src/Server.Tests/Application.UnitTests/Application.UnitTests.csproj" />
