@@ -1,8 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <RootNamespace>CleanArchitecture.Domain</RootNamespace>
-    <AssemblyName>CleanArchitecture.Domain</AssemblyName>
+    <RootNamespace>ClinicManager.Domain</RootNamespace>
+    <AssemblyName>ClinicManager.Domain</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
