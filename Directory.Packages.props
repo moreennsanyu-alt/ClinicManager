@@ -17,58 +17,7 @@
 
 
     <PackageVersion Include="ThisAssembly.Constants" Version="2.1.5" />
-        <!-- DevExpress -->
-    <PackageVersion Include="DevExpress.Wpf.Themes.All" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.Scheduling" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.DataAccess" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Document.Processor" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Drawing.Skia" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.RichEdit.Export" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Scaffolding.Core" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Scaffolding.EFCore" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.Accordion" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.Carousel" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.Charts" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.Core.Extensions" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.Diagram" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.Dialogs" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.Docking" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.DocumentViewer.Core" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.ExpressionEditor" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.Gantt" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.Gauges" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.Grid" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.LayoutControl" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.Map" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.NavBar" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.PdfViewer" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.PivotGrid" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.Printing" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.PrismAdapters" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.PropertyGrid" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.Ribbon" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.RichEdit" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.SchedulingReporting" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.SpellChecker" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.Spreadsheet" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.TreeMap" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.TypedStyles" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Mvvm" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Mvvm.CodeGenerators" Version="22.1.1" />
-    <PackageVersion Include="DevExpress.Wpf.ThemesLW" Version="24.2.15"/>
-
-
-    <!-- Added DevExpress transitive packages -->
-    <PackageVersion Include="DevExpress.Data" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Xpo" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Data.Desktop" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Images" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.Controls" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.Core" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.Themes.Win11Light" Version="24.2.15" />
-    <PackageVersion Include="DevExpress.Wpf.Themes.Win11Dark" Version="24.2.15" />
-
-    <!-- System / Microsoft -->
+ 
     <PackageVersion Include="System.Text.Json" Version="9.0.19" />
     <PackageVersion Include="System.Runtime.CompilerServices.Unsafe" Version="6.1.2" />
     <PackageVersion Include="System.Collections.Immutable" Version="9.0.19" />
