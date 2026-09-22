@@ -15,7 +15,7 @@
     <Project Path="Src/Desktop/ClinicManager.Library/ClinicManager.Library.csproj" />
   </Folder>
 
-  Folder Name="/Desktop.Tests/">
+  <Folder Name="/Desktop.Tests/">
     <Project Path="Src/Desktop/ClinicManager.Core.Tests/ClinicManager.Core.Tests.csproj" />
     <Project Path="Src/Desktop/ClinicManager.Win.Tests/ClinicManager.Win.Tests.csproj" />
     <Project Path="Src/Desktop/ClinicManager.Presentation.Tests/ClinicManager.Presentation.Tests.csproj" />
