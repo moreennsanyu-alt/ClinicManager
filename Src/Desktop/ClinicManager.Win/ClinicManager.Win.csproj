@@ -13,6 +13,9 @@
     <PackageReference Include="AsyncAwaitBestPractices.MVVM" />
     <PackageReference Include="AsyncFixer" />
     <PackageReference Include="WpfAnalyzers" />
-</ItemGroup>
+  </ItemGroup>
 
+  <ItemGroup>
+      <ProjectReference Include="..\ClinicManager.Core\ClinicManager.Core.csproj" />
+  </ItemGroup>
 </Project>
