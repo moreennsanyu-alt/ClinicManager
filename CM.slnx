@@ -16,11 +16,11 @@
   </Folder>
 
   <Folder Name="/Desktop.Tests/">
-    <Project Path="Src/Desktop/ClinicManager.Core.Tests/ClinicManager.Core.Tests.csproj" />
-    <Project Path="Src/Desktop/ClinicManager.Win.Tests/ClinicManager.Win.Tests.csproj" />
-    <Project Path="Src/Desktop/ClinicManager.Presentation.Tests/ClinicManager.Presentation.Tests.csproj" />
-    <Project Path="Src/Desktop/ClinicManager.Layout.Tests/ClinicManager.Layout.Tests.csproj" />
-    <Project Path="Src/Desktop/ClinicManager.Library.Tests/ClinicManager.Library.Tests.csproj" />
+    <Project Path="Src/Desktop.Tests/ClinicManager.Core.Tests/ClinicManager.Core.Tests.csproj" />
+    <Project Path="Src/Desktop.Tests/ClinicManager.Win.Tests/ClinicManager.Win.Tests.csproj" />
+    <Project Path="Src/Desktop.Tests/ClinicManager.Presentation.Tests/ClinicManager.Presentation.Tests.csproj" />
+    <Project Path="Src/Desktop.Tests/ClinicManager.Layout.Tests/ClinicManager.Layout.Tests.csproj" />
+    <Project Path="Src/Desktop.Tests/ClinicManager.Library.Tests/ClinicManager.Library.Tests.csproj" />
   </Folder>
 
   <Folder Name="/Server/">
