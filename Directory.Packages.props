@@ -5,7 +5,7 @@
     <AspireVersion>13.1.2</AspireVersion>
     <AspnetVersion>10.0.12</AspnetVersion>
     <EfcoreVersion>10.0.12</EfcoreVersion>
- <PrismVersion>8.1.97</PrismVersion>
+    <PrismVersion>8.1.97</PrismVersion>
     <MicrosoftExtensionsVersion>10.0.12</MicrosoftExtensionsVersion>
   </PropertyGroup>
 
@@ -18,17 +18,17 @@
 
     <PackageVersion Include="ThisAssembly.Constants" Version="2.1.5" />
  
-    <PackageVersion Include="System.Text.Json" Version="9.0.19" />
+    <PackageVersion Include="System.Text.Json" Version="10.0.12" />
     <PackageVersion Include="System.Runtime.CompilerServices.Unsafe" Version="6.1.2" />
-    <PackageVersion Include="System.Collections.Immutable" Version="9.0.19" />
-    <PackageVersion Include="Microsoft.Windows.Compatibility" Version="9.0.19" />
-    <PackageVersion Include="Microsoft.Bcl.AsyncInterfaces" Version="9.0.19" />
-    <PackageVersion Include="System.Reflection.Metadata" Version="9.0.19" />
+    <PackageVersion Include="System.Collections.Immutable" Version="10.0.12" />
+    <PackageVersion Include="Microsoft.Windows.Compatibility" Version="10.0.12" />
+    <PackageVersion Include="Microsoft.Bcl.AsyncInterfaces" Version="10.0.12" />
+    <PackageVersion Include="System.Reflection.Metadata" Version="10.0.12" />
     <PackageVersion Include="Microsoft.CodeAnalysis" Version="4.12.0" />
     <PackageVersion Include="System.ValueTuple" Version="4.6.2" />
     <PackageVersion Include="System.Memory" Version="4.6.3" />
     <PackageVersion Include="Microsoft.VisualBasic" Version="10.3.0" />
-    <PackageVersion Include="System.Diagnostics.DiagnosticSource" Version="9.0.19" />
+    <PackageVersion Include="System.Diagnostics.DiagnosticSource" Version="10.0.12" />
     <PackageVersion Include="System.Net.Http" Version="4.3.4" />
     <PackageVersion Include="System.Text.RegularExpressions" Version="4.3.1" />
 
