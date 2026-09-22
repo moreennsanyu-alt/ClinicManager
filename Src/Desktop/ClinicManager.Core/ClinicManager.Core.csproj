@@ -8,6 +8,11 @@
 
   <ItemGroup>
     <PackageReference Include="Prism.Wpf" />
-  </ItemGroup>
+    <PackageReference Include="ThisAssembly.Constants" />
+    <PackageReference Include="CommunityToolkit.Mvvm" />
+    <PackageReference Include="AsyncAwaitBestPractices.MVVM" />
+    <PackageReference Include="AsyncFixer" />
+    <PackageReference Include="WpfAnalyzers" />
+</ItemGroup>
 
 </Project>
