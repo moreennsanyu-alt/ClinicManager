@@ -3,8 +3,7 @@ ThisAssembly.Constants
 System.Net.Http
 System.Text.RegularExpressions
 
-FluentAssertions
-Moq
+
 nunit
 NUnit.Analyzers
 NUnit3TestAdapter
@@ -13,12 +12,9 @@ FlaUI.Core.Signed
 FlaUI.UIA2.Signed
 FlaUI.UIA3.Signed
 FlaUI.TestUtilities
-Microsoft.NET.Test.Sdk
 
 
-Microsoft.Xaml.Behaviors.Wpf
 Humanizer.Core
-NetArchTest.eNhancedEdition
 
 
 Nerdbank.GitVersioning
