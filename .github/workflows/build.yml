@@ -48,7 +48,10 @@ jobs:
 
       - name: Add wix extensions
         run: wix extension add -g WixToolset.UI.wixext/6.0.2
-          
+            
+      - name: Restore tools
+        run: dotnet paket restore 
+        
       - name: Prepare Interactive Environment
         shell: powershell
         run: |
