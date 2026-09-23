@@ -66,7 +66,7 @@ nuget System.Collections.Immutable 10.0.12
 nuget Microsoft.Windows.Compatibility 10.0.12
 nuget Microsoft.Bcl.AsyncInterfaces 10.0.12
 nuget System.Reflection.Metadata 10.0.12
-nuget Microsoft.CodeAnalysis 4.12.0
+nuget Microsoft.CodeAnalysis 5.0
 nuget System.ValueTuple 4.6.2
 nuget System.Memory 4.6.3
 nuget Microsoft.VisualBasic 10.3.0
