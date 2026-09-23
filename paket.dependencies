@@ -60,7 +60,7 @@ nuget System.Text.Json 9.0.19
 nuget System.Runtime.CompilerServices.Unsafe 6.1.2
 nuget System.Collections.Immutable 9.0.19
 nuget Microsoft.Windows.Compatibility 9.0.19
-nuget Microsoft.Bcl.AsyncInterfaces 9.0.19
+nuget Microsoft.Bcl.AsyncInterfaces 10.0.12
 nuget System.Reflection.Metadata 9.0.19
 nuget Microsoft.CodeAnalysis 4.12.0
 nuget System.ValueTuple 4.6.2
