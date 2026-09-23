@@ -6,16 +6,10 @@
     <UseWindowsForms>true</UseWindowsForms>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
-  <ItemGroup>
-    <PackageReference Include="Prism.Wpf" />
-    <PackageReference Include="ThisAssembly.Constants" />
-    <PackageReference Include="CommunityToolkit.Mvvm" />
-    <PackageReference Include="AsyncAwaitBestPractices.MVVM" />
-    <PackageReference Include="AsyncFixer" />
-    <PackageReference Include="WpfAnalyzers" />
-  </ItemGroup>
+
   <ItemGroup>
     <ProjectReference Include="..\ClinicManager.Core\ClinicManager.Core.csproj" />
   </ItemGroup>
+
   <Import Project="..\..\..\.paket\Paket.Restore.targets" />
 </Project>
