@@ -9,5 +9,5 @@
     <PackageReference Include="ThisAssembly.Constants" />
     <PackageReference Include="AsyncFixer" />
 </ItemGroup>
-<
+
 /Project>
