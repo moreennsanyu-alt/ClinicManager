@@ -10,4 +10,7 @@ MediatR.Contracts
 AutoMapper
 FluentValidation.DependencyInjectionExtensions
 MediatR
+Microsoft.EntityFrameworkCore
+Microsoft.AspNetCore.Identity.EntityFrameworkCore
+Microsoft.EntityFrameworkCore.Sqlite
     
