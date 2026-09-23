@@ -4,3 +4,6 @@ Microsoft.AspNetCore.Identity.EntityFrameworkCore
 Microsoft.EntityFrameworkCore.Sqlite
 Ardalis.GuardClauses
 MediatR.Contracts
+AutoMapper
+FluentValidation.DependencyInjectionExtensions
+MediatR
