@@ -55,6 +55,7 @@ nuget Prism.DryIoc 8.1.97
 
 // ---------- System / transitive pins ----------
 nuget ThisAssembly.Constants 2.1.5
+nuget System.Security.AccessControl 6.0.1
 nuget System.Security.Cryptography.Xml 10.0.12
 nuget System.Text.Json 10.0.12
 nuget System.Runtime.CompilerServices.Unsafe 6.1.2
@@ -82,6 +83,7 @@ nuget Shouldly 4.3.0
 nuget xunit.v3.extensibility.core 4.0.0
 nuget Microsoft.Testing.Extensions.CodeCoverage 18.8.0
 nuget Microsoft.TestPlatform.ObjectModel 18.8.1
+nuget Microsoft.Testing.Platform 2.4.1
 nuget coverlet.collector 10.0.1
 nuget FlaUI.Core.Signed 5.0.0
 nuget FlaUI.UIA2.Signed 5.0.0
