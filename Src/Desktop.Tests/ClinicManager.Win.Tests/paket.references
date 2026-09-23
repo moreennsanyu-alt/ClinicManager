@@ -4,9 +4,7 @@ System.Net.Http
 System.Text.RegularExpressions
 
 Moq
-nunit
-NUnit.Analyzers
-NUnit3TestAdapter
+xunit.v3
 Shouldly
 
 
