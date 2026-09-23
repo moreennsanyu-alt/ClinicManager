@@ -4,3 +4,7 @@ NUnit.Analyzers
 NUnit3TestAdapter
 Moq
 Shouldly
+Ardalis.GuardClauses
+MediatR.Contracts
+AutoMapper
+MediatR
