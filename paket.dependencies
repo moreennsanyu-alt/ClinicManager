@@ -48,6 +48,8 @@ nuget DevExpress.Wpf.TypedStyles 24.2.15
 nuget DevExpress.Mvvm 24.2.15
 nuget DevExpress.Mvvm.CodeGenerators 22.1.1
 nuget DevExpress.Wpf.ThemesLW 24.2.15
+nuget DevExpress.Wpf.Themes.Win11Light 24.2.15
+nuget DevExpress.Wpf.Themes.Win11Dark 24.2.15
 
 // ---------- Prism ----------
 nuget Prism.Core 8.1.97
