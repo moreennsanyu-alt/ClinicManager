@@ -84,6 +84,7 @@ nuget xunit.v3.extensibility.core 4.0.0
 nuget Microsoft.Testing.Extensions.CodeCoverage 18.8.0
 nuget Microsoft.TestPlatform.ObjectModel 18.8.1
 nuget Microsoft.Testing.Platform 2.4.1
+nuget Microsoft.Testing.Platform.MSBuild 2.4.1
 nuget coverlet.collector 10.0.1
 nuget FlaUI.Core.Signed 5.0.0
 nuget FlaUI.UIA2.Signed 5.0.0
