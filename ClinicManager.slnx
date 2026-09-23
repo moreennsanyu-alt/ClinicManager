@@ -29,4 +29,9 @@
     <Project Path="Src/Server.Tests/Domain.UnitTests/Domain.UnitTests.csproj" />
     <Project Path="Src/Server.Tests/Infrastructure.IntegrationTests/Infrastructure.IntegrationTests.csproj" />
   </Folder>
+  <Folder Name="/Installers/">
+    <Project Path="Src/Installers/ClinicManager.Setup/ClinicManager.Setup.csproj">
+      <Build Solution="*|*" Project="false" />
+    </Project>
+  </Folder>
 </Solution>
