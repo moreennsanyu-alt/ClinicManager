@@ -6,7 +6,7 @@ strategy: min
 lowest_matching: true
 copy_local: true
 specific_version: false
-framework: netstandard2.0, net9.0, net9.0-windows, net48
+framework: netstandard2.0, net10.0, net10.0-windows, net48
 
 // ---------- DevExpress ----------
 nuget DevExpress.Wpf 24.2.15
