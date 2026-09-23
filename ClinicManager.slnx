@@ -1,4 +1,11 @@
 <Solution>
+      <Configurations>
+        <Platform Name="Any CPU" />
+        <BuildType Name="Debug" />
+        <BuildType Name="Release" />
+        <BuildType Name="E2ETests" />
+        <BuildType Name="CI" />
+    </Configurations>
   <Folder Name="/Solution Items/">
     <File Path=".editorconfig" />
     <File Path=".gitignore" />
