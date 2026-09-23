@@ -55,18 +55,18 @@ nuget Prism.DryIoc 8.1.97
 
 // ---------- System / transitive pins ----------
 nuget ThisAssembly.Constants 2.1.5
-nuget System.Security.Cryptography.Xml 9.0.19
-nuget System.Text.Json 9.0.19
+nuget System.Security.Cryptography.Xml 10.0.12
+nuget System.Text.Json 10.0.12
 nuget System.Runtime.CompilerServices.Unsafe 6.1.2
-nuget System.Collections.Immutable 9.0.19
-nuget Microsoft.Windows.Compatibility 9.0.19
+nuget System.Collections.Immutable 10.0.12
+nuget Microsoft.Windows.Compatibility 10.0.12
 nuget Microsoft.Bcl.AsyncInterfaces 10.0.12
-nuget System.Reflection.Metadata 9.0.19
+nuget System.Reflection.Metadata 10.0.12
 nuget Microsoft.CodeAnalysis 4.12.0
 nuget System.ValueTuple 4.6.2
 nuget System.Memory 4.6.3
 nuget Microsoft.VisualBasic 10.3.0
-nuget System.Diagnostics.DiagnosticSource 9.0.19
+nuget System.Diagnostics.DiagnosticSource 10.0.12
 nuget System.Net.Http 4.3.4
 nuget System.Text.RegularExpressions 4.3.1
 
@@ -91,35 +91,35 @@ nuget Microsoft.NET.Test.Sdk 18.3.0
 nuget Respawn 7.0.0
 
 // ---------- Microsoft.Extensions family ----------
-nuget Microsoft.Extensions.Hosting 9.0.19
-nuget Microsoft.Extensions.Logging 9.0.19
-nuget Microsoft.Extensions.Logging.Debug 9.0.19
-nuget Microsoft.Extensions.Logging.Console 9.0.19
-nuget Microsoft.Extensions.Configuration 9.0.19
-nuget Microsoft.Extensions.Configuration.Xml 9.0.19
-nuget Microsoft.Extensions.Configuration.CommandLine 9.0.19
-nuget Microsoft.Extensions.Configuration.UserSecrets 9.0.19
-nuget Microsoft.Extensions.Configuration.FileExtensions 9.0.19
-nuget Microsoft.Extensions.Configuration.Binder 9.0.19
-nuget Microsoft.Extensions.Options 9.0.19
-nuget Microsoft.Extensions.Options.ConfigurationExtensions 9.0.19
-nuget Microsoft.Extensions.Configuration.Json 9.0.19
-nuget Microsoft.Extensions.Configuration.EnvironmentVariables 9.0.19
+nuget Microsoft.Extensions.Hosting 10.0.12
+nuget Microsoft.Extensions.Logging 10.0.12
+nuget Microsoft.Extensions.Logging.Debug 10.0.12
+nuget Microsoft.Extensions.Logging.Console 10.0.12
+nuget Microsoft.Extensions.Configuration 10.0.12
+nuget Microsoft.Extensions.Configuration.Xml 10.0.12
+nuget Microsoft.Extensions.Configuration.CommandLine 10.0.12
+nuget Microsoft.Extensions.Configuration.UserSecrets 10.0.12
+nuget Microsoft.Extensions.Configuration.FileExtensions 10.0.12
+nuget Microsoft.Extensions.Configuration.Binder 10.0.12
+nuget Microsoft.Extensions.Options 10.0.12
+nuget Microsoft.Extensions.Options.ConfigurationExtensions 10.0.12
+nuget Microsoft.Extensions.Configuration.Json 10.0.12
+nuget Microsoft.Extensions.Configuration.EnvironmentVariables 10.0.12
 nuget Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore 10.0.3
-nuget Microsoft.Extensions.ApiDescription.Server 9.0.19
+nuget Microsoft.Extensions.ApiDescription.Server 10.0.12
 nuget Microsoft.Extensions.Http.Resilience 10.3.0
 nuget Microsoft.Extensions.ServiceDiscovery 10.3.0
 
 // ---------- ASP.NET Core / EF Core ----------
-nuget Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore 9.0.19
-nuget Microsoft.AspNetCore.Identity.EntityFrameworkCore 9.0.19
-nuget Microsoft.AspNetCore.Mvc.Testing 9.0.19
-nuget Microsoft.AspNetCore.OpenApi 9.0.19
-nuget Microsoft.EntityFrameworkCore 9.0.19
-nuget Microsoft.EntityFrameworkCore.Design 9.0.19
-nuget Microsoft.EntityFrameworkCore.Relational 9.0.19
-nuget Microsoft.EntityFrameworkCore.Tools 9.0.19
-nuget Microsoft.EntityFrameworkCore.Sqlite 9.0.19
+nuget Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore 10.0.12
+nuget Microsoft.AspNetCore.Identity.EntityFrameworkCore 10.0.12
+nuget Microsoft.AspNetCore.Mvc.Testing 10.0.12
+nuget Microsoft.AspNetCore.OpenApi 10.0.12
+nuget Microsoft.EntityFrameworkCore 10.0.12
+nuget Microsoft.EntityFrameworkCore.Design 10.0.12
+nuget Microsoft.EntityFrameworkCore.Relational 10.0.12
+nuget Microsoft.EntityFrameworkCore.Tools 10.0.12
+nuget Microsoft.EntityFrameworkCore.Sqlite 10.0.12
 nuget Microsoft.Data.SqlClient 6.1.4
 nuget Microsoft.Build.Tasks.Core 18.3.3
 nuget Microsoft.Build.Utilities.Core 18.3.3
