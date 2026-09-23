@@ -1,0 +1,10 @@
+Prism.Wpf
+ThisAssembly.Constants
+
+CommunityToolkit.Mvvm
+Utf8StringInterpolation
+Humanizer.Core
+AsyncFixer
+Ardalis.GuardClauses
+
+Nerdbank.GitVersioning
