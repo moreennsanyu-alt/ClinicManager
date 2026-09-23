@@ -8,3 +8,8 @@ Ardalis.GuardClauses
 MediatR.Contracts
 AutoMapper
 MediatR
+FluentValidation.DependencyInjectionExtensions
+Microsoft.Build.Tasks.Core
+Microsoft.Build.Utilities.Core
+Microsoft.EntityFrameworkCore
+Microsoft.Extensions.Hosting
