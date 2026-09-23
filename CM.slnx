@@ -8,19 +8,12 @@
     <File Path="README.md" />
   </Folder>
   <Folder Name="/Desktop/">
-    <Project Path="Src/Desktop/ClinicManager.Core/ClinicManager.Core.csproj" />
     <Project Path="Src/Desktop/ClinicManager.Win/ClinicManager.Win.csproj" />
-    <Project Path="Src/Desktop/ClinicManager.Presentation/ClinicManager.Presentation.csproj" />
-    <Project Path="Src/Desktop/ClinicManager.Layout/ClinicManager.Layout.csproj" />
-    <Project Path="Src/Desktop/ClinicManager.Library/ClinicManager.Library.csproj" />
   </Folder>
 
   <Folder Name="/Desktop.Tests/">
-    <Project Path="Src/Desktop.Tests/ClinicManager.Core.Tests/ClinicManager.Core.Tests.csproj" />
+    <Project Path="Src/Desktop.Tests/ClinicManager.E2E.Tests/ClinicManager.E2E.Tests.csproj" />
     <Project Path="Src/Desktop.Tests/ClinicManager.Win.Tests/ClinicManager.Win.Tests.csproj" />
-    <Project Path="Src/Desktop.Tests/ClinicManager.Presentation.Tests/ClinicManager.Presentation.Tests.csproj" />
-    <Project Path="Src/Desktop.Tests/ClinicManager.Layout.Tests/ClinicManager.Layout.Tests.csproj" />
-    <Project Path="Src/Desktop.Tests/ClinicManager.Library.Tests/ClinicManager.Library.Tests.csproj" />
   </Folder>
 
   <Folder Name="/Server/">
