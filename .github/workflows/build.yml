@@ -1,44 +1,80 @@
-name: Build and Test
+
+name: Build Complete
 
 on:
   push:
-    branches:
-      - main
   pull_request:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
+  pull-requests: write
 
 jobs:
-  build-and-test:
-    name: Build and test
+  paket-update:
     runs-on: windows-latest
-    timeout-minutes: 45
-
-    env:
-      DOTNET_NOLOGO: true
-      DOTNET_CLI_TELEMETRY_OPTOUT: 1
 
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
+      - name: Checkout Code
+        uses: actions/checkout@v7
+        with:
+           fetch-depth: 0
 
-      - name: Set up .NET SDK
+      - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          global-json-file: global.json
+          dotnet-version: '10.0.103' # Adjust to match your SDK version
+      
+      - name: Restore tools
+        run: dotnet tool restore
 
-      - name: Restore dependencies
-        run: dotnet restore CM.slnx
+      - name: Extract Split Archive
+        shell: pwsh
+        env:
+          ZIP_PWD: ${{ secrets.DxPass }}
+        run: |
+          $packageName = "lib/packages/dx.zip.001"
+          $outputDir = "support/nupkg"
 
-      - name: Build solution
-        run: dotnet build CM.slnx --configuration Release --no-restore
+          if (!(Test-Path $outputDir)) { New-Item -ItemType Directory -Path $outputDir }
 
-      - name: Run tests
-        run: >-
-          dotnet test CM.slnx
-          --configuration Release
-          --no-build
-          --logger "trx;LogFileName=test-results.trx"
-          --results-directory artifacts/TestResults
+          # Access the environment variable using $env:
+          & 7z x "$packageName" -p"$env:ZIP_PWD" "-o$outputDir" -y
+
+      
+        
+      - name: Install wix
+        run: dotnet tool install --global wix --version 6.0.2
+
+      - name: Add wix extensions
+        run: wix extension add -g WixToolset.UI.wixext/6.0.2
+          
+      - name: Prepare Interactive Environment
+        shell: powershell
+        run: |
+          Set-DisplayResolution -Width 1920 -Height 1080 -Force
+          Set-ItemProperty -Path "HKCU:\Control Panel\Desktop" -Name "ScreenSaveActive" -Value 0
+          
+      - name: Run Fallout
+        run: ./build.ps1
+        env:
+          NuGetApiKey: ${{ secrets.NUGETAPIKEY }}
+          GitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          AppKey: ${{ secrets.LICKEY }}
+        
+        
+      - name: Upload test result images
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-result-images
+          path: |
+            artifacts/attachments/testresults/**/*.png
+            artifacts/attachments/testresults/**/*.jpg
+            artifacts/attachments/testresults/**/*.jpeg
+            artifacts/attachments/testresults/**/*.gif
+            artifacts/attachments/testresults/**/*.bmp
+            artifacts/attachments/testresults/**/*.avi
+          if-no-files-found: ignore
+        
+    
