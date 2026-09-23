@@ -3,15 +3,11 @@ ThisAssembly.Constants
 System.Net.Http
 System.Text.RegularExpressions
 
-
-nunit
-NUnit.Analyzers
-NUnit3TestAdapter
+xunit.v3
 Shouldly
 FlaUI.Core.Signed
 FlaUI.UIA2.Signed
 FlaUI.UIA3.Signed
-FlaUI.TestUtilities
 
 
 Humanizer.Core
