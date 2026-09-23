@@ -1,4 +1,4 @@
-STORAGE: PACKAGES
+STORAGE: NONE
 STRATEGY: MIN
 LOWEST_MATCHING: TRUE
 COPY-LOCAL: TRUE
@@ -1375,7 +1375,7 @@ NUGET
     xunit.v3.runner.inproc.console (4.0) - restriction: || (== net48) (== net9.0) (== net9.0-windows7.0) (&& (== netstandard2.0) (>= net472)) (&& (== netstandard2.0) (>= net8.0))
       xunit.v3.extensibility.core (4.0) - restriction: || (== net48) (== net9.0) (== net9.0-windows7.0) (&& (== netstandard2.0) (>= net472)) (&& (== netstandard2.0) (>= net8.0))
       xunit.v3.runner.common (4.0) - restriction: || (== net48) (== net9.0) (== net9.0-windows7.0) (&& (== netstandard2.0) (>= net472)) (&& (== netstandard2.0) (>= net8.0))
-  remote: https://nuget.devexpress.com/88luCgoeuPFTrDrTDcc6zKg22U2cVcTm3vdKCv88I7PHF9St6i/api
+  remote: support/nupkg
     DevExpress.Charts (24.2.15) - restriction: || (== net48) (== net9.0) (== net9.0-windows7.0) (&& (== netstandard2.0) (>= net462)) (&& (== netstandard2.0) (>= net8.0)) (&& (== netstandard2.0) (>= net8.0-windows7.0))
       DevExpress.Charts.Core (24.2.15) - restriction: || (== net48) (== net9.0) (== net9.0-windows7.0) (&& (== netstandard2.0) (>= net462)) (&& (== netstandard2.0) (>= net8.0))
       DevExpress.Data (24.2.15) - restriction: || (== net48) (== net9.0) (== net9.0-windows7.0) (&& (== netstandard2.0) (>= net462)) (&& (== netstandard2.0) (>= net8.0))

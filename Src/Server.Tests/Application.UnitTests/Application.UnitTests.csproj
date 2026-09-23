@@ -1,15 +1,12 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
-    <PropertyGroup>
-        <RootNamespace>ClinicManager.Application.UnitTests</RootNamespace>
-        <AssemblyName>ClinicManager.Application.UnitTests</AssemblyName>
-    </PropertyGroup>
-
- 
-
-    <ItemGroup>
-        <ProjectReference Include="..\..\Server\Application\Application.csproj" />
-        <ProjectReference Include="..\..\Server\Infrastructure\Infrastructure.csproj" />
-    </ItemGroup>
-
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RootNamespace>ClinicManager.Application.UnitTests</RootNamespace>
+    <AssemblyName>ClinicManager.Application.UnitTests</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Server\Application\Application.csproj" />
+    <ProjectReference Include="..\..\Server\Infrastructure\Infrastructure.csproj" />
+  </ItemGroup>
+  <Import Project="..\..\..\.paket\Paket.Restore.targets" />
 </Project>
