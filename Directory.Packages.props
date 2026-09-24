@@ -6,7 +6,7 @@
     <CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
   </PropertyGroup>
 
-  <!--  Build-wide (was GlobalPackageReference)  -->
+  <!--  Build wide (was GlobalPackageReference)  -->
   <ItemGroup>
     <GlobalPackageReference Include="Nerdbank.GitVersioning" Version="3.10.94" />
   </ItemGroup>
