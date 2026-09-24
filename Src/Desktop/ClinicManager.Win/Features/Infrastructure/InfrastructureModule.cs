@@ -16,4 +16,3 @@ namespace ClinicManager.Win.Features.Infrastructure;
             //regions.RegisterViewWithRegion(RegionNames.Content, typeof(OrderListView));
         }
     }
-}
