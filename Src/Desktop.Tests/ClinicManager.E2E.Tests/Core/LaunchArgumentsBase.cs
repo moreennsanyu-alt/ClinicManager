@@ -1,6 +1,6 @@
 ﻿using System.Runtime.CompilerServices;
 
-namespace UITest;
+namespace ClinicManager.E2E.Tests.Core;
 
 public abstract record LaunchArgumentsBase
 {
