@@ -1,0 +1,44 @@
+using System.Windows;
+using DryIoc;
+using DryIoc.Microsoft.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection;
+using Prism.DryIoc;
+using Prism.Ioc;
+using PrismDryIocHttpDemo.Extensions;
+using PrismDryIocHttpDemo.Services;
+using PrismDryIocHttpDemo.Views;
+
+namespace PrismDryIocHttpDemo;
+
+public partial class App : PrismApplication
+{
+    /// <summary>
+    /// Build the DryIoc container ourselves so we can pour an <see cref="IServiceCollection"/> into it
+    /// *before* Prism starts registering its own types. The returned container is then handed to Prism.
+    /// After this, there is ONE container: anything registered through Microsoft DI (IHttpClientFactory,
+    /// ILogger&lt;T&gt;, typed clients...) can be injected into Prism view models, and anything registered
+    /// through Prism (see <see cref="RegisterTypes"/>) can be injected into Microsoft DI-created objects
+    /// such as the HTTP logging handler.
+    /// </summary>
+    protected override IContainerExtension CreateContainerExtension()
+    {
+        var services = new ServiceCollection();
+        services.AddDemoLogging();
+        services.AddDemoHttpClients();
+
+        IContainer container = new DryIoc.Container(DryIocContainerExtension.DefaultRules)
+            .WithDependencyInjectionAdapter(services);
+
+        return new DryIocContainerExtension(container);
+    }
+
+    protected override Window CreateShell() => Container.Resolve<MainWindow>();
+
+    protected override void RegisterTypes(IContainerRegistry containerRegistry)
+    {
+        // Registered through Prism, consumed by LoggingHttpMessageHandler (created by IHttpClientFactory).
+        // Must be a singleton: the factory caches/recycles handler chains, so the handler must not hold
+        // on to something short-lived.
+        containerRegistry.RegisterSingleton<IRequestLogService, RequestLogService>();
+    }
+}
