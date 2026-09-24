@@ -25,7 +25,9 @@
             </Grid.ColumnDefinitions>
             <TextBlock Text="https://jsonplaceholder.typicode.com/" VerticalAlignment="Center" Margin="0,0,4,0" />
             <TextBox Grid.Column="1" Text="{Binding RelativeUrl, UpdateSourceTrigger=PropertyChanged}" Padding="4" />
-            <Button Grid.Column="2" Content="Send GET" Command="{Binding SendCommand}"
+            <Button Grid.Column="2" Content="Send GET"
+                    Command="{Binding SendCommand}"
+                    AutomationProperties.AutomationId="SendButton"
                     Margin="8,0,0,0" Padding="16,4" />
         </Grid>
 
