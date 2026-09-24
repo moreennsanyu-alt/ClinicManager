@@ -10,7 +10,7 @@ public class ShellViewModel : BindableBase
     private readonly IRequestLogService _log;
 
     private string _title = "Prism + DryIoc + Microsoft.Extensions.DependencyInjection";
-    private string _relativeUrl = "posts/1";
+    private string _relativeUrl = "objects";
     private string _response = string.Empty;
     private bool _isBusy;
 
