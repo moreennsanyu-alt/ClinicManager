@@ -4,7 +4,7 @@ using FlaUI.Core.Conditions;
 using FlaUI.Core.Definitions;
 using System.Diagnostics;
 
-namespace UITest.SystemViews;
+namespace ClinicManager.E2E.Tests.Core.SystemViews;
 
 public class PrintDialog(FrameworkAutomationElementBase element) : Window(element)
 {
