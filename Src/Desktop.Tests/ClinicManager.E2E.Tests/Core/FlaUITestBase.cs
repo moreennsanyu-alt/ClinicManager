@@ -70,16 +70,24 @@ namespace ClinicManager.E2E.Tests.Core
         protected virtual string TestsMediaPath =>
             Path.Combine(@"c:\temp\testsmedia", SanitizeFileName(_testMethodName ?? "unknown"), _testDateTime);
 
-        /// <summary>
-        /// Gets the automation instance that should be used.
-        /// </summary>
-        protected abstract AutomationBase GetAutomation();
+        protected  AutomationBase GetAutomation()
+        {
+            return new UIA3Automation();
+        }
 
-        /// <summary>
-        /// Starts the application which should be tested.
-        /// </summary>
-        protected abstract Application StartApplication();
+        public static string ApplicationPath = BuildInfo.ApplicationPath;
+    
+        protected  FlaUI.Core.Application StartApplication()
+        { 
+            var startInfo = new System.Diagnostics.ProcessStartInfo
+            {
+                FileName = ApplicationPath,
+                WorkingDirectory = System.IO.Path.GetDirectoryName(ApplicationPath),
+                UseShellExecute = false
+            };
 
+            return FlaUI.Core.Application.Launch(startInfo);
+        }
         /// <summary>
         /// Setup for each test (replaces NUnit's [OneTimeSetUp] + [SetUp] in per-test mode).
         /// </summary>
