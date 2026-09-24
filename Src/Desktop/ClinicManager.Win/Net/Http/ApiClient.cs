@@ -1,4 +1,4 @@
-namespace PrismDryIocHttpDemo.Http;
+namespace ClinicManager.Win.Net.Http;
 
 /// <summary>Typed client: the HttpClient is supplied (and configured) by IHttpClientFactory.</summary>
 public sealed class ApiClient : IApiClient
