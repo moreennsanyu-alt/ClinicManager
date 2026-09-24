@@ -10,6 +10,10 @@
     <Configurations>Debug;Release;E2ETests;CI</Configurations>
   </PropertyGroup>
 
+<PropertyGroup Condition="'$(MSBuildProjectName)' != '' And $(MSBuildProjectName.EndsWith('_wpftmp'))">
+  <ProjectAssetsFile>$(MSBuildThisFileDirectory)artifacts\obj\ClinicManager.Win\project.assets.json</ProjectAssetsFile>
+</PropertyGroup>
+
   <ItemGroup>
     <Constant Include="Foo.Bar" Value="Baz" Comment="Yay!" />
     <Constant Include="Foo.Hello" Value="World" Comment="Comments make everything better 😍" />
