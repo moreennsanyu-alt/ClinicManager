@@ -33,7 +33,7 @@ public partial class App : PrismApplication
 
     protected override void RegisterTypes(IContainerRegistry containerRegistry)
     {
-        containerRegistry.AddAddInfrastructureFeature();
+        containerRegistry.AddInfrastructureFeature();
    
         containerRegistry.RegisterSingleton<IRequestLogService, RequestLogService>();
     }
