@@ -1,4 +1,4 @@
-namespace PrismDryIocHttpDemo.Http;
+namespace ClinicManager.Win.Net.Http;
 
 public interface IApiClient
 {
