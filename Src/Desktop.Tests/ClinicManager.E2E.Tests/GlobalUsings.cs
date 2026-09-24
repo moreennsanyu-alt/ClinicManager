@@ -5,7 +5,6 @@ global using FlaUI.Core.Tools;
 global using FlaUI.UIA3;
 global using FlaUI.Core.AutomationElements;
 global using FlaUI.Core.WindowsAPI;
-global using FlaUI.TestUtilities;
 global using FlaUI.Core.Definitions;
 
 global using Xunit;
