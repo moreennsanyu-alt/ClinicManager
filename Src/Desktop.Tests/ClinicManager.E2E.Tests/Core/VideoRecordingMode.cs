@@ -1,4 +1,4 @@
-namespace FlaUI.TestUtilities
+namespace ClinicManager.E2E.Tests.Core
 {
     /// <summary>
     /// Defines how videos should be recorded for the tests.
