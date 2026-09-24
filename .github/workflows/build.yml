@@ -61,6 +61,9 @@ jobs:
         run: wix extension add -g WixToolset.UI.wixext/6.0.2
             
       - name: Restore paket
+        run: dotnet paket restore 
+
+      - name: Restore 
         run: dotnet restore 
         
       - name: Prepare Interactive Environment
