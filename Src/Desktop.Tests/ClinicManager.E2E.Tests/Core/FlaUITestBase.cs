@@ -253,7 +253,7 @@ namespace ClinicManager.E2E.Tests.Core
         /// <summary>
         /// Takes a screen shot. Returns the file path, or null if saving failed.
         /// </summary>
-        private string TakeScreenShot(string testName)
+        protected internal string TakeScreenShot(string testName)
         {
             var imagePath = CreateScreenShotPath(testName);
             try
