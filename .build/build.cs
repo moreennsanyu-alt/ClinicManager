@@ -139,7 +139,7 @@ class Build : FalloutBuild
                 .EnableNoCache()
                 .CombineWith(configurations, (settings, config) => settings
                     .SetConfiguration(config)),
-            degreeOfParallelism: configurations.Length,
+            degreeOfParallelism: 1,//configurations.Length,
             completeOnFailure: true);
         });
         
