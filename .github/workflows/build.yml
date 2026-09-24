@@ -41,7 +41,18 @@ jobs:
           # Access the environment variable using $env:
           & 7z x "$packageName" -p"$env:ZIP_PWD" "-o$outputDir" -y
 
-      
+      - name: Cache NuGet and Paket packages
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.nuget/packages
+            ~/.local/share/NuGet/v3-cache
+            .paket
+            paket-files
+          key: ${{ runner.os }}-paket-${{ hashFiles('paket.lock', '**/paket.lock', '.paket/Paket.Restore.targets') }}
+          restore-keys: |
+            ${{ runner.os }}-paket-
+            
         
       - name: Install wix
         run: dotnet tool install --global wix --version 6.0.2
@@ -49,7 +60,7 @@ jobs:
       - name: Add wix extensions
         run: wix extension add -g WixToolset.UI.wixext/6.0.2
             
-      - name: Restore tools
+      - name: Restore paket
         run: dotnet paket restore 
         
       - name: Prepare Interactive Environment
