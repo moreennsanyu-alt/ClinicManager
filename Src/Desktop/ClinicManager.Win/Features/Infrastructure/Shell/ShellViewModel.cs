@@ -5,9 +5,9 @@ using PrismDryIocHttpDemo.Http;
 using PrismDryIocHttpDemo.Models;
 using PrismDryIocHttpDemo.Services;
 
-namespace PrismDryIocHttpDemo.ViewModels;
+namespace ClinicManager.Win.Features.Infrastructure.Shell;
 
-public class MainWindowViewModel : BindableBase
+public class ShellViewModel : BindableBase
 {
     private readonly IApiClient _api;
     private readonly IRequestLogService _log;
@@ -19,7 +19,7 @@ public class MainWindowViewModel : BindableBase
 
     // IApiClient is a typed HttpClient registered through Microsoft DI (AddHttpClient<,>);
     // IRequestLogService is registered through Prism. Both are constructor-injected here.
-    public MainWindowViewModel(IApiClient api, IRequestLogService log)
+    public ShellViewModel(IApiClient api, IRequestLogService log)
     {
         _api = api;
         _log = log;
