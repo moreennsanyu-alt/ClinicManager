@@ -33,9 +33,8 @@ public partial class App : PrismApplication
 
     protected override void RegisterTypes(IContainerRegistry containerRegistry)
     {
-        // Registered through Prism, consumed by LoggingHttpMessageHandler (created by IHttpClientFactory).
-        // Must be a singleton: the factory caches/recycles handler chains, so the handler must not hold
-        // on to something short-lived.
+        containerRegistry.AddAddInfrastructureFeature();
+   
         containerRegistry.RegisterSingleton<IRequestLogService, RequestLogService>();
     }
 }
