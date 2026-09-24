@@ -8,7 +8,7 @@ Shouldly
 FlaUI.Core.Signed
 FlaUI.UIA2.Signed
 FlaUI.UIA3.Signed
-
+Microsoft.Testing.Extensions.CodeCoverage
 
 Humanizer.Core
 
