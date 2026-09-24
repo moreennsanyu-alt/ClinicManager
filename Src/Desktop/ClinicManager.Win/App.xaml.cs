@@ -15,8 +15,6 @@ public partial class App : CMApplication
 
     protected override void RegisterTypes(IContainerRegistry containerRegistry)
     {
-        containerRegistry.AddInfrastructureFeature();
-   
         containerRegistry.RegisterSingleton<IRequestLogService, RequestLogService>();
     }
 
