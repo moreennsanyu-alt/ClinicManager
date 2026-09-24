@@ -1,7 +1,7 @@
 ﻿using FlaUI.Core.Tools;
 using System.Runtime.CompilerServices;
 
-namespace UITest;
+namespace ClinicManager.E2E.Tests.Core;
 
 public class ElementFoundException(string message, Exception? innerException = null) : Exception(message, innerException) { }
 
