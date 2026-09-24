@@ -90,7 +90,7 @@ namespace ClinicManager.E2E.Tests.Core
             _testClassName = ctx.TestClass?.TestClassName;
             _testDisplayName = ctx.Test?.TestDisplayName ?? _testMethodName ?? "unknown";
 
-            Logger.Default = new XunitLogger();
+            Logger.Default = new XunitProgressLogger();
             Automation = GetAutomation();
 
             if (RecordVideo)
@@ -275,15 +275,42 @@ namespace ClinicManager.E2E.Tests.Core
         }
     }
 
-    /// <summary>
-    /// Replacement for FlaUI's NUnitProgressLogger: writes to the current xUnit test output.
+        /// <summary>
+    /// FlaUI logger which writes to the current xUnit test's output
+    /// (falls back to a runner diagnostic message when no test is active).
     /// </summary>
-    public class XunitLogger : Logger
+    public class XunitProgressLogger : LoggerBase
     {
-        // NOTE: match this override to the abstract member on FlaUI.Core.Logging.Logger in your FlaUI version.
-        protected override void LogInternal(LogLevel logLevel, string message)
+        /// <inheritdoc />
+        protected override void GatedTrace(string message) => Write($"Trace: {message}");
+
+        /// <inheritdoc />
+        protected override void GatedDebug(string message) => Write($"Debug: {message}");
+
+        /// <inheritdoc />
+        protected override void GatedInfo(string message) => Write($"Info: {message}");
+
+        /// <inheritdoc />
+        protected override void GatedWarn(string message) => Write($"Warn: {message}");
+
+        /// <inheritdoc />
+        protected override void GatedError(string message) => Write($"Error: {message}");
+
+        /// <inheritdoc />
+        protected override void GatedFatal(string message) => Write($"Fatal: {message}");
+
+        private static void Write(string line)
         {
-            TestContext.Current.TestOutputHelper?.WriteLine($"[{logLevel}] {message}");
+            var ctx = TestContext.Current;
+            var output = ctx.TestOutputHelper;
+            if (output != null)
+            {
+                output.WriteLine(line);
+            }
+            else
+            {
+                ctx.SendDiagnosticMessage(line);
+            }
         }
     }
 }
