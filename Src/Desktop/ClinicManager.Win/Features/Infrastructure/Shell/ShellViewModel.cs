@@ -1,9 +1,6 @@
 using System.Collections.ObjectModel;
 using Prism.Commands;
 using Prism.Mvvm;
-using PrismDryIocHttpDemo.Http;
-using PrismDryIocHttpDemo.Models;
-using PrismDryIocHttpDemo.Services;
 
 namespace ClinicManager.Win.Features.Infrastructure.Shell;
 
