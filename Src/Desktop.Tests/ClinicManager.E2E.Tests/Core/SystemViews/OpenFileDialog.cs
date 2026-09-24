@@ -4,7 +4,7 @@ using FlaUI.Core.AutomationElements;
 using FlaUI.Core.WindowsAPI;
 using FlaUI.Core.Input;
 
-namespace UITest.SystemViews;
+namespace ClinicManager.E2E.Tests.Core.SystemViews;
 
 public class OpenFileDialog(FrameworkAutomationElementBase element) : Window(element)
 {
