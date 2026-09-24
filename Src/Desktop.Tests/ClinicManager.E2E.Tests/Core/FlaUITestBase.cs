@@ -7,7 +7,7 @@ using FlaUI.Core.Logging;
 using FlaUI.Core.Tools;
 using Xunit;
 
-namespace FlaUI.TestUtilities
+namespace ClinicManager.E2E.Tests.Core
 {
     /// <summary>
     /// Base class for ui tests with some helper methods (xUnit v3).
