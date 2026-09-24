@@ -281,6 +281,29 @@ namespace ClinicManager.E2E.Tests.Core
             imageName = imageName.Replace("\"", string.Empty);
             return Path.Combine(TestsMediaPath, imageName);
         }
+
+        public TWindow GetWindow<TWindow>(string automationId) where TWindow : FlaUI.Core.AutomationElements.Window
+        {
+            var window = WindowFinder.FindWindowById(
+                                        Automation,
+                                        automationId,
+                                        timeout: TimeSpan.FromSeconds(15),
+                                        pollInterval: TimeSpan.FromMilliseconds(300));     
+            return window.As<TWindow>();
+        }
+
+        public LoginWindow GetLoginWindow()
+                   => GetWindow<LoginWindow>("LoginWindow"); 
+
+        public ShellWindow GetShellWindow()
+                   => GetWindow<ShellWindow>("ShellWindow"); 
+
+   
+        private static class NativeMethods
+        {
+            [DllImport("user32.dll", SetLastError = true)]
+            public static extern bool SetProcessDPIAware();
+        }
     }
 
         /// <summary>
