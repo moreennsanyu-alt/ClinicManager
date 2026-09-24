@@ -14,7 +14,7 @@ namespace ClinicManager.E2E.Tests
             TestContext.Current.AddAttachment(
                             "hello1.png",
                             File.ReadAllBytes(path),
-                            ".png"); 
+                            "image/png"); 
         }
 
         
