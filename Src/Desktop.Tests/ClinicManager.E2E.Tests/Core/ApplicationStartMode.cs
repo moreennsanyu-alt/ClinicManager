@@ -1,4 +1,4 @@
-namespace FlaUI.TestUtilities
+namespace ClinicManager.E2E.Tests.Core
 {
     /// <summary>
     /// Defines how the application under test should be started by the test fixture.
