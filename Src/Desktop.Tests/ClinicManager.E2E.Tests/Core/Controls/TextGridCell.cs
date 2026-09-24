@@ -4,7 +4,7 @@ using FlaUI.Core.Definitions;
 using FlaUI.Core.Input;
 using FlaUI.Core.WindowsAPI;
 
-namespace UITest.Controls;
+namespace ClinicManager.E2E.Tests.Core.Controls;
 
 public class TextGridCell(FrameworkAutomationElementBase element) : GridCell(element)
 {
