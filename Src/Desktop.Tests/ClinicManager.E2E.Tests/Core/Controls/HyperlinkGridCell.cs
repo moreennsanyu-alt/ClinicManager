@@ -2,7 +2,7 @@
 using FlaUI.Core.AutomationElements;
 using FlaUI.Core.Definitions;
 
-namespace UITest.Controls;
+namespace ClinicManager.E2E.Tests.Core.Controls;
 
 public class HyperlinkGridCell(FrameworkAutomationElementBase element) : GridCell(element)
 {
