@@ -15,6 +15,7 @@ global using ClinicManager.E2E.Tests.Core.SystemViews;
 global using ClinicManager.E2E.Tests.Views;
 global using static ThisAssembly.Constants;
 
-
+global using System.Runtime.InteropServices;
+global using System.Globalization;
 
 
