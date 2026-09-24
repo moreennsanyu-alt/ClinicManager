@@ -8,7 +8,13 @@ namespace ClinicManager.E2E.Tests
         public void TestMethodName()
         {
             var shellWindow = GetShellWindow();
-            
+            shellWindow.SendButton.Click();
+            Thread.Sleep(TimeSpan.FromSeconds(5));
+            var path = TakeScreenShot("hello1");
+            TestContext.Current.AddAttachment(
+                            "hello1.png",
+                            File.ReadAllBytes(path),
+                            ".png"); 
         }
 
         
