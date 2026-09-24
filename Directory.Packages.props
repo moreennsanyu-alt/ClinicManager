@@ -6,12 +6,12 @@
     <CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
   </PropertyGroup>
 
-  <!-- ---------- Build-wide (was GlobalPackageReference) ---------- -->
+  <!--  Build-wide (was GlobalPackageReference)  -->
   <ItemGroup>
     <GlobalPackageReference Include="Nerdbank.GitVersioning" Version="3.10.94" />
   </ItemGroup>
 
-  <!-- ---------- DevExpress ---------- -->
+  <!--  DevExpress  -->
   <ItemGroup>
     <PackageVersion Include="DevExpress.Wpf" Version="24.2.15" />
     <PackageVersion Include="DevExpress.Wpf.Themes.All" Version="24.2.15" />
@@ -56,14 +56,14 @@
     <PackageVersion Include="DevExpress.Wpf.Themes.Win11Dark" Version="24.2.15" />
   </ItemGroup>
 
-  <!-- ---------- Prism ---------- -->
+  <!--  Prism  -->
   <ItemGroup>
     <PackageVersion Include="Prism.Core" Version="8.1.97" />
     <PackageVersion Include="Prism.Wpf" Version="8.1.97" />
     <PackageVersion Include="Prism.DryIoc" Version="8.1.97" />
   </ItemGroup>
 
-  <!-- ---------- System / transitive pins ---------- -->
+  <!--  System / transitive pins  -->
   <ItemGroup>
     <PackageVersion Include="ThisAssembly.Constants" Version="2.1.5" />
     <PackageVersion Include="System.Security.AccessControl" Version="6.0.1" />
@@ -83,7 +83,7 @@
     <PackageVersion Include="System.Text.RegularExpressions" Version="4.3.1" />
   </ItemGroup>
 
-  <!-- ---------- Testing ---------- -->
+  <!-- Testing  -->
   <ItemGroup>
     <PackageVersion Include="xunit.v3" Version="4.0.0" />
     <PackageVersion Include="FluentAssertions" Version="8.5.0" />
@@ -107,7 +107,7 @@
     <PackageVersion Include="Respawn" Version="7.0.0" />
   </ItemGroup>
 
-  <!-- ---------- Microsoft.Extensions family ---------- -->
+  <!--  Microsoft.Extensions family  -->
   <ItemGroup>
     <PackageVersion Include="Microsoft.Extensions.Hosting" Version="10.0.12" />
     <PackageVersion Include="Microsoft.Extensions.Logging" Version="10.0.12" />
@@ -129,7 +129,7 @@
     <PackageVersion Include="Microsoft.Extensions.ServiceDiscovery" Version="10.3.0" />
   </ItemGroup>
 
-  <!-- ---------- ASP.NET Core / EF Core ---------- -->
+  <!-- ASP.NET Core / EF Core  -->
   <ItemGroup>
     <PackageVersion Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="10.0.12" />
     <PackageVersion Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="10.0.12" />
@@ -145,7 +145,7 @@
     <PackageVersion Include="Microsoft.Build.Utilities.Core" Version="18.3.3" />
   </ItemGroup>
 
-  <!-- ---------- OpenTelemetry ---------- -->
+  <!--  OpenTelemetry  -->
   <ItemGroup>
     <PackageVersion Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.19.0" />
     <PackageVersion Include="OpenTelemetry.Extensions.Hosting" Version="1.19.0" />
@@ -154,7 +154,7 @@
     <PackageVersion Include="OpenTelemetry.Instrumentation.Runtime" Version="1.19.0" />
   </ItemGroup>
 
-  <!-- ---------- Misc ---------- -->
+  <!--  Misc  -->
   <ItemGroup>
     <PackageVersion Include="WixSharp_wix4" Version="2.14.1" />
     <PackageVersion Include="Newtonsoft.Json" Version="13.0.4" />
