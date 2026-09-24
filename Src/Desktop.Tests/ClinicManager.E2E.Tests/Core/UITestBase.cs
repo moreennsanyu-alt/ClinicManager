@@ -8,7 +8,7 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 using Xunit;
 
-namespace UITest;
+namespace ClinicManager.E2E.Tests.Core;
 
 public abstract class UITestBase : IDisposable
 {
