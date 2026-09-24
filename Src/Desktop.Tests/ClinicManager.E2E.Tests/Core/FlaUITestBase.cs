@@ -241,6 +241,11 @@ namespace ClinicManager.E2E.Tests.Core
                     File.Delete(_recorder.TargetVideoPath);
                 }
                 _recorder.Dispose();
+                if(File.Exists(_recorder.TargetVideoPath))
+                {
+                    var ctx = TestContext.Current;
+                    ctx.AddAttachment(Path.GetFileName(_recorder.TargetVideoPath), File.ReadAllBytes(_recorder.TargetVideoPath), "video/x-msvideo");
+                }
                 _recorder = null;
             }
         }
