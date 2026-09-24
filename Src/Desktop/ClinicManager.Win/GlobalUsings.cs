@@ -92,6 +92,9 @@ global using ToolTip = System.Windows.Controls.ToolTip;
 global using TreeView = System.Windows.Controls.TreeView;
 global using UserControl = System.Windows.Controls.UserControl;
 
+using System.Windows.Markup;
 
+[assembly: XmlnsDefinition("http://componentsystems.com/cm/ui", "ClinicManager.Win")]
+[assembly: XmlnsPrefix("http://componentsystems.com/cm/ui", "cm")]   //
 
 
