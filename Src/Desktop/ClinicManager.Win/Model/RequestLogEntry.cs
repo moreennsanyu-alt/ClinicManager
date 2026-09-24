@@ -1,4 +1,4 @@
-namespace PrismDryIocHttpDemo.Models;
+namespace ClinicManager.Win.Models;
 
 public sealed record RequestLogEntry(
     DateTimeOffset Timestamp,
