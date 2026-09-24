@@ -1,8 +1,0 @@
-Ardalis.GuardClauses
-AutoMapper
-FluentValidation.DependencyInjectionExtensions
-MediatR
-Microsoft.Build.Tasks.Core
-Microsoft.Build.Utilities.Core
-Microsoft.EntityFrameworkCore
-Microsoft.Extensions.Hosting
