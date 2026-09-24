@@ -19,6 +19,12 @@
     <Constant Include="BuildInfo.DesktopPublishDir" Value="$(DesktopPublishDir)" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="WixSharp_wix4" />
+    <PackageReference Include="ThisAssembly.Constants" />
+    <PackageReference Include="Nerdbank.GitVersioning" />
+    <PackageReference Include="PolySharp" />
+  </ItemGroup>
 
   <ItemGroup>
     <Reference Include="System.Windows.Forms" />
@@ -30,5 +36,5 @@
      <MSBuild Projects="..\Desktop\ClinicManager.Win\ClinicManager.Win.csproj" Targets="Publish" Properties="Configuration=$(Configuration);PublishDir=$(DesktopPublishDir)" />
   </Target>
 
-  <Import Project="..\..\..\.paket\Paket.Restore.targets" />
+  
 </Project>
