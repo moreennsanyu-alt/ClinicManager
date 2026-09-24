@@ -1,0 +1,49 @@
+<Window x:Class="PrismDryIocHttpDemo.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:prism="http://prismlibrary.com/"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        Title="{Binding Title}"
+        Width="860" Height="600"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="12">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="170" />
+        </Grid.RowDefinitions>
+
+        <!-- Request bar -->
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="https://jsonplaceholder.typicode.com/" VerticalAlignment="Center" Margin="0,0,4,0" />
+            <TextBox Grid.Column="1" Text="{Binding RelativeUrl, UpdateSourceTrigger=PropertyChanged}" Padding="4" />
+            <Button Grid.Column="2" Content="Send GET" Command="{Binding SendCommand}"
+                    Margin="8,0,0,0" Padding="16,4" />
+        </Grid>
+
+        <TextBlock Grid.Row="1" Text="Response" FontWeight="SemiBold" Margin="0,12,0,4" />
+        <TextBox Grid.Row="2" Text="{Binding Response, Mode=OneWay}" IsReadOnly="True"
+                 FontFamily="Consolas" TextWrapping="Wrap"
+                 VerticalScrollBarVisibility="Auto" AcceptsReturn="True" />
+
+        <DockPanel Grid.Row="3" Margin="0,12,0,4">
+            <Button DockPanel.Dock="Right" Content="Clear" Command="{Binding ClearLogCommand}" Padding="12,2" />
+            <TextBlock Text="HTTP log  (LoggingHttpMessageHandler -> IRequestLogService)"
+                       FontWeight="SemiBold" VerticalAlignment="Center" />
+        </DockPanel>
+        <ListBox Grid.Row="4" ItemsSource="{Binding LogEntries}" FontFamily="Consolas">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Summary}" />
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</Window>
