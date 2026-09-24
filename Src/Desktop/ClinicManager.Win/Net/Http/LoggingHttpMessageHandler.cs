@@ -1,8 +1,8 @@
 using System.Diagnostics;
-using PrismDryIocHttpDemo.Models;
-using PrismDryIocHttpDemo.Services;
+using ClinicManager.Win.Models;
+using ClinicManager.Win.Services;
 
-namespace PrismDryIocHttpDemo.Http;
+namespace ClinicManager.Win.Net.Http;
 
 /// <summary>
 /// Outgoing-request handler added to the HttpClient pipeline via
