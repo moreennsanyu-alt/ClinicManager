@@ -22,7 +22,7 @@ public static class ServiceCollectionExtensions
         services
             .AddHttpClient<IApiClient, ApiClient>(client =>
             {
-                client.BaseAddress = new Uri("https://api.restful-api.dev");
+                client.BaseAddress = new Uri("https://api.restful-api.dev/");
                 client.Timeout = TimeSpan.FromSeconds(15);
                 client.DefaultRequestHeaders.Accept.ParseAdd("application/json");
             })
