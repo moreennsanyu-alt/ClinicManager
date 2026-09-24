@@ -8,10 +8,20 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+<ItemGroup>
+  <PackageReference Include="ThisAssembly.Constants" />
+
+  <PackageReference Include="Moq" />
+  <PackageReference Include="xunit.v3" />
+  <PackageReference Include="Shouldly" />
+
+  <PackageReference Include="Humanizer.Core" />
+  <PackageReference Include="NetArchTest.eNhancedEdition" />
+  <PackageReference Include="Microsoft.Testing.Extensions.CodeCoverage" />
+</ItemGroup>
+
   <ItemGroup>
     <ProjectReference Include="..\..\Desktop\ClinicManager.Core\ClinicManager.Core.csproj" />
   </ItemGroup>
 
-
-  <Import Project="..\..\..\.paket\Paket.Restore.targets" />
 </Project>
