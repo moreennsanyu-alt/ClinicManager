@@ -37,4 +37,14 @@ public partial class App : PrismApplication
    
         containerRegistry.RegisterSingleton<IRequestLogService, RequestLogService>();
     }
+
+    protected override Rules CreateContainerRules()
+{
+    return Rules.Default.WithConcreteTypeDynamicRegistrations(reuse: Reuse.Transient)
+                        .With(Made.Of(FactoryMethod.ConstructorWithResolvableArguments))
+                        .WithFuncAndLazyWithoutRegistration()
+                        .WithTrackingDisposableTransients()
+                        //.WithoutFastExpressionCompiler()
+                        .WithFactorySelector(Rules.SelectLastRegisteredFactory());
+}
 }
