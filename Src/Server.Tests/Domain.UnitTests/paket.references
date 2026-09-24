@@ -4,3 +4,5 @@ NUnit3TestAdapter
 Shouldly
 Ardalis.GuardClauses
 MediatR.Contracts
+Microsoft.Testing.Extensions.CodeCoverage
+
