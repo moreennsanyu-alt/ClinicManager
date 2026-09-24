@@ -1,9 +1,9 @@
 using System.Collections.ObjectModel;
 using System.Windows;
 using Microsoft.Extensions.Logging;
-using PrismDryIocHttpDemo.Models;
+using ClinicManager.Win.Models;
 
-namespace PrismDryIocHttpDemo.Services;
+namespace ClinicManager.Win.Services;
 
 public sealed class RequestLogService : IRequestLogService
 {
