@@ -9,4 +9,9 @@
     <Nullable>enable</Nullable>
     <Configurations>Debug;Release;E2ETests;CI</Configurations>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Constant Include="Foo.Bar" Value="Baz" Comment="Yay!" />
+    <Constant Include="Foo.Hello" Value="World" Comment="Comments make everything better 😍" />
+  </ItemGroup>
 </Project>
