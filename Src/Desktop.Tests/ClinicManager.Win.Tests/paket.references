@@ -2,6 +2,8 @@ ThisAssembly.Constants
 
 System.Net.Http
 System.Text.RegularExpressions
+Microsoft.Testing.Extensions.CodeCoverage
+
 
 Moq
 xunit.v3
