@@ -4,11 +4,8 @@ using DryIoc.Microsoft.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
 using Prism.DryIoc;
 using Prism.Ioc;
-using PrismDryIocHttpDemo.Extensions;
-using PrismDryIocHttpDemo.Services;
-using PrismDryIocHttpDemo.Views;
 
-namespace PrismDryIocHttpDemo;
+namespace ClinicManager.Win;
 
 public partial class App : PrismApplication
 {
@@ -23,8 +20,8 @@ public partial class App : PrismApplication
     protected override IContainerExtension CreateContainerExtension()
     {
         var services = new ServiceCollection();
-        services.AddDemoLogging();
-        services.AddDemoHttpClients();
+        services.AddLogging();
+        services.AddHttpClients();
 
         IContainer container = new DryIoc.Container(DryIocContainerExtension.DefaultRules)
             .WithDependencyInjectionAdapter(services);
@@ -32,7 +29,7 @@ public partial class App : PrismApplication
         return new DryIocContainerExtension(container);
     }
 
-    protected override Window CreateShell() => Container.Resolve<MainWindow>();
+    protected override Window CreateShell() => Container.Resolve<ShellWindow>();
 
     protected override void RegisterTypes(IContainerRegistry containerRegistry)
     {
