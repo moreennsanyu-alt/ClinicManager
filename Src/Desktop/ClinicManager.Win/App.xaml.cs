@@ -18,5 +18,8 @@ public partial class App : CMApplication
         containerRegistry.RegisterSingleton<IRequestLogService, RequestLogService>();
     }
 
-
+    private void OnExit(object sender, ExitEventArgs e)
+    {
+        // Cleanup code can be added here later.
+    }
 }
