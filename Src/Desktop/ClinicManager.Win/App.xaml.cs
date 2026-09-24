@@ -20,7 +20,7 @@ public partial class App : PrismApplication
     protected override IContainerExtension CreateContainerExtension()
     {
         var services = new ServiceCollection();
-        services.AddLogging();
+        services.AddDefaultLogging();
         services.AddHttpClients();
 
         IContainer container = new DryIoc.Container(DryIocContainerExtension.DefaultRules)
