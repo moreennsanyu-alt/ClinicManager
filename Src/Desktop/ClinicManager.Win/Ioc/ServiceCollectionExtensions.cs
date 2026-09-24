@@ -1,8 +1,8 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using PrismDryIocHttpDemo.Http;
+using ClinicManager.Win.Net.Http;
 
-namespace PrismDryIocHttpDemo.Extensions;
+namespace ClinicManager.Win.Ioc;
 
 public static class ServiceCollectionExtensions
 {
