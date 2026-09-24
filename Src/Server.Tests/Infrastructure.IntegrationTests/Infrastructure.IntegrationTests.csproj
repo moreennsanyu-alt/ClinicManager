@@ -6,5 +6,15 @@
     <RootNamespace>ClinicManager.Infrastructure.IntegrationTests</RootNamespace>
     <AssemblyName>ClinicManager.Infrastructure.IntegrationTests</AssemblyName>
   </PropertyGroup>
-  <Import Project="..\..\..\.paket\Paket.Restore.targets" />
+
+  <ItemGroup>
+    <PackageReference Include="nunit" />
+    <PackageReference Include="NUnit.Analyzers" />
+    <PackageReference Include="NUnit3TestAdapter" />
+    <PackageReference Include="Shouldly" />
+    <PackageReference Include="Ardalis.GuardClauses" />
+    <PackageReference Include="MediatR.Contracts" />
+    <PackageReference Include="Microsoft.Testing.Extensions.CodeCoverage" />
+  </ItemGroup>
+
 </Project>
