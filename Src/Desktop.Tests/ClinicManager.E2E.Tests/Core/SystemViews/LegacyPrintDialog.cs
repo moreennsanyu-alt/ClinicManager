@@ -2,7 +2,7 @@
 using FlaUI.Core.AutomationElements;
 using FlaUI.Core.Definitions;
 
-namespace UITest.SystemViews;
+namespace ClinicManager.E2E.Tests.Core.SystemViews;
 
 public class LegacyPrintDialog(FrameworkAutomationElementBase element) : Window(element)
 {
