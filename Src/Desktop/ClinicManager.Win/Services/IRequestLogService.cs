@@ -1,7 +1,7 @@
 using System.Collections.ObjectModel;
-using PrismDryIocHttpDemo.Models;
+using ClinicManager.Win.Models;
 
-namespace PrismDryIocHttpDemo.Services;
+namespace ClinicManager.Win.Services;
 
 /// <summary>Collects HTTP request/response log entries so the UI can display them.</summary>
 public interface IRequestLogService
