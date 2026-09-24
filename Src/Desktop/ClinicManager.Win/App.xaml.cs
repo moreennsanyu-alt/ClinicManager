@@ -23,7 +23,7 @@ public partial class App : PrismApplication
         services.AddDefaultLogging();
         services.AddHttpClients();
 
-        IContainer container = new DryIoc.Container(DryIocContainerExtension.DefaultRules)
+        IContainer container = new DryIoc.Container(CreateContainerRules())
             .WithDependencyInjectionAdapter(services);
 
         return new DryIocContainerExtension(container);
