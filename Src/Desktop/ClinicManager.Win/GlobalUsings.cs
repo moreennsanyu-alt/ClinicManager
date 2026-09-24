@@ -22,6 +22,18 @@ global using System.Windows.Navigation;
 global using System.Windows.Resources;
 
 // GlobalUsings.cs
+global using System.Net;
+global using System.Net.Http;
+global using System.Net.Http.Headers;
+global using System.Net.Http.Json;
+global using System.Text;
+global using System.Text.Json;
+global using System.Text.Json.Serialization;
+global using Microsoft.Extensions.DependencyInjection;
+global using Microsoft.Extensions.Http;
+global using Microsoft.Extensions.Logging;
+
+// GlobalUsings.cs
 global using CommunityToolkit.Mvvm.ComponentModel;
 global using CommunityToolkit.Mvvm.Input;
 global using CommunityToolkit.Mvvm.Messaging;
