@@ -131,7 +131,21 @@ class Build : FalloutBuild
 		//.DependsOn(InjectLicenseKey)
         .Executes(() =>
         {
-            var configurations = new[] { "Release", "CI", "Debug" };
+            var configurations = new List<string>();
+
+            if (ExecutionPlan.Any(x => x.Name == nameof(Test)))
+                configurations.Add("Debug");
+
+            if (ExecutionPlan.Any(x => x.Name == nameof(Release)))
+                configurations.Add("CI");
+
+            if (!string.IsNullOrWhiteSpace(Configuration))
+                configurations.Add(Configuration);
+
+            configurations = configurations.Distinct().ToList();
+
+            if (!configurations.Any())
+                configurations.Add("Release");
 
             DotNetBuild(s => s
                 .SetProjectFile(Solution)
