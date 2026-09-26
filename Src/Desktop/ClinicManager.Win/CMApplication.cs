@@ -52,6 +52,11 @@ public abstract class CMApplication : PrismApplication
     }
     protected override void ConfigureViewModelLocator()
     {
+        ViewModelLocationProvider.SetDefaultViewModelFactory((viewModelType) => 
+        {
+            return Container.Resolve(viewModelType);
+        });
+        
         ViewModelLocationProvider.SetDefaultViewTypeToViewModelTypeResolver(viewType =>
         {
             var viewName = viewType.FullName;
