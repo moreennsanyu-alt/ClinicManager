@@ -13,7 +13,11 @@ namespace ClinicManager.Win.Features.Infrastructure.Shell
     {
         private object? _currentViewModel;
         private string _statusMessage = string.Empty;
-
+        public ObservableCollection<NavigationItem> NavigationItems { get; }
+        public MainViewModel(INavigationTreeBuilder _treebuilder)
+        {
+           Items = navigationTree.Root;
+        }
         public object? CurrentViewModel
         {
             get => _currentViewModel;
@@ -28,24 +32,14 @@ namespace ClinicManager.Win.Features.Infrastructure.Shell
 
         public ICommand NavigateHomeCommand { get; }
 
-        public MainViewModel()
+        public MainViewModel(INavigationTreeBuilder _treebuilder)
         {
-            NavigateHomeCommand = new RelayCommand(_ => NavigateHome());
-
-            NavigateHome();
+            NavigationItems = _treebuilder.Root;
         }
 
         private void NavigateHome()
         {
             CurrentViewModel = new HomeViewModel();
-        }
-
-        /// <summary>
-        /// Swaps the hosted view model for any feature view model.
-        /// </summary>
-        public void NavigateTo(object viewModel)
-        {
-            CurrentViewModel = viewModel ?? throw new ArgumentNullException(nameof(viewModel));
         }
 
         public event PropertyChangedEventHandler? PropertyChanged;
