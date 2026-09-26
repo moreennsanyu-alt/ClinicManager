@@ -6,7 +6,23 @@ namespace ClinicManager.Win.Features.Infrastructure;
     {
         public void RegisterTypes(IContainerRegistry registry)
         {
-           
+           var nav = containerProvider.Resolve<INavigationTreeBuilder>();
+
+        nav.Register(new NavigationItem
+        {
+            Key = "AllUsers",
+            Title = "All Users",
+            Path = "Users/AllUsers",
+            ViewName = nameof(HomeView)
+        });
+
+        nav.Register(new NavigationItem
+        {
+            Key = "Detail",
+            Title = "Detail",
+            Path = "Users/Detail",
+            ViewName = nameof(HomeView)
+        });
            // registry.RegisterSingleton<IOrderService, OrderService>();
            // registry.RegisterForNavigation<OrderListView, OrderListViewModel>();
         }
