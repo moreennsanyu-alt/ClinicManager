@@ -91,6 +91,7 @@ global using TextBox = System.Windows.Controls.TextBox;
 global using ToolTip = System.Windows.Controls.ToolTip;
 global using TreeView = System.Windows.Controls.TreeView;
 global using UserControl = System.Windows.Controls.UserControl;
+global using Control = System.Windows.Controls.Control;
 
 using System.Windows.Markup;
 
