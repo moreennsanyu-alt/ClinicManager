@@ -43,7 +43,9 @@
     <PackageReference Include="DevExpress.Mvvm" />
     <PackageReference Include="DevExpress.Mvvm.CodeGenerators" />
     <PackageReference Include="DevExpress.Wpf.ThemesLW" />
-
+    <PackageReference Include="DevExpress.Wpf.Themes.Win11Light" />
+    <PackageReference Include="DevExpress.Wpf.Themes.Win11Dark" />
+          
     <PackageReference Include="Prism.Wpf" />
     <PackageReference Include="Prism.DryIoc" />
 
