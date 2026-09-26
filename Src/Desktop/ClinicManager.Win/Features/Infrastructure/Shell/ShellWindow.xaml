@@ -1,9 +1,10 @@
-<Window x:Class="ClinicManager.Win.Features.Infrastructure.Shell.ShellWindow"
+<dx:ThemedWindow x:Class="ClinicManager.Win.Features.Infrastructure.Shell.ShellWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:prism="http://prismlibrary.com/"
         prism:ViewModelLocator.AutoWireViewModel="True"
         AutomationProperties.AutomationId="ShellWindow"
+        xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
         Title="{Binding Title}"
         Width="860" Height="600"
         WindowStartupLocation="CenterScreen">
@@ -49,4 +50,4 @@
             </ListBox.ItemTemplate>
         </ListBox>
     </Grid>
-</Window>
+</dx:ThemedWindow>
