@@ -9,10 +9,6 @@
         Height="720" Width="1280"
         WindowStartupLocation="CenterScreen">
     <DockPanel>
-        <controls:ViewHeader DockPanel.Dock="Top" />
-
-        <controls:ViewFooter DockPanel.Dock="Bottom" />
-
-        <ContentControl Content="{Binding CurrentViewModel}" />
+        
     </DockPanel>
 </Window>
