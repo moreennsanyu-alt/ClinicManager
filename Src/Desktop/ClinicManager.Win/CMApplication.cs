@@ -55,7 +55,7 @@ public abstract class CMApplication : PrismApplication
         ViewModelLocationProvider.SetDefaultViewTypeToViewModelTypeResolver(viewType =>
         {
             var viewName = viewType.FullName;
-            var assemblyName = viewType.GetTypeInfo().Assembly.FullName;
+            var assemblyName = viewType.Assembly.FullName;
             string viewModelName;
 
             if (viewName.EndsWith("Window"))
