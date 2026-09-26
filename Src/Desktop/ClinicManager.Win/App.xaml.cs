@@ -15,6 +15,7 @@ public partial class App : CMApplication
 
     protected override void RegisterTypes(IContainerRegistry containerRegistry)
     {
+        containerRegistry.RegisterSingleton<INavigationTreeBuilder, NavigationTreeBuilder>();
         containerRegistry.RegisterSingleton<IRequestLogService, RequestLogService>();
         containerRegistry.RegisterSingleton<IApiClient, ApiClient>();
     }
