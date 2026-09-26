@@ -133,7 +133,10 @@ class Build : FalloutBuild
         {
             var configurations = new List<string>();
 
-            if (ExecutionPlan.Any(x => x.Name == nameof(Test)))
+            if (ExecutionPlan.Any(x => x.Name == nameof(E2ETests)))
+                configurations.Add("Debug");
+
+			if (ExecutionPlan.Any(x => x.Name == nameof(UnitTests)))
                 configurations.Add("Debug");
 
             if (ExecutionPlan.Any(x => x.Name == nameof(Release)))
