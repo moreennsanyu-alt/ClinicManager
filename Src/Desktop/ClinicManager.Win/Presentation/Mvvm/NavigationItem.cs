@@ -1,3 +1,5 @@
+namespace ClinicManager.Win.Presentation.Mvvm;
+
 public enum BadgeType
 {
     None,
