@@ -6,6 +6,8 @@ namespace ClinicManager.Win.Features.Infrastructure;
     {
         public void RegisterTypes(IContainerRegistry registry)
         {
+           ViewModelLocationProvider.Register<ShellWindow, ShellViewModel>();
+        
            // registry.RegisterSingleton<IOrderService, OrderService>();
            // registry.RegisterForNavigation<OrderListView, OrderListViewModel>();
         }
