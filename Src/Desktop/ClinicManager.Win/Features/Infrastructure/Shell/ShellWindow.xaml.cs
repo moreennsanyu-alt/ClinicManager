@@ -2,7 +2,7 @@ using System.Windows;
 
 namespace ClinicManager.Win.Features.Infrastructure.Shell;
 
-public partial class ShellWindow : Window
+public partial class ShellWindow : ThemedWindow
 {
     public ShellWindow()
     {
