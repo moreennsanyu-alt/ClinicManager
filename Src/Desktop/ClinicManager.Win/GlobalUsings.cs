@@ -5,7 +5,9 @@ global using ClinicManager.Win.Services;
 global using ClinicManager.Win.Ioc;
 global using ClinicManager.Win.Net.Http;
 global using ClinicManager.Win.Models;
-
+global using ClinicManager.Win.Presentation;
+global using ClinicManager.Win.Presentation.Mvvm;
+global using ClinicManager.Win.Presentation.Controls;
 
 global using System.Windows;
 global using System.Windows.Controls;
