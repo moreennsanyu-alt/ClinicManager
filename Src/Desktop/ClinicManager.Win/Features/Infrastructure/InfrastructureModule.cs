@@ -11,7 +11,7 @@ namespace ClinicManager.Win.Features.Infrastructure;
 
         public void OnInitialized(IContainerProvider container)
         {
-            var nav = containerProvider.Resolve<INavigationTreeBuilder>();
+            var nav = container.Resolve<INavigationTreeBuilder>();
 
             nav.Register(new NavigationItem
             {
