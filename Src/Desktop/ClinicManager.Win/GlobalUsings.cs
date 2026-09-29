@@ -23,7 +23,7 @@ global using System.Windows.Media.Effects;
 global using System.Windows.Media.Imaging;
 global using System.Windows.Navigation;
 global using System.Windows.Resources;
-
+global using System.Collections.ObjectModel;
 // GlobalUsings.cs
 global using System.Net;
 global using System.Net.Http;
