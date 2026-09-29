@@ -11,7 +11,7 @@ namespace ClinicManager.Win.Features.Infrastructure.Shell
         public MainView()
         {
             InitializeComponent();
-            DataContext = new MainViewModel();
+
         }
     }
 }
