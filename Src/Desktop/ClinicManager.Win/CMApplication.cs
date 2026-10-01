@@ -16,6 +16,8 @@ public abstract class CMApplication : PrismApplication
 
     private static Logger? _logger;
 
+    
+
     static CMApplication()
     {
         // Build configuration from multiple sources in order of precedence:
@@ -24,7 +26,7 @@ public abstract class CMApplication : PrismApplication
         // 3. appsettings.{Environment}.json
         // 4. Environment variables
         // 5. Command line arguments (when available)
-        var configuration = new ConfigurationBuilder()
+        Configuration = new ConfigurationBuilder()
             .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
             .AddInMemoryCollection(GetDefaultSettings())
             .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
@@ -34,7 +36,7 @@ public abstract class CMApplication : PrismApplication
 
         // Configure Serilog from the IConfiguration
         Log.Logger = new LoggerConfiguration()
-            .ReadFrom.Configuration(configuration)
+            .ReadFrom.Configuration(Configuration)
             .Enrich.FromLogContext()
             .Enrich.WithProperty("Application", "ClinicManager.Win")
             .CreateLogger();
@@ -52,6 +54,8 @@ public abstract class CMApplication : PrismApplication
         }
  
     }
+
+    public static IConfiguration Configuration { get;}
 
     private static Dictionary<string, string?> GetDefaultSettings()
     {
