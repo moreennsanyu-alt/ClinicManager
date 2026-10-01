@@ -4,6 +4,10 @@ using DryIoc.Microsoft.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
 using Prism.DryIoc;
 using Prism.Ioc;
+using ClinicManager.Win.Configuration;
+using Microsoft.Extensions.Configuration;
+using Serilog;
+using Serilog.Core;
 
 namespace ClinicManager.Win;
 
