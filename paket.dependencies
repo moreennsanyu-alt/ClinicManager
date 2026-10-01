@@ -7,8 +7,6 @@ copy_local: true
 specific_version: false
 framework: netstandard2.0, net48
 
-nuget DevExpress.ExpressApp.Office 24.2.15
-nuget DevExpress.ExpressApp.Office.Win 24.2.15
 nuget DevExpress.ExpressApp.Win 24.2.15
 nuget DevExpress.Utils 24.2.15
 nuget DevExpress.ExpressApp.Core.All 24.2.15
@@ -25,7 +23,7 @@ nuget DevExpress.Drawing.Skia 24.2.15
 nuget DevExpress.ExpressApp 24.2.15
 nuget DevExpress.Persistent.Base 24.2.15
 nuget DevExpress.RichEdit.Export 24.2.15
-nuget DevExpress.Win.Design 24.2.15
+nuget DevExpress.Win.PdfViewer 24.2.15
 nuget DevExpress.Win.Map 24.2.15
 nuget DevExpress.Persistent.BaseImpl.Xpo 24.2.15
 
