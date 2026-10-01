@@ -3,37 +3,35 @@ source https://api.nuget.org/v3/index.json
 storage: packages
 strategy: min
 lowest_matching: true
-copy_local:true
-specific_version : false
-framework:netstandard2.0,net48
+copy_local: true
+specific_version: false
+framework: netstandard2.0, net48
 
-nuget DevExpress.ExpressApp.Office 24.2.8
-nuget DevExpress.ExpressApp.Office.Win 24.2.8
-nuget DevExpress.ExpressApp.Win 24.2.8
-nuget DevExpress.Utils 24.2.8
-nuget DevExpress.ExpressApp.Core.All 24.2.8
-nuget DevExpress.ExpressApp.Win.All 24.2.8
-nuget DevExpress.EasyTest 24.2.8 
-nuget DevExpress.ExpressApp.EasyTest.WinAdapter 24.2.8  
-nuget DevExpress.ExpressApp.Security.Xpo 24.2.8  
-nuget DevExpress.Win.SpellChecker 24.2.8  
+nuget DevExpress.ExpressApp.Office 24.2.15
+nuget DevExpress.ExpressApp.Office.Win 24.2.15
+nuget DevExpress.ExpressApp.Win 24.2.15
+nuget DevExpress.Utils 24.2.15
+nuget DevExpress.ExpressApp.Core.All 24.2.15
+nuget DevExpress.ExpressApp.Win.All 24.2.15
+nuget DevExpress.EasyTest 24.2.15
+nuget DevExpress.ExpressApp.EasyTest.WinAdapter 24.2.15
+nuget DevExpress.ExpressApp.Security.Xpo 24.2.15
+nuget DevExpress.Win.SpellChecker 24.2.15
 nuget ZString 2.5
 nuget System.Configuration.ConfigurationManager == 9.0.0
 
-nuget DevExpress.Document.Processor 24.2.8
-nuget DevExpress.Drawing.Skia 24.2.8
-nuget DevExpress.ExpressApp 24.2.8
-nuget DevExpress.ExpressApp.Win 24.2.8
-nuget DevExpress.Persistent.Base 24.2.8
-nuget DevExpress.RichEdit.Export 24.2.8
-nuget DevExpress.Win.Design 24.2.8
-nuget DevExpress.Win.Map 24.2.8
-nuget DevExpress.ExpressApp.Security.Xpo  24.2.8
-nuget DevExpress.Persistent.BaseImpl.Xpo  24.2.8
+nuget DevExpress.Document.Processor 24.2.15
+nuget DevExpress.Drawing.Skia 24.2.15
+nuget DevExpress.ExpressApp 24.2.15
+nuget DevExpress.Persistent.Base 24.2.15
+nuget DevExpress.RichEdit.Export 24.2.15
+nuget DevExpress.Win.Design 24.2.15
+nuget DevExpress.Win.Map 24.2.15
+nuget DevExpress.Persistent.BaseImpl.Xpo 24.2.15
 
-nuget DevExpress.DataAccess.UI  24.2.8
-nuget DevExpress.Win.Gauges  24.2.8
-nuget DevExpress.Win.Reporting  24.2.8
+nuget DevExpress.DataAccess.UI 24.2.15
+nuget DevExpress.Win.Gauges 24.2.15
+nuget DevExpress.Win.Reporting 24.2.15
 
 nuget Fasterflect.Xpand 2.0.7
 nuget Microsoft.CSharp 4.7.0
@@ -57,8 +55,8 @@ nuget Microsoft.TestPlatform.ObjectModel 18.8.1
 nuget Microsoft.Testing.Platform 2.4.1
 nuget Microsoft.Testing.Platform.MSBuild 2.4.1
 
-
 // ---------- Misc ----------
 nuget WixSharp_wix4 2.14.1
+
 // ---------- Build-wide (was GlobalPackageReference) ----------
 nuget Nerdbank.GitVersioning 3.10.94
