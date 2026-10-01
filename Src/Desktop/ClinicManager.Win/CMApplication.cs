@@ -36,7 +36,6 @@ public abstract class CMApplication : PrismApplication
 
         // Configure Serilog from the IConfiguration
         Log.Logger = new LoggerConfiguration()
-            .ReadFrom.Configuration(Configuration)
             .Enrich.FromLogContext()
             .Enrich.WithProperty("Application", "ClinicManager.Win")
             .CreateLogger();
