@@ -8,6 +8,8 @@ global using ClinicManager.Win.Models;
 global using ClinicManager.Win.Presentation;
 global using ClinicManager.Win.Presentation.Mvvm;
 global using ClinicManager.Win.Presentation.Controls;
+global using ClinicManager.Win.Net;
+global using ClinicManager.Win.Configuration;
 
 global using System.Windows;
 global using System.Windows.Controls;
