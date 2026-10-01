@@ -9,6 +9,71 @@ namespace ClinicManager.Win;
 
 public abstract class CMApplication : PrismApplication
 {
+
+    private static Logger? _logger;
+
+    static CMApplication()
+    {
+        // Build configuration from multiple sources in order of precedence:
+        // 1. Defaults
+        // 2. appsettings.json
+        // 3. appsettings.{Environment}.json
+        // 4. Environment variables
+        // 5. Command line arguments (when available)
+        var configuration = new ConfigurationBuilder()
+            .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
+            .AddInMemoryCollection(GetDefaultSettings())
+            .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+            .AddJsonFile($"appsettings.{Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") ?? "Production"}.json", optional: true, reloadOnChange: true)
+            .AddEnvironmentVariables("CLINICMANAGER_")
+            .Build();
+
+        // Configure Serilog from the IConfiguration
+        Log.Logger = new LoggerConfiguration()
+            .ReadFrom.Configuration(configuration)
+            .Enrich.FromLogContext()
+            .Enrich.WithProperty("Application", "ClinicManager.Win")
+            .CreateLogger();
+
+        _logger = Log.Logger as Logger;
+
+        try
+        {
+            _logger?.Information("Application starting. Environment: {Environment}", 
+                Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") ?? "Production");
+        }
+        catch
+        {
+            // Silently continue if logging fails during initialization
+        }
+ 
+    }
+
+    private static Dictionary<string, string?> GetDefaultSettings()
+    {
+        return new Dictionary<string, string?>
+        {
+            // Serilog defaults
+            ["Serilog:MinimumLevel"] = "Information",
+            ["Serilog:MinimumLevel:Microsoft"] = "Warning",
+            ["Serilog:MinimumLevel:System"] = "Warning",
+            
+            // File sink defaults
+            ["Serilog:WriteTo:0:Name"] = "File",
+            ["Serilog:WriteTo:0:Args:path"] = Path.Combine(
+                Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+                "ClinicManager",
+                "Logs",
+                "clinicmanager-.txt"),
+            ["Serilog:WriteTo:0:Args:rollingInterval"] = "Day",
+            ["Serilog:WriteTo:0:Args:retainedFileCountLimit"] = "30",
+            ["Serilog:WriteTo:0:Args:outputTemplate"] = "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}",
+            
+            // Console sink defaults (for debug builds or console runners)
+            ["Serilog:WriteTo:1:Name"] = "Console",
+            ["Serilog:WriteTo:1:Args:outputTemplate"] = "[{Timestamp:HH:mm:ss} {Level:u3}] {Message:lj}{NewLine}{Exception}",
+        };
+    }
     /// <summary>
     /// Build the DryIoc container ourselves so we can pour an <see cref="IServiceCollection"/> into it
     /// *before* Prism starts registering its own types. The returned container is then handed to Prism.
