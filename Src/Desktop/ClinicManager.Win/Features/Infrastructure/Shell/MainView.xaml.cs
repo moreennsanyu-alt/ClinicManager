@@ -6,7 +6,7 @@ namespace ClinicManager.Win.Features.Infrastructure.Shell
     /// Interaction logic for MainView.xaml. Acts as the application shell window
     /// that hosts the currently active feature view.
     /// </summary>
-    public partial class MainView : Window
+    public partial class MainView : UserControl
     {
         public MainView()
         {
