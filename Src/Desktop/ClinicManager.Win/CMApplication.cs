@@ -30,7 +30,7 @@ public abstract class CMApplication : PrismApplication
                                         PreloadCategories.Core,
                                         PreloadCategories.Ribbon,
                                         PreloadCategories.Docking,
-                                        PreloadCategories.Guages);
+                                      );
     }    
     
     [MethodImpl(MethodImplOptions.NoInlining)]
