@@ -5,7 +5,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:controls="clr-namespace:ClinicManager.Win.Presentation.Controls"
         mc:Ignorable="d"
-        WindowStartupLocation="CenterScreen">
+        >
     <DockPanel>
         
     </DockPanel>
