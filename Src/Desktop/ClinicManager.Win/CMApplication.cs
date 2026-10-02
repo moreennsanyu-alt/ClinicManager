@@ -20,7 +20,7 @@ public abstract class CMApplication : PrismApplication
         SetupLogging();
         BuildConfiguration();      
     }
-        
+
     [MethodImpl(MethodImplOptions.NoInlining)]
     static void PreloadThemes()
     {
@@ -31,6 +31,18 @@ public abstract class CMApplication : PrismApplication
                                         PreloadCategories.Ribbon,
                                         PreloadCategories.Docking,
                                         PreloadCategories.Guages);
+    }    
+    
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    static void SetupLogging()
+    {
+    }
+
+    
+        
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    static void BuildConfiguration()
+    {
     }
     /// <summary>
     /// Build the DryIoc container ourselves so we can pour an <see cref="IServiceCollection"/> into it
