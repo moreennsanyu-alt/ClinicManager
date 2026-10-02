@@ -29,7 +29,7 @@ public abstract class CMApplication : PrismApplication
         ApplicationThemeHelper.Preload(PreloadCategories.Grid, PreloadCategories.LayoutControl,
                                         PreloadCategories.Core,
                                         PreloadCategories.Ribbon,
-                                        PreloadCategories.Docking,
+                                        PreloadCategories.Docking
                                       );
     }    
     
