@@ -4,11 +4,34 @@ using DryIoc.Microsoft.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
 using Prism.DryIoc;
 using Prism.Ioc;
+using DevExpress.Xpf.Core;
+using System.Runtime.CompilerServices;
+using System.Windows;
 
 namespace ClinicManager.Win;
 
 public abstract class CMApplication : PrismApplication
 {
+
+
+    static CMApplication() 
+    {
+        PreloadThemes();
+        SetupLogging();
+        BuildConfiguration();      
+    }
+        
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    static void PreloadThemes()
+    {
+        ApplicationThemeHelper.ApplicationThemeName = Theme.Win11Light.Name;
+        SplashScreenManager.CreateThemed().ShowOnStartup();
+        ApplicationThemeHelper.Preload(PreloadCategories.Grid, PreloadCategories.LayoutControl,
+                                        PreloadCategories.Core,
+                                        PreloadCategories.Ribbon,
+                                        PreloadCategories.Docking,
+                                        PreloadCategories.Guages);
+    }
     /// <summary>
     /// Build the DryIoc container ourselves so we can pour an <see cref="IServiceCollection"/> into it
     /// *before* Prism starts registering its own types. The returned container is then handed to Prism.
