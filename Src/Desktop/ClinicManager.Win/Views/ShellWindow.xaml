@@ -2,7 +2,7 @@
         AutomationProperties.AutomationId="ShellWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:clr-namespace="using:ClinicManager.Win.Views"
+        xmlns:views="clr-namespace:ClinicManager.Win.Views"
         Title="Clinic Manager" Height="720" Width="1200"
         WindowStartupLocation="CenterScreen">
     <Grid>
