@@ -5,7 +5,5 @@
     <AssemblyName>ClinicMgrMod</AssemblyName>
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
-
-  <ItemGroup>
-  </ItemGroup>
+  <Import Project="..\..\.paket\Paket.Restore.targets" />
 </Project>
