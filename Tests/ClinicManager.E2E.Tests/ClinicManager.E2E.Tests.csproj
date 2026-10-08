@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <UseMicrosoftTestingPlatformRunner>true</UseMicrosoftTestingPlatformRunner>
+    <TargetFramework>net48</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Constant Include="BuildInfo.ApplicationPath" Value="$(ArtifactsPath)\bin\ClinicManager.Win\debug\ClinicMgr.exe" />
+  </ItemGroup>
+
+</ItemGroup>
+</Project>
