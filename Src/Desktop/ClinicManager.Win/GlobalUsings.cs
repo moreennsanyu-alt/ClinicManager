@@ -9,6 +9,7 @@ global using ClinicManager.Win.Models;
 global using ClinicManager.Win.Presentation;
 global using ClinicManager.Win.Presentation.Mvvm;
 global using ClinicManager.Win.Presentation.Controls;
+global using ViewModelBase = ClinicManager.Win.Presentation.Mvvm.ViewModelBase;
 
 global using System.Windows;
 global using System.Windows.Controls;
