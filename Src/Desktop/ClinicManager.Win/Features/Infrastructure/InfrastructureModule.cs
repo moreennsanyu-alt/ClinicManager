@@ -13,21 +13,15 @@ namespace ClinicManager.Win.Features.Infrastructure;
         {
             var nav = container.Resolve<INavigationTreeBuilder>();
 
-            nav.Register(new NavigationItem
-            {
-                Key = "AllUsers",
-                Title = "All Users",
-                Path = "Users/AllUsers",
-                ViewName = nameof(HomeView)
-            });
+            //nav.Register(new NavigationItem
+            //{
+            //    Key = "AllUsers",
+            //    Title = "All Users",
+            //    Path = "Users/AllUsers",
+            //    ViewName = nameof(HomeView)
+            //});
 
-            nav.Register(new NavigationItem
-            {
-                Key = "Detail",
-                Title = "Detail",
-                Path = "Users/Detail",
-                ViewName = nameof(HomeView)
-            });
+            
             //var regions = container.Resolve<IRegionManager>();
             //regions.RegisterViewWithRegion(RegionNames.Content, typeof(OrderListView));
         }
