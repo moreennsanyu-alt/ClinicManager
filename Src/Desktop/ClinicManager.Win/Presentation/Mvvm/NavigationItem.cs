@@ -41,3 +41,13 @@ public partial class NavigationItem : ViewModelBase
     public ObservableCollection<NavigationItem> Items { get; } = new();
 
 }
+
+public partial class RootNavigationItem : NavigationItem
+{
+    [ObservableProperty]
+    NavigationItem _selectedItem = null;
+
+    [ObservableProperty]
+    string _defaultKey;
+    
+}
