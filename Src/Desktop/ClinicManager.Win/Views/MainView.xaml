@@ -15,7 +15,7 @@
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
              xmlns:dxnav="http://schemas.devexpress.com/winfx/2008/xaml/navigation"
              xmlns:dxbt="http://schemas.devexpress.com/winfx/2008/xaml/bars/themekeys"
-            
+             xmlns:prism="http://prismlibrary.com/"
              mc:Ignorable="d"
              d:DataContext="{d:DesignInstance Type=vm:MainViewModel}"
              DataContext="{prism:ContainerProvider {x:Type viewModels:MainViewModel}}"
