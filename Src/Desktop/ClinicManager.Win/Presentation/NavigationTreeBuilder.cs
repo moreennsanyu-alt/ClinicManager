@@ -49,7 +49,7 @@ public class NavigationTreeBuilder : INavigationTreeBuilder
                 // fill in the placeholder with real leaf data
                 existing.Title = item.Title ?? existing.Title;
                 existing.ViewName = item.ViewName;
-                existing.Parameters = item.Parameters;
+                //existing.Parameters = item.Parameters;
                 existing.Priority = item.Priority;
                 existing.BadgeText = item.BadgeText;
                 existing.BadgeType = item.BadgeType;
