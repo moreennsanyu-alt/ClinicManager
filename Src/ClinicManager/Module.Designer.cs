@@ -1,5 +1,5 @@
-namespace PermissionPolicyExample.Module {
-    partial class PermissionPolicyExampleModule {
+namespace ClinicManager {
+    partial class ClinicManagerModule {
         /// <summary> 
         /// Required designer variable.
         /// </summary>
