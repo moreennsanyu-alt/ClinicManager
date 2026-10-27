@@ -6,9 +6,9 @@ using System.Reflection;
 using DevExpress.ExpressApp.Security.Strategy;
 using DevExpress.Persistent.BaseImpl.PermissionPolicy;
 
-namespace PermissionPolicyExample.Module {
-    public sealed partial class PermissionPolicyExampleModule : ModuleBase {
-        public PermissionPolicyExampleModule() {
+namespace ClinicManager {
+    public sealed partial class ClinicManagerModule : ModuleBase {
+        public ClinicManagerModule() {
             InitializeComponent();
         }
         protected override IEnumerable<Type> GetDeclaredExportedTypes() {
