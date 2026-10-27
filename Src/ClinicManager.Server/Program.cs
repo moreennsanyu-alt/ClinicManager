@@ -16,7 +16,8 @@ using DevExpress.ExpressApp.Security.ClientServer.Wcf;
 using DevExpress.Persistent.BaseImpl.PermissionPolicy;
 using DevExpress.ExpressApp.Win.SystemModule;
 using DevExpress.ExpressApp.Web.SystemModule;
-using PermissionPolicyExample.Module;
+using ClinicManager;
+using ClinicManager.BO;
 using DevExpress.ExpressApp.MiddleTier;
 
 namespace ConsoleApplicationServer
@@ -59,8 +60,7 @@ namespace ConsoleApplicationServer
 
                 serverApplication.Modules.BeginInit();
                 serverApplication.Modules.Add(new SystemWindowsFormsModule());
-                serverApplication.Modules.Add(new SystemAspNetModule());
-                serverApplication.Modules.Add(new PermissionPolicyExampleModule());
+                serverApplication.Modules.Add(new ClinicManagerModule());
                 serverApplication.Modules.Add(new SecurityModule());
                 serverApplication.Modules.EndInit();
 
