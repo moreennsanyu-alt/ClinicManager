@@ -7,7 +7,6 @@ DevExpress.EasyTest
 DevExpress.ExpressApp.EasyTest.WinAdapter
 DevExpress.ExpressApp.Security.Xpo
 DevExpress.Win.SpellChecker
-DevExpress.Blazor.PdfViewer
 DevExpress.Document.Processor
 DevExpress.Drawing.Skia
 DevExpress.ExpressApp
