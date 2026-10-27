@@ -115,7 +115,7 @@ nuget Microsoft.Testing.Platform 2.5.1
 nuget xunit.v3.extensibility.core 4.0.2
 nuget HarfBuzzSharp 14.2.1.301 
 nuget System.Diagnostics.DiagnosticSource 9.0.22
-
+nuget System.Security.AccessControl 6.0.1
 
 
 
