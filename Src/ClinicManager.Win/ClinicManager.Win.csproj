@@ -5,19 +5,17 @@
     <AssemblyName>ClinicMgr</AssemblyName>
     <UseWindowsForms>true</UseWindowsForms>
     <OutputType>WinExe</OutputType>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
-
-   <ItemGroup>
-        <Content Include="Model.xafml">
-            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-        </Content>
-        <EmbeddedResource Include="**\*.svg" />
-        <EmbeddedResource Remove="bin\**" />
-    </ItemGroup>
-
+  <ItemGroup>
+    <Content Include="Model.xafml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="**\*.svg" />
+    <EmbeddedResource Remove="bin\**" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ClinicManager\ClinicManager.csproj" />
   </ItemGroup>
-
   <Import Project="..\..\.paket\Paket.Restore.targets" />
 </Project>
