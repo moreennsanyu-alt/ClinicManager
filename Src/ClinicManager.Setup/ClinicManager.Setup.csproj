@@ -18,14 +18,12 @@
     <Constant Include="BuildInfo.InstallerDir" Value="$(InstallersPath)" />
     <Constant Include="BuildInfo.DesktopPublishDir" Value="$(DesktopPublishDir)" />
   </ItemGroup>
-
   <ItemGroup>
     <PackageReference Include="WixSharp_wix4" />
     <PackageReference Include="ThisAssembly.Constants" />
     <PackageReference Include="Nerdbank.GitVersioning" />
     <PackageReference Include="PolySharp" />
   </ItemGroup>
-
   <ItemGroup>
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
@@ -33,8 +31,7 @@
     <Exec Command="cd .&#xD;&#xA;set ide=true&#xD;&#xA;&quot;$(TargetPath)&quot;" />
   </Target>
   <Target Name="PublishBeforeBuild" BeforeTargets="CoreCompile">
-     <MSBuild Projects="..\Desktop\ClinicManager.Win\ClinicManager.Win.csproj" Targets="Publish" Properties="Configuration=$(Configuration);PublishDir=$(DesktopPublishDir)" />
+    <MSBuild Projects="..\Desktop\ClinicManager.Win\ClinicManager.Win.csproj" Targets="Publish" Properties="Configuration=$(Configuration);PublishDir=$(DesktopPublishDir)" />
   </Target>
-
-  
+  <Import Project="..\..\.paket\Paket.Restore.targets" />
 </Project>
