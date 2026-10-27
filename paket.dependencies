@@ -108,7 +108,7 @@ nuget System.Xml.XDocument 4.3.0
 nuget ThisAssembly.Constants 2.1.5
 nuget xunit.v3 4.0.2 
 nuget Xunit.OpenCategories.V3 2.4.1.19
-nuget Microsoft.Testing.Extensions.CodeCoverage 18.9.0
+nuget Microsoft.Testing.Extensions.CodeCoverage 18.8.0
 nuget System.Net.Http 4.3.4 
 nuget System.Text.RegularExpressions 4.3.1 
 
