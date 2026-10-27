@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <UseWindowsForms>false</UseWindowsForms>
+    <RootNamespace>ClinicManager.Server</RootNamespace>
+    <AssemblyName>ClinicMgrSvr</AssemblyName>
+  </PropertyGroup>
+
+ 
+
+</Project>
