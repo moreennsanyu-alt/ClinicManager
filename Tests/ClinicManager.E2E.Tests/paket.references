@@ -1,1 +1,12 @@
+PolySharp
+DevExpress.EasyTest
+DevExpress.ExpressApp.EasyTest.WinAdapter
 
+
+
+
+Microsoft.CodeAnalysis
+System.ValueTuple
+System.Memory
+Microsoft.CSharp
+ThisAssembly.Constants
