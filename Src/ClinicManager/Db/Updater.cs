@@ -6,12 +6,12 @@ using DevExpress.Xpo;
 using DevExpress.Data.Filtering;
 using DevExpress.Persistent.BaseImpl;
 using DevExpress.ExpressApp.Security;
-using PermissionPolicyExample.Module.BusinessObjects;
+using ClinicManager.BO;
 using DevExpress.ExpressApp.Security.Strategy;
 using DevExpress.Persistent.BaseImpl.PermissionPolicy;
 using DevExpress.Persistent.Base;
 
-namespace PermissionPolicyExample.Module.DatabaseUpdate
+namespace ClinicManager.Db
 {
     public class Updater : ModuleUpdater
     {
