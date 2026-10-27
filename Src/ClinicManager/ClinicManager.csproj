@@ -5,5 +5,12 @@
     <AssemblyName>ClinicMgrMod</AssemblyName>
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
+
+    <ItemGroup>
+        <EmbeddedResource Include="**\*.svg" />
+        <EmbeddedResource Include="**\*.xafml" />
+        <EmbeddedResource Remove="bin\**" />
+    </ItemGroup>
+
   <Import Project="..\..\.paket\Paket.Restore.targets" />
 </Project>
