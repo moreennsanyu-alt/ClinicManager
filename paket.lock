@@ -1,4 +1,4 @@
-STORAGE: PACKAGES
+STORAGE: NONE
 STRATEGY: MIN
 LOWEST_MATCHING: TRUE
 COPY-LOCAL: TRUE
@@ -915,7 +915,7 @@ NUGET
       System.Threading.Tasks.Extensions (>= 4.6.3)
     ZString (2.5)
       System.Memory (>= 4.5.3)
-  remote: https://nuget.devexpress.com/88luCgoeuPFTrDrTDcc6zKg22U2cVcTm3vdKCv88I7PHF9St6i/api
+  remote: support/nupkg
     DevExpress.Blazor.PdfViewer (24.2.15)
     DevExpress.Charts (24.2.15) - restriction: || (== net48) (&& (== netstandard2.0) (>= net462)) (&& (== netstandard2.0) (>= net8.0))
       DevExpress.Charts.Core (24.2.15) - restriction: || (== net48) (&& (== netstandard2.0) (>= net462)) (&& (== netstandard2.0) (>= net8.0))
