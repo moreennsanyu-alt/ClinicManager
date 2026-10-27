@@ -6,7 +6,6 @@ DevExpress.Utils
 DevExpress.ExpressApp.Security.Xpo
 DevExpress.Win.SpellChecker
 DevExpress.Document.Processor
-DevExpress.Drawing.Skia
 DevExpress.ExpressApp
 DevExpress.ExpressApp.Chart
 DevExpress.ExpressApp.Chart.Win
