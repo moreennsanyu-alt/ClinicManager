@@ -1,5 +1,5 @@
-namespace PermissionPolicyExample.Win {
-    partial class PermissionPolicyExampleWindowsFormsApplication {
+namespace ClinicManager.Win {
+    partial class ClinicManagerWinApp {
         /// <summary> 
         /// Required designer variable.
         /// </summary>
@@ -25,18 +25,11 @@ namespace PermissionPolicyExample.Win {
         private void InitializeComponent() {
             this.module1 = new DevExpress.ExpressApp.SystemModule.SystemModule();
             this.module2 = new DevExpress.ExpressApp.Win.SystemModule.SystemWindowsFormsModule();
-            this.module3 = new PermissionPolicyExample.Module.PermissionPolicyExampleModule();
-            this.sqlConnection1 = new System.Data.SqlClient.SqlConnection();
+            this.module3 = new ClinicManager.ClinicManagerModule();
             this.securityStrategyComplex1 = new DevExpress.ExpressApp.Security.SecurityStrategyComplex();
             this.securityModule1 = new DevExpress.ExpressApp.Security.SecurityModule();
             this.authenticationStandard1 = new DevExpress.ExpressApp.Security.AuthenticationStandard();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
-            // 
-            // sqlConnection1
-            // 
-            this.sqlConnection1.ConnectionString = "Integrated Security=SSPI;Pooling=false;Data Source=.\\SQLEXPRESS;Initial Catalog=S" +
-                "ecuritySystemExample";
-            this.sqlConnection1.FireInfoMessageEventOnUserErrors = false;
             // 
             // securityStrategyComplex1
             // 
@@ -67,8 +60,7 @@ namespace PermissionPolicyExample.Win {
 
         private DevExpress.ExpressApp.SystemModule.SystemModule module1;
         private DevExpress.ExpressApp.Win.SystemModule.SystemWindowsFormsModule module2;
-        private PermissionPolicyExample.Module.PermissionPolicyExampleModule module3;
-        private System.Data.SqlClient.SqlConnection sqlConnection1;
+        private ClinicManager.ClinicManagerModule module3;
         private DevExpress.ExpressApp.Security.SecurityStrategyComplex securityStrategyComplex1;
         private DevExpress.ExpressApp.Security.SecurityModule securityModule1;
         private DevExpress.ExpressApp.Security.AuthenticationStandard authenticationStandard1;
