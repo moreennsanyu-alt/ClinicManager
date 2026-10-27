@@ -37,14 +37,10 @@ DevExpress.ExpressApp.ViewVariantsModule
 DevExpress.Win.PdfViewer
 DevExpress.Persistent.Base
 DevExpress.RichEdit.Export
-DevExpress.Win.Map
 DevExpress.Persistent.BaseImpl.Xpo
-DevExpress.DataAccess.UI
 DevExpress.Win.Gauges
 DevExpress.Win.Reporting
 ZString
-Shouldly
-Moq
 Enums.NET
 FasterFlect.Xpand
 Microsoft.CodeAnalysis
