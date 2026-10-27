@@ -3,8 +3,6 @@ DevExpress.ExpressApp.Office
 DevExpress.ExpressApp.Office.Win
 DevExpress.ExpressApp.Win
 DevExpress.Utils
-DevExpress.EasyTest
-DevExpress.ExpressApp.EasyTest.WinAdapter
 DevExpress.ExpressApp.Security.Xpo
 DevExpress.Win.SpellChecker
 DevExpress.Document.Processor
