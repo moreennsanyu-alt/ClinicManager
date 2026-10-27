@@ -2,11 +2,15 @@ PolySharp
 DevExpress.EasyTest
 DevExpress.ExpressApp.EasyTest.WinAdapter
 
-
-
-
-Microsoft.CodeAnalysis
 System.ValueTuple
 System.Memory
 Microsoft.CSharp
 ThisAssembly.Constants
+
+xunit.v3
+Xunit.OpenCategories.V3
+Microsoft.Testing.Extensions.CodeCoverage
+System.Net.Http 
+System.Text.RegularExpressions
+
+
