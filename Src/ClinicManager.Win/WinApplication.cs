@@ -8,9 +8,9 @@ using DevExpress.ExpressApp.Xpo;
 using DevExpress.ExpressApp.Security.ClientServer;
 using DevExpress.ExpressApp.Security;
 
-namespace PermissionPolicyExample.Win {
-    public partial class PermissionPolicyExampleWindowsFormsApplication : WinApplication {
-        public PermissionPolicyExampleWindowsFormsApplication() {
+namespace ClinicManager.Win {
+    public partial class ClinicManagerWinApp : WinApplication {
+        public ClinicManagerWinApp() {
             InitializeComponent();
             DelayedViewItemsInitialization = true;
         }
