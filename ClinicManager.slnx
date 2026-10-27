@@ -15,8 +15,8 @@
     <File Path="README.md" />
   </Folder>
   <Folder Name="/Desktop/">
-    <Project Path="Src/Desktop/ClinicManager/ClinicManager.csproj" />
-    <Project Path="Src/Desktop/ClinicManager.Win/ClinicManager.Win.csproj" />
+    <Project Path="Src/ClinicManager/ClinicManager.csproj" />
+    <Project Path="Src/ClinicManager.Win/ClinicManager.Win.csproj" />
   </Folder>
 
   <Folder Name="/Desktop.Tests/">
