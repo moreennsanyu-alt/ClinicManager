@@ -8,172 +8,200 @@ copy_local: true
 specific_version: false
 framework: netstandard2.0, net10.0, net10.0-windows, net48
 
-// ---------- DevExpress ----------
-nuget DevExpress.Wpf 24.2.15
-nuget DevExpress.Wpf.Themes.All 24.2.15
-nuget DevExpress.Wpf.Scheduling 24.2.15
-nuget DevExpress.DataAccess 24.2.15
-nuget DevExpress.Document.Processor 24.2.15
-nuget DevExpress.Drawing.Skia 24.2.15
-nuget DevExpress.RichEdit.Export 24.2.15
-nuget DevExpress.Scaffolding.Core 24.2.15
-nuget DevExpress.Scaffolding.EFCore 24.2.15
-nuget DevExpress.Wpf.Accordion 24.2.15
-nuget DevExpress.Wpf.Carousel 24.2.15
-nuget DevExpress.Wpf.Charts 24.2.15
-nuget DevExpress.Wpf.Core.Extensions 24.2.15
-nuget DevExpress.Wpf.Diagram 24.2.15
-nuget DevExpress.Wpf.Dialogs 24.2.15
-nuget DevExpress.Wpf.Docking 24.2.15
-nuget DevExpress.Wpf.DocumentViewer.Core 24.2.15
-nuget DevExpress.Wpf.ExpressionEditor 24.2.15
-nuget DevExpress.Wpf.Gantt 24.2.15
-nuget DevExpress.Wpf.Gauges 24.2.15
-nuget DevExpress.Wpf.Grid 24.2.15
-nuget DevExpress.Wpf.LayoutControl 24.2.15
-nuget DevExpress.Wpf.Map 24.2.15
-nuget DevExpress.Wpf.NavBar 24.2.15
-nuget DevExpress.Wpf.PdfViewer 24.2.15
-nuget DevExpress.Wpf.PivotGrid 24.2.15
-nuget DevExpress.Wpf.Printing 24.2.15
-nuget DevExpress.Wpf.PrismAdapters 24.2.15
-nuget DevExpress.Wpf.PropertyGrid 24.2.15
-nuget DevExpress.Wpf.Ribbon 24.2.15
-nuget DevExpress.Wpf.RichEdit 24.2.15
-nuget DevExpress.Wpf.SchedulingReporting 24.2.15
-nuget DevExpress.Wpf.SpellChecker 24.2.15
-nuget DevExpress.Wpf.Spreadsheet 24.2.15
-nuget DevExpress.Wpf.TreeMap 24.2.15
-nuget DevExpress.Wpf.TypedStyles 24.2.15
-nuget DevExpress.Mvvm 24.2.15
-nuget DevExpress.Mvvm.CodeGenerators 22.1.1
-nuget DevExpress.Wpf.ThemesLW 24.2.15
-nuget DevExpress.Wpf.Themes.Win11Light 24.2.15
-nuget DevExpress.Wpf.Themes.Win11Dark 24.2.15
+nuget DevExpress.ExpressApp.Office 24.2.8
+nuget DevExpress.ExpressApp.Office.Win 24.2.8
+nuget DevExpress.ExpressApp.Win 24.2.8
+nuget DevExpress.Utils 24.2.8
+nuget DevExpress.ExpressApp.Core.All 24.2.8
+nuget DevExpress.ExpressApp.Win.All 24.2.8
+nuget DevExpress.ExpressApp.Web.All 24.2.8
+nuget DevExpress.ExpressApp.Blazor.All 24.2.8
+nuget DevExpress.ExpressApp.Blazor 24.2.8
+nuget DevExpress.ExpressApp.Validation.Blazor 24.2.8
+nuget DevExpress.EasyTest 24.2.8 
+nuget DevExpress.ExpressApp.EasyTest.WinAdapter 24.2.8  
+nuget DevExpress.ExpressApp.Security.Xpo 24.2.8  
+nuget DevExpress.Win.SpellChecker 24.2.8  
+nuget ZString 2.5.0
+nuget System.CodeDom 9.0.0
+nuget System.Text.Json == 9.0.0
+nuget System.Security.Cryptography.Pkcs == 9.0.0
+nuget System.Security.Cryptography.Xml == 9.0.0
+nuget System.Security.Cryptography.ProtectedData == 9.0.0
+nuget System.ServiceModel.NetTcp 8.1
+nuget System.ServiceModel.Security 4.10.2
+nuget System.ServiceModel.Http 8.1
+nuget System.ServiceModel.Duplex 4.10.2
+nuget Microsoft.CognitiveServices.Speech 1.23.0
+nuget System.Configuration.ConfigurationManager == 9.0.0
+nuget System.Drawing.Common == 9.0.0
+nuget Mono.Cecil 0.11.5
 
-// ---------- Prism ----------
-nuget Prism.Core 8.1.97
-nuget Prism.Wpf 8.1.97
-nuget Prism.DryIoc 8.1.97
-
-// ---------- System / transitive pins ----------
-nuget ThisAssembly.Constants 2.1.5
-nuget System.Security.AccessControl 6.0.1
-nuget System.Security.Cryptography.Xml 10.0.12
-nuget System.Text.Json 10.0.12
-nuget System.Runtime.CompilerServices.Unsafe 6.1.2
-nuget System.Collections.Immutable 10.0.12
-nuget Microsoft.Windows.Compatibility 10.0.12
-nuget Microsoft.Bcl.AsyncInterfaces 10.0.12
-nuget System.Reflection.Metadata 10.0.12
-nuget Microsoft.CodeAnalysis 5.0
-nuget System.ValueTuple 4.6.2
-nuget System.Memory 4.6.3
+nuget NAudio 2.1.0
+nuget MagicOnion 2.6.3
+nuget Grpc 2.23.0
+nuget Grpc.Core 2.25.0
+nuget MessagePack 2.5.187
+nuget Hangfire.Core 1.7.35
+nuget Hangfire.SqlServer 1.7.35
+nuget Hangfire.AspNetCore 1.7.35
+nuget System.Runtime.CompilerServices.Unsafe 6.1.0
+nuget System.Collections.Immutable == 9.0.0
+nuget Microsoft.Windows.Compatibility 9.0.0
+nuget Microsoft.Bcl.AsyncInterfaces 9.0.0 
+nuget Microsoft.NETCore.Platforms 7.0.4 
+nuget Shouldly 4.0.3
+nuget System.Data.OleDb == 8.0.1
+nuget System.Diagnostics.PerformanceCounter == 8.0.1
+nuget Moq 4.16
+nuget NUnit 3.13.2
+nuget NUnit3TestAdapter 4.0.0
+nuget Microsoft.Graph.Beta 4.22.0-preview
+nuget Enums.NET 4.0
+nuget FasterFlect.Xpand 2.0.7
+nuget akarnokd.reactive_extensions 0.0.27-alpha
+nuget Microsoft.AspNetCore.Razor.Runtime 2.2
+nuget Microsoft.AspNetCore.Hosting 2.2.7
+nuget Microsoft.IdentityModel.Protocols.OpenIdConnect 8.2.0
+nuget System.Reflection.Metadata 9.0.0
+nuget System.Formats.Asn1 9.0.0
+nuget System.Interactive 6.0.1
+nuget System.Interactive.Async 6.0.1
+nuget Unofficial.Microsoft.mshtml 7.0.3300
+nuget Xpand.Patcher 9.0.0
+nuget YamlDotNet 11.2.1
+nuget Polly 7.2.2
+nuget TextCopy 6.1.0
+nuget Google.Apis.Calendar.v3 1.55.0.2410
+nuget Google.Apis.Tasks.v1 1.55.0.2384
+nuget Google.Apis.People.v1 1.25.0.830
+nuget Xpand.Collections 1.0.4
+nuget Microsoft.CodeAnalysis 4.12.0
+nuget Microsoft.Extensions.Hosting 6.0
+nuget Microsoft.AspNetCore 2.2
+nuget Selenium.WebDriver 4.21
+nuget System.ValueTuple 4.5
+nuget System.Threading.Tasks.Dataflow 7.0.0
+nuget Microsoft.NET.Test.SDK 17.0
+nuget RazorLight 2.0.0-rc.3
+nuget System.Reactive 6.0.0
+nuget Microsoft.Reactive.Testing 5.0.0
+nuget System.Collections.Concurrent 4.3.0
+nuget System.Memory 4.5.5
+nuget Microsoft.NETCore.Targets 5.0.0
+nuget Xpand.VersionConverter 2.202.11
 nuget Microsoft.VisualBasic 10.3.0
-nuget System.Diagnostics.DiagnosticSource 10.0.12
-nuget System.Net.Http 4.3.4
-nuget System.Text.RegularExpressions 4.3.1
+nuget Microsoft.Data.SqlClient 4.1.0
+nuget hangfire.memorystorage 1.8.0
+nuget Microsoft.AspNetCore.Components 9.0.0
+nuget Microsoft.Extensions.Configuration.Abstractions == 9.0
+nuget Microsoft.Extensions.DependencyInjection.Abstractions == 9.0
+nuget Microsoft.Extensions.FileProviders.Abstractions == 9.0
+nuget Microsoft.Extensions.Options == 9.0
+nuget System.Diagnostics.DiagnosticSource == 9.0
+nuget Azure.Core == 1.6
 
-// ---------- Testing ----------
-nuget xunit.v3 4.0.0
-nuget FluentAssertions 8.5.0
-nuget xunit.runner.visualstudio 4.0.0
-nuget Moq 4.20.72
-nuget nunit 4.6.1
-nuget NUnit.Analyzers 4.12.0
-nuget NUnit3TestAdapter 6.2.0
-nuget Shouldly 4.3.0
-nuget xunit.v3.extensibility.core 4.0.0
-nuget Microsoft.Testing.Extensions.CodeCoverage 18.8.0
-nuget Microsoft.TestPlatform.ObjectModel 18.8.1
-nuget Microsoft.Testing.Platform 2.4.1
-nuget Microsoft.Testing.Platform.MSBuild 2.4.1
-nuget coverlet.collector 10.0.1
-nuget FlaUI.Core.Signed 5.0.0
-nuget FlaUI.UIA2.Signed 5.0.0
-nuget FlaUI.UIA3.Signed 5.0.0
-nuget FlaUI.TestUtilities 5.0.0
-nuget Microsoft.NET.Test.Sdk 18.3.0
-nuget Respawn 7.0.0
+nuget DevExpress.Blazor.PdfViewer 24.2.8
+nuget DevExpress.Document.Processor 24.2.8
+nuget DevExpress.Drawing.Skia 24.2.8
+nuget DevExpress.ExpressApp 24.2.8
+nuget DevExpress.ExpressApp.Blazor 24.2.8
+nuget DevExpress.ExpressApp.Chart 24.2.8
+nuget DevExpress.ExpressApp.Chart.Win 24.2.8
+nuget DevExpress.ExpressApp.CodeAnalysis 24.2.8
+nuget DevExpress.ExpressApp.ConditionalAppearance 24.2.8
+nuget DevExpress.ExpressApp.Dashboards 24.2.8
+nuget DevExpress.ExpressApp.Dashboards.Blazor 24.2.8
+nuget DevExpress.ExpressApp.Dashboards.Win 24.2.8
+nuget DevExpress.ExpressApp.FileAttachment.Blazor 24.2.8
+nuget DevExpress.ExpressApp.FileAttachment.Win 24.2.8
+nuget DevExpress.ExpressApp.Notifications 24.2.8
+nuget DevExpress.ExpressApp.Notifications.Win 24.2.8
+nuget DevExpress.ExpressApp.Objects 24.2.8
+nuget DevExpress.ExpressApp.Office 24.2.8
+nuget DevExpress.ExpressApp.Office.Blazor 24.2.8
+nuget DevExpress.ExpressApp.Office.Win 24.2.8
+nuget DevExpress.ExpressApp.PivotChart 24.2.8
+nuget DevExpress.ExpressApp.PivotChart.Win 24.2.8
+nuget DevExpress.ExpressApp.PivotGrid 24.2.8
+nuget DevExpress.ExpressApp.PivotGrid.Win 24.2.8
+nuget DevExpress.ExpressApp.ReportsV2 24.2.8
+nuget DevExpress.ExpressApp.ReportsV2.Blazor 24.2.8
+nuget DevExpress.ExpressApp.ReportsV2.Win 24.2.8
+nuget DevExpress.ExpressApp.Scheduler 24.2.8
+nuget DevExpress.ExpressApp.Scheduler.Blazor 24.2.8
+nuget DevExpress.ExpressApp.Scheduler.Win 24.2.8
+nuget DevExpress.ExpressApp.TreeListEditors 24.2.8
+nuget DevExpress.ExpressApp.TreeListEditors.Win 24.2.8
+nuget DevExpress.ExpressApp.Validation 24.2.8
+nuget DevExpress.ExpressApp.Validation.Blazor 24.2.8
+nuget DevExpress.ExpressApp.Validation.Win 24.2.8
+nuget DevExpress.ExpressApp.ViewVariantsModule 24.2.8
+nuget DevExpress.ExpressApp.Win 24.2.8
+nuget DevExpress.ExpressApp.Win.Design 24.2.8
+nuget DevExpress.Persistent.Base 24.2.8
+nuget DevExpress.RichEdit.Export 24.2.8
+nuget DevExpress.Win.Design 24.2.8
+nuget DevExpress.Win.Map 24.2.8
+nuget DevExpress.ExpressApp.Security.Xpo  24.2.8
+nuget DevExpress.Persistent.BaseImpl.Xpo  24.2.8
 
-// ---------- Microsoft.Extensions family ----------
-nuget Microsoft.Extensions.Hosting 10.0.12
-nuget Microsoft.Extensions.Logging 10.0.12
-nuget Microsoft.Extensions.Logging.Debug 10.0.12
-nuget Microsoft.Extensions.Logging.Console 10.0.12
-nuget Microsoft.Extensions.Configuration 10.0.12
-nuget Microsoft.Extensions.Configuration.Xml 10.0.12
-nuget Microsoft.Extensions.Configuration.CommandLine 10.0.12
-nuget Microsoft.Extensions.Configuration.UserSecrets 10.0.12
-nuget Microsoft.Extensions.Configuration.FileExtensions 10.0.12
-nuget Microsoft.Extensions.Configuration.Binder 10.0.12
-nuget Microsoft.Extensions.Options 10.0.12
-nuget Microsoft.Extensions.Options.ConfigurationExtensions 10.0.12
-nuget Microsoft.Extensions.Configuration.Json 10.0.12
-nuget Microsoft.Extensions.Configuration.EnvironmentVariables 10.0.12
-nuget Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore 10.0.3
-nuget Microsoft.Extensions.ApiDescription.Server 10.0.12
-nuget Microsoft.Extensions.Http.Resilience 10.3.0
-nuget Microsoft.Extensions.ServiceDiscovery 10.3.0
+nuget DevExpress.DataAccess.UI  24.2.8
+nuget DevExpress.Win.Gauges  24.2.8
+nuget DevExpress.Win.Reporting  24.2.8
 
-// ---------- ASP.NET Core / EF Core ----------
-nuget Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore 10.0.12
-nuget Microsoft.AspNetCore.Identity.EntityFrameworkCore 10.0.12
-nuget Microsoft.AspNetCore.Mvc.Testing 10.0.12
-nuget Microsoft.AspNetCore.OpenApi 10.0.12
-nuget Microsoft.EntityFrameworkCore 10.0.12
-nuget Microsoft.EntityFrameworkCore.Design 10.0.12
-nuget Microsoft.EntityFrameworkCore.Relational 10.0.12
-nuget Microsoft.EntityFrameworkCore.Tools 10.0.12
-nuget Microsoft.EntityFrameworkCore.Sqlite 10.0.12
-nuget Microsoft.Data.SqlClient 6.1.4
-nuget Microsoft.Build.Tasks.Core 18.3.3
-nuget Microsoft.Build.Utilities.Core 18.3.3
+nuget AutoMapper 13.0.1
+nuget System.Diagnostics.FileVersionInfo 4.3.0
+nuget System.IO.FileSystem 4.3.0
+nuget System.IO.FileSystem.Primitives 4.3.0
+nuget DocumentFormat.OpenXml 2.11.3
+nuget DotNetZip 1.16.0
+nuget Enums.NET 5.0.0
+nuget ExcelDataReader 3.6.0
+nuget ExcelDataReader.DataSet 3.6.0
+nuget Fasterflect.Xpand 2.0.7
+nuget Fody 4.2.1 copy_local: false
+nuget IIS.Microsoft.Web.Adminstration 8.5.9600.16384
+nuget InputSimulator 1.0.4.0
+nuget JetBrains.Annotations 2021.3
+nuget Microsoft.AspNet.Razor 3.3.0
+nuget Microsoft.CSharp 4.7.0
+nuget Microsoft.NETCore.Platforms 7.0.4
+nuget Microsoft.Win32.Registry 5.0.0
+nuget System.Text.Encoding.CodePages 9.0.0
+nuget Mono.Cecil 0.11.5
+nuget System.Text.Json 9.0.0
+nuget PropertyChanged.Fody 2.6.1 copy_local: false
+nuget RazorEngine 3.10.0
+nuget SharpZipLib 1.4.2
+nuget System.Buffers 4.6.0
+nuget System.CodeDom 9.0.0
+nuget Microsoft.Data.SqlClient 5.2.2
+nuget System.Configuration.ConfigurationManager 9.0.0
+nuget Microsoft.Extensions.DependencyInjection.Abstractions == 9.0.0
+nuget Microsoft.Extensions.DependencyInjection 9.0.0
+nuget Microsoft.Extensions.Hosting.Abstractions 9.0.0
+nuget Microsoft.Extensions.Options 9.0.0
+nuget System.Security.Cryptography.Xml  9.0.0
+nuget System.ComponentModel.Annotations == 5.0.0
+nuget System.Data.OleDb 9.0.0
+nuget System.Security.Permissions  9.0.0
+nuget System.Reflection.Emit 4.7.0
+nuget System.Drawing.Common 9.0.0
+nuget System.IO.Compression 4.3.0
+nuget System.Management 9.0.0
+nuget System.Reactive 6.0.0
+nuget System.Reflection.TypeExtensions 4.7.0
+nuget system.interactive 6.0.1
+nuget System.Reflection.DispatchProxy 4.8.0
+nuget System.Resources.Extensions 9.0.0
+nuget System.Runtime.CompilerServices.Unsafe 6.1.0
+nuget System.Reflection.Emit.Lightweight == 4.7.0
+nuget System.Runtime 4.3.1
+nuget System.Threading.Tasks.Extensions 4.6.0
+nuget System.ValueTuple 4.5.0
+nuget System.Xml.XDocument 4.3.0
+nuget System.Threading.Tasks.Dataflow 9.0.0
+nuget System.Memory  4.6.3
 
-// ---------- OpenTelemetry ----------
-nuget OpenTelemetry.Exporter.OpenTelemetryProtocol 1.19.0
-nuget OpenTelemetry.Extensions.Hosting 1.19.0
-nuget OpenTelemetry.Instrumentation.AspNetCore 1.19.0
-nuget OpenTelemetry.Instrumentation.Http 1.19.0
-nuget OpenTelemetry.Instrumentation.Runtime 1.19.0
-
-// ---------- Misc ----------
-nuget WixSharp_wix4 2.14.1
-nuget Newtonsoft.Json 13.0.4
-nuget CommunityToolkit.Mvvm 8.4.0
-nuget DryIoc.Microsoft.DependencyInjection 6.2.0
-nuget Microsoft.Xaml.Behaviors.Wpf 1.1.142
-nuget PolySharp 1.16.0
-nuget Serilog 4.4.0
-nuget WPFLocalizeExtensionEzzFork 3.10.1
-nuget XAMLMarkupExtensionsEzzFork 2.1.4
-nuget MailKit 4.17.0
-nuget MimeKit 4.17.0
-nuget Utf8StringInterpolation 1.3.2
-nuget Humanizer.Core 3.0.10
-nuget NetArchTest.eNhancedEdition 1.4.5
-nuget QuestPDF 2026.9.0
-nuget Verify 33.1.0
-nuget SimpleInfoName 3.2.0
-nuget DiffEngine 20.3.1
-nuget Argon 0.37.0
-nuget WpfAnalyzers 4.1.1
-nuget Microsoft.VisualStudio.Threading.Analyzers 18.7.23
-nuget EnumerableAsyncProcessor 4.0.0
-nuget AsyncAwaitBestPractices 10.0.0
-nuget AsyncAwaitBestPractices.MVVM 10.0.0
-nuget AsyncKeyedLock 8.1.2
-nuget AsyncFixer 2.1.0
-nuget NetEvolve.Extensions.NUnit 3.5.484
-nuget Ardalis.GuardClauses 5.0.0
-nuget AutoMapper 16.2.0
-nuget Azure.Extensions.AspNetCore.Configuration.Secrets 1.4.0
-nuget Azure.Identity 1.18.0
-nuget FluentValidation.DependencyInjectionExtensions 12.1.1
-nuget MediatR 14.0.0
-nuget MediatR.Contracts 2.0.1
-nuget Scalar.AspNetCore 2.12.50
-nuget System.IdentityModel.Tokens.Jwt 8.16.0
-
-// ---------- Build-wide (was GlobalPackageReference) ----------
-nuget Nerdbank.GitVersioning 3.10.94
+nuget ThisAssembly.Constants 2.1.5
