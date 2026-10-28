@@ -44,7 +44,6 @@ namespace ClinicManager.Win {
             // PermissionPolicyExampleWindowsFormsApplication
             // 
             this.ApplicationName = "PermissionPolicyExample";
-            this.Connection = this.sqlConnection1;
             this.Modules.Add(this.module1);
             this.Modules.Add(this.module2);
             this.Modules.Add(this.module3);
