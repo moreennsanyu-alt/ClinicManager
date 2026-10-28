@@ -2,7 +2,7 @@
 using DevExpress.EasyTest.Framework;
 using Xunit;
 
-[assembly: CollectionBehavior(DisableTestParallelization = true)]
+[assembly: Parallelization(Mode = ParallelizationMode.Disabled)]
 
 // Refer to the following article for more information: https://docs.devexpress.com/eXpressAppFramework/403852/
 
