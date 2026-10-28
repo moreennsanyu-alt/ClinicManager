@@ -11,7 +11,7 @@ using DevExpress.ExpressApp;
 using System.Collections;
 using DevExpress.ExpressApp.Xpo;
 using System.ServiceModel;
-using System.Runtime.Remoting.Channels;
+//using System.Runtime.Remoting.Channels;
 using DevExpress.ExpressApp.Security.ClientServer.Wcf;
 using DevExpress.Persistent.BaseImpl.PermissionPolicy;
 using DevExpress.ExpressApp.Win.SystemModule;
