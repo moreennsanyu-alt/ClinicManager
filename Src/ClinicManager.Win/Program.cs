@@ -14,7 +14,7 @@ using DevExpress.ExpressApp.Security.ClientServer;
 using DevExpress.ExpressApp.Security.ClientServer.Wcf;
 using System.ServiceModel;
 
-namespace PermissionPolicyExample.Win
+namespace ClinicManager.Win
 {
     static class Program
     {
@@ -35,7 +35,7 @@ namespace PermissionPolicyExample.Win
                 Tracing.LocalUserAppDataPath = Application.LocalUserAppDataPath;
             }
             Tracing.Initialize();
-            PermissionPolicyExampleWindowsFormsApplication winApplication = new PermissionPolicyExampleWindowsFormsApplication();
+            ClinicManagerWinApp winApplication = new ClinicManagerWinApp();
             // Refer to the https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112680.aspx help article for more details on how to provide a custom splash form.
             //winApplication.SplashScreen = new DevExpress.ExpressApp.Win.Utils.DXSplashScreen("YourSplashImage.png");
             try
