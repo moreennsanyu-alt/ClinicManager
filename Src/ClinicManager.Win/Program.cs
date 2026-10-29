@@ -22,9 +22,9 @@ namespace ClinicManager.Win
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        static void Main(string[] args)
         {
-#if EASYTEST
+#if DEBUG
 			DevExpress.ExpressApp.Win.EasyTest.EasyTestRemotingRegistration.Register();
 #endif
             Application.EnableVisualStyles();
@@ -51,13 +51,19 @@ namespace ClinicManager.Win
                     {
                         e.ObjectSpaceProvider = new MiddleTierServerObjectSpaceProvider(wcfSecuredClient);
                     };
+                Initialization.RunSecurityServer(args);
+                
                 winApplication.Setup();
                 winApplication.Start();
                 wcfSecuredClient.Dispose();
             }
             catch (Exception e)
             {
+                winApplication.StopSplash();
                 winApplication.HandleException(e);
+            }
+            finally {
+            Initialization.KillServerProcess();
             }
         }
     }
