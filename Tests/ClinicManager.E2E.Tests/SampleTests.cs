@@ -2,6 +2,7 @@
 using DevExpress.EasyTest.Framework;
 using Xunit;
 using Xunit.v3;
+using Xunit.Sdk;
 
 [assembly: Parallelization(Mode = ParallelizationMode.Disabled)]
 
