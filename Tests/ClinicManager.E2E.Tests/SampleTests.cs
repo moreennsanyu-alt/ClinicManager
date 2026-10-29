@@ -39,7 +39,7 @@ public class ClinicManagerTests : IDisposable {
     [Fact]
     public void CreateNewRole() {
         DropDB();
-        var appContext = FixtureContext.CreateApplicationContext(applicationName);
+        var appContext = FixtureContext.CreateApplicationContext(WinAppName);
         appContext.RunApplication();
         appContext.GetForm().FillForm(("User Name", "Sam"));
         appContext.GetAction("Log In").Execute();
