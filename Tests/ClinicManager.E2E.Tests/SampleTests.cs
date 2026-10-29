@@ -4,7 +4,7 @@ using Xunit;
 using Xunit.v3;
 using Xunit.Sdk;
 
-[assembly: Parallelization(Mode = ParallelMode.Disabled)]
+[assembly: Parallelization(Mode = ParallelMode.None)]
 
 // Refer to the following article for more information: https://docs.devexpress.com/eXpressAppFramework/403852/
 
