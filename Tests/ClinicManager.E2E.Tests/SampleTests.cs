@@ -16,7 +16,7 @@ public class ClinicManagerTests : IDisposable {
 
     public ClinicManagerTests() {
         FixtureContext.RegisterApplications(
-            new WinApplicationOptions(WinAppName, @$"{Environment.CurrentDirectory}\..\..\..\..\MainDemo.Win\bin\EasyTest\MainDemo.Win.exe"));
+            new WinApplicationOptions(WinAppName, @$"{Environment.CurrentDirectory}\..\..\ClinicManager.Win\debug\ClinicMgr.exe"));
        // FixtureContext.RegisterDatabases(new DatabaseOptions(MainDemoDBName, "MainDemo.NET.XPO_v26.1", server: "(localdb)\\mssqllocaldb"));
     }
     public void Dispose() {
