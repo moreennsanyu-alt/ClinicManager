@@ -4,6 +4,7 @@
     <OutputType>Exe</OutputType>
     <UseMicrosoftTestingPlatformRunner>true</UseMicrosoftTestingPlatformRunner>
     <TargetFramework>net48</TargetFramework>
+    <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
     <Constant Include="BuildInfo.ApplicationPath" Value="$(ArtifactsPath)\bin\ClinicManager.Win\debug\ClinicMgr.exe" />
