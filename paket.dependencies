@@ -8,6 +8,7 @@ copy_local: true
 specific_version: false
 framework: netstandard2.0, net48
 
+nuget ScreenRecorderLib 7.0.1
 nuget PolySharp 1.16.0 
 nuget DevExpress.ExpressApp.Office 24.2.15
 nuget DevExpress.ExpressApp.Office.Win 24.2.15
