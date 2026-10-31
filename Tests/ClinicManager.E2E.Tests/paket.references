@@ -6,7 +6,7 @@ System.ValueTuple
 System.Memory
 Microsoft.CSharp
 ThisAssembly.Constants
-
+ScreenRecorderLib
 xunit.v3
 Xunit.OpenCategories.V3
 Microsoft.Testing.Extensions.CodeCoverage
