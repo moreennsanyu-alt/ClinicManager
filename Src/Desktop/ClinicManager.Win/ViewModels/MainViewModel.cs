@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 
 namespace ClinicManager.Win.ViewModels
 {
-    public partial class MainViewModel : ViewModelBase
+    public partial class MainViewModel(INavigationTreeBuilder navigationTreeBuilder) : ViewModelBase
     {
          [ObservableProperty]
          bool _NavigationPaneVisibility;
@@ -13,6 +13,7 @@ namespace ClinicManager.Win.ViewModels
          
          [ObservableProperty]
          NavigationItem _selectedNavigationItem;
+
          
          [RelayCommand]
          public async Task OnLoaded()
@@ -20,7 +21,7 @@ namespace ClinicManager.Win.ViewModels
               await Task.CompletedTask; 
          }
           
-    public ObservableCollection<RootNavigationItem> NavigationItems { get; } = new();
+    public ObservableCollection<RootNavigationItem> NavigationItems { get; } = navigationTreeBuilder.Root;
 
     partial void OnSelectedRootNavigationItemChanging(RootNavigationItem oldItem,RootNavigationItem newItem)
     {
