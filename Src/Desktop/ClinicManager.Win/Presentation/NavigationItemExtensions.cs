@@ -10,7 +10,7 @@ public static class NavigationItemExtensions
         {
             if (item.Key == key) return item;
 
-            var found = item.Children.FindByKey(key);
+            var found = item.Items.FindByKey(key);
             if (found != null) return found;
         }
         return null;
