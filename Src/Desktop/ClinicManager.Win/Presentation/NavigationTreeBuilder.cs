@@ -53,7 +53,7 @@ public class NavigationTreeBuilder : INavigationTreeBuilder
                 existing.Priority = item.Priority;
                 existing.BadgeText = item.BadgeText;
                 existing.BadgeType = item.BadgeType;
-                existing.IsEnabled = item.IsEnabled;
+                existing.Enabled = item.Enabled;
             }
 
             level = existing.Items;
