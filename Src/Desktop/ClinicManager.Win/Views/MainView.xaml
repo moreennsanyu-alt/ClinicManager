@@ -60,8 +60,8 @@
                 </dxdo:LayoutGroup>
             </dxdo:DockLayoutManager>
           <dxnav:OfficeNavigationBar Grid.Row="2" />
-          <dxr:RibbonStatusBarControl Height="35" x:Name="ribbonStatusBarControl" IsSizeGripVisible="False"/>
-        <Grid/>
+          <dxr:RibbonStatusBarControl Grid.Row="3"  Height="35" x:Name="ribbonStatusBarControl" IsSizeGripVisible="False"/>
+        </Grid>
         <Grid x:Name="footerGrid" Grid.Row = "0" />
     </Grid>
 </UserControl>
