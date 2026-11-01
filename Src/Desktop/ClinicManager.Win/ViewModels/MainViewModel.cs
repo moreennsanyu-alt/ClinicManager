@@ -30,9 +30,8 @@ namespace ClinicManager.Win.ViewModels
     partial void OnSelectedRootNavigationItemChanged(RootNavigationItem oldItem,RootNavigationItem newItem)
     {
         if(newItem.SelectedItem == null)
-           SelectedNavigationItem = NavignewItem.Items.First();
-        else 
-           SelectedNavigationItem = newItem.SelectedItem;
+           SelectedNavigationItem = newItem.Items.First();
+        SelectedNavigationItem = newItem.SelectedItem;
     }
 
     partial void OnSelectedNavigationItemChanged(NavigationItem oldItem,NavigationItem newItem)
