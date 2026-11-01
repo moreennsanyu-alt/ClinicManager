@@ -56,7 +56,7 @@ public class NavigationTreeBuilder : INavigationTreeBuilder
                 existing.IsEnabled = item.IsEnabled;
             }
 
-            level = existing.Children;
+            level = existing.Items;
         }
     }
 
