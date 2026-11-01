@@ -21,7 +21,7 @@ namespace ClinicManager.Win.ViewModels
               await Task.CompletedTask; 
          }
           
-    public ObservableCollection<RootNavigationItem> NavigationItems { get; } = navigationTreeBuilder.Root;
+    public ObservableCollection<NavigationItem> NavigationItems { get; } = navigationTreeBuilder.Root;
 
     partial void OnSelectedRootNavigationItemChanging(RootNavigationItem oldItem,RootNavigationItem newItem)
     {
