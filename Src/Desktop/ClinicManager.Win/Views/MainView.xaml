@@ -25,14 +25,43 @@
     </dxmvvm:Interaction.Behaviors>
     <Grid x:Name="RootGrid">
         <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
+        <Grid x:Name="headerGrid" Grid.Row = "0" />
+        <Grid x:Name="contentGrid" Grid.Row = "0">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+          </Grid.RowDefinitions>
+          <dxr:RibbonControl Grid.Row="0" />
+          <dxdo:DockLayoutManager Grid.Row="1" BorderThickness="0" Name="dockLayoutManager" Margin="0,10,0,0">
+                <dxdo:LayoutGroup Orientation="Vertical" ItemHeight="*">
+                    <dxdo:LayoutGroup>
+                        <dxdo:LayoutPanel Margin="4,0,4,8" Padding="4,5,12,12" ItemWidth="{Binding ElementName=accordion, Path=IsExpanded, Converter={StaticResource isExpandedToWidthConverter}}"
+                                          AllowClose="False" AllowFloat="False" ShowPinButton="False"
+                                          ShowBorder="True" ShowCaption="False" AllowSizing="False"
+                                          Visibility="{Binding NavigationPaneVisibility, Converter={StaticResource NavigationPaneVisibilityConverter}}">
+                            <dxa:AccordionControl ItemsSource="{Binding NavigationItems}" x:Name="accordion">
+                                
+                                     
+                            </dxa:AccordionControl>
+                        </dxdo:LayoutPanel>
+                        <dxdo:LayoutPanel Margin="0,0,8,6" AllowClose="False" AllowFloat="False" ShowPinButton="False" ShowBorder="False" ShowCaption="False"
+                                          dxb:MergingProperties.ElementMergingBehavior="InternalWithExternal">
+                            <dxwui:NavigationFrame AnimationType="SlideHorizontal" AllowMerging="True">
+                               
+                            </dxwui:NavigationFrame>
+                        </dxdo:LayoutPanel>
+                    </dxdo:LayoutGroup>
+                </dxdo:LayoutGroup>
+            </dxdo:DockLayoutManager>
+          <dxnav:OfficeNavigationBar Grid.Row="2" />
+          <dxr:RibbonStatusBarControl Height="35" x:Name="ribbonStatusBarControl" IsSizeGripVisible="False"/>
+        <Grid/>
+        <Grid x:Name="footerGrid" Grid.Row = "0" />
     </Grid>
 </UserControl>
