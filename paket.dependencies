@@ -111,7 +111,7 @@ nuget System.Text.Encoding.CodePages 9.0.22
 nuget System.Text.Encodings.Web 9.0.22
 nuget System.Text.Json == 9.0.22
 nuget System.Threading.Tasks.Dataflow 9.0.22
-nuget System.Threading.Tasks.Extensions 4.6.0
+nuget System.Threading.Tasks.Extensions 4.6.3
 nuget System.ValueTuple 4.6.2
 nuget System.Net.Http 4.3.4
 nuget System.Text.RegularExpressions 4.3.1
@@ -135,6 +135,7 @@ nuget Humanizer.Core 3.0.10
 nuget NetArchTest.eNhancedEdition 1.4.5
 nuget QuestPDF 2026.9.0
 nuget Verify 33.3.4
+nuget Verify.QuestPDF 3.1.0
 nuget SimpleInfoName 3.2.1
 nuget DiffEngine 20.8.2
 nuget Argon 0.38.2
