@@ -5,16 +5,14 @@
     <AssemblyName>ClinicMgr</AssemblyName>
     <UseWindowsForms>true</UseWindowsForms>
     <OutputType>WinExe</OutputType>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
-
   <ItemGroup>
-   <Reference Include="System.Runtime.Serialization" />
-   <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
   </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\ClinicManager\ClinicManager.csproj" />
   </ItemGroup>
-
   <Import Project="..\..\.paket\Paket.Restore.targets" />
 </Project>
