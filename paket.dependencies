@@ -56,7 +56,7 @@ nuget DevExpress.EasyTest 24.2.15
 nuget AutoMapper 13.0.1
 nuget Enums.NET 5.0.0
 nuget Fasterflect.Xpand 2.0.7
-nuget Mono.Cecil 0.11.5
+nuget Mono.Cecil 0.11.6
 nuget ZString 2.5.0
 nuget akarnokd.reactive_extensions 0.0.27-alpha
 nuget Polly 7.2.2
