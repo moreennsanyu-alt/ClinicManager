@@ -1,9 +1,17 @@
-ThisAssembly.Constants
-
 System.Net.Http
 System.Text.RegularExpressions
 
 xunit.v3
 Shouldly
+NetEvolve.Extensions.XUnit.V3
 Microsoft.Testing.Extensions.CodeCoverage
+Microsoft.Testing.Platform
+Microsoft.Testing.Extensions.VideoRecorder
+Microsoft.Testing.Extensions.HtmlReport
+
+// Misc
+ThisAssembly.Constants
+PolySharp
 Humanizer.Core
+
+Nerdbank.GitVersioning
