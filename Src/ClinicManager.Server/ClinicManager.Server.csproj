@@ -1,15 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <TargetFramework>net48</TargetFramework>
-    <AssemblyName>ClinicMgrSvr</AssemblyName>
-    <UseWindowsForms>true</UseWindowsForms>
     <OutputType>Exe</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <RootNamespace>MyWindowsService</RootNamespace>
+    <AssemblyName>MyWindowsService</AssemblyName>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\ClinicManager\ClinicManager.csproj" />
+  <ItemGroup> 
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Configuration.Install" />
   </ItemGroup>
-
 
 </Project>
