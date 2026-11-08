@@ -65,7 +65,7 @@ nuget Moq 4.21.0
 nuget Microsoft.Reactive.Testing 7.0.0
 
 // Microsoft / System
-nuget Microsoft.Bcl.AsyncInterfaces 9.0.22
+nuget Microsoft.Bcl.AsyncInterfaces 10.0.14
 nuget Microsoft.CodeAnalysis 4.12.0
 nuget Microsoft.CSharp 4.7.0
 nuget Microsoft.VisualBasic 10.3.0
