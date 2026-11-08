@@ -1,0 +1,16 @@
+
+DevExpress.ExpressApp.Win
+DevExpress.ExpressApp.Xpo
+DevExpress.ExpressApp
+DevExpress.ExpressApp.Security.Xpo
+
+Microsoft.CSharp
+
+System.Configuration.ConfigurationManager
+
+// Misc
+ThisAssembly.Constants
+PolySharp
+Humanizer.Core
+QuestPDF
+Nerdbank.GitVersioning
