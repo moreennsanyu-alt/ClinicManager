@@ -133,7 +133,7 @@ nuget WixSharp_wix4 2.14.2
 nuget PolySharp 1.16.0
 nuget Humanizer.Core 3.0.10
 nuget NetArchTest.eNhancedEdition 1.4.5
-nuget QuestPDF 2026.9.0
+nuget QuestPDF 2026.9.1
 nuget Verify 33.3.4
 nuget Verify.QuestPDF 3.1.0
 nuget SimpleInfoName 3.2.1
