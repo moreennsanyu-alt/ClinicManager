@@ -1,0 +1,9 @@
+ThisAssembly.Constants
+
+System.Net.Http
+System.Text.RegularExpressions
+
+xunit.v3
+Shouldly
+Microsoft.Testing.Extensions.CodeCoverage
+Humanizer.Core
