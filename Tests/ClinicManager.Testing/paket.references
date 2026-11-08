@@ -1,0 +1,11 @@
+
+Shouldly
+xunit.v3.extensibility.core
+
+
+// Misc
+ThisAssembly.Constants
+PolySharp
+Humanizer.Core
+
+Nerdbank.GitVersioning
