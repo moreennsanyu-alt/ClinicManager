@@ -103,6 +103,7 @@ nuget System.Security.Cryptography.Pkcs == 9.0.22
 nuget System.Security.Cryptography.ProtectedData == 9.0.22
 nuget System.Security.Cryptography.Xml == 9.0.22
 nuget System.Security.Permissions 9.0.22
+nuget System.Security.AccessControl 6.0.1
 nuget System.ServiceModel.Duplex 6.0.0
 nuget System.ServiceModel.Http 8.1.2
 nuget System.ServiceModel.NetTcp 8.1.2
