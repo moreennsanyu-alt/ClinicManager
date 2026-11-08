@@ -130,6 +130,7 @@ nuget Microsoft.Testing.Extensions.HtmlReport 2.5.2
 
 
 // ---------- Misc ----------
+nuget ThisAssembly.Constants 2.1.6
 nuget WixSharp_wix4 2.14.2
 nuget PolySharp 1.16.0
 nuget Humanizer.Core 3.0.10
