@@ -59,7 +59,7 @@ namespace ClinicManager.Win {
 
         private DevExpress.ExpressApp.SystemModule.SystemModule module1;
         private DevExpress.ExpressApp.Win.SystemModule.SystemWindowsFormsModule module2;
-        private ClinicManage.ClinicManagerModule module3;
+        private ClinicManager.ClinicManagerModule module3;
         private DevExpress.ExpressApp.Security.SecurityStrategyComplex securityStrategyComplex1;
         private DevExpress.ExpressApp.Security.SecurityModule securityModule1;
         private DevExpress.ExpressApp.Security.AuthenticationStandard authenticationStandard1;
