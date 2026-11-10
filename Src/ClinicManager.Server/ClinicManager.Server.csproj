@@ -12,6 +12,7 @@
     <ProjectReference Include="..\ClinicManager\ClinicManager.csproj" />
   </ItemGroup>
 
+    <ItemGroup>
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Configuration.Install" />
