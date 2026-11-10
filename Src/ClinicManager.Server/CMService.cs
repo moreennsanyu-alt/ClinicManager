@@ -56,7 +56,7 @@ namespace ClinicManager.Server
 
                 serverApplication.Modules.BeginInit();
                 serverApplication.Modules.Add(new SystemWindowsFormsModule());
-                serverApplication.Modules.Add(new ClinicManager());
+                serverApplication.Modules.Add(new ClinicManagerModule());
                 serverApplication.Modules.Add(new SecurityModule());
                 serverApplication.Modules.EndInit();
 
