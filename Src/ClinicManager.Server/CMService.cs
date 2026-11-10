@@ -1,4 +1,21 @@
 using System.ServiceProcess;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using DevExpress.ExpressApp.Security.ClientServer;
+using System.Configuration;
+using DevExpress.Persistent.Base;
+using DevExpress.ExpressApp.Security;
+using DevExpress.ExpressApp.Security.Strategy;
+using DevExpress.ExpressApp;
+using System.Collections;
+using DevExpress.ExpressApp.Xpo;
+using System.ServiceModel;
+using DevExpress.ExpressApp.Security.ClientServer.Wcf;
+using DevExpress.Persistent.BaseImpl.PermissionPolicy;
+using DevExpress.ExpressApp.Win.SystemModule;
+using DevExpress.ExpressApp.MiddleTier;
 
 namespace ClinicManager.Server
 {
