@@ -6,7 +6,7 @@
     <AssemblyName>ClinicMgrSvr</AssemblyName>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
-  <ItemGroup>
+ 
 
   <ItemGroup>
     <ProjectReference Include="..\ClinicManager\ClinicManager.csproj" />
