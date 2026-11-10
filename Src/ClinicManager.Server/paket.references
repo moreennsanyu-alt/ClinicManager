@@ -3,7 +3,7 @@ DevExpress.ExpressApp.Win
 DevExpress.ExpressApp.Xpo
 DevExpress.ExpressApp
 DevExpress.ExpressApp.Security.Xpo
-
+DevExpress.Persistent.BaseImpl.Xpo
 Microsoft.CSharp
 
 System.Configuration.ConfigurationManager
