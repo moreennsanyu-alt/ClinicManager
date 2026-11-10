@@ -7,6 +7,7 @@ namespace ClinicManager.Server
     [RunInstaller(true)]
     public class ProjectInstaller : Installer
     {
+        string _displayName = "Clinic Manager Server";
         public ProjectInstaller()
         {
             var processInstaller = new ServiceProcessInstaller
@@ -17,8 +18,8 @@ namespace ClinicManager.Server
             var serviceInstaller = new ServiceInstaller
             {
                 ServiceName = CMService.Name,
-                DisplayName = "Clinic Manager Server",
-                Description = DisplayName,
+                DisplayName = _displayName,
+                Description = _displayName,
                 StartType = ServiceStartMode.Automatic
             };
 
