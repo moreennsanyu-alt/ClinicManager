@@ -5,7 +5,7 @@ using DevExpress.Persistent.BaseImpl;
 using DevExpress.Persistent.Base;
 using DevExpress.Xpo;
 
-namespace PermissionPolicyExample.Module.BusinessObjects {
+namespace ClinicManager.BO {
     [DefaultClassOptions, ImageName("BO_Person")]
     public class Contact : BaseObject {
         public Contact(Session session) : base(session) { }
