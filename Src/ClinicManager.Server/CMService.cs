@@ -19,7 +19,7 @@ using DevExpress.ExpressApp.MiddleTier;
 
 namespace ClinicManager.Server
 {
-    public class CMService : ServiceBase
+    public class CMService : System.ServiceProcess.ServiceBase
     {
         public const string Name = "CMServer";
         WcfXafServiceHost serviceHost = null;
