@@ -13,6 +13,9 @@ namespace ClinicManager.E2E.Tests;
 
 public class MainDemoTests
 {
-
-    
+    [Fact]
+    public void TestMethod()
+    {
+        
+    }  
 }
