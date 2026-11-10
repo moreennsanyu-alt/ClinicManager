@@ -3,6 +3,7 @@ DevExpress.EasyTest
 
 System.Net.Http
 System.Text.RegularExpressions
+System.Text.Json
 
 xunit.v3
 Shouldly
