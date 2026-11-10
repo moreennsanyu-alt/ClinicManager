@@ -8,6 +8,9 @@ using DevExpress.Persistent.BaseImpl.PermissionPolicy;
 
 namespace ClinicManager {
     public sealed partial class ClinicManagerModule : ModuleBase {
+
+    public const string AppName = "ClinicManagerApp";
+
         public ClinicManagerModule() {
             InitializeComponent();
         }
