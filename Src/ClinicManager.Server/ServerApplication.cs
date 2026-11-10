@@ -6,7 +6,6 @@ using DevExpress.ExpressApp.MiddleTier;
 using DevExpress.ExpressApp.Xpo;
 using DevExpress.ExpressApp;
 using DevExpress.ExpressApp.Win.SystemModule;
-using DevExpress.ExpressApp.Web.SystemModule;
 using PermissionPolicyExample.Module;
 using DevExpress.ExpressApp.Security;
 
