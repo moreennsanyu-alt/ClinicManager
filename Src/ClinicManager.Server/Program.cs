@@ -53,7 +53,7 @@ namespace ClinicManager.Server
             }
             else
             {
-                ServiceBase.Run(service);
+                System.ServiceProcess.ServiceBase.Run(service);
             }
         }
     }
