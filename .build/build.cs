@@ -188,9 +188,9 @@ class Build : FalloutBuild
                         .SetProperty("RunWorkingDirectory", ArtifactsDirectory / "bin" / "ClinicManager.Win" / "debug" )
 						.SetProcessAdditionalArguments(
                             "--",
-							"--coverage",
-							"--coverage-output-format cobertura",
-							$"--coverage-output {CoverageDirectory / $"{v.project.Name}_{v.framework}.cobertura.xml"}",
+							//"--coverage",
+							//"--coverage-output-format cobertura",
+					        //$"--coverage-output {CoverageDirectory / $"{v.project.Name}_{v.framework}.cobertura.xml"}",
                             $"--results-directory {TestResultsDirectory}"
                          )
                     )
